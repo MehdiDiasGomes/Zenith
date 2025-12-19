@@ -16,9 +16,9 @@
     "contact": "Contact"
   },
   "landing": {
-    "brand": "Devaura",
-    "tagline": "Créateur d'expériences web sur mesure",
-    "description": "Nous transformons vos idées en solutions web modernes et performantes. Expertise en développement full-stack, design UX/UI et création d'applications web qui marquent les esprits.",
+    "brand": "Mehdi, votre développeur fullstack freelance",
+    "tagline": "J'accompagne startups et PME dans la création de leurs applications web",
+    "description": "Je transforme vos idées en solutions web modernes et performantes. Expertise en développement full-stack avec Vue.js, Nuxt.js et Laravel pour créer des applications qui marquent les esprits.",
     "cta": {
       "portfolio": "Voir mes projets",
       "contact": "Me contacter"
