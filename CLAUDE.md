@@ -2,6 +2,67 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Context: Zenith
+
+This project is the website for **Zenith**, a custom web development and design agency. The site is being migrated from a personal portfolio to a corporate agency website while maintaining the same technical stack.
+
+### About Zenith
+- **Type**: Web development and design agency
+- **Services**: Custom website creation and development
+- **Brand positioning**: Luxury, professional, accessible
+
+### Current Migration Scope
+**Phase 1 (Current)**:
+- Landing page
+- Contact page
+
+**Phase 2 (Later)**:
+- About page
+- Blog/News section
+
+### Brand Identity
+
+**Logo**: `public/images/brand/z_logo.png` - Golden gradient logo with "ZENITH" text
+
+**Color Palette** (Gold/Bronze luxury theme):
+```css
+/* Primary Colors */
+--zenith-bronze-dark: #7B542F    /* Dark bronze for text, borders, dark elements */
+--zenith-gold-bronze: #B6771D    /* Main gold-bronze for primary accents, buttons, links */
+--zenith-gold-vivid: #FF9D00     /* Vivid gold for CTAs, hover states, important elements */
+--zenith-champagne: #FFCF71      /* Light champagne for highlights, gradients, light effects */
+
+/* Neutral Colors */
+--zenith-bg-dark: #0A0A0A        /* Dark mode background */
+--zenith-bg-light: #FAFAF9       /* Light mode background */
+--zenith-bg-secondary-dark: #1A1A1A
+--zenith-bg-secondary-light: #F5F5F4
+--zenith-text-primary-dark: #FFFFFF
+--zenith-text-primary-light: #1A1A1A
+--zenith-text-secondary-dark: #E5E5E5
+--zenith-text-secondary-light: #737373
+```
+
+**Typography**:
+- **Primary font**: Montserrat (replaces Trirong)
+  - Headings: Montserrat Bold/SemiBold (600-700)
+  - Body: Montserrat Regular/Medium (400-500)
+  - CTAs: Montserrat SemiBold (600)
+
+**Visual Style**:
+- Corporate modern: Professional yet accessible
+- Subtle and fluid animations
+- Generous spacing for breathing room
+- High contrast for readability
+- Golden glow effects on interactive elements
+- Dark/Light mode support (both themes maintained)
+
+**Component Styling Guidelines**:
+- Buttons: Gold background (#FF9D00) with golden glow on hover
+- Cards: Bronze borders (#B6771D) with subtle hover effects
+- Forms: Inputs with vivid gold focus states
+- Navigation: Links with animated golden underline
+
 ## Development Commands
 
 ### Running the project
@@ -88,11 +149,26 @@ content/               # Markdown content for @nuxt/content
 - `.text-xxl`, `.text-xl`, `.text-l`, `.text-m`, `.text-s` - Responsive text sizes
 - `.text-intro`, `.text-main`, `.text-legend`, `.text-cta` - Semantic text classes
 
+**Custom utility classes** (defined in `assets/css/tailwind.css`):
+- `.glass-effect` - Glass morphism effect with backdrop blur
+- `.glass-effect-dark` - Dark variant of glass effect
+- `.text-gradient-primary` - Purple to blue gradient text
+- `.text-gradient-secondary` - Blue to pink gradient text
+- `.smooth-transition` - Standard transition timing
+- `.fade-in` - Fade in animation (0.5s ease-out)
+- `.hover-glow` - Glow effect on hover
+
 **Custom color tokens**:
 - `primaryPerso: '#CBACF9'` - Primary purple accent
 - `secondaryPerso: '#7E7E7E'` - Secondary gray
 - `backgroundForeground: '#04071D'` - Dark background
 - `borderPerso: '#303247'` - Border color
+
+**CSS variables** (defined in `assets/css/tailwind.css`):
+- HSL-based color system with automatic dark mode variants
+- Typography colors: `--heading-primary`, `--text-primary`, `--text-secondary`, `--text-muted`
+- Accent colors: `--accent-purple`, `--accent-blue`, `--accent-pink`
+- Global responsive typography styles for `h1`-`h6` and `p` elements
 
 Use these custom classes for consistency across components.
 
@@ -128,6 +204,21 @@ const formSchema = toTypedSchema(z.object({
 }))
 ```
 
+### Animation System
+
+The project uses `@formkit/auto-animate` for automatic animations:
+- Composable: `useAutoAnimate()` exported from `composables/useAutoAnimate.ts`
+- Usage: Add `v-auto-animate` directive to parent elements for automatic child animations
+- Common use cases: Form field errors, list transitions, conditional content
+
+Example:
+```vue
+<FormItem v-auto-animate>
+  <FormControl>...</FormControl>
+  <FormMessage />  <!-- Animates in/out automatically -->
+</FormItem>
+```
+
 ### Content Management
 
 - Static data lives in `constants/` directories as TypeScript files
@@ -150,14 +241,173 @@ This project uses **shadcn-nuxt** components which are:
 
 Common UI components available: Button, Input, Label, Sheet, DropdownMenu, Toast
 
+## Coding Standards
+
+**This project follows STRICT clean code and TypeScript practices:**
+
+### Type Safety Rules - EVERYTHING MUST BE TYPED
+
+**1. Variables and Constants**
+```typescript
+// ✅ GOOD - Always explicit types
+const name: string = 'Zenith'
+const count: number = 0
+const isActive: boolean = false
+let userId: string | null = null
+
+// ❌ BAD - No implicit types
+const name = 'Zenith'
+const count = 0
+```
+
+**2. Refs and Reactive**
+```typescript
+// ✅ GOOD - Simple types
+const name = ref<string>('')
+const count = ref<number>(0)
+const isLoading = ref<boolean>(false)
+
+// ✅ GOOD - Complex types (create in types/)
+const project = ref<Project | null>(null)
+const projects = ref<Project[]>([])
+
+// ❌ BAD
+const name = ref('')  // No type
+```
+
+**3. Functions**
+```typescript
+// ✅ GOOD - All parameters and return types
+function calculateTotal(price: number, quantity: number): number {
+  return price * quantity
+}
+
+const formatName = (firstName: string, lastName: string): string => {
+  return `${firstName} ${lastName}`
+}
+
+// Async functions
+async function fetchProjects(): Promise<Project[]> {
+  // ...
+}
+
+// ❌ BAD - Missing types
+function calculateTotal(price, quantity) {
+  return price * quantity
+}
+```
+
+**4. Component Props**
+```typescript
+// ✅ GOOD - Define props interface
+interface ProjectCardProps {
+  title: string
+  description: string
+  technologies: string[]
+  imageUrl?: string  // Optional
+}
+
+const props = defineProps<ProjectCardProps>()
+
+// ❌ BAD - No typing
+const props = defineProps(['title', 'description'])
+```
+
+**5. Composables**
+```typescript
+// ✅ GOOD - Typed return
+export function useProjects() {
+  const projects = ref<Project[]>([])
+  const loading = ref<boolean>(false)
+
+  const fetchProjects = async (): Promise<void> => {
+    loading.value = true
+    // ...
+  }
+
+  return {
+    projects: readonly(projects),
+    loading: readonly(loading),
+    fetchProjects
+  }
+}
+```
+
+**6. Event Handlers**
+```typescript
+// ✅ GOOD
+const handleClick = (event: MouseEvent): void => {
+  console.log(event.target)
+}
+
+const handleSubmit = async (formData: FormData): Promise<void> => {
+  // ...
+}
+```
+
+### Complex Type Organization
+
+**When types are complex, create dedicated files in `types/` directory:**
+
+```typescript
+// types/project.ts
+export interface Project {
+  id: string
+  title: string
+  description: string
+  technologies: Technology[]
+  status: ProjectStatus
+}
+
+export type ProjectStatus = 'draft' | 'published' | 'archived'
+
+export interface Technology {
+  name: string
+  icon: string
+}
+```
+
+**File structure for types:**
+- Component-specific types → `types/components/`
+- Constants types → `types/constants/`
+- API/Data types → `types/` (root)
+- Keep type files focused and single-purpose
+
+### Clean Code Principles (Non-Negotiable)
+
+- **Descriptive naming**: Clear, self-documenting names (no `data`, `temp`, `x`)
+- **Single responsibility**: One function = one purpose
+- **No magic numbers/strings**: Use named constants
+- **DRY principle**: Don't repeat yourself
+- **Proper error handling**: Explicit try/catch and error types
+- **Meaningful comments**: Only when logic is complex (code should be self-explanatory)
+- **Consistent formatting**: Follow existing patterns
+
 ## Important Notes
 
 - **Color mode**: Uses class-based dark mode (`darkMode: ["class"]` in Tailwind config)
+  - Default preference: dark mode
+  - Managed by `@nuxtjs/color-mode` module
 - **reCAPTCHA**: Configured via plugin at `plugins/vue-recaptcha-v3.ts` (client-side only)
+  - Site key is public and safe to commit
+  - Badge auto-hidden in configuration
 - **Component auto-import**: Nuxt auto-imports components from `components/` directory
 - **Composables**: Auto-imported from `composables/` directory
-- **Type safety**: Project uses strict TypeScript - maintain type definitions in `types/`
+- **Type safety**: Project uses STRICT TypeScript - ALL code must be explicitly typed (see Coding Standards)
+- **SEO**: Global SEO configuration in `app.vue` using `useSeoMeta()` and `useHead()`
+  - Translations for meta tags via i18n
+  - Dynamic `lang` attribute based on current locale
+  - Configured for social sharing (Open Graph, Twitter Cards)
+
+## Migration Notes
+
+This codebase is currently being migrated from a personal portfolio (Mehdi DIAS GOMES) to the Zenith agency website. When working on this project:
+- Prioritize Zenith branding and color scheme over legacy portfolio styles
+- Maintain all existing technical infrastructure and component architecture
+- Phase 1 focuses on Landing + Contact pages only
+- Keep all UI components (shadcn) but adapt styling to Zenith brand
+- Update typography from Trirong to Montserrat throughout
 
 ## Related Documentation
 
-For detailed project context and structure, see `LLMS.md` which contains comprehensive information about the portfolio content, technologies, and developer profile.
+**Note**: `LLMS.md` contains the legacy portfolio context. For current project direction, refer to the "Project Context: Zenith" section at the top of this file.
