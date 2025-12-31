@@ -1,5 +1,5 @@
 <template>
-  <section class="relative flex h-screen items-center justify-center overflow-hidden px-4">
+  <section class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-20">
     <NuxtImg
       src="/images/decorations/left_spotlight.png"
       alt=""
