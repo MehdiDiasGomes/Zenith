@@ -10,6 +10,7 @@
     "ariaLabel": "Main navigation",
     "logoAriaLabel": "Return to Zenith home",
     "home": "Home",
+    "services": "Services",
     "contact": "Contact",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
@@ -27,6 +28,34 @@
     "cta": {
       "primary": "Get in touch",
       "secondary": "Discover my work"
+    }
+  },
+  "marquee": {
+    "webDesigner": "Web Designer",
+    "fullstackDev": "Full-Stack Developer",
+    "uiUx": "UI/UX Designer",
+    "performance": "Performance Expert",
+    "seoExpert": "SEO Expert",
+    "creative": "Digital Creative"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Complete solutions to bring your projects to life",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Modern and high-performance websites with the latest technologies"
+    },
+    "uiUx": {
+      "title": "UI/UX Design",
+      "description": "Intuitive interfaces and optimal user experiences"
+    },
+    "performance": {
+      "title": "Performance & SEO",
+      "description": "Technical optimization for optimal search engine ranking"
+    },
+    "maintenance": {
+      "title": "Maintenance",
+      "description": "Ongoing support and evolution of your website"
     }
   }
 }
