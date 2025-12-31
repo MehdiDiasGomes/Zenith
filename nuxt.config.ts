@@ -37,7 +37,7 @@ export default defineNuxtConfig({
       },
     ],
     lazy: true,
-    langDir: "./app/i18n/locales",
+    langDir: "locales",
     defaultLocale: "fr",
   },
   shadcn: {
