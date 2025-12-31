@@ -58,7 +58,7 @@
       <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <NuxtLink
           to="/contact"
-          class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
+          class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
         >
           {{ $t('hero.cta.primary') }}
         </NuxtLink>

@@ -7,7 +7,12 @@
       <button
         type="button"
         aria-label="Paramètres"
-        class="flex h-14 w-14 shrink-0 items-center justify-center rounded-l-full bg-zenith-gold-vivid text-white shadow-lg shadow-zenith-gold-vivid/30 transition-shadow duration-200 hover:shadow-xl hover:shadow-zenith-gold-vivid/40"
+        class="flex h-14 w-14 shrink-0 items-center justify-center rounded-l-full transition-all duration-500"
+        :class="
+          isOpen
+            ? 'border-y border-l border-zenith-bronze-dark/10 bg-transparent text-zenith-gold-vivid shadow-none dark:border-zenith-gold-bronze/20'
+            : 'bg-zenith-gold-vivid text-white shadow-lg shadow-zenith-gold-vivid/30 hover:shadow-xl hover:shadow-zenith-gold-vivid/40'
+        "
         @click="toggleSettings"
       >
         <Icon
