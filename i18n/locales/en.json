@@ -16,9 +16,10 @@
     "contact": "Contact"
   },
   "landing": {
+    "availability": "Available for your projects",
     "brand": "Mehdi, your freelance fullstack developer",
     "tagline": "I support startups and SMEs in building their web applications",
-    "description": "I transform your ideas into modern and high-performance web solutions. Full-stack development expertise with Vue.js, Nuxt.js, and Laravel to create applications that leave a lasting impression.",
+    "description": "Fullstack developer specialized in Nuxt.js & Laravel. I quickly transform your ideas into modern web applications: showcase sites, SaaS, custom interfaces. Up-to-date tech stack, fast delivery, and I remain available after launch. Based in Metz, I work with startups and SMEs that want to move fast.",
     "cta": {
       "portfolio": "View my projects",
       "contact": "Contact me"
