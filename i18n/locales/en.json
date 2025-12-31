@@ -5,5 +5,14 @@
   },
   "home": {
     "title": "Welcome to Zenith"
+  },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "logoAriaLabel": "Return to Zenith home",
+    "home": "Home",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu",
+    "switchToLang": "Switch language to {lang}"
   }
 }

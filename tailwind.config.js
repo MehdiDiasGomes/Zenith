@@ -19,6 +19,21 @@ module.exports = {
         trirong: ['Trirong', 'serif'],
       },
       colors: {
+        // Zenith Brand Colors
+        'zenith-bronze-dark': '#7B542F',
+        'zenith-gold-bronze': '#B6771D',
+        'zenith-gold-vivid': '#FF9D00',
+        'zenith-champagne': '#FFCF71',
+        'zenith-bg-dark': '#0A0A0A',
+        'zenith-bg-light': '#FAFAF9',
+        'zenith-bg-secondary-dark': '#1A1A1A',
+        'zenith-bg-secondary-light': '#F5F5F4',
+        'zenith-text-primary-dark': '#FFFFFF',
+        'zenith-text-primary-light': '#1A1A1A',
+        'zenith-text-secondary-dark': '#E5E5E5',
+        'zenith-text-secondary-light': '#737373',
+
+        // Legacy colors
         mauve: "hsl(var(--mauve))",
         foreground: "hsl(var(--foreground))",
         darkblue: "hsl(var(--darkblue))",

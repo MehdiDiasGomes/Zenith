@@ -27,3 +27,6 @@ pnpm-lock.yaml
 .idea/
 *.swp
 *.swo
+
+# UI Components
+./app/components/Navbar.vue
