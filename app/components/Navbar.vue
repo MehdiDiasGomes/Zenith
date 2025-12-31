@@ -8,22 +8,15 @@
         <div class="flex h-16 items-center justify-between md:h-20">
           <NuxtLink
             to="/"
-            class="group flex items-center gap-3"
+            class="group flex items-center"
             :aria-label="$t('nav.logoAriaLabel')"
           >
             <NuxtImg
-              src="/images/brand/z_logo.png"
+              src="/images/brand/z_logo.webp"
               alt="Zenith Logo"
-              class="h-8 w-auto transition-transform group-hover:scale-105 md:h-10"
+              class="h-8 w-auto transition-transform group-hover:scale-105 md:h-12"
               loading="eager"
-              width="40"
-              height="40"
             />
-            <span
-              class="bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne bg-clip-text text-xl font-bold text-transparent md:text-2xl"
-            >
-              ZENITH
-            </span>
           </NuxtLink>
 
           <div class="hidden items-center gap-8 md:flex">
@@ -43,7 +36,7 @@
 
           <div class="flex items-center gap-3">
             <div
-              class="hidden items-center gap-1 rounded-lg bg-zenith-bg-secondary-light p-1 dark:bg-zenith-bg-secondary-dark sm:flex"
+              class="hidden items-center gap-1 rounded-xl bg-zenith-bg-secondary-light p-1 dark:bg-zenith-bg-secondary-dark sm:flex"
             >
               <button
                 v-for="localeItem in availableLocales"
