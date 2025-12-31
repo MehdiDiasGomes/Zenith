@@ -1,5 +1,5 @@
 <template>
-  <section class="relative flex items-center justify-center px-4 h-screen overflow-hidden">
+  <section class="relative flex h-screen items-center justify-center overflow-hidden px-4">
     <NuxtImg
       src="/images/decorations/left_spotlight.png"
       alt=""
@@ -23,7 +23,9 @@
             />
             <span class="relative inline-flex h-2 w-2 rounded-full bg-zenith-gold-vivid" />
           </span>
-          <span class="text-xs font-medium text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+          <span
+            class="text-xs font-medium text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+          >
             {{ $t('hero.availability') }}
           </span>
         </div>
@@ -42,7 +44,7 @@
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part3') }}
         </span>
-        <span class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+        <span class="dark:text-zenith-text-secondary-dark">
           {{ $t('hero.title.part4') }}
         </span>
       </h1>
@@ -75,5 +77,4 @@
   </section>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

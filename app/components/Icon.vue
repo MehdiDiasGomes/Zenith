@@ -14,5 +14,11 @@ watchEffect(() => {
 </script>
 
 <template>
-  <component :is="icon" :size="size" :color="color" :stroke-width="strokeWidth" :default-class="defaultClass" />
+  <component
+    :is="icon"
+    :size="size"
+    :color="color"
+    :stroke-width="strokeWidth"
+    :default-class="defaultClass"
+  />
 </template>

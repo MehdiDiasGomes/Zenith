@@ -6,11 +6,7 @@
     >
       <div class="px-4 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between md:h-20">
-          <NuxtLink
-            to="/"
-            class="group flex items-center"
-            :aria-label="$t('nav.logoAriaLabel')"
-          >
+          <NuxtLink to="/" class="group flex items-center" :aria-label="$t('nav.logoAriaLabel')">
             <NuxtImg
               src="/images/brand/z_logo.webp"
               alt="Zenith Logo"
@@ -26,50 +22,23 @@
               :to="item.to"
               class="group relative text-base font-medium text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
               :aria-current="isActive(item.to) ? 'page' : undefined"
+              :aria-label="item.to === '/' ? $t('nav.home') : undefined"
             >
-              {{ $t(item.label) }}
+              <Icon
+                v-if="item.to === '/'"
+                name="Home"
+                size="20"
+                aria-hidden="true"
+              />
+              <template v-else>{{ $t(item.label) }}</template>
               <span
-                class="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
+                class="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300"
+                :class="isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'"
               />
             </NuxtLink>
           </div>
 
           <div class="flex items-center gap-3">
-            <div
-              class="hidden items-center gap-1 rounded-xl bg-zenith-bg-secondary-light p-1 dark:bg-zenith-bg-secondary-dark sm:flex"
-            >
-              <button
-                v-for="localeItem in availableLocales"
-                :key="localeItem.code"
-                type="button"
-                :aria-label="$t('nav.switchToLang', { lang: localeItem.name })"
-                :aria-current="currentLocale === localeItem.code ? 'true' : 'false'"
-                class="rounded-lg px-3 py-1.5 text-sm font-semibold transition-all duration-200"
-                :class="
-                  currentLocale === localeItem.code
-                    ? 'bg-zenith-gold-vivid text-white shadow-md'
-                    : 'text-zenith-text-secondary-light hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark'
-                "
-                @click="switchLocale(localeItem.code)"
-              >
-                {{ localeItem.code.toUpperCase() }}
-              </button>
-            </div>
-
-            <button
-              type="button"
-              :aria-label="$t('nav.toggleTheme')"
-              :aria-pressed="colorMode.value === 'dark'"
-              class="rounded-lg bg-zenith-bg-secondary-light p-2.5 text-zenith-gold-bronze transition-all duration-200 hover:text-zenith-gold-vivid hover:shadow-lg hover:shadow-zenith-gold-vivid/20 dark:bg-zenith-bg-secondary-dark"
-              @click="toggleColorMode"
-            >
-              <Icon
-                :name="colorMode.value === 'dark' ? 'Sun' : 'Moon'"
-                size="20"
-                aria-hidden="true"
-              />
-            </button>
-
             <button
               type="button"
               :aria-label="$t('nav.toggleMenu')"
@@ -99,35 +68,24 @@
                 v-for="item in navItems"
                 :key="item.to"
                 :to="item.to"
-                class="rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
+                class="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
                 :class="
                   isActive(item.to)
                     ? 'bg-zenith-gold-vivid/10 text-zenith-gold-vivid'
                     : 'text-zenith-text-primary-light hover:bg-zenith-bg-secondary-light dark:text-zenith-text-primary-dark dark:hover:bg-zenith-bg-secondary-dark'
                 "
                 :aria-current="isActive(item.to) ? 'page' : undefined"
+                :aria-label="item.to === '/' ? $t('nav.home') : undefined"
                 @click="closeMobileMenu"
               >
-                {{ $t(item.label) }}
+                <Icon
+                  v-if="item.to === '/'"
+                  name="Home"
+                  size="20"
+                  aria-hidden="true"
+                />
+                <template v-else>{{ $t(item.label) }}</template>
               </NuxtLink>
-
-              <div class="flex gap-2 px-4 pt-2 sm:hidden">
-                <button
-                  v-for="localeItem in availableLocales"
-                  :key="localeItem.code"
-                  type="button"
-                  :aria-label="$t('nav.switchToLang', { lang: localeItem.name })"
-                  class="flex-1 rounded-lg px-3 py-2 text-sm font-semibold transition-all duration-200"
-                  :class="
-                    currentLocale === localeItem.code
-                      ? 'bg-zenith-gold-vivid text-white shadow-md'
-                      : 'bg-zenith-bg-secondary-light text-zenith-text-secondary-light dark:bg-zenith-bg-secondary-dark dark:text-zenith-text-secondary-dark'
-                  "
-                  @click="switchLocale(localeItem.code)"
-                >
-                  {{ localeItem.name }}
-                </button>
-              </div>
             </div>
           </div>
         </Transition>
@@ -142,30 +100,7 @@ interface NavItem {
   label: string
 }
 
-interface Locale {
-  code: 'fr' | 'en'
-  name: string
-}
-
-const colorMode = useColorMode()
-
-const toggleColorMode = (): void => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-}
-
-const { locale, setLocale } = useI18n()
 const route = useRoute()
-
-const currentLocale = computed<string>(() => locale.value)
-
-const availableLocales: Locale[] = [
-  { code: 'fr', name: 'Français' },
-  { code: 'en', name: 'English' },
-]
-
-const switchLocale = (newLocale: 'fr' | 'en'): void => {
-  setLocale(newLocale)
-}
 
 const navItems: NavItem[] = [
   { to: '/', label: 'nav.home' },
