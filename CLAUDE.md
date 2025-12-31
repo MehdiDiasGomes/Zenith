@@ -383,6 +383,133 @@ export interface Technology {
 - **Meaningful comments**: Only when logic is complex (code should be self-explanatory)
 - **Consistent formatting**: Follow existing patterns
 
+## Accessibility & Internationalization (CRITICAL)
+
+**IMPORTANT: This project MUST follow strict accessibility (a11y) standards and full multilingual support.**
+
+### Accessibility (a11y) Requirements
+
+**WCAG 2.1 Level AA compliance is MANDATORY:**
+
+1. **Semantic HTML**
+   - Use proper heading hierarchy (h1 → h2 → h3, no skipping)
+   - Use semantic elements (`<nav>`, `<main>`, `<article>`, `<aside>`, `<footer>`)
+   - NEVER use `<div>` for interactive elements
+
+2. **ARIA Labels & Attributes**
+   ```vue
+   <!-- ✅ GOOD -->
+   <button aria-label="Close menu">
+     <IconClose aria-hidden="true" />
+   </button>
+
+   <nav aria-label="Main navigation">...</nav>
+   <img src="..." alt="Descriptive text" />
+
+   <!-- ❌ BAD -->
+   <button><IconClose /></button>  <!-- No label -->
+   <img src="..." />  <!-- Missing alt -->
+   ```
+
+3. **Keyboard Navigation**
+   - ALL interactive elements must be keyboard accessible (Tab, Enter, Escape)
+   - Visible focus states (`:focus-visible` in Tailwind)
+   - Logical tab order
+   - No keyboard traps
+
+4. **Color Contrast**
+   - Minimum 4.5:1 for normal text
+   - Minimum 3:1 for large text (18pt+)
+   - Test all gold/bronze colors against backgrounds
+   - Don't rely on color alone to convey information
+
+5. **Form Accessibility**
+   ```vue
+   <!-- ✅ GOOD -->
+   <FormField>
+     <FormLabel for="email">{{ $t('form.email') }}</FormLabel>
+     <FormControl>
+       <Input
+         id="email"
+         type="email"
+         :aria-describedby="error ? 'email-error' : undefined"
+         :aria-invalid="!!error"
+       />
+     </FormControl>
+     <FormMessage id="email-error">{{ error }}</FormMessage>
+   </FormField>
+   ```
+
+6. **Screen Reader Support**
+   - Use `aria-live` for dynamic content
+   - Add `sr-only` class for screen-reader-only text
+   - Proper `role` attributes where needed
+   - Test with NVDA/JAWS/VoiceOver
+
+### Internationalization (i18n) Requirements
+
+**Dual language support (French/English) is MANDATORY:**
+
+1. **All User-Facing Text MUST Use i18n**
+   ```vue
+   <!-- ✅ GOOD -->
+   <h1>{{ $t('home.title') }}</h1>
+   <Button :aria-label="$t('actions.close')">
+     {{ $t('actions.close') }}
+   </Button>
+
+   <!-- ❌ BAD -->
+   <h1>Welcome to Zenith</h1>  <!-- Hardcoded text -->
+   ```
+
+2. **Translation File Structure**
+   ```json
+   // app/i18n/locales/fr.json
+   {
+     "home": {
+       "title": "Bienvenue chez Zenith",
+       "description": "Agence de développement web"
+     },
+     "actions": {
+       "close": "Fermer",
+       "open": "Ouvrir"
+     },
+     "aria": {
+       "mainNav": "Navigation principale",
+       "closeMenu": "Fermer le menu"
+     }
+   }
+   ```
+
+3. **Combine i18n with ARIA**
+   ```vue
+   <nav :aria-label="$t('aria.mainNav')">
+     <button
+       :aria-label="$t('aria.closeMenu')"
+       :aria-expanded="isOpen"
+     >
+       <IconClose :aria-hidden="true" />
+       <span class="sr-only">{{ $t('actions.close') }}</span>
+     </button>
+   </nav>
+   ```
+
+4. **Date/Number Formatting**
+   - Use i18n number and date formatters
+   - Respect locale-specific formats
+
+5. **RTL Support** (Future consideration)
+   - Structure prepared for RTL languages if needed
+   - Use logical properties (start/end vs left/right)
+
+### Testing Requirements
+
+- **Manual testing**: Test with keyboard only (no mouse)
+- **Screen reader testing**: Test with at least one screen reader
+- **Automated tools**: Run axe DevTools or Lighthouse accessibility audit
+- **Color contrast**: Use WebAIM Contrast Checker
+- **Language switching**: Test all features in both FR and EN
+
 ## Important Notes
 
 - **Color mode**: Uses class-based dark mode (`darkMode: ["class"]` in Tailwind config)
