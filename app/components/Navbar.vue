@@ -100,14 +100,9 @@
 </template>
 
 <script setup lang="ts">
-interface NavItem {
-  to: string
-  label: string
-}
+import { navItems } from '~/constants/navigation'
 
 const route = useRoute()
-
-const navItems: NavItem[] = [{ to: '/', label: 'nav.home' }]
 
 const mobileMenuOpen = ref<boolean>(false)
 
