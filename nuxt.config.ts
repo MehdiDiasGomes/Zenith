@@ -37,11 +37,12 @@ export default defineNuxtConfig({
       },
     ],
     lazy: true,
+    langDir: "i18n/locales",
     defaultLocale: "fr",
   },
   shadcn: {
     prefix: "",
-    componentDir: "./components/ui",
+    componentDir: "./app/components/ui",
   },
   colorMode: {
     classSuffix: '',
