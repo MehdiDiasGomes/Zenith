@@ -18,13 +18,13 @@ interface SheetContentProps extends DialogContentProps {
   side?: SheetVariants['side']
 }
 
-defineOptions({
-  inheritAttrs: false,
-})
-
 const props = defineProps<SheetContentProps>()
 
 const emits = defineEmits<DialogContentEmits>()
+
+defineOptions({
+  inheritAttrs: false,
+})
 
 const delegatedProps = computed(() => {
   const { class: _, side, ...delegated } = props

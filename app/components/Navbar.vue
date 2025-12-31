@@ -47,20 +47,20 @@
               class="hidden items-center gap-1 rounded-lg bg-zenith-bg-secondary-light p-1 dark:bg-zenith-bg-secondary-dark sm:flex"
             >
               <button
-                v-for="locale in availableLocales"
-                :key="locale.code"
+                v-for="localeItem in availableLocales"
+                :key="localeItem.code"
                 type="button"
-                :aria-label="$t('nav.switchToLang', { lang: locale.name })"
-                :aria-current="currentLocale === locale.code ? 'true' : 'false'"
+                :aria-label="$t('nav.switchToLang', { lang: localeItem.name })"
+                :aria-current="currentLocale === localeItem.code ? 'true' : 'false'"
                 class="rounded-md px-3 py-1.5 text-sm font-semibold transition-all duration-200"
                 :class="
-                  currentLocale === locale.code
+                  currentLocale === localeItem.code
                     ? 'bg-zenith-gold-vivid text-white shadow-md'
                     : 'text-zenith-text-secondary-light hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark'
                 "
-                @click="switchLocale(locale.code)"
+                @click="switchLocale(localeItem.code)"
               >
-                {{ locale.code.toUpperCase() }}
+                {{ localeItem.code.toUpperCase() }}
               </button>
             </div>
 
@@ -121,19 +121,19 @@
 
               <div class="flex gap-2 px-4 pt-2 sm:hidden">
                 <button
-                  v-for="locale in availableLocales"
-                  :key="locale.code"
+                  v-for="localeItem in availableLocales"
+                  :key="localeItem.code"
                   type="button"
-                  :aria-label="$t('nav.switchToLang', { lang: locale.name })"
+                  :aria-label="$t('nav.switchToLang', { lang: localeItem.name })"
                   class="flex-1 rounded-md px-3 py-2 text-sm font-semibold transition-all duration-200"
                   :class="
-                    currentLocale === locale.code
+                    currentLocale === localeItem.code
                       ? 'bg-zenith-gold-vivid text-white shadow-md'
                       : 'bg-zenith-bg-secondary-light text-zenith-text-secondary-light dark:bg-zenith-bg-secondary-dark dark:text-zenith-text-secondary-dark'
                   "
-                  @click="switchLocale(locale.code)"
+                  @click="switchLocale(localeItem.code)"
                 >
-                  {{ locale.name }}
+                  {{ localeItem.name }}
                 </button>
               </div>
             </div>
@@ -203,6 +203,6 @@ watch(
   () => route.path,
   () => {
     closeMobileMenu()
-  }
+  },
 )
 </script>

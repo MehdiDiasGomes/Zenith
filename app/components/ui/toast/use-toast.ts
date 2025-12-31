@@ -5,10 +5,10 @@ import { computed, ref } from 'vue'
 const TOAST_LIMIT = 1
 const TOAST_REMOVE_DELAY = 1000000
 
-export type StringOrVNode =
-  | string
-  | VNode
-  | (() => VNode)
+export type StringOrVNode
+  = | string
+    | VNode
+    | (() => VNode)
 
 type ToasterToast = ToastProps & {
   id: string
@@ -33,8 +33,8 @@ function genId() {
 
 type ActionType = typeof actionTypes
 
-type Action =
-  | {
+type Action
+  = | {
     type: ActionType['ADD_TOAST']
     toast: ToasterToast
   }
@@ -58,8 +58,7 @@ interface State {
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
 
 function addToRemoveQueue(toastId: string) {
-  if (toastTimeouts.has(toastId))
-    return
+  if (toastTimeouts.has(toastId)) { return }
 
   const timeout = setTimeout(() => {
     toastTimeouts.delete(toastId)
@@ -112,10 +111,8 @@ function dispatch(action: Action) {
     }
 
     case actionTypes.REMOVE_TOAST:
-      if (action.toastId === undefined)
-        state.value.toasts = []
-      else
-        state.value.toasts = state.value.toasts.filter(t => t.id !== action.toastId)
+      if (action.toastId === undefined) { state.value.toasts = [] }
+      else { state.value.toasts = state.value.toasts.filter(t => t.id !== action.toastId) }
 
       break
   }
@@ -149,8 +146,7 @@ function toast(props: Toast) {
       id,
       open: true,
       onOpenChange: (open: boolean) => {
-        if (!open)
-          dismiss()
+        if (!open) { dismiss() }
       },
     },
   })

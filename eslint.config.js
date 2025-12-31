@@ -132,12 +132,13 @@ export default createConfigForNuxt({
   })
   .override('nuxt/vue/rules', {
     rules: {
+      'vue/multi-word-component-names': 'off',
       'vue/html-self-closing': [
         'error',
         {
           html: {
             void: 'always',
-            normal: 'never',
+            normal: 'always',
             component: 'always',
           },
         },
