@@ -3,4 +3,7 @@ export interface NavItem {
   label: string
 }
 
-export const navItems: NavItem[] = [{ to: '/', label: 'nav.home' }]
+export const navItems: NavItem[] = [
+  { to: '/', label: 'nav.home' },
+  { to: '#services', label: 'nav.services' },
+]

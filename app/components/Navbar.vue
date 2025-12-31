@@ -16,13 +16,16 @@
           </NuxtLink>
 
           <div class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-            <NuxtLink
+            <component
+              :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
               v-for="item in navItems"
               :key="item.to"
-              :to="item.to"
-              class="group relative text-base font-medium text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
+              :to="item.to.startsWith('#') ? undefined : item.to"
+              :href="item.to.startsWith('#') ? item.to : undefined"
+              class="group relative cursor-pointer text-base font-medium text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
               :aria-current="isActive(item.to) ? 'page' : undefined"
               :aria-label="item.to === '/' ? $t('nav.home') : undefined"
+              @click="handleNavClick($event, item.to)"
             >
               <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
               <template v-else>{{ $t(item.label) }}</template>
@@ -30,7 +33,7 @@
                 class="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300"
                 :class="isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'"
               />
-            </NuxtLink>
+            </component>
           </div>
 
           <div class="flex items-center gap-3">
@@ -66,11 +69,13 @@
             class="border-t border-zenith-bronze-dark/10 py-4 dark:border-zenith-gold-bronze/20 md:hidden"
           >
             <div class="flex flex-col gap-2">
-              <NuxtLink
+              <component
+                :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
                 v-for="item in navItems"
                 :key="item.to"
-                :to="item.to"
-                class="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
+                :to="item.to.startsWith('#') ? undefined : item.to"
+                :href="item.to.startsWith('#') ? item.to : undefined"
+                class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
                 :class="
                   isActive(item.to)
                     ? 'bg-zenith-gold-vivid/10 text-zenith-gold-vivid'
@@ -78,11 +83,11 @@
                 "
                 :aria-current="isActive(item.to) ? 'page' : undefined"
                 :aria-label="item.to === '/' ? $t('nav.home') : undefined"
-                @click="closeMobileMenu"
+                @click="handleNavClick($event, item.to)"
               >
                 <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
                 <template v-else>{{ $t(item.label) }}</template>
-              </NuxtLink>
+              </component>
 
               <NuxtLink
                 to="/contact"
@@ -105,6 +110,7 @@ import { navItems } from '~/constants/navigation'
 const route = useRoute()
 
 const mobileMenuOpen = ref<boolean>(false)
+const activeSection = ref<string>('')
 
 const toggleMobileMenu = (): void => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -114,12 +120,87 @@ const closeMobileMenu = (): void => {
   mobileMenuOpen.value = false
 }
 
-const isActive = (path: string): boolean => {
+const scrollToSection = (event: Event, anchor: string): void => {
+  event.preventDefault()
+  const targetId = anchor.replace('#', '')
+  const targetElement = document.getElementById(targetId)
+
+  if (targetElement) {
+    const navbarHeight = 100
+    const elementPosition = targetElement.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.scrollY - navbarHeight
+
+    window.scrollTo({
+      top: offsetPosition,
+    })
+
+    closeMobileMenu()
+  }
+}
+
+const scrollToTop = (event: Event): void => {
+  if (route.path === '/') {
+    event.preventDefault()
+    window.scrollTo({
+      top: 0,
+    })
+    closeMobileMenu()
+  }
+}
+
+const handleNavClick = (event: Event, path: string): void => {
   if (path === '/') {
-    return route.path === '/'
+    scrollToTop(event)
+  } else if (path.startsWith('#')) {
+    scrollToSection(event, path)
+  } else {
+    closeMobileMenu()
+  }
+}
+
+const isActive = (path: string): boolean => {
+  if (path.startsWith('#')) {
+    return activeSection.value === path
+  }
+  if (path === '/') {
+    return route.path === '/' && activeSection.value === ''
   }
   return route.path.startsWith(path)
 }
+
+onMounted(() => {
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px 0px -66% 0px',
+    threshold: 0,
+  }
+
+  const observerCallback = (entries: IntersectionObserverEntry[]): void => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        activeSection.value = `#${entry.target.id}`
+      }
+    })
+  }
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions)
+
+  const sections = document.querySelectorAll('section[id]')
+  sections.forEach((section) => observer.observe(section))
+
+  const handleScroll = (): void => {
+    if (window.scrollY < 200) {
+      activeSection.value = ''
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll)
+
+  onUnmounted(() => {
+    observer.disconnect()
+    window.removeEventListener('scroll', handleScroll)
+  })
+})
 
 watch(
   () => route.path,
