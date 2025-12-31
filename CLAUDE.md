@@ -215,7 +215,7 @@ import * as z from 'zod'
 const formSchema = toTypedSchema(
   z.object({
     field: z.string().min(1, 'Required message'),
-  })
+  }),
 )
 ```
 

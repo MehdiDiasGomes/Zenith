@@ -24,7 +24,9 @@
       >
         <div class="w-64 space-y-6">
           <div>
-            <h3 class="mb-3 text-sm font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            <h3
+              class="mb-3 text-sm font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+            >
               Thème
             </h3>
             <div class="flex gap-2">
@@ -58,7 +60,9 @@
           </div>
 
           <div>
-            <h3 class="mb-3 text-sm font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            <h3
+              class="mb-3 text-sm font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+            >
               Langue
             </h3>
             <div class="flex gap-2">

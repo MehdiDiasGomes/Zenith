@@ -1,4 +1,5 @@
 import { createConfigForNuxt } from '@nuxt/eslint-config/flat'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default createConfigForNuxt({
   features: {
@@ -6,6 +7,7 @@ export default createConfigForNuxt({
     stylistic: true,
   },
 })
+  .append(eslintConfigPrettier)
   .append({
     ignores: [
       'node_modules/**',
@@ -17,6 +19,8 @@ export default createConfigForNuxt({
       '*.config.js',
       '*.config.ts',
       'bun.lock',
+      'app/components/ui/**',
+      'app/lib/utils.ts',
     ],
   })
   .override('nuxt/typescript/rules', {
@@ -143,12 +147,6 @@ export default createConfigForNuxt({
           },
         },
       ],
-      'vue/max-attributes-per-line': [
-        'error',
-        {
-          singleline: 3,
-          multiline: 1,
-        },
-      ],
+      'vue/max-attributes-per-line': 'off',
     },
   })

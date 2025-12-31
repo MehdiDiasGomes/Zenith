@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref, watchEffect } from 'vue'
-import type { Component } from 'vue'
 import * as icons from 'lucide-vue-next'
 import type IconProps from '~/types/components/props/IconProps'
 

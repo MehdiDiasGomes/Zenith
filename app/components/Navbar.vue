@@ -24,12 +24,7 @@
               :aria-current="isActive(item.to) ? 'page' : undefined"
               :aria-label="item.to === '/' ? $t('nav.home') : undefined"
             >
-              <Icon
-                v-if="item.to === '/'"
-                name="Home"
-                size="20"
-                aria-hidden="true"
-              />
+              <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
               <template v-else>{{ $t(item.label) }}</template>
               <span
                 class="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300"
@@ -78,12 +73,7 @@
                 :aria-label="item.to === '/' ? $t('nav.home') : undefined"
                 @click="closeMobileMenu"
               >
-                <Icon
-                  v-if="item.to === '/'"
-                  name="Home"
-                  size="20"
-                  aria-hidden="true"
-                />
+                <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
                 <template v-else>{{ $t(item.label) }}</template>
               </NuxtLink>
             </div>
