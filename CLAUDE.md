@@ -7,16 +7,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This project is the website for **Zenith**, a custom web development and design agency. The site is being migrated from a personal portfolio to a corporate agency website while maintaining the same technical stack.
 
 ### About Zenith
+
 - **Type**: Web development and design agency
 - **Services**: Custom website creation and development
 - **Brand positioning**: Luxury, professional, accessible
 
 ### Current Migration Scope
+
 **Phase 1 (Current)**:
+
 - Landing page
 - Contact page
 
 **Phase 2 (Later)**:
+
 - About page
 - Blog/News section
 
@@ -25,31 +29,29 @@ This project is the website for **Zenith**, a custom web development and design 
 **Logo**: `public/images/brand/z_logo.png` - Golden gradient logo with "ZENITH" text
 
 **Color Palette** (Gold/Bronze luxury theme):
+
 ```css
 /* Primary Colors */
---zenith-bronze-dark: #7B542F    /* Dark bronze for text, borders, dark elements */
---zenith-gold-bronze: #B6771D    /* Main gold-bronze for primary accents, buttons, links */
---zenith-gold-vivid: #FF9D00     /* Vivid gold for CTAs, hover states, important elements */
---zenith-champagne: #FFCF71      /* Light champagne for highlights, gradients, light effects */
-
-/* Neutral Colors */
---zenith-bg-dark: #0A0A0A        /* Dark mode background */
---zenith-bg-light: #FAFAF9       /* Light mode background */
---zenith-bg-secondary-dark: #1A1A1A
---zenith-bg-secondary-light: #F5F5F4
---zenith-text-primary-dark: #FFFFFF
---zenith-text-primary-light: #1A1A1A
---zenith-text-secondary-dark: #E5E5E5
---zenith-text-secondary-light: #737373
+--zenith-bronze-dark: #7b542f /* Dark bronze for text, borders, dark elements */
+  --zenith-gold-bronze: #b6771d /* Main gold-bronze for primary accents, buttons, links */
+  --zenith-gold-vivid: #ff9d00 /* Vivid gold for CTAs, hover states, important elements */
+  --zenith-champagne: #ffcf71 /* Light champagne for highlights, gradients, light effects */
+  /* Neutral Colors */ --zenith-bg-dark: #0a0a0a /* Dark mode background */
+  --zenith-bg-light: #fafaf9 /* Light mode background */ --zenith-bg-secondary-dark: #1a1a1a
+  --zenith-bg-secondary-light: #f5f5f4 --zenith-text-primary-dark: #ffffff
+  --zenith-text-primary-light: #1a1a1a --zenith-text-secondary-dark: #e5e5e5
+  --zenith-text-secondary-light: #737373;
 ```
 
 **Typography**:
+
 - **Primary font**: Montserrat (replaces Trirong)
   - Headings: Montserrat Bold/SemiBold (600-700)
   - Body: Montserrat Regular/Medium (400-500)
   - CTAs: Montserrat SemiBold (600)
 
 **Visual Style**:
+
 - Corporate modern: Professional yet accessible
 - Subtle and fluid animations
 - Generous spacing for breathing room
@@ -58,6 +60,7 @@ This project is the website for **Zenith**, a custom web development and design 
 - Dark/Light mode support (both themes maintained)
 
 **Component Styling Guidelines**:
+
 - Buttons: Gold background (#FF9D00) with golden glow on hover
 - Cards: Bronze borders (#B6771D) with subtle hover effects
 - Forms: Inputs with vivid gold focus states
@@ -66,6 +69,7 @@ This project is the website for **Zenith**, a custom web development and design 
 ## Development Commands
 
 ### Running the project
+
 ```bash
 bun dev                # Start development server
 bun dev:http           # Start dev server with network access (--host)
@@ -79,6 +83,7 @@ bun preview            # Preview production build
 ## Project Architecture
 
 ### Technology Stack
+
 - **Framework**: Nuxt.js 3 (v3.15.4) with Vue.js
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS with custom utility classes
@@ -124,18 +129,21 @@ content/               # Markdown content for @nuxt/content
 ### Core Component Organization
 
 **Main layout components**:
+
 - `layouts/default.vue` - Main layout wrapper
 - `components/Navbar.vue` - Navigation bar
 - `components/Header.vue` - Homepage header
 - `components/Footer.vue` - Site footer
 
 **Feature components**:
+
 - `components/Projects.vue` - Projects listing
 - `components/WorkXp.vue` - Work experience timeline
 - `components/ContactForm.vue` - Contact form with validation
 - `components/LangChoice.vue` - Language switcher
 
 **About section** (`components/about/`):
+
 - `About.vue` - Main about section wrapper
 - `AboutHeader.vue` - About page header
 - `AboutEducation.vue` - Education history
@@ -145,11 +153,13 @@ content/               # Markdown content for @nuxt/content
 ### Styling System
 
 **Custom Tailwind utilities** (defined in `tailwind.config.js`):
+
 - `.mp-home` - Responsive horizontal padding for main content
 - `.text-xxl`, `.text-xl`, `.text-l`, `.text-m`, `.text-s` - Responsive text sizes
 - `.text-intro`, `.text-main`, `.text-legend`, `.text-cta` - Semantic text classes
 
 **Custom utility classes** (defined in `assets/css/tailwind.css`):
+
 - `.glass-effect` - Glass morphism effect with backdrop blur
 - `.glass-effect-dark` - Dark variant of glass effect
 - `.text-gradient-primary` - Purple to blue gradient text
@@ -159,12 +169,14 @@ content/               # Markdown content for @nuxt/content
 - `.hover-glow` - Glow effect on hover
 
 **Custom color tokens**:
+
 - `primaryPerso: '#CBACF9'` - Primary purple accent
 - `secondaryPerso: '#7E7E7E'` - Secondary gray
 - `backgroundForeground: '#04071D'` - Dark background
 - `borderPerso: '#303247'` - Border color
 
 **CSS variables** (defined in `assets/css/tailwind.css`):
+
 - HSL-based color system with automatic dark mode variants
 - Typography colors: `--heading-primary`, `--text-primary`, `--text-secondary`, `--text-muted`
 - Accent colors: `--accent-purple`, `--accent-blue`, `--accent-pink`
@@ -183,6 +195,7 @@ Use these custom classes for consistency across components.
 ### Path Aliases
 
 Configured in `components.json`:
+
 ```typescript
 @/components  → components/
 @/composables → composables/
@@ -199,19 +212,23 @@ Forms use Vee-validate with Zod schemas. Example from `ContactForm.vue`:
 import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
 
-const formSchema = toTypedSchema(z.object({
-  field: z.string().min(1, 'Required message')
-}))
+const formSchema = toTypedSchema(
+  z.object({
+    field: z.string().min(1, 'Required message'),
+  })
+)
 ```
 
 ### Animation System
 
 The project uses `@formkit/auto-animate` for automatic animations:
+
 - Composable: `useAutoAnimate()` exported from `composables/useAutoAnimate.ts`
 - Usage: Add `v-auto-animate` directive to parent elements for automatic child animations
 - Common use cases: Form field errors, list transitions, conditional content
 
 Example:
+
 ```vue
 <FormItem v-auto-animate>
   <FormControl>...</FormControl>
@@ -234,6 +251,7 @@ Example:
 ### Component Library
 
 This project uses **shadcn-nuxt** components which are:
+
 - Located in `components/ui/`
 - Based on Radix Vue primitives
 - Styled with Tailwind CSS
@@ -248,6 +266,7 @@ Common UI components available: Button, Input, Label, Sheet, DropdownMenu, Toast
 ### Type Safety Rules - EVERYTHING MUST BE TYPED
 
 **1. Variables and Constants**
+
 ```typescript
 // ✅ GOOD - Always explicit types
 const name: string = 'Zenith'
@@ -261,6 +280,7 @@ const count = 0
 ```
 
 **2. Refs and Reactive**
+
 ```typescript
 // ✅ GOOD - Simple types
 const name = ref<string>('')
@@ -272,10 +292,11 @@ const project = ref<Project | null>(null)
 const projects = ref<Project[]>([])
 
 // ❌ BAD
-const name = ref('')  // No type
+const name = ref('') // No type
 ```
 
 **3. Functions**
+
 ```typescript
 // ✅ GOOD - All parameters and return types
 function calculateTotal(price: number, quantity: number): number {
@@ -298,13 +319,14 @@ function calculateTotal(price, quantity) {
 ```
 
 **4. Component Props**
+
 ```typescript
 // ✅ GOOD - Define props interface
 interface ProjectCardProps {
   title: string
   description: string
   technologies: string[]
-  imageUrl?: string  // Optional
+  imageUrl?: string // Optional
 }
 
 const props = defineProps<ProjectCardProps>()
@@ -314,6 +336,7 @@ const props = defineProps(['title', 'description'])
 ```
 
 **5. Composables**
+
 ```typescript
 // ✅ GOOD - Typed return
 export function useProjects() {
@@ -328,12 +351,13 @@ export function useProjects() {
   return {
     projects: readonly(projects),
     loading: readonly(loading),
-    fetchProjects
+    fetchProjects,
   }
 }
 ```
 
 **6. Event Handlers**
+
 ```typescript
 // ✅ GOOD
 const handleClick = (event: MouseEvent): void => {
@@ -368,6 +392,7 @@ export interface Technology {
 ```
 
 **File structure for types:**
+
 - Component-specific types → `types/components/`
 - Constants types → `types/constants/`
 - API/Data types → `types/` (root)
@@ -397,6 +422,7 @@ export interface Technology {
    - NEVER use `<div>` for interactive elements
 
 2. **ARIA Labels & Attributes**
+
    ```vue
    <!-- ✅ GOOD -->
    <button aria-label="Close menu">
@@ -407,8 +433,10 @@ export interface Technology {
    <img src="..." alt="Descriptive text" />
 
    <!-- ❌ BAD -->
-   <button><IconClose /></button>  <!-- No label -->
-   <img src="..." />  <!-- Missing alt -->
+   <button><IconClose /></button>
+   <!-- No label -->
+   <img src="..." />
+   <!-- Missing alt -->
    ```
 
 3. **Keyboard Navigation**
@@ -424,6 +452,7 @@ export interface Technology {
    - Don't rely on color alone to convey information
 
 5. **Form Accessibility**
+
    ```vue
    <!-- ✅ GOOD -->
    <FormField>
@@ -451,6 +480,7 @@ export interface Technology {
 **Dual language support (French/English) is MANDATORY:**
 
 1. **All User-Facing Text MUST Use i18n**
+
    ```vue
    <!-- ✅ GOOD -->
    <h1>{{ $t('home.title') }}</h1>
@@ -459,10 +489,12 @@ export interface Technology {
    </Button>
 
    <!-- ❌ BAD -->
-   <h1>Welcome to Zenith</h1>  <!-- Hardcoded text -->
+   <h1>Welcome to Zenith</h1>
+   <!-- Hardcoded text -->
    ```
 
 2. **Translation File Structure**
+
    ```json
    // app/i18n/locales/fr.json
    {
@@ -482,6 +514,7 @@ export interface Technology {
    ```
 
 3. **Combine i18n with ARIA**
+
    ```vue
    <nav :aria-label="$t('aria.mainNav')">
      <button
@@ -529,6 +562,7 @@ export interface Technology {
 ## Migration Notes
 
 This codebase is currently being migrated from a personal portfolio (Mehdi DIAS GOMES) to the Zenith agency website. When working on this project:
+
 - Prioritize Zenith branding and color scheme over legacy portfolio styles
 - Maintain all existing technical infrastructure and component architecture
 - Phase 1 focuses on Landing + Contact pages only

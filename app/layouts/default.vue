@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-zenith-bg-light dark:bg-zenith-bg-dark transition-colors">
+  <div class="min-h-screen bg-zenith-bg-light transition-colors dark:bg-zenith-bg-dark">
     <Navbar />
     <main>
       <slot />
@@ -7,5 +7,4 @@
   </div>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>

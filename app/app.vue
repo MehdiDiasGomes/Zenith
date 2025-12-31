@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-const { t, locale } = useI18n();
+const { t, locale } = useI18n()
 
 // SEO Meta tags with i18n support
 useSeoMeta({
@@ -22,7 +22,7 @@ useSeoMeta({
   twitterTitle: () => t('seo.title'),
   twitterDescription: () => t('seo.description'),
   twitterImage: 'https://www.mdiasgomes.dev/og-image.jpg',
-});
+})
 
 // Additional head tags
 useHead({
@@ -32,8 +32,8 @@ useHead({
   link: [
     {
       rel: 'canonical',
-      href: 'https://www.mdiasgomes.dev'
-    }
-  ]
-});
+      href: 'https://www.mdiasgomes.dev',
+    },
+  ],
+})
 </script>

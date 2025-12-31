@@ -1,23 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  plugins:[
-          {src: '~/plugins/vue-recaptcha-v3.ts', mode: 'client' },
-  ],
+  plugins: [{ src: '~/plugins/vue-recaptcha-v3.ts', mode: 'client' }],
   modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/i18n",
-    "shadcn-nuxt",
-    "@nuxt/content",
-    "@nuxtjs/color-mode",
-    "@nuxt/fonts",
-    "@nuxt/image",
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/i18n',
+    'shadcn-nuxt',
+    '@nuxt/content',
+    '@nuxtjs/color-mode',
+    '@nuxt/fonts',
+    '@nuxt/image',
   ],
   fonts: {
-    families: [
-      { name: 'Trirong', provider: 'google' }
-    ],
+    families: [{ name: 'Trirong', provider: 'google' }],
     defaults: {
       weights: [300, 400, 500, 600, 700],
     },
@@ -25,29 +21,29 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       {
-        name: "Français",
-        code: "fr",
-        language: "fr-FR",
-        file: "fr.json",
+        name: 'Français',
+        code: 'fr',
+        language: 'fr-FR',
+        file: 'fr.json',
       },
       {
-        name: "English",
-        code: "en",
-        language: "en-US",
-        file: "en.json",
+        name: 'English',
+        code: 'en',
+        language: 'en-US',
+        file: 'en.json',
       },
     ],
     lazy: true,
-    langDir: "locales",
-    defaultLocale: "fr",
+    langDir: 'locales',
+    defaultLocale: 'fr',
   },
   shadcn: {
-    prefix: "",
-    componentDir: "./app/components/ui",
+    prefix: '',
+    componentDir: './app/components/ui',
   },
   colorMode: {
     classSuffix: '',
     preference: 'dark',
     fallback: 'dark',
   },
-});
+})
