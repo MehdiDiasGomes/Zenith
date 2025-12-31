@@ -11,6 +11,7 @@
     "logoAriaLabel": "Retour à l'accueil Zenith",
     "home": "Accueil",
     "services": "Services",
+    "projects": "Projets",
     "contact": "Contact",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
@@ -56,6 +57,27 @@
     "maintenance": {
       "title": "Maintenance",
       "description": "Support et évolution continue de votre site"
+    }
+  },
+  "projects": {
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations",
+    "viewProject": "Visiter le site",
+    "viewCode": "Voir le code",
+    "categories": {
+      "all": "Tous",
+      "showcase": "Sites vitrines",
+      "ecommerce": "E-commerce",
+      "saas": "SaaS",
+      "portfolio": "Portfolio"
+    },
+    "kbClean": {
+      "title": "KB Clean",
+      "description": "Site vitrine pour une société de nettoyage de bacs à déchets écologique avec système de contact et gestion multilingue"
+    },
+    "myMassageShop": {
+      "title": "My Massage Shop",
+      "description": "Plateforme e-commerce professionnelle pour équipements de massage avec intégration Shopify, panier persistant et gestion multilingue"
     }
   }
 }
