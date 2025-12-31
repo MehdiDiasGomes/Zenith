@@ -2,6 +2,14 @@ const animate = require('tailwindcss-animate')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    './app/components/**/*.{js,vue,ts}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue',
+    './app/plugins/**/*.{js,ts}',
+    './app/app.vue',
+    './app/error.vue',
+  ],
   darkMode: ['class'],
   safelist: ['dark'],
   prefix: '',
@@ -80,10 +88,11 @@ module.exports = {
         },
       },
       borderRadius: {
-        xl: 'calc(var(--radius) + 4px)',
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        '2xl': '1rem',
+        xl: '0.75rem',
+        lg: '0.5rem',
+        md: '0.375rem',
+        sm: '0.125rem',
       },
       keyframes: {
         'accordion-down': {
