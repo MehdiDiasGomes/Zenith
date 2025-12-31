@@ -14,5 +14,19 @@
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
     "switchToLang": "Changer la langue vers {lang}"
+  },
+  "hero": {
+    "availability": "Actuellement disponible",
+    "title": {
+      "part1": "Créez des ",
+      "part2": "expériences en ligne",
+      "part3": "sur ",
+      "part4": "mesure."
+    },
+    "subtitle": "Designer et développeur web, je crée des solutions sur-mesure qui donnent vie à vos ambitions et renforcent votre présence digitale.",
+    "cta": {
+      "primary": "Prendre contact",
+      "secondary": "Découvrir mes travaux"
+    }
   }
 }

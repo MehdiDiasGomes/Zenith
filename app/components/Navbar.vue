@@ -14,7 +14,7 @@
             <NuxtImg
               src="/images/brand/z_logo.webp"
               alt="Zenith Logo"
-              class="h-8 w-auto transition-transform group-hover:scale-105 md:h-12"
+              class="h-8 w-auto md:h-12"
               loading="eager"
             />
           </NuxtLink>

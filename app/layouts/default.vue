@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-zenith-bg-light transition-colors dark:bg-zenith-bg-dark">
     <Navbar />
-    <main class="pt-28 md:pt-32">
+    <main>
       <slot />
     </main>
   </div>

@@ -14,5 +14,19 @@
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
     "switchToLang": "Switch language to {lang}"
+  },
+  "hero": {
+    "availability": "Currently available",
+    "title": {
+      "part1": "Create ",
+      "part2": "custom online",
+      "part3": "",
+      "part4": "experiences."
+    },
+    "subtitle": "Web designer and developer, I create custom solutions that bring your ambitions to life and strengthen your digital presence.",
+    "cta": {
+      "primary": "Get in touch",
+      "secondary": "Discover my work"
+    }
   }
 }
