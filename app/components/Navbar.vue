@@ -2,7 +2,7 @@
   <div class="fixed left-0 right-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">
     <nav
       :aria-label="$t('nav.ariaLabel')"
-      class="mx-auto max-w-7xl rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light/90 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/90 dark:shadow-black/30"
+      class="mx-auto max-w-4xl rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light/90 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/90 dark:shadow-black/30"
     >
       <div class="px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between md:h-20">
@@ -37,7 +37,6 @@
               {{ $t(item.label) }}
               <span
                 class="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
-                :class="{ 'w-full': isActive(item.to) }"
               />
             </NuxtLink>
           </div>
@@ -52,7 +51,7 @@
                 type="button"
                 :aria-label="$t('nav.switchToLang', { lang: localeItem.name })"
                 :aria-current="currentLocale === localeItem.code ? 'true' : 'false'"
-                class="rounded-md px-3 py-1.5 text-sm font-semibold transition-all duration-200"
+                class="rounded-lg px-3 py-1.5 text-sm font-semibold transition-all duration-200"
                 :class="
                   currentLocale === localeItem.code
                     ? 'bg-zenith-gold-vivid text-white shadow-md'
@@ -71,9 +70,9 @@
               class="rounded-lg bg-zenith-bg-secondary-light p-2.5 text-zenith-gold-bronze transition-all duration-200 hover:text-zenith-gold-vivid hover:shadow-lg hover:shadow-zenith-gold-vivid/20 dark:bg-zenith-bg-secondary-dark"
               @click="toggleColorMode"
             >
-              <component
-                :is="colorMode.value === 'dark' ? Sun : Moon"
-                class="h-5 w-5"
+              <Icon
+                :name="colorMode.value === 'dark' ? 'Sun' : 'Moon'"
+                size="20"
                 aria-hidden="true"
               />
             </button>
@@ -85,7 +84,7 @@
               class="rounded-lg bg-zenith-bg-secondary-light p-2.5 text-zenith-gold-bronze transition-all duration-200 hover:text-zenith-gold-vivid dark:bg-zenith-bg-secondary-dark md:hidden"
               @click="toggleMobileMenu"
             >
-              <component :is="mobileMenuOpen ? X : Menu" class="h-5 w-5" aria-hidden="true" />
+              <Icon :name="mobileMenuOpen ? 'X' : 'Menu'" size="20" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -125,7 +124,7 @@
                   :key="localeItem.code"
                   type="button"
                   :aria-label="$t('nav.switchToLang', { lang: localeItem.name })"
-                  class="flex-1 rounded-md px-3 py-2 text-sm font-semibold transition-all duration-200"
+                  class="flex-1 rounded-lg px-3 py-2 text-sm font-semibold transition-all duration-200"
                   :class="
                     currentLocale === localeItem.code
                       ? 'bg-zenith-gold-vivid text-white shadow-md'
@@ -145,8 +144,6 @@
 </template>
 
 <script setup lang="ts">
-import { Menu, X, Sun, Moon } from 'lucide-vue-next'
-
 interface NavItem {
   to: string
   label: string

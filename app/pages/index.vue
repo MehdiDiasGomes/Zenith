@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-24 mp-home">
+  <div class="mp-home">
     <h1
       class="bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne bg-clip-text text-center font-bold text-transparent text-xxl"
     >
