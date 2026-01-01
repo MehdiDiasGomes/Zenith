@@ -71,7 +71,7 @@
     "categories": {
       "all": "Tous",
       "showcase": "Sites vitrines",
-      "ecommerce": "E-commerce",
+      "ecommerce": "E-shop",
       "saas": "SaaS",
       "portfolio": "Portfolio"
     },
@@ -81,7 +81,7 @@
     },
     "myMassageShop": {
       "title": "My Massage Shop",
-      "description": "Plateforme e-commerce professionnelle pour équipements de massage avec intégration Shopify, panier persistant et gestion multilingue"
+      "description": "Plateforme e-shop professionnelle pour équipements de massage avec intégration Shopify, panier persistant et gestion multilingue"
     }
   }
 }
