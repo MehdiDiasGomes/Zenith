@@ -1,9 +1,9 @@
 <template>
-  <div class="fixed bottom-20 right-0 z-50">
-    <div
-      class="flex items-center transition-transform duration-500 ease-out"
-      :class="isOpen ? 'translate-x-0' : 'translate-x-[calc(100%-3.5rem)]'"
-    >
+  <div
+    class="fixed bottom-20 z-50 transition-all duration-500 ease-out"
+    :class="isOpen ? 'right-0' : '-right-[19rem]'"
+  >
+    <div class="flex items-center">
       <button
         type="button"
         aria-label="Paramètres"
