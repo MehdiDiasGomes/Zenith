@@ -63,18 +63,35 @@
           {{ $t('hero.cta.primary') }}
         </NuxtLink>
 
-        <NuxtLink
-          to="#projects"
+        <a
+          href="#projects"
           class="group relative text-sm font-semibold text-zenith-text-primary-light transition-all duration-200 dark:text-zenith-text-primary-dark"
+          @click="scrollToProjects"
         >
           {{ $t('hero.cta.secondary') }}
           <span
             class="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
           />
-        </NuxtLink>
+        </a>
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const scrollToProjects = (event: Event): void => {
+  event.preventDefault()
+  const projectsSection = document.getElementById('projects')
+
+  if (projectsSection) {
+    const navbarHeight = 100
+    const elementPosition = projectsSection.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.scrollY - navbarHeight
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    })
+  }
+}
+</script>
