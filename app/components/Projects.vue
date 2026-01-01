@@ -14,21 +14,25 @@
         </p>
       </div>
 
-      <div class="mb-8 flex flex-wrap justify-center gap-3">
-        <button
-          v-for="category in categories"
-          :key="category.id"
-          type="button"
-          :class="
-            selectedCategory === category.id
-              ? 'bg-zenith-gold-vivid text-white shadow-md'
-              : 'bg-zenith-bg-light text-zenith-text-secondary-light hover:bg-zenith-gold-vivid/10 hover:text-zenith-gold-vivid dark:bg-zenith-bg-dark dark:text-zenith-text-secondary-dark'
-          "
-          class="rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200"
-          @click="selectedCategory = category.id"
+      <div class="mb-8 flex justify-center">
+        <div
+          class="inline-flex rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-1 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
         >
-          {{ $t(category.labelKey) }}
-        </button>
+          <button
+            v-for="category in categories"
+            :key="category.id"
+            type="button"
+            :class="
+              selectedCategory === category.id
+                ? 'bg-zenith-gold-vivid text-white shadow-md'
+                : 'text-zenith-text-secondary-light hover:bg-zenith-gold-vivid/10 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark'
+            "
+            class="rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200"
+            @click="selectedCategory = category.id"
+          >
+            {{ $t(category.labelKey) }}
+          </button>
+        </div>
       </div>
 
       <Transition
