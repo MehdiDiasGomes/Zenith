@@ -5,7 +5,7 @@
   >
     <nav
       :aria-label="$t('nav.ariaLabel')"
-      class="mx-auto max-w-4xl rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light/90 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/90 dark:shadow-black/30"
+      class="mx-auto max-w-6xl rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light/90 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/90 dark:shadow-black/30"
     >
       <div class="px-4 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between md:h-20">
