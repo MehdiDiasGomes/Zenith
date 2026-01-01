@@ -28,7 +28,7 @@
     "subtitle": "Designer et développeur web, je crée des solutions sur-mesure qui donnent vie à vos ambitions et renforcent votre présence digitale.",
     "cta": {
       "primary": "Prendre contact",
-      "secondary": "Découvrir mes travaux"
+      "secondary": "Découvrir nos travaux"
     }
   },
   "marquee": {
@@ -40,7 +40,7 @@
     "creative": "Créatif Digital"
   },
   "services": {
-    "title": "Mes Services",
+    "title": "Nos Services",
     "subtitle": "Des solutions complètes pour donner vie à vos projets",
     "webDev": {
       "title": "Développement Web",
@@ -60,8 +60,8 @@
     }
   },
   "projects": {
-    "title": "Mes Projets",
-    "subtitle": "Découvrez mes réalisations",
+    "title": "Nos Projets",
+    "subtitle": "Découvrez nos réalisations",
     "viewProject": "Visiter le site",
     "viewCode": "Voir le code",
     "emptyState": {
