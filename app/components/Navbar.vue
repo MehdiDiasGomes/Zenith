@@ -132,6 +132,7 @@ const scrollToSection = (event: Event, anchor: string): void => {
 
     window.scrollTo({
       top: offsetPosition,
+      behavior: 'smooth',
     })
 
     closeMobileMenu()
@@ -143,6 +144,7 @@ const scrollToTop = (event: Event): void => {
     event.preventDefault()
     window.scrollTo({
       top: 0,
+      behavior: 'smooth',
     })
     closeMobileMenu()
   }
