@@ -71,7 +71,7 @@
       </div>
 
       <div
-        class="mx-auto mt-12 max-w-3xl rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light p-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+        class="mx-auto mt-12 rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light p-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
       >
         <div class="flex items-start gap-3">
           <Icon name="Info" size="20" class="mt-0.5 shrink-0 text-zenith-gold-vivid" aria-hidden="true" />
