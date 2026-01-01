@@ -1,5 +1,8 @@
 <template>
-  <div class="fixed left-0 right-0 top-0 z-50 px-4 pt-4 sm:px-6 sm:pt-6 lg:px-8">
+  <div
+    class="fixed left-0 right-0 z-50 px-4 pt-4 transition-all duration-300 sm:px-6 sm:pt-6 lg:px-8"
+    :class="isPromoBannerVisible ? 'top-12' : 'top-0'"
+  >
     <nav
       :aria-label="$t('nav.ariaLabel')"
       class="mx-auto max-w-4xl rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light/90 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/90 dark:shadow-black/30"
@@ -108,6 +111,7 @@
 import { navItems } from '~/constants/navigation'
 
 const route = useRoute()
+const { isPromoBannerVisible } = usePromoBanner()
 
 const mobileMenuOpen = ref<boolean>(false)
 const activeSection = ref<string>('')

@@ -89,5 +89,9 @@
     "legal": "Legal notice",
     "privacy": "Privacy policy",
     "copyright": "© {year} Zenith. All rights reserved."
+  },
+  "promo": {
+    "discount": "🎉 -15% on all projects until 04/30",
+    "close": "Close promotional banner"
   }
 }
