@@ -72,9 +72,7 @@
     "categories": {
       "all": "All",
       "showcase": "Showcase sites",
-      "ecommerce": "E-shop",
-      "saas": "SaaS",
-      "portfolio": "Portfolio"
+      "ecommerce": "E-shop"
     },
     "kbClean": {
       "title": "KB Clean",

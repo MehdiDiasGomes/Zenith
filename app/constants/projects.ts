@@ -1,4 +1,4 @@
-export type ProjectCategory = 'all' | 'showcase' | 'ecommerce' | 'saas' | 'portfolio'
+export type ProjectCategory = 'all' | 'showcase' | 'ecommerce'
 
 export interface Category {
   id: ProjectCategory
@@ -20,8 +20,6 @@ export const categories: Category[] = [
   { id: 'all', labelKey: 'projects.categories.all' },
   { id: 'showcase', labelKey: 'projects.categories.showcase' },
   { id: 'ecommerce', labelKey: 'projects.categories.ecommerce' },
-  { id: 'saas', labelKey: 'projects.categories.saas' },
-  { id: 'portfolio', labelKey: 'projects.categories.portfolio' },
 ]
 
 export const projects: Project[] = [
