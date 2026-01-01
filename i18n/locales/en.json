@@ -83,5 +83,11 @@
       "title": "My Massage Shop",
       "description": "Professional e-shop platform for massage equipment with Shopify integration, persistent cart and multilingual support"
     }
+  },
+  "footer": {
+    "legalNavAriaLabel": "Legal navigation",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "copyright": "© {year} Zenith. All rights reserved."
   }
 }

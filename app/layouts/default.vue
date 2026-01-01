@@ -4,6 +4,7 @@
     <main>
       <slot />
     </main>
+    <Footer />
     <Settings />
   </div>
 </template>
