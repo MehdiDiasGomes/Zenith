@@ -4,6 +4,7 @@
     <Marquee />
     <Services />
     <Projects />
+    <Pricing />
   </div>
 </template>
 

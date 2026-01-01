@@ -12,6 +12,7 @@
     "home": "Accueil",
     "services": "Services",
     "projects": "Projets",
+    "pricing": "Tarifs",
     "contact": "Contact",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
@@ -93,5 +94,68 @@
   "promo": {
     "discount": "🎉 -15% sur tous les projets jusqu'au 30/04",
     "close": "Fermer la bannière promotionnelle"
+  },
+  "pricing": {
+    "title": "Offres & Tarifs",
+    "subtitle": "Des solutions adaptées à vos besoins et votre budget",
+    "popular": "Populaire",
+    "startingFrom": "à partir de",
+    "getQuote": "Demander un devis",
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Pour valoriser vos projets et votre identité",
+      "features": [
+        "Design sur-mesure adapté à votre univers",
+        "Mise en valeur des projets (galeries, visuels, descriptions)",
+        "Structure claire et fluide (UX optimisée)",
+        "Site entièrement responsive (mobile / tablette)",
+        "Animations légères et transitions",
+        "Formulaire de contact",
+        "Optimisation SEO de base",
+        "Optimisation des performances (vitesse)",
+        "Sécurité de base",
+        "Mise en ligne et tests"
+      ]
+    },
+    "showcase": {
+      "title": "Site vitrine",
+      "description": "Présenter votre activité et convertir des visiteurs en clients",
+      "features": [
+        "Arborescence et structure personnalisées",
+        "Design moderne et professionnel",
+        "Pages de présentation (services, à propos, contact, etc.)",
+        "Appels à l'action stratégiques",
+        "Site responsive tous écrans",
+        "Formulaires personnalisés",
+        "Optimisation SEO (balises, structure, contenus)",
+        "Optimisation des performances",
+        "Sécurité & protection de base",
+        "Intégration des outils de suivi (analytics)",
+        "Mise en ligne et accompagnement"
+      ]
+    },
+    "eshop": {
+      "title": "E-shop",
+      "description": "Vendre en ligne avec une boutique fiable et évolutive",
+      "features": [
+        "Design e-commerce sur-mesure",
+        "Catalogue produits complet et personnalisable",
+        "Gestion des commandes et des clients",
+        "Paiements en ligne sécurisés",
+        "Configuration des livraisons",
+        "Emails transactionnels automatisés",
+        "Pages légales conformes",
+        "Optimisation SEO e-commerce",
+        "Optimisation vitesse et performance",
+        "Sécurité renforcée",
+        "Interface d'administration simple",
+        "Formation à la prise en main",
+        "Mise en ligne et tests"
+      ]
+    },
+    "info": {
+      "title": "Information importante",
+      "description": "Les tarifs sont indiqués « à partir de » et peuvent évoluer selon la complexité du projet, le niveau de personnalisation et les besoins spécifiques. Un devis détaillé est établi après échange."
+    }
   }
 }

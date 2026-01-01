@@ -12,6 +12,7 @@
     "home": "Home",
     "services": "Services",
     "projects": "Projects",
+    "pricing": "Pricing",
     "contact": "Contact",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
@@ -93,5 +94,68 @@
   "promo": {
     "discount": "🎉 -15% on all projects until 04/30",
     "close": "Close promotional banner"
+  },
+  "pricing": {
+    "title": "Offers & Pricing",
+    "subtitle": "Solutions tailored to your needs and budget",
+    "popular": "Popular",
+    "startingFrom": "starting from",
+    "getQuote": "Get a quote",
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "To showcase your projects and identity",
+      "features": [
+        "Custom design adapted to your universe",
+        "Project highlighting (galleries, visuals, descriptions)",
+        "Clear and fluid structure (optimized UX)",
+        "Fully responsive site (mobile / tablet)",
+        "Smooth animations and transitions",
+        "Contact form",
+        "Basic SEO optimization",
+        "Performance optimization (speed)",
+        "Basic security",
+        "Deployment and testing"
+      ]
+    },
+    "showcase": {
+      "title": "Showcase site",
+      "description": "Present your business and convert visitors into customers",
+      "features": [
+        "Custom architecture and structure",
+        "Modern and professional design",
+        "Presentation pages (services, about, contact, etc.)",
+        "Strategic calls to action",
+        "Responsive site for all screens",
+        "Custom forms",
+        "SEO optimization (tags, structure, content)",
+        "Performance optimization",
+        "Basic security & protection",
+        "Analytics tools integration",
+        "Deployment and support"
+      ]
+    },
+    "eshop": {
+      "title": "E-shop",
+      "description": "Sell online with a reliable and scalable store",
+      "features": [
+        "Custom e-commerce design",
+        "Complete and customizable product catalog",
+        "Order and customer management",
+        "Secure online payments",
+        "Shipping configuration",
+        "Automated transactional emails",
+        "Compliant legal pages",
+        "E-commerce SEO optimization",
+        "Speed and performance optimization",
+        "Enhanced security",
+        "Simple admin interface",
+        "Training for handling",
+        "Deployment and testing"
+      ]
+    },
+    "info": {
+      "title": "Important information",
+      "description": "Prices are indicated \"starting from\" and may vary depending on project complexity, level of customization, and specific needs. A detailed quote is provided after discussion."
+    }
   }
 }
