@@ -5,11 +5,11 @@
   >
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center gap-8">
-        <NuxtLink to="/" class="group" :aria-label="$t('nav.logoAriaLabel')">
+        <NuxtLink to="/" :aria-label="$t('nav.logoAriaLabel')">
           <NuxtImg
             src="/images/brand/z_logo.webp"
             alt="Zenith Logo"
-            class="h-12 w-auto transition-opacity duration-200 group-hover:opacity-80"
+            class="h-12 w-auto"
             loading="lazy"
           />
         </NuxtLink>
