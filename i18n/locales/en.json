@@ -64,6 +64,10 @@
     "subtitle": "Discover my work",
     "viewProject": "Visit site",
     "viewCode": "View code",
+    "emptyState": {
+      "title": "No projects available",
+      "subtitle": "New projects coming soon in this category"
+    },
     "categories": {
       "all": "All",
       "showcase": "Showcase sites",

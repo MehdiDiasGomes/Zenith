@@ -64,6 +64,10 @@
     "subtitle": "Découvrez mes réalisations",
     "viewProject": "Visiter le site",
     "viewCode": "Voir le code",
+    "emptyState": {
+      "title": "Aucun projet disponible",
+      "subtitle": "De nouveaux projets arrivent bientôt dans cette catégorie"
+    },
     "categories": {
       "all": "Tous",
       "showcase": "Sites vitrines",
