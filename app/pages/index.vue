@@ -1,8 +1,10 @@
 <template>
-  <Hero />
-  <Marquee />
-  <Services />
-  <Projects />
+  <div>
+    <Hero />
+    <Marquee />
+    <Services />
+    <Projects />
+  </div>
 </template>
 
 <script setup lang="ts">
