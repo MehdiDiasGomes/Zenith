@@ -1,5 +1,9 @@
 <template>
-  <div class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark">
+  <div
+    ref="elementRef"
+    :class="animationClasses"
+    class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+  >
     <div class="flex animate-marquee whitespace-nowrap">
       <div v-for="index in 2" :key="index" class="flex shrink-0">
         <span
@@ -17,6 +21,8 @@
 
 <script setup lang="ts">
 import { marqueeItems } from '~/constants/marquee'
+
+const { elementRef, animationClasses } = useScrollAnimation('fade-in')
 </script>
 
 <style scoped>

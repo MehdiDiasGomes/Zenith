@@ -1,6 +1,6 @@
 <template>
   <section id="services" class="relative px-4 py-20 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-6xl">
+    <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
       <div class="mb-12 text-center">
         <h2
           class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
@@ -52,4 +52,6 @@
 
 <script setup lang="ts">
 import { services } from '~/constants/services'
+
+const { elementRef, animationClasses } = useScrollAnimation('fade-up')
 </script>
