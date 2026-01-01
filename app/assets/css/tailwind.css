@@ -350,4 +350,9 @@ body {
   .hover-glow {
     @apply transition-all duration-300 ease-out;
   }
+
+  /* Scroll animations */
+  .animate-in {
+    @apply opacity-100 translate-x-0 translate-y-0 scale-100;
+  }
 }
