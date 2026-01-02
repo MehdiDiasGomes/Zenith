@@ -1,5 +1,8 @@
 <template>
-  <section id="pricing" class="relative bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8">
+  <section
+    id="pricing"
+    class="relative bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
+  >
     <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
       <div class="mb-12 text-center">
         <h2
@@ -19,20 +22,28 @@
           class="group relative flex flex-col overflow-hidden rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
         >
           <div class="p-6">
-            <h3 class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            <h3
+              class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+            >
               {{ $t(plan.titleKey) }}
             </h3>
 
-            <p class="mb-6 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            <p
+              class="mb-6 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+            >
               {{ $t(plan.descriptionKey) }}
             </p>
 
             <div class="mb-6">
               <div class="mb-1 flex items-center gap-2">
-                <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                <p
+                  class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                >
                   {{ $t('pricing.startingFrom') }}
                 </p>
-                <span class="rounded-full bg-zenith-gold-vivid/10 px-2 py-1 text-xs font-semibold text-zenith-gold-vivid">
+                <span
+                  class="rounded-full bg-zenith-gold-vivid/10 px-2 py-1 text-xs font-semibold text-zenith-gold-vivid"
+                >
                   -15%
                 </span>
               </div>
@@ -40,7 +51,9 @@
                 <span class="text-3xl font-bold text-zenith-gold-vivid">
                   {{ formatPrice(calculateDiscountedPrice(plan.basePrice)) }}
                 </span>
-                <span class="text-sm text-zenith-text-secondary-light line-through dark:text-zenith-text-secondary-dark">
+                <span
+                  class="text-sm text-zenith-text-secondary-light line-through dark:text-zenith-text-secondary-dark"
+                >
                   {{ formatPrice(plan.basePrice) }}
                 </span>
               </div>
@@ -52,13 +65,20 @@
                 :key="index"
                 class="flex items-start gap-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
               >
-                <Icon name="Check" size="16" class="mt-0.5 shrink-0 text-zenith-gold-vivid" aria-hidden="true" />
+                <Icon
+                  name="Check"
+                  size="16"
+                  class="mt-0.5 shrink-0 text-zenith-gold-vivid"
+                  aria-hidden="true"
+                />
                 <span>{{ $t(feature.textKey) }}</span>
               </li>
             </ul>
           </div>
 
-          <div class="mt-auto border-t border-zenith-bronze-dark/10 p-6 dark:border-zenith-gold-bronze/20">
+          <div
+            class="mt-auto border-t border-zenith-bronze-dark/10 p-6 dark:border-zenith-gold-bronze/20"
+          >
             <NuxtLink
               to="/contact"
               class="block rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-6 py-3 text-center font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
@@ -77,12 +97,21 @@
         class="mx-auto mt-12 rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light p-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
       >
         <div class="flex items-start gap-3">
-          <Icon name="Info" size="20" class="mt-0.5 shrink-0 text-zenith-gold-vivid" aria-hidden="true" />
+          <Icon
+            name="Info"
+            size="20"
+            class="mt-0.5 shrink-0 text-zenith-gold-vivid"
+            aria-hidden="true"
+          />
           <div>
-            <h4 class="mb-2 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            <h4
+              class="mb-2 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+            >
               {{ $t('pricing.info.title') }}
             </h4>
-            <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            <p
+              class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+            >
               {{ $t('pricing.info.description') }}
             </p>
           </div>

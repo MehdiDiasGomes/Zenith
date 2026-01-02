@@ -12,7 +12,9 @@
       class="fixed left-0 right-0 top-0 z-[100] bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid"
       role="banner"
     >
-      <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8"
+      >
         <div class="flex flex-1 items-center justify-center gap-2">
           <p class="text-center text-sm font-semibold text-white sm:text-base">
             {{ $t('promo.discount') }}

@@ -4,7 +4,7 @@
     :class="animationClasses"
     class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
   >
-    <div class="flex animate-marquee whitespace-nowrap">
+    <div class="animate-marquee flex whitespace-nowrap">
       <div v-for="index in 2" :key="index" class="flex shrink-0">
         <span
           v-for="item in marqueeItems"

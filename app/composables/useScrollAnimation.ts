@@ -1,11 +1,20 @@
-export type AnimationType = 'fade-up' | 'fade-down' | 'fade-left' | 'fade-right' | 'fade-in' | 'scale-in'
+export type AnimationType =
+  | 'fade-up'
+  | 'fade-down'
+  | 'fade-left'
+  | 'fade-right'
+  | 'fade-in'
+  | 'scale-in'
 
 interface UseScrollAnimationReturn {
   elementRef: Ref<HTMLElement | null>
   animationClasses: ComputedRef<string>
 }
 
-export const useScrollAnimation = (type: AnimationType = 'fade-up', delay: number = 0): UseScrollAnimationReturn => {
+export const useScrollAnimation = (
+  type: AnimationType = 'fade-up',
+  delay: number = 0,
+): UseScrollAnimationReturn => {
   const elementRef = ref<HTMLElement | null>(null)
   const isVisible = ref<boolean>(false)
 

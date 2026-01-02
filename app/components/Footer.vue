@@ -14,7 +14,10 @@
           />
         </NuxtLink>
 
-        <nav :aria-label="$t('footer.legalNavAriaLabel')" class="flex flex-wrap justify-center gap-6">
+        <nav
+          :aria-label="$t('footer.legalNavAriaLabel')"
+          class="flex flex-wrap justify-center gap-6"
+        >
           <NuxtLink
             :to="localePath('/legal')"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
@@ -29,7 +32,9 @@
           </NuxtLink>
         </nav>
 
-        <p class="text-center text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+        <p
+          class="text-center text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+        >
           {{ $t('footer.copyright', { year: currentYear }) }}
         </p>
       </div>
