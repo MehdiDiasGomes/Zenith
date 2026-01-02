@@ -5,6 +5,7 @@
     <Services />
     <Projects />
     <Pricing />
+    <ContactForm />
   </div>
 </template>
 

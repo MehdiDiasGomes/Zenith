@@ -13,7 +13,7 @@
     "services": "Services",
     "projects": "Projets",
     "pricing": "Tarifs",
-    "contact": "Contact",
+    "contact": "Contactez-nous",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
     "switchToLang": "Changer la langue vers {lang}"
@@ -151,6 +151,43 @@
     "info": {
       "title": "Information importante",
       "description": "Les tarifs sont indiqués « à partir de » et peuvent évoluer selon la complexité du projet, le niveau de personnalisation et les besoins spécifiques. Un devis détaillé est établi après échange."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à nous écrire, nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "name": {
+        "label": "Nom",
+        "placeholder": "Votre nom complet",
+        "error": "Le nom doit contenir au moins 2 caractères"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Votre adresse email",
+        "error": "Veuillez entrer une adresse email valide"
+      },
+      "subject": {
+        "label": "Sujet",
+        "placeholder": "Sélectionnez un sujet",
+        "error": "Veuillez sélectionner un sujet",
+        "options": {
+          "showcase": "Projet de site vitrine",
+          "portfolio": "Projet de portfolio",
+          "eshop": "Projet e-commerce",
+          "other": "Autre demande"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Décrivez votre projet ou posez votre question...",
+        "description": "Partagez-nous les détails de votre projet",
+        "error": "Le message doit contenir au moins 10 caractères"
+      },
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès ! Nous vous répondrons rapidement.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
     }
   }
 }

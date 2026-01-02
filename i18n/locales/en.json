@@ -13,7 +13,7 @@
     "services": "Services",
     "projects": "Projects",
     "pricing": "Pricing",
-    "contact": "Contact",
+    "contact": "Contact us",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
     "switchToLang": "Switch language to {lang}"
@@ -151,6 +151,43 @@
     "info": {
       "title": "Important information",
       "description": "Prices are indicated \"starting from\" and may vary depending on project complexity, level of customization, and specific needs. A detailed quote is provided after discussion."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? A project? Feel free to write to us, we'll get back to you as soon as possible.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your full name",
+        "error": "Name must be at least 2 characters"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your email address",
+        "error": "Please enter a valid email address"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Select a subject",
+        "error": "Please select a subject",
+        "options": {
+          "showcase": "Showcase website project",
+          "portfolio": "Portfolio project",
+          "eshop": "E-commerce project",
+          "other": "Other inquiry"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Describe your project or ask your question...",
+        "description": "Share the details of your project with us",
+        "error": "Message must be at least 10 characters"
+      },
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll respond quickly.",
+      "error": "An error occurred. Please try again."
     }
   }
 }

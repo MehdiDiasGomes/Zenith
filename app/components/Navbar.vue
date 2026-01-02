@@ -40,12 +40,13 @@
           </div>
 
           <div class="flex items-center gap-3">
-            <NuxtLink
-              to="/contact"
+            <a
+              href="#contact"
               class="hidden items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid md:inline-flex"
+              @click="handleNavClick($event, '#contact')"
             >
               {{ $t('nav.contact') }}
-            </NuxtLink>
+            </a>
 
             <button
               type="button"
@@ -92,13 +93,13 @@
                 <template v-else>{{ $t(item.label) }}</template>
               </component>
 
-              <NuxtLink
-                to="/contact"
+              <a
+                href="#contact"
                 class="inline-flex items-center justify-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-                @click="closeMobileMenu"
+                @click="handleNavClick($event, '#contact')"
               >
                 {{ $t('nav.contact') }}
-              </NuxtLink>
+              </a>
             </div>
           </div>
         </Transition>
