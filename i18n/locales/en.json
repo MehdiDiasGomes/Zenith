@@ -71,16 +71,13 @@
     },
     "categories": {
       "all": "All",
+      "portfolio": "Portfolio",
       "showcase": "Showcase sites",
       "ecommerce": "E-shop"
     },
     "kbClean": {
       "title": "KB Clean",
       "description": "Showcase website for an eco-friendly waste bin cleaning company with contact system and multilingual management"
-    },
-    "myMassageShop": {
-      "title": "My Massage Shop",
-      "description": "Professional e-shop platform for massage equipment with Shopify integration, persistent cart and multilingual support"
     }
   },
   "footer": {

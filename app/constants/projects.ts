@@ -1,4 +1,4 @@
-export type ProjectCategory = 'all' | 'showcase' | 'ecommerce'
+export type ProjectCategory = 'all' | 'portfolio' | 'showcase' | 'ecommerce'
 
 export interface Category {
   id: ProjectCategory
@@ -18,6 +18,7 @@ export interface Project {
 
 export const categories: Category[] = [
   { id: 'all', labelKey: 'projects.categories.all' },
+  { id: 'portfolio', labelKey: 'projects.categories.portfolio' },
   { id: 'showcase', labelKey: 'projects.categories.showcase' },
   { id: 'ecommerce', labelKey: 'projects.categories.ecommerce' },
 ]
@@ -31,14 +32,5 @@ export const projects: Project[] = [
     category: 'showcase',
     technologies: ['Nuxt 4', 'TailwindCSS', 'Shadcn', 'Resend', 'TypeScript'],
     link: 'https://kb-clean.vercel.app',
-  },
-  {
-    id: 'my-massage-shop',
-    titleKey: 'projects.myMassageShop.title',
-    descriptionKey: 'projects.myMassageShop.description',
-    image: '/images/projects/my-massage-shop.png',
-    category: 'ecommerce',
-    technologies: ['Nuxt 4', 'Shopify API', 'TypeScript', 'TailwindCSS', 'Shadcn'],
-    link: 'https://mymassageshop.com',
   },
 ]

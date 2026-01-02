@@ -71,16 +71,13 @@
     },
     "categories": {
       "all": "Tous",
+      "portfolio": "Portfolio",
       "showcase": "Sites vitrines",
       "ecommerce": "E-shop"
     },
     "kbClean": {
       "title": "KB Clean",
       "description": "Site vitrine pour une société de nettoyage de bacs à déchets écologique avec système de contact et gestion multilingue"
-    },
-    "myMassageShop": {
-      "title": "My Massage Shop",
-      "description": "Plateforme e-shop professionnelle pour équipements de massage avec intégration Shopify, panier persistant et gestion multilingue"
     }
   },
   "footer": {
