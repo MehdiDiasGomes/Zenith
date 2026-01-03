@@ -6,7 +6,7 @@
     <div class="relative mx-auto max-w-7xl">
       <div class="grid gap-12 lg:grid-cols-2">
         <div class="flex flex-col justify-between gap-12 h-full">
-          <div class="space-y-2">
+          <div class="space-y-2 w-full max-lg:text-center">
             <h1
               class="mb-4 text-4xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-5xl"
             >
