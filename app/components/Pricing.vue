@@ -19,7 +19,7 @@
         <article
           v-for="plan in pricingPlans"
           :key="plan.id"
-          class="group relative flex flex-col overflow-hidden rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+          class="group relative border-dashed flex flex-col overflow-hidden rounded-2xl border-2 border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
         >
           <div class="p-6">
             <h3
@@ -97,22 +97,7 @@
 </template>
 
 <script setup lang="ts">
-import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
-
-const PERCENTAGE_DIVISOR = 100
-
-const calculateDiscountedPrice = (basePrice: number): number => {
-  return basePrice * (1 - DISCOUNT_PERCENTAGE / PERCENTAGE_DIVISOR)
-}
-
-const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('fr-FR', {
-    style: 'currency',
-    currency: 'EUR',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(price)
-}
+import { pricingPlans } from '~/constants/pricing'
 
 const { elementRef, animationClasses } = useScrollAnimation('fade-up')
 </script>
