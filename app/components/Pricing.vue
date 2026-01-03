@@ -34,31 +34,6 @@
               {{ $t(plan.descriptionKey) }}
             </p>
 
-            <div class="mb-6">
-              <div class="mb-1 flex items-center gap-2">
-                <p
-                  class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                >
-                  {{ $t('pricing.startingFrom') }}
-                </p>
-                <span
-                  class="rounded-full bg-zenith-gold-vivid/10 px-2 py-1 text-xs font-semibold text-zenith-gold-vivid"
-                >
-                  -15%
-                </span>
-              </div>
-              <div class="flex items-baseline gap-2">
-                <span class="text-3xl font-bold text-zenith-gold-vivid">
-                  {{ formatPrice(calculateDiscountedPrice(plan.basePrice)) }}
-                </span>
-                <span
-                  class="text-sm text-zenith-text-secondary-light line-through dark:text-zenith-text-secondary-dark"
-                >
-                  {{ formatPrice(plan.basePrice) }}
-                </span>
-              </div>
-            </div>
-
             <ul class="space-y-3">
               <li
                 v-for="(feature, index) in plan.features"
