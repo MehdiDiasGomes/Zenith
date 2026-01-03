@@ -188,6 +188,19 @@
       "sending": "Sending...",
       "success": "Message sent successfully! We'll respond quickly.",
       "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "You can also reach us directly through these channels.",
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone"
+      },
+      "instagram": {
+        "label": "Instagram"
+      }
     }
   }
 }

@@ -1,24 +1,135 @@
 <template>
   <section
     id="contact"
-    class="relative bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
+    class="relative overflow-hidden bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
   >
-    <div class="mx-auto max-w-3xl">
-      <div class="mb-12 text-center">
-        <h1
-          class="mb-4 text-3xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-4xl"
-        >
-          {{ $t('contact.title') }}
-        </h1>
-        <p class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-          {{ $t('contact.subtitle') }}
-        </p>
-      </div>
+    <div class="relative mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-2">
+        <div class="flex flex-col justify-between gap-12 h-full">
+          <div class="space-y-2">
+            <h1
+              class="mb-4 text-4xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-5xl"
+            >
+              {{ $t('contact.title') }}
+            </h1>
+            <p class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+              {{ $t('contact.subtitle') }}
+            </p>
+          </div>
 
-      <form
-        class="space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
-        @submit="onSubmit"
-      >
+          <div class="space-y-4">
+            <a
+              href="mailto:diasgomes.mehdi270@gmail.com"
+              class="group flex items-center justify-between rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-6 transition-all hover:border-zenith-gold-vivid/50 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+                >
+                  <Icon
+                    name="Mail"
+                    size="20"
+                    class="text-zenith-gold-vivid"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div>
+                  <h3
+                    class="mb-1 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+                  >
+                    {{ $t('contact.info.email.label') }}
+                  </h3>
+                  <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                    diasgomes.mehdi270@gmail.com
+                  </p>
+                </div>
+              </div>
+              <Icon
+                name="ArrowUpRight"
+                size="20"
+                class="text-zenith-text-secondary-light opacity-0 transition-opacity group-hover:opacity-100 dark:text-zenith-text-secondary-dark"
+                aria-hidden="true"
+              />
+            </a>
+
+            <a
+              href="tel:+33123456789"
+              class="group flex items-center justify-between rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-6 transition-all hover:border-zenith-gold-vivid/50 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+                >
+                  <Icon
+                    name="Phone"
+                    size="20"
+                    class="text-zenith-gold-vivid"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div>
+                  <h3
+                    class="mb-1 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+                  >
+                    {{ $t('contact.info.phone.label') }}
+                  </h3>
+                  <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                    +33 1 23 45 67 89
+                  </p>
+                </div>
+              </div>
+              <Icon
+                name="ArrowUpRight"
+                size="20"
+                class="text-zenith-text-secondary-light opacity-0 transition-opacity group-hover:opacity-100 dark:text-zenith-text-secondary-dark"
+                aria-hidden="true"
+              />
+            </a>
+
+            <a
+              href="https://instagram.com/zenith"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex items-center justify-between rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-6 transition-all hover:border-zenith-gold-vivid/50 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+                >
+                  <Icon
+                    name="Instagram"
+                    size="20"
+                    class="text-zenith-gold-vivid"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div>
+                  <h3
+                    class="mb-1 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+                  >
+                    {{ $t('contact.info.instagram.label') }}
+                  </h3>
+                  <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                    @zenith
+                  </p>
+                </div>
+              </div>
+              <Icon
+                name="ArrowUpRight"
+                size="20"
+                class="text-zenith-text-secondary-light opacity-0 transition-opacity group-hover:opacity-100 dark:text-zenith-text-secondary-dark"
+                aria-hidden="true"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-zenith-gold-bronze w-7/12 h-[1px] rounded-full lg:hidden mx-auto"></div>
+
+        <form
+          class="space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+          @submit="onSubmit"
+        >
         <FormField v-slot="{ componentField }" name="name">
           <FormItem v-auto-animate>
             <FormLabel>{{ $t('contact.form.name.label') }}</FormLabel>
@@ -118,7 +229,8 @@
         >
           {{ $t('contact.form.error') }}
         </p>
-      </form>
+        </form>
+      </div>
     </div>
   </section>
 </template>

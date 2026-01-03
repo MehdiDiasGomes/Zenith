@@ -188,6 +188,19 @@
       "sending": "Envoi en cours...",
       "success": "Message envoyé avec succès ! Nous vous répondrons rapidement.",
       "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "title": "Informations de contact",
+      "description": "Vous pouvez également nous contacter directement via ces canaux.",
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Téléphone"
+      },
+      "instagram": {
+        "label": "Instagram"
+      }
     }
   }
 }
