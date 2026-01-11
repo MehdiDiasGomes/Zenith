@@ -3,7 +3,7 @@
     id="pricing"
     class="relative bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
   >
-    <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
+    <div ref="_elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
       <div class="mb-12 text-center">
         <h2
           class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
@@ -68,31 +68,6 @@
           />
         </article>
       </div>
-
-      <div
-        class="mx-auto mt-12 rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light p-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
-      >
-        <div class="flex items-start gap-3">
-          <Icon
-            name="Info"
-            size="20"
-            class="mt-0.5 shrink-0 text-zenith-gold-vivid"
-            aria-hidden="true"
-          />
-          <div>
-            <h4
-              class="mb-2 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-            >
-              {{ $t('pricing.info.title') }}
-            </h4>
-            <p
-              class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-            >
-              {{ $t('pricing.info.description') }}
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </template>
@@ -100,5 +75,5 @@
 <script setup lang="ts">
 import { pricingPlans } from '~/constants/pricing'
 
-const { elementRef, animationClasses } = useScrollAnimation('fade-up')
+const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
 </script>
