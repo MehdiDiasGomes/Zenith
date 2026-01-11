@@ -23,16 +23,20 @@
         <div
           v-for="(service, index) in serviceList"
           :key="service.id"
+          :ref="(el) => setCardRef(el, index)"
+          class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 backdrop-blur-sm transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/20"
           :class="[
-            'group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 backdrop-blur-sm transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/20',
-            index === 0 || index === 3 ? 'p-6 md:col-span-2 md:row-span-2 md:p-8' : 'p-6 md:row-span-2',
+            index === 0 || index === 3
+              ? 'p-6 md:col-span-2 md:row-span-2 md:p-8'
+              : 'p-6 md:row-span-2',
+            getCardAnimationClass(index),
           ]"
         >
           <NuxtImg
             :src="service.imagePath"
             :alt="$t(service.imageAltKey)"
             class="pointer-events-none absolute -bottom-4 -right-12 opacity-20 transition-all duration-700 ease-out group-hover:translate-x-0 group-hover:opacity-30"
-            :class="index === 0 || index === 3 ? 'h-48 w-48 translate-x-8 md:h-64 md:w-64' : 'h-32 w-32 translate-x-6'"
+            :class="getImageClass(index)"
             loading="lazy"
           />
 
@@ -41,7 +45,12 @@
               <div
                 class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-zenith-gold-vivid/20"
               >
-                <Icon :name="service.icon" size="32" class="text-zenith-gold-vivid" aria-hidden="true" />
+                <Icon
+                  :name="service.icon"
+                  size="32"
+                  class="text-zenith-gold-vivid"
+                  aria-hidden="true"
+                />
               </div>
 
               <h3
@@ -50,7 +59,9 @@
                 {{ $t(service.titleKey) }}
               </h3>
 
-              <p class="text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+              <p
+                class="text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+              >
                 {{ $t(service.descriptionKey) }}
               </p>
             </div>
@@ -78,4 +89,67 @@ import { services } from '~/constants/services'
 const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
 
 const serviceList = services
+const cardRefs = ref<(HTMLElement | null)[]>([])
+const visibleCards = ref<Set<number>>(new Set())
+
+const setCardRef = (
+  el: HTMLElement | Element | ComponentPublicInstance | null,
+  index: number,
+): void => {
+  if (el && 'nodeType' in el) {
+    cardRefs.value[index] = el as HTMLElement
+  }
+}
+
+const getCardAnimationClass = (index: number): string => {
+  const delays = [
+    'animate-delay-100',
+    'animate-delay-200',
+    'animate-delay-300',
+    'animate-delay-400',
+  ]
+  const animations = ['animate-zoom-in', 'animate-zoom-in', 'animate-zoom-in', 'animate-zoom-in']
+
+  if (visibleCards.value.has(index)) {
+    return `${animations[index]} ${delays[index]} animate-duration-700`
+  }
+  return 'opacity-0'
+}
+
+const getImageClass = (index: number): string => {
+  return index === 0 || index === 3
+    ? 'h-48 w-48 translate-x-8 md:h-64 md:w-64'
+    : 'h-32 w-32 translate-x-6'
+}
+
+onMounted(() => {
+  if (!import.meta.client) return
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = cardRefs.value.findIndex((ref) => ref === entry.target)
+          if (index !== -1) {
+            visibleCards.value.add(index)
+          }
+        }
+      })
+    },
+    {
+      threshold: 0.15,
+      rootMargin: '0px',
+    },
+  )
+
+  cardRefs.value.forEach((ref) => {
+    if (ref && 'nodeType' in ref) {
+      observer.observe(ref)
+    }
+  })
+
+  onUnmounted(() => {
+    observer.disconnect()
+  })
+})
 </script>

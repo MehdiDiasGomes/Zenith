@@ -17,6 +17,8 @@
     <div class="relative z-10 mx-auto max-w-5xl text-center">
       <div class="mb-8 flex justify-center">
         <div
+          ref="_badgeRef"
+          :class="badgeClasses"
           class="inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/20 bg-zenith-bg-secondary-light/50 px-4 py-2 backdrop-blur-sm dark:bg-zenith-bg-secondary-dark/50"
         >
           <span class="relative flex h-2 w-2">
@@ -33,7 +35,11 @@
         </div>
       </div>
 
-      <h1 class="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+      <h1
+        ref="_titleRef"
+        :class="titleClasses"
+        class="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
+      >
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part1') }}
         </span>
@@ -52,12 +58,18 @@
       </h1>
 
       <p
+        ref="_subtitleRef"
+        :class="subtitleClasses"
         class="mx-auto mb-12 max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark md:text-lg"
       >
         {{ $t('hero.subtitle') }}
       </p>
 
-      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <div
+        ref="_ctaRef"
+        :class="ctaClasses"
+        class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+      >
         <NuxtLink
           to="/contact"
           class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
@@ -81,6 +93,19 @@
 </template>
 
 <script setup lang="ts">
+const { elementRef: _badgeRef, classes: badgeClasses } = useTailwindAnimate(
+  'animate-fade-down animate-delay-100 animate-duration-700',
+)
+const { elementRef: _titleRef, classes: titleClasses } = useTailwindAnimate(
+  'animate-fade-up animate-delay-300 animate-duration-700',
+)
+const { elementRef: _subtitleRef, classes: subtitleClasses } = useTailwindAnimate(
+  'animate-fade-up animate-delay-500 animate-duration-700',
+)
+const { elementRef: _ctaRef, classes: ctaClasses } = useTailwindAnimate(
+  'animate-fade-up animate-delay-700 animate-duration-700',
+)
+
 const scrollToProjects = (event: Event): void => {
   event.preventDefault()
   const projectsSection = document.getElementById('projects')

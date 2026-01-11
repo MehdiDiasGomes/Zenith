@@ -17,7 +17,7 @@
         </p>
       </div>
 
-      <div class="mb-8 flex justify-center">
+      <div ref="_filterRef" :class="filterClasses" class="mb-8 flex justify-center">
         <div
           class="inline-flex rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-1 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
         >
@@ -177,4 +177,7 @@ const gridClasses = computed(() => {
 })
 
 const { elementRef, animationClasses } = useScrollAnimation('fade-left')
+const { elementRef: _filterRef, classes: filterClasses } = useTailwindAnimate(
+  'animate-fade-down animate-delay-200 animate-duration-700',
+)
 </script>

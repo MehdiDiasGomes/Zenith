@@ -3,8 +3,8 @@
     id="contact"
     class="relative overflow-hidden bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
   >
-    <div class="relative mx-auto max-w-6xl">
-      <div class="mb-12 space-y-2 text-center">
+    <div ref="_elementRef" class="relative mx-auto max-w-6xl">
+      <div :class="animationClasses" class="mb-12 space-y-2 text-center">
         <h1
           class="mb-4 text-4xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-5xl"
         >
@@ -16,9 +16,9 @@
       </div>
 
       <div class="grid gap-12 lg:grid-cols-2">
-        <div>
+        <div ref="_formRef" :class="formClasses">
           <form
-            class="relative group space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+            class="group relative space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
             @submit="onSubmit"
           >
             <FormField v-slot="{ componentField }" name="name">
@@ -123,7 +123,11 @@
           </form>
         </div>
 
-        <div class="flex flex-col justify-between space-y-8">
+        <div
+          ref="_contactRef"
+          :class="contactClasses"
+          class="flex flex-col justify-between space-y-8"
+        >
           <div class="flex items-center justify-center">
             <NuxtImg
               src="/assets/illustrations/contact_us.svg"
@@ -156,7 +160,9 @@
                 >
                   {{ $t(contact.labelKey) }}
                 </h3>
-                <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                <p
+                  class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                >
                   {{ contact.value }}
                 </p>
               </div>
@@ -184,7 +190,9 @@
                 >
                   {{ $t('contact.info.instagram.label') }}
                 </h3>
-                <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                <p
+                  class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                >
                   @dg_zenith
                 </p>
               </div>
@@ -212,42 +220,24 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
-
-interface ContactInfo {
-  id: string
-  icon: string
-  labelKey: string
-  value: string
-  href: string
-}
+import { contactInfo } from '~/constants/contact'
 
 const { t } = useI18n()
 
-const contactInfo: ContactInfo[] = [
-  {
-    id: 'email',
-    icon: 'Mail',
-    labelKey: 'contact.info.email.label',
-    value: 'contact@dg-zenith.com',
-    href: 'mailto:contact@dg-zenith.com',
-  },
-  {
-    id: 'phone',
-    icon: 'Phone',
-    labelKey: 'contact.info.phone.label',
-    value: '+33 7 89 62 69 27',
-    href: 'tel:+33789626927',
-  },
-]
+const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
+const { elementRef: _formRef, classes: formClasses } = useTailwindAnimate(
+  'animate-fade-right animate-delay-100 animate-duration-700',
+)
+const { elementRef: _contactRef, classes: contactClasses } = useTailwindAnimate(
+  'animate-fade-left animate-delay-300 animate-duration-700',
+)
 
 const formSchema = toTypedSchema(
   z.object({
     name: z.string().min(2, {
       message: t('contact.form.name.error'),
     }),
-    email: z.string().email({
-      message: t('contact.form.email.error'),
-    }),
+    email: z.string().email(),
     subject: z.string().min(1, {
       message: t('contact.form.subject.error'),
     }),

@@ -1,7 +1,7 @@
 <template>
   <div
-    ref="elementRef"
-    :class="animationClasses"
+    ref="_elementRef"
+    :class="elementClasses"
     class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
   >
     <div class="animate-marquee flex whitespace-nowrap">
@@ -22,7 +22,9 @@
 <script setup lang="ts">
 import { marqueeItems } from '~/constants/marquee'
 
-const { elementRef, animationClasses } = useScrollAnimation('fade-in')
+const { elementRef: _elementRef, classes: elementClasses } = useTailwindAnimate(
+  'animate-fade-up animate-delay-100 animate-duration-700',
+)
 </script>
 
 <style scoped>

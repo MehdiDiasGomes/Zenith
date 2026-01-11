@@ -51,8 +51,8 @@ export const useScrollAnimation = (
     const animations = {
       'fade-up': 'opacity-0 translate-y-12',
       'fade-down': 'opacity-0 -translate-y-12',
-      'fade-left': 'opacity-0 translate-x-12',
-      'fade-right': 'opacity-0 -translate-x-12',
+      'fade-left': 'opacity-0 translate-x-24',
+      'fade-right': 'opacity-0 -translate-x-24',
       'fade-in': 'opacity-0',
       'scale-in': 'opacity-0 scale-95',
     }

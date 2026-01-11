@@ -17,11 +17,14 @@
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <article
-          v-for="plan in pricingPlans"
+          v-for="(plan, index) in pricingPlans"
           :key="plan.id"
-          class="group relative border-dashed flex flex-col overflow-hidden rounded-2xl border-2 border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+          :ref="(el) => setCardRef(el, index)"
+          :class="[
+            'group relative flex flex-col overflow-hidden rounded-2xl border-2 border-dashed border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark',
+            getCardAnimationClass(index),
+          ]"
         >
-        
           <div class="p-6">
             <h3
               class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
@@ -76,4 +79,57 @@
 import { pricingPlans } from '~/constants/pricing'
 
 const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
+
+const cardRefs = ref<(HTMLElement | null)[]>([])
+const visibleCards = ref<Set<number>>(new Set())
+
+const setCardRef = (
+  el: HTMLElement | Element | ComponentPublicInstance | null,
+  index: number,
+): void => {
+  if (el && 'nodeType' in el) {
+    cardRefs.value[index] = el as HTMLElement
+  }
+}
+
+const getCardAnimationClass = (index: number): string => {
+  const delays = ['animate-delay-100', 'animate-delay-300', 'animate-delay-500']
+  const animations = ['animate-flip-up', 'animate-flip-up', 'animate-flip-up']
+
+  if (visibleCards.value.has(index)) {
+    return `${animations[index]} ${delays[index]} animate-duration-700`
+  }
+  return 'opacity-0'
+}
+
+onMounted(() => {
+  if (!import.meta.client) return
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = cardRefs.value.findIndex((ref) => ref === entry.target)
+          if (index !== -1) {
+            visibleCards.value.add(index)
+          }
+        }
+      })
+    },
+    {
+      threshold: 0.15,
+      rootMargin: '0px',
+    },
+  )
+
+  cardRefs.value.forEach((ref) => {
+    if (ref && 'nodeType' in ref) {
+      observer.observe(ref)
+    }
+  })
+
+  onUnmounted(() => {
+    observer.disconnect()
+  })
+})
 </script>
