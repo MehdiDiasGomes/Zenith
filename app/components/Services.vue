@@ -66,12 +66,12 @@
               </p>
             </div>
 
-            <div
+            <!-- <div
               class="mt-6 flex items-center gap-2 text-sm font-semibold text-zenith-gold-vivid opacity-0 transition-all duration-300 group-hover:opacity-100"
             >
               <span>{{ $t('services.learnMore') }}</span>
               <Icon name="ArrowRight" size="16" aria-hidden="true" />
-            </div>
+            </div> -->
           </div>
 
           <div
