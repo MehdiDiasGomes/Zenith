@@ -6,7 +6,7 @@
     <div ref="_elementRef" class="relative mx-auto max-w-6xl">
       <div :class="animationClasses" class="mb-12 space-y-2 text-center">
         <h1
-          class="mb-4 text-4xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-5xl"
+          class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
         >
           {{ $t('contact.title') }}
         </h1>
