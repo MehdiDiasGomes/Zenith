@@ -99,14 +99,6 @@ export default createConfigForNuxt({
       'prefer-const': 'error',
       'prefer-template': 'error',
       'prefer-arrow-callback': 'error',
-      'no-magic-numbers': [
-        'warn',
-        {
-          ignore: [0, 1, -1],
-          ignoreArrayIndexes: true,
-          ignoreDefaultValues: true,
-        },
-      ],
       complexity: ['warn', 10],
       'max-depth': ['warn', 3],
       'max-lines-per-function': [
