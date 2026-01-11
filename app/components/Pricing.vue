@@ -21,6 +21,7 @@
           :key="plan.id"
           class="group relative border-dashed flex flex-col overflow-hidden rounded-2xl border-2 border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
         >
+        
           <div class="p-6">
             <h3
               class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"

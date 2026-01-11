@@ -127,9 +127,10 @@
         <div class="bg-zenith-gold-bronze w-7/12 h-[1px] rounded-full lg:hidden mx-auto"></div>
 
         <form
-          class="space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+          class="relative group space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark overflow-hidden"
           @submit="onSubmit"
         >
+        <Icon name="Mail" class="absolute -right-[45%] w-full h-full -top-10 group-hover:-right-[30%] duration-200 transition-all text-white opacity-10 group-hover:text-zenith-gold-bronze group-hover:opacity-50" />
         <FormField v-slot="{ componentField }" name="name">
           <FormItem v-auto-animate>
             <FormLabel>{{ $t('contact.form.name.label') }}</FormLabel>

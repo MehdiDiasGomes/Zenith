@@ -1,48 +1,70 @@
 <template>
-  <section id="services" class="relative px-4 py-20 sm:px-6 lg:px-8">
-    <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
-      <div class="mb-12 text-center">
+  <section
+    id="services"
+    :aria-label="$t('services.ariaLabel')"
+    class="relative px-4 py-20 sm:px-6 lg:px-8"
+  >
+    <div ref="_elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
+      <div class="mb-16 text-center">
         <h2
-          class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
+          id="services-heading"
+          class="mb-4 text-3xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-4xl"
         >
           {{ $t('services.title') }}
         </h2>
         <p
-          class="mx-auto max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+          class="mx-auto max-w-2xl text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
           {{ $t('services.subtitle') }}
         </p>
       </div>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
         <div
-          v-for="service in services"
+          v-for="(service, index) in serviceList"
           :key="service.id"
-          class="group relative overflow-hidden rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-6 transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+          :class="[
+            'group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 backdrop-blur-sm transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/20',
+            index === 0 || index === 3 ? 'p-6 md:col-span-2 md:row-span-2 md:p-8' : 'p-6 md:row-span-2',
+          ]"
         >
-          <div
-            class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:bg-zenith-gold-vivid/20"
-          >
-            <Icon
-              :name="service.icon"
-              size="24"
-              class="text-zenith-gold-vivid"
-              aria-hidden="true"
-            />
+          <NuxtImg
+            :src="service.imagePath"
+            :alt="$t(service.imageAltKey)"
+            class="pointer-events-none absolute -bottom-4 -right-12 opacity-20 transition-all duration-700 ease-out group-hover:translate-x-0 group-hover:opacity-30"
+            :class="index === 0 || index === 3 ? 'h-48 w-48 translate-x-8 md:h-64 md:w-64' : 'h-32 w-32 translate-x-6'"
+            loading="lazy"
+          />
+
+          <div class="relative z-10 flex h-full flex-col justify-between">
+            <div :class="index === 0 || index === 3 ? 'max-w-lg' : 'max-w-xs'">
+              <div
+                class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-zenith-gold-vivid/20"
+              >
+                <Icon :name="service.icon" size="32" class="text-zenith-gold-vivid" aria-hidden="true" />
+              </div>
+
+              <h3
+                class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-2xl"
+              >
+                {{ $t(service.titleKey) }}
+              </h3>
+
+              <p class="text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                {{ $t(service.descriptionKey) }}
+              </p>
+            </div>
+
+            <div
+              class="mt-6 flex items-center gap-2 text-sm font-semibold text-zenith-gold-vivid opacity-0 transition-all duration-300 group-hover:opacity-100"
+            >
+              <span>{{ $t('services.learnMore') }}</span>
+              <Icon name="ArrowRight" size="16" aria-hidden="true" />
+            </div>
           </div>
 
-          <h3
-            class="mb-2 text-lg font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-          >
-            {{ $t(service.titleKey) }}
-          </h3>
-
-          <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-            {{ $t(service.descriptionKey) }}
-          </p>
-
           <div
-            class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
+            class="absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 to-zenith-gold-vivid/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
         </div>
       </div>
@@ -53,5 +75,7 @@
 <script setup lang="ts">
 import { services } from '~/constants/services'
 
-const { elementRef, animationClasses } = useScrollAnimation('fade-up')
+const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
+
+const serviceList = services
 </script>

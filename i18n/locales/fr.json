@@ -21,12 +21,12 @@
   "hero": {
     "availability": "Actuellement disponible",
     "title": {
-      "part1": "Créez des ",
-      "part2": "expériences en ligne",
-      "part3": "sur ",
-      "part4": "mesure."
+      "part1": "Votre entreprise mérite ",
+      "part2": "un site web",
+      "part3": "qui ",
+      "part4": "génère des clients."
     },
-    "subtitle": "Agence de design et développement web, nous créons des solutions sur-mesure qui donnent vie à vos ambitions et renforcent votre présence en ligne.",
+    "subtitle": "Création ou refonte : nous construisons des sites performants pour les PME qui veulent croître.",
     "cta": {
       "primary": "Prendre contact",
       "secondary": "Découvrir nos travaux"
@@ -42,22 +42,28 @@
   },
   "services": {
     "title": "Nos Services",
-    "subtitle": "Des solutions complètes pour donner vie à vos projets",
+    "subtitle": "Tout ce dont votre entreprise a besoin pour réussir en ligne",
+    "learnMore": "En savoir plus",
+    "ariaLabel": "Section des services proposés",
     "webDev": {
-      "title": "Développement Web",
-      "description": "Sites web modernes et performants avec les dernières technologies"
+      "title": "Site Web Professionnel",
+      "description": "Un site qui inspire confiance et transforme vos visiteurs en clients - disponible 24/7 pour développer votre activité",
+      "imageAlt": "Illustration représentant le développement web professionnel"
     },
     "uiUx": {
-      "title": "Design UI/UX",
-      "description": "Interfaces intuitives et expériences utilisateur optimales"
+      "title": "Design Qui Convertit",
+      "description": "Navigation claire et appels à l'action efficaces pour que vos prospects vous contactent facilement",
+      "imageAlt": "Illustration représentant le design et l'expérience utilisateur"
     },
     "performance": {
-      "title": "Performance & SEO",
-      "description": "Optimisation technique pour un référencement optimal"
+      "title": "Visible sur Google",
+      "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services - sans dépendre de la publicité",
+      "imageAlt": "Illustration représentant l'optimisation SEO et le référencement"
     },
     "maintenance": {
-      "title": "Maintenance",
-      "description": "Support et évolution continue de votre site"
+      "title": "Tranquillité d'Esprit",
+      "description": "Hébergement, mises à jour et support inclus - concentrez-vous sur votre métier, on s'occupe de la technique",
+      "imageAlt": "Illustration représentant la maintenance et le support technique"
     }
   },
   "projects": {

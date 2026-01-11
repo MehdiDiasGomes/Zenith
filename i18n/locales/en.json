@@ -21,12 +21,12 @@
   "hero": {
     "availability": "Currently available",
     "title": {
-      "part1": "Create ",
-      "part2": "custom online",
-      "part3": "",
-      "part4": "experiences."
+      "part1": "Your business deserves ",
+      "part2": "a website",
+      "part3": "that ",
+      "part4": "generates clients."
     },
-    "subtitle": "Web design and development agency, we create custom solutions that bring your ambitions to life and strengthen your online presence.",
+    "subtitle": "Creation or redesign: we build high-performing websites for SMEs looking to grow.",
     "cta": {
       "primary": "Get in touch",
       "secondary": "Discover our work"
@@ -42,22 +42,28 @@
   },
   "services": {
     "title": "My Services",
-    "subtitle": "Complete solutions to bring your projects to life",
+    "subtitle": "Everything your business needs to succeed online",
+    "learnMore": "Learn more",
+    "ariaLabel": "Services section",
     "webDev": {
-      "title": "Web Development",
-      "description": "Modern and high-performance websites with the latest technologies"
+      "title": "Professional Website",
+      "description": "A site that inspires trust and converts your visitors into clients - available 24/7 to grow your business",
+      "imageAlt": "Illustration representing professional web development"
     },
     "uiUx": {
-      "title": "UI/UX Design",
-      "description": "Intuitive interfaces and optimal user experiences"
+      "title": "Design That Converts",
+      "description": "Clear navigation and effective calls-to-action so your prospects can easily contact you",
+      "imageAlt": "Illustration representing design and user experience"
     },
     "performance": {
-      "title": "Performance & SEO",
-      "description": "Technical optimization for optimal search engine ranking"
+      "title": "Visible on Google",
+      "description": "Optimization so your clients find you when searching for your services - without relying on advertising",
+      "imageAlt": "Illustration representing SEO optimization and search engine ranking"
     },
     "maintenance": {
-      "title": "Maintenance",
-      "description": "Ongoing support and evolution of your website"
+      "title": "Peace of Mind",
+      "description": "Hosting, updates, and support included - focus on your business, we handle the technical side",
+      "imageAlt": "Illustration representing maintenance and technical support"
     }
   },
   "projects": {
