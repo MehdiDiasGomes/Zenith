@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.nuxt/
+.output/
+dist/
+
+# Build files
+*.min.js
+*.min.css
+
+# Lock files
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment
+.env
+.env.*
+
+# Generated
+.nitro/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# UI Components
+app/components/ui/
