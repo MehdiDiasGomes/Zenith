@@ -23,13 +23,13 @@
           class="flex flex-wrap justify-center gap-6"
         >
           <NuxtLink
-            :to="localePath('/legal')"
+            to="legal"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
           >
             {{ $t('footer.legal') }}
           </NuxtLink>
           <NuxtLink
-            :to="localePath('/privacy')"
+            to="privacy"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
           >
             {{ $t('footer.privacy') }}
@@ -49,8 +49,6 @@
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath()
-
 const currentYear = computed<number>(() => new Date().getFullYear())
 
 const { elementRef: _logoRef, classes: logoClasses } = useTailwindAnimate(

@@ -145,21 +145,29 @@ const scrollToSection = (event: Event, anchor: string): void => {
 }
 
 const scrollToTop = (event: Event): void => {
+  event.preventDefault()
   if (route.path === '/') {
-    event.preventDefault()
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     })
-    closeMobileMenu()
+  } else {
+    navigateTo('/')
   }
+  closeMobileMenu()
 }
 
 const handleNavClick = (event: Event, path: string): void => {
   if (path === '/') {
     scrollToTop(event)
   } else if (path.startsWith('#')) {
-    scrollToSection(event, path)
+    if (route.path === '/') {
+      scrollToSection(event, path)
+    } else {
+      event.preventDefault()
+      closeMobileMenu()
+      navigateTo(`/${path}`)
+    }
   } else {
     closeMobileMenu()
   }

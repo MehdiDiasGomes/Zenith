@@ -2,8 +2,18 @@
 
 ## Éditeur du site
 
-**Zenith**
-Agence de développement web sur mesure
+**Mehdi DIAS GOMES**
+Auto-entrepreneur
+SIRET : 99215661200010
+
+Adresse :
+28 cité des sports
+57270 Uckange
+France
+
+Email : contact@dg-zenith.com
+
+**Directeur de publication** : Mehdi DIAS GOMES
 
 ## Hébergement
 
@@ -13,9 +23,11 @@ Le site est hébergé par :
 Walnut, CA 91789
 États-Unis
 
+Site web : https://vercel.com
+
 ## Propriété intellectuelle
 
-L'ensemble du contenu de ce site (textes, images, logos, graphismes) est la propriété exclusive de Zenith, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation préalable est strictement interdite.
+L'ensemble du contenu de ce site (textes, images, logos, graphismes) est la propriété exclusive de Mehdi DIAS GOMES, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation préalable est strictement interdite.
 
 ## Données personnelles
 
@@ -23,10 +35,10 @@ Pour toute information concernant la collecte et le traitement de vos données p
 
 ## Cookies
 
-Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking ou publicitaire n'est utilisé.
+Ce site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement (préférences d'affichage, langue). Aucun cookie de tracking, publicitaire ou analytique n'est utilisé.
 
 ## Contact
 
-Pour toute question concernant ces mentions légales, vous pouvez nous contacter via le [formulaire de contact](/contact).
+Pour toute question concernant ces mentions légales, vous pouvez nous contacter via le [formulaire de contact](/#contact) ou par email à contact@dg-zenith.com.
 
-Dernière mise à jour : 01/01/2026
+Dernière mise à jour : 17/01/2026
