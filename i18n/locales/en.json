@@ -186,6 +186,11 @@
         "description": "Share the details of your project with us",
         "error": "Message must be at least 10 characters"
       },
+      "consent": {
+        "label": "I agree that my data can be used to contact me. See our ",
+        "linkText": "privacy policy",
+        "error": "You must agree to the processing of your data to submit the form"
+      },
       "submit": "Send message",
       "sending": "Sending...",
       "success": "Message sent successfully! We'll respond quickly.",

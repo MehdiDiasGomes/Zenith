@@ -96,6 +96,26 @@
               </FormItem>
             </FormField>
 
+            <FormField v-slot="{ value, handleChange }" name="consent">
+              <FormItem class="flex flex-row items-start space-x-3 space-y-0">
+                <FormControl>
+                  <Checkbox :checked="value" @update:checked="handleChange" />
+                </FormControl>
+                <div v-auto-animate class="space-y-1 leading-none">
+                  <FormLabel class="text-sm font-normal cursor-pointer">
+                    {{ $t('contact.form.consent.label') }}
+                    <NuxtLink
+                      to="/privacy"
+                      class="text-zenith-gold-vivid hover:text-zenith-champagne underline"
+                    >
+                      {{ $t('contact.form.consent.linkText') }}
+                    </NuxtLink>
+                  </FormLabel>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            </FormField>
+
             <Button
               type="submit"
               :disabled="isSubmitting"
@@ -210,6 +230,7 @@ import { useForm } from 'vee-validate'
 import { z } from 'zod'
 
 import { Button } from '@/components/ui/button'
+import Checkbox from '@/components/ui/checkbox.vue'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import {
@@ -237,12 +258,17 @@ const formSchema = toTypedSchema(
     name: z.string().min(2, {
       message: t('contact.form.name.error'),
     }),
-    email: z.string().email(),
+    email: z.string().email({
+      message: t('contact.form.email.error'),
+    }),
     subject: z.string().min(1, {
       message: t('contact.form.subject.error'),
     }),
     message: z.string().min(10, {
       message: t('contact.form.message.error'),
+    }),
+    consent: z.boolean().refine((val) => val === true, {
+      message: t('contact.form.consent.error'),
     }),
   }),
 )
@@ -254,6 +280,7 @@ const form = useForm({
     email: '',
     subject: '',
     message: '',
+    consent: false,
   },
   validateOnMount: false,
 })

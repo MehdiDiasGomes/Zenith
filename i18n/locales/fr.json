@@ -186,6 +186,11 @@
         "description": "Partagez-nous les détails de votre projet",
         "error": "Le message doit contenir au moins 10 caractères"
       },
+      "consent": {
+        "label": "J'accepte que mes données soient utilisées pour me recontacter. Consultez notre ",
+        "linkText": "politique de confidentialité",
+        "error": "Vous devez accepter le traitement de vos données pour soumettre le formulaire"
+      },
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
       "success": "Message envoyé avec succès ! Nous vous répondrons rapidement.",
