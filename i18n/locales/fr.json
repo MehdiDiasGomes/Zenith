@@ -24,7 +24,7 @@
       "part1": "Votre entreprise mérite ",
       "part2": "un site web",
       "part3": "qui ",
-      "part4": "génère des clients."
+      "part4": "attire des clients."
     },
     "subtitle": "Création ou refonte : nous construisons des sites performants pour les PME qui veulent croître.",
     "cta": {
@@ -46,12 +46,12 @@
     "learnMore": "En savoir plus",
     "ariaLabel": "Section des services proposés",
     "webDev": {
-      "title": "Site Web Professionnel",
+      "title": "Site web professionnel",
       "description": "Un site qui inspire confiance et transforme vos visiteurs en clients - disponible 24/7 pour développer votre activité",
       "imageAlt": "Illustration représentant le développement web professionnel"
     },
     "uiUx": {
-      "title": "Design Qui Convertit",
+      "title": "Design qui convertit",
       "description": "Navigation claire et appels à l'action efficaces pour que vos prospects vous contactent facilement",
       "imageAlt": "Illustration représentant le design et l'expérience utilisateur"
     },
@@ -61,7 +61,7 @@
       "imageAlt": "Illustration représentant l'optimisation SEO et le référencement"
     },
     "maintenance": {
-      "title": "Tranquillité d'Esprit",
+      "title": "Tranquillité d'esprit",
       "description": "Hébergement, mises à jour et support inclus - concentrez-vous sur votre métier, on s'occupe de la technique",
       "imageAlt": "Illustration représentant la maintenance et le support technique"
     }

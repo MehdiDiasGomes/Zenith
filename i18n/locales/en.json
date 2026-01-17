@@ -24,7 +24,7 @@
       "part1": "Your business deserves ",
       "part2": "a website",
       "part3": "that ",
-      "part4": "generates clients."
+      "part4": "attracts clients."
     },
     "subtitle": "Creation or redesign: we build high-performing websites for SMEs looking to grow.",
     "cta": {
@@ -46,12 +46,12 @@
     "learnMore": "Learn more",
     "ariaLabel": "Services section",
     "webDev": {
-      "title": "Professional Website",
+      "title": "Professional website",
       "description": "A site that inspires trust and converts your visitors into clients - available 24/7 to grow your business",
       "imageAlt": "Illustration representing professional web development"
     },
     "uiUx": {
-      "title": "Design That Converts",
+      "title": "Design that converts",
       "description": "Clear navigation and effective calls-to-action so your prospects can easily contact you",
       "imageAlt": "Illustration representing design and user experience"
     },
@@ -61,7 +61,7 @@
       "imageAlt": "Illustration representing SEO optimization and search engine ranking"
     },
     "maintenance": {
-      "title": "Peace of Mind",
+      "title": "Peace of mind",
       "description": "Hosting, updates, and support included - focus on your business, we handle the technical side",
       "imageAlt": "Illustration representing maintenance and technical support"
     }
