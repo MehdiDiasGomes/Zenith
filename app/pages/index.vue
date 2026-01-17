@@ -3,7 +3,7 @@
     <Hero />
     <Marquee />
     <Services />
-    <Projects />
+    <!-- <Projects /> -->
     <Pricing />
     <ContactForm />
   </div>
