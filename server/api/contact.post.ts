@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
     const textContent: string = generateContactEmailText(validatedData)
 
     const { data, error } = await resend.emails.send({
-      from: 'Zenith Contact <onboarding@resend.dev>',
+      from: useRuntimeConfig().contactEmail,
       to: [contactEmail],
       replyTo: validatedData.email,
       subject: `Nouveau contact: ${validatedData.subject}`,
