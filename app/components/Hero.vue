@@ -71,13 +71,13 @@
         class="flex flex-col items-center justify-center gap-4 sm:flex-row"
       >
         <NuxtLink
-          to="/contact"
+          to="#contact"
           class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
         >
           {{ $t('hero.cta.primary') }}
         </NuxtLink>
 
-        <a
+        <!-- <a
           href="#projects"
           class="group relative text-sm font-semibold text-zenith-text-primary-light transition-all duration-200 dark:text-zenith-text-primary-dark"
           @click="scrollToProjects"
@@ -86,7 +86,7 @@
           <span
             class="absolute -bottom-1 left-0 h-0.5 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
           />
-        </a>
+        </a> -->
       </div>
     </div>
   </section>
