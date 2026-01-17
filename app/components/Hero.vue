@@ -70,12 +70,13 @@
         :class="ctaClasses"
         class="flex flex-col items-center justify-center gap-4 sm:flex-row"
       >
-        <NuxtLink
-          to="#contact"
+        <a
+          href="#contact"
           class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
+          @click="scrollToContact"
         >
           {{ $t('hero.cta.primary') }}
-        </NuxtLink>
+        </a>
 
         <!-- <a
           href="#projects"
@@ -106,13 +107,13 @@ const { elementRef: _ctaRef, classes: ctaClasses } = useTailwindAnimate(
   'animate-fade-up animate-delay-700 animate-duration-700',
 )
 
-const scrollToProjects = (event: Event): void => {
+const scrollToContact = (event: Event): void => {
   event.preventDefault()
-  const projectsSection = document.getElementById('projects')
+  const contactSection = document.getElementById('contact')
 
-  if (projectsSection) {
+  if (contactSection) {
     const navbarHeight = 100
-    const elementPosition = projectsSection.getBoundingClientRect().top
+    const elementPosition = contactSection.getBoundingClientRect().top
     const offsetPosition = elementPosition + window.scrollY - navbarHeight
 
     window.scrollTo({
