@@ -1,270 +1,218 @@
 {
   "seo": {
-    "title": "Mehdi Dias Gomes - Développeur Full-Stack | Devaura",
-    "description": "Développeur full-stack spécialisé en Vue.js, Nuxt.js, Laravel et TypeScript. Je crée des applications web modernes, performantes et sur mesure."
+    "title": "Zenith - Agence de Développement Web sur Mesure",
+    "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne.",
+    "legal": {
+      "title": "Mentions Légales - Zenith",
+      "description": "Informations légales et mentions obligatoires de Zenith, agence de développement web."
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité - Zenith",
+      "description": "Politique de confidentialité et protection des données personnelles de Zenith, conforme au RGPD."
+    }
   },
-  "header": {
-    "title": "Je construis",
-    "span_title": "Des Expériences",
-    "span_title_italic": "Web Modernes",
-    "description": "Développeur full-stack passionné, je crée des applications web modernes et performantes"
+  "home": {
+    "title": "Bienvenue chez Zenith"
   },
-  "navigation": {
+  "nav": {
+    "ariaLabel": "Navigation principale",
+    "logoAriaLabel": "Retour à l'accueil Zenith",
     "home": "Accueil",
-    "about": "À propos",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
+    "services": "Services",
+    "projects": "Projets",
+    "pricing": "Tarifs",
+    "contact": "Contactez-nous",
+    "toggleTheme": "Changer le thème",
+    "toggleMenu": "Ouvrir le menu",
+    "switchToLang": "Changer la langue vers {lang}"
   },
-  "landing": {
-    "availability": "Disponible pour vos projets",
-    "brand": "Mehdi, votre développeur fullstack freelance",
-    "tagline": "J'accompagne startups et PME dans la création de leurs applications web",
-    "description": "Développeur fullstack spécialisé Nuxt.js & Laravel. Je transforme rapidement vos idées en applications web modernes : sites vitrines, SaaS, interfaces sur mesure. Stack technique à jour, livraison rapide, et je reste disponible après le lancement. Basé à Metz, je travaille avec startups et PME qui veulent avancer vite.",
+  "hero": {
+    "availability": "Actuellement disponible",
+    "title": {
+      "part1": "Votre entreprise mérite ",
+      "part2": "un site web",
+      "part3": "qui ",
+      "part4": "attire des clients."
+    },
+    "subtitle": "Création ou refonte : nous construisons des sites performants pour les PME qui veulent croître.",
     "cta": {
-      "portfolio": "Voir mes projets",
-      "contact": "Me contacter"
+      "primary": "Prendre contact",
+      "secondary": "Découvrir nos travaux"
     }
   },
-  "lang": {
-    "choose": "Choix de la langue"
+  "marquee": {
+    "webDesigner": "Web Designer",
+    "fullstackDev": "Développeur Full-Stack",
+    "uiUx": "UI/UX Designer",
+    "seoExpert": "Expert SEO"
   },
-  "theme": {
-    "choose": "Choix du thème",
-    "light": "Clair",
-    "dark": "Sombre",
-    "system": "Système"
-  },
-  "button": {
-    "see_work": "Voir mon travail"
-  },
-  "workXp": {
-    "title_first": "Mon",
-    "title_second": "expérience professionnelle",
-    "cardOne": {
-      "title": "Développeur Front End",
-      "description": "Création d'applications web dynamiques et performantes avec Vue.js et Nuxt.js."
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Tout ce dont votre entreprise a besoin pour réussir en ligne",
+    "learnMore": "En savoir plus",
+    "ariaLabel": "Section des services proposés",
+    "webDev": {
+      "title": "Site web professionnel",
+      "description": "Un site qui inspire confiance et transforme vos visiteurs en clients - disponible 24/7 pour développer votre activité",
+      "imageAlt": "Illustration représentant le développement web professionnel"
     },
-    "cardTwo": {
-      "title": "Développeur Back End",
-      "description": "Conception et implémentation d'API RESTful avec Laravel et Eloquent."
+    "uiUx": {
+      "title": "Design qui convertit",
+      "description": "Navigation claire et appels à l'action efficaces pour que vos prospects vous contactent facilement",
+      "imageAlt": "Illustration représentant le design et l'expérience utilisateur"
     },
-    "cardThree": {
-      "title": "Designer UX/UI",
-      "description": "Création d'interfaces attrayantes et intuitives avec Figma."
+    "performance": {
+      "title": "Visible sur Google",
+      "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services - sans dépendre de la publicité",
+      "imageAlt": "Illustration représentant l'optimisation SEO et le référencement"
     },
-    "cardFour": {
-      "title": "Chef de Projet",
-      "description": "Direction et gestion d'une équipe de développeurs pour livrer des produits de haute qualité."
-    }
-  },
-  "skills": {
-    "title": "Mes compétences",
-    "subtitle": "Technologies et outils que j'utilise",
-    "techStack": {
-      "title": "Technologies"
-    },
-    "frontend": {
-      "title": "Frontend"
-    },
-    "backend": {
-      "title": "Backend"
-    },
-    "database": {
-      "title": "Bases de données"
-    },
-    "tools": {
-      "title": "Outils & Autres"
-    },
-    "experience": {
-      "title": "Niveaux d'expérience",
-      "expert": "Expert",
-      "expertDesc": "Plusieurs années d'expérience professionnelle, maîtrise approfondie et capacité à former les autres.",
-      "proficient": "Avancé",
-      "proficientDesc": "Bonne connaissance et expérience pratique dans des projets professionnels.",
-      "familiar": "Familier",
-      "familiarDesc": "Connaissance des concepts fondamentaux et expérience dans des projets personnels."
+    "maintenance": {
+      "title": "Tranquillité d'esprit",
+      "description": "Hébergement, mises à jour et support inclus - concentrez-vous sur votre métier, on s'occupe de la technique",
+      "imageAlt": "Illustration représentant la maintenance et le support technique"
     }
   },
   "projects": {
-    "title": "Mes",
-    "title_highlight": "projets",
-    "quizify": {
-      "title": "Quizify",
-      "description": "Projet de bachelor visant à intégrer un quiz interactif permettant d'évaluer les compétences des joueurs tout en leur offrant une expérience de jeu."
+    "title": "Nos Projets",
+    "subtitle": "Découvrez nos réalisations",
+    "viewProject": "Visiter le site",
+    "viewCode": "Voir le code",
+    "emptyState": {
+      "title": "Aucun projet disponible",
+      "subtitle": "De nouveaux projets arrivent bientôt dans cette catégorie"
     },
-    "portfolio": {
-      "title": "Mon portfolio",
-      "card_description": "Site personnel présentant mes compétences, projets et expériences professionnelles dans le développement web.",
-      "description": "Ce portfolio est conçu comme une vitrine de mes compétences en développement web. J'ai développé ce site en utilisant Nuxt.js et TypeScript pour offrir une expérience utilisateur fluide et réactive, avec un design moderne et accessible.",
-      "subtitle": "Un aperçu de mon projet personnel",
-      "technologies": "Technologies utilisées",
-      "personal": "Projet personnel",
-      "year": "2024-2025",
-      "features": "Fonctionnalités",
-      "feature1": "Interface responsive adaptée à tous les appareils",
-      "feature2": "Multilinguisme (français/anglais) avec i18n",
-      "feature3": "Animations et transitions fluides pour une expérience utilisateur améliorée",
-      "source": "Voir le code source",
-      "live": "Visiter le site"
+    "categories": {
+      "all": "Tous",
+      "portfolio": "Portfolio",
+      "showcase": "Sites vitrines",
+      "ecommerce": "E-shop"
     },
-    "fp": {
-      "title": "Fiches pédagogiques",
-      "description": "Site personnel présentant mes compétences, projets et expériences professionnelles dans le développement web."
-    },
-    "inDevelopment": {
-      "title": "Projet en développement",
-      "subtitle": "Ce projet est actuellement en cours de réalisation",
-      "message": "Je travaille activement sur ce projet. Les détails et fonctionnalités seront dévoilés prochainement !",
-      "comingSoon": "Bientôt disponible"
-    },
-    "view": "Voir détails",
-    "viewSite": "Voir le site"
+    "kbClean": {
+      "title": "KB Clean",
+      "description": "Site vitrine pour une société de nettoyage de bacs à déchets écologique avec système de contact et gestion multilingue"
+    }
   },
-  "common": {
-    "close": "Fermer"
+  "footer": {
+    "legalNavAriaLabel": "Navigation légale",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "copyright": "© {year} Zenith. Tous droits réservés."
+  },
+  "promo": {
+    "discount": "🎉 -15% sur tous les projets jusqu'au 30/04",
+    "close": "Fermer la bannière promotionnelle"
+  },
+  "pricing": {
+    "title": "Nos prestations",
+    "subtitle": "Des solutions digitales pensées pour votre activité",
+    "popular": "Populaire",
+    "startingFrom": "à partir de",
+    "getQuote": "Demander un devis",
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Pour valoriser vos projets et votre identité",
+      "features": [
+        "Design sur-mesure adapté à votre univers",
+        "Mise en valeur des projets (galeries, visuels, descriptions)",
+        "Structure claire et fluide (UX optimisée)",
+        "Site entièrement responsive (mobile / tablette)",
+        "Animations légères et transitions",
+        "Formulaire de contact",
+        "Optimisation SEO de base",
+        "Optimisation des performances (vitesse)",
+        "Sécurité de base",
+        "Mise en ligne et tests"
+      ]
+    },
+    "showcase": {
+      "title": "Site vitrine",
+      "description": "Présenter votre activité et convertir des visiteurs en clients",
+      "features": [
+        "Arborescence et structure personnalisées",
+        "Design moderne et professionnel",
+        "Pages de présentation (services, à propos, contact, etc.)",
+        "Appels à l'action stratégiques",
+        "Site responsive tous écrans",
+        "Formulaires personnalisés",
+        "Optimisation SEO (balises, structure, contenus)",
+        "Optimisation des performances",
+        "Sécurité & protection de base",
+        "Intégration des outils de suivi (analytics)",
+        "Mise en ligne et accompagnement"
+      ]
+    },
+    "eshop": {
+      "title": "E-shop",
+      "description": "Vendre en ligne avec une boutique fiable et évolutive",
+      "features": [
+        "Design e-commerce sur-mesure",
+        "Catalogue produits complet et personnalisable",
+        "Gestion des commandes et des clients",
+        "Paiements en ligne sécurisés",
+        "Configuration des livraisons",
+        "Emails transactionnels automatisés",
+        "Pages légales conformes",
+        "Optimisation SEO e-commerce",
+        "Optimisation vitesse et performance",
+        "Sécurité renforcée",
+        "Interface d'administration simple",
+        "Formation à la prise en main",
+        "Mise en ligne et tests"
+      ]
+    }
   },
   "contact": {
-    "recaptchaNotice": {
-      "text": "Ce site est protégé par reCAPTCHA et les",
-      "privacyPolicy": "règles de confidentialité",
-      "and": "et",
-      "termsOfService": "conditions d'utilisation",
-      "suffix": "de Google s'appliquent."
-    },
-    "title": "Contactez-moi",
-    "description": "Vous avez un projet en tête ou une question ? N'hésitez pas à me contacter via ce formulaire et je vous répondrai dans les plus brefs délais.",
-    "firstName": "Prénom",
-    "firstNamePlaceholder": "Votre prénom",
-    "lastName": "Nom",
-    "lastNamePlaceholder": "Votre nom",
-    "email": "Email",
-    "emailPlaceholder": "Votre adresse email",
-    "message": "Message",
-    "messagePlaceholder": "Décrivez votre projet ou votre message ici...",
-    "send": "Envoyer",
-    "sending": "Envoi en cours...",
-    "successMessage": "Votre message a été envoyé avec succès. Je vous répondrai dès que possible !",
-    "errorMessage": "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer plus tard.",
-    "errors": {
-      "firstNameRequired": "Le prénom est requis",
-      "firstNameTooShort": "Le prénom doit contenir au moins 2 caractères",
-      "lastNameRequired": "Le nom est requis",
-      "lastNameTooShort": "Le nom doit contenir au moins 2 caractères",
-      "emailRequired": "L'adresse email est requise",
-      "emailInvalid": "Veuillez saisir une adresse email valide",
-      "messageRequired": "Le message est requis",
-      "messageTooShort": "Le message doit contenir au moins 10 caractères"
-    }
-  },
-  "about": {
-    "status": "Disponible",
-    "subTitle": "Développeur Full Stack",
-    "firstParagraph": "Mehdi DIAS GOMES, Développeur Full Stack, Metz",
-    "secondParagraph": "Diplômé d'une licence en Développement Web Full Stack à Metz Numeric School, je suis passionné par le développement web. J'ai développé une expertise pratique en développement full stack et acquis une expérience significative à travers divers projets professionnels.",
-    "aboutMe": "À propos de moi",
-    "yearsExperience": "Années",
-    "projectsCount": "Projets",
-    "technologiesCount": "Technologies",
-    "readyToCollaborate": "Prêt à collaborer ?",
-    "collaborateDescription": "Je suis toujours ouvert aux nouvelles opportunités et aux projets passionnants. N'hésitez pas à me contacter !",
-    "contactMe": "Me contacter",
-    "viewProjects": "Voir mes projets",
-    "experience": {
-      "title": "Expérience professionnelle",
-      "maanos": {
-        "title": "Maanos - The art of Massage",
-        "subTitle": "Développeur Full Stack",
-        "time": "11/2025 - Maintenant",
-        "firstInList": {
-          "parag": "Développement et maintenance du site web en interne. Prise en charge de l'infrastructure technique et amélioration continue de la plateforme.",
-          "usedTechnos": "Technologies utilisées : ",
-          "technos": "Nuxt.js, TypeScript, Tailwind CSS"
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "name": {
+        "label": "Nom",
+        "placeholder": "Votre nom complet",
+        "error": "Le nom doit contenir au moins 2 caractères"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Votre adresse email",
+        "error": "Veuillez entrer une adresse email valide"
+      },
+      "subject": {
+        "label": "Sujet",
+        "placeholder": "Sélectionnez un sujet",
+        "error": "Veuillez sélectionner un sujet",
+        "options": {
+          "showcase": "Projet de site vitrine",
+          "portfolio": "Projet de portfolio",
+          "eshop": "Projet e-commerce",
+          "other": "Autre demande"
         }
       },
-      "flippad": {
-        "title": "Jewely HBJO",
-        "subTitle": "Développeur Full Stack",
-        "time": "09/2024 - 10/2025",
-        "firstInList": {
-          "parag": "Refonte complète du site \"Fiches pédagogiques\" (front-end) \n Développement from scratch de l'interface utilisateur responsive et du back-office, avec intégration API back-end.",
-          "usedTechnos": "Technologies utilisées : ",
-          "technos": "Nuxt.js 3, TypeScript, Tailwind CSS, Laravel (Eloquent), MySQL, Docker"
-        },
-        "secondInList": {
-          "parag": "Ajout de fonctionnalités sur un PIM (Product Information Management) – amélioration du formulaire produit (filtres, nouveaux champs pour montres). Développement front-end de filtres dynamiques et de champs personnalisés pour la saisie des données.",
-          "usedTechnos": "Technologies utilisées : ",
-          "technos": "Nuxt.js, Bootstrap, JavaScript, Laravel"
-        }
-      }
-    },
-    "skill": {
-      "title": "Compétences techniques",
-      "legend": "Outils & technologies que j'utilise à l'heure actuelle",
-      "footer": "Outils & technologies que j'utilise à l'heure actuelle",
-      "level": "Niveau",
-      "expert": "Expert",
-      "intermediate": "Intermédiaire",
-      "expertSkills": "Expertes",
-      "totalSkills": "Total",
-      "expertiseLevel": "Expertise"
-    },
-    "education": {
-      "title": "Éducation",
-      "graduated": "Diplômé",
-      "keySkills": "Compétences clés",
-      "webDevelopment": "Développement Web",
-      "algorithms": "Algorithmique",
-      "databases": "Bases de données",
-      "academicPath": "Parcours académique",
-      "mns": {
-        "title": "Metz Numeric School",
-        "subTitle": "Licence développeur full stack",
-        "time": "10/2024 - 10/2025",
-        "parag": "Formation spécialisée en développement web et applications, combinant compétences en front-end, back-end et gestion de bases de données. Acquis une expertise technique dans des technologies telles que TypeScript, PHP, et MySQL, et développé des compétences pratiques à travers des projets concrets, me préparant ainsi à une carrière de développeur full-stack."
+      "message": {
+        "label": "Message",
+        "placeholder": "Décrivez votre projet ou posez votre question...",
+        "description": "Partagez-nous les détails de votre projet",
+        "error": "Le message doit contenir au moins 10 caractères"
       },
-      "labriquerie": {
-        "title": "LPO La Briquerie",
-        "subTitle": "BTS Systèmes Numériques (SNIR)",
-        "time": "09/2021 - 07/2023",
-        "parag": "Formation axée sur les systèmes embarqués, les réseaux et le développement logiciel. Apprentissage des bases de l'électronique, de la programmation (C/C++, Python) et de l'administration réseau. Développement d'une compréhension globale des architectures matérielles et logicielles, avec une approche technique et rigoureuse des systèmes numériques."
-      }
-    }
-  },
-  "pages": {
-    "landing": {
-      "seo": {
-        "title": "Devaura - Créateur d'expériences web sur mesure | Mehdi Dias Gomes",
-        "description": "Transformez vos idées en solutions web modernes et performantes. Expertise en développement full-stack, design UX/UI et création d'applications web qui marquent les esprits."
-      }
+      "consent": {
+        "label": "J'accepte que mes données soient utilisées pour me recontacter. Consultez notre ",
+        "linkText": "politique de confidentialité",
+        "error": "Vous devez accepter le traitement de vos données pour soumettre le formulaire"
+      },
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès ! Nous vous répondrons rapidement.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
     },
-    "about": {
-      "seo": {
-        "title": "À propos - Mehdi Dias Gomes | Développeur Full-Stack",
-        "description": "Diplômé en développement web full-stack, je suis passionné par la création d'applications web modernes. Découvrez mon parcours, mes compétences et mon expérience professionnelle."
-      }
-    },
-    "portfolio": {
-      "seo": {
-        "title": "Portfolio - Projets & Réalisations | Mehdi Dias Gomes",
-        "description": "Découvrez mes projets de développement web : applications Vue.js, Nuxt.js, Laravel. Solutions full-stack modernes et performantes créées avec passion."
-      }
-    },
-    "contact": {
-      "seo": {
-        "title": "Contact - Discutons de votre projet | Mehdi Dias Gomes",
-        "description": "Vous avez un projet web en tête ? Contactez-moi pour discuter de vos besoins en développement full-stack. Je réponds rapidement à toutes les demandes."
-      }
-    },
-    "projects": {
-      "seo": {
-        "title": "Projets en développement | Mehdi Dias Gomes",
-        "description": "Nouveaux projets passionnants en cours de développement. Revenez bientôt pour découvrir mes dernières créations web."
-      }
-    },
-    "privacy": {
-      "seo": {
-        "title": "Politique de confidentialité | Mehdi Dias Gomes",
-        "description": "Politique de confidentialité et protection des données personnelles pour le site mdiasgomes.dev. Informations sur l'utilisation de vos données."
+    "info": {
+      "title": "Informations de contact",
+      "description": "Vous pouvez également nous contacter directement via ces canaux.",
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Téléphone"
+      },
+      "instagram": {
+        "label": "Instagram"
       }
     }
   }

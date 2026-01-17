@@ -1,0 +1,358 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --mauve: 261, 100%, 76%, 1;
+    --foreground: 260 96% 50%;
+    --darkblue: 225 36% 14%;
+    --midnightBlue: 226 81% 7%;
+    --softSlate: 231 23% 52% 0.4;
+    --midnightOverlay: 231, 21%, 19%, 0.5;
+
+    --accent-purple: 270 100% 80%;
+    --accent-blue: 220 90% 70%;
+    --accent-pink: 320 85% 75%;
+    --glow-purple: 270 100% 80% / 0.3;
+    --glow-blue: 220 90% 70% / 0.3;
+
+    --app-background: 0 2% 98%;
+    --background: 0 0% 100%;
+
+    --heading-primary: 0 0% 9%;
+    --text-primary: 0 0% 15%;
+    --text-secondary: 0 0% 40%;
+    --text-muted: 0 0% 50%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --chart-1: 12 76% 61%;
+
+    --chart-2: 173 58% 39%;
+
+    --chart-3: 197 37% 24%;
+
+    --chart-4: 43 74% 66%;
+
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --app-background: 226 81% 7%;
+    --background: 0 0% 3.9%;
+
+    --heading-primary: 0 0% 98%;
+    --text-primary: 0 0% 90%;
+    --text-secondary: 0 0% 70%;
+    --text-muted: 0 0% 60%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 0 0% 83.1%;
+
+    --chart-1: 220 70% 50%;
+
+    --chart-2: 160 60% 45%;
+
+    --chart-3: 30 80% 55%;
+
+    --chart-4: 280 65% 60%;
+
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    @apply text-foreground;
+    overflow-x: hidden;
+    max-width: 100vw;
+    background: hsl(var(--app-background));
+  }
+
+  /* Typography - Global heading and text styles */
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 4rem;
+      line-height: 4.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h3 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 2.25rem;
+      line-height: 2.75rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h4 {
+      font-size: 1.375rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h4 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h5 {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h5 {
+      font-size: 1.375rem;
+      line-height: 2rem;
+    }
+  }
+
+  h6 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h6 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    color: hsl(var(--text-primary));
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.125rem;
+      line-height: 1.875rem;
+    }
+  }
+}
+
+body {
+  font-family: Regular, sans-serif;
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply border-black/10 bg-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+  }
+
+  .glass-effect-dark {
+    @apply border-gray-300 bg-white/60 backdrop-blur-xl dark:border-white/5 dark:bg-black/20;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-[#CBACF9] via-purple-400 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  /* Scroll animations */
+  .animate-in {
+    @apply translate-x-0 translate-y-0 scale-100 opacity-100;
+  }
+}
