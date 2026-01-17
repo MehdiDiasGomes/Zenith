@@ -1,7 +1,15 @@
 {
   "seo": {
     "title": "Zenith - Custom Web Development Agency",
-    "description": "Zenith creates custom websites with expertise in modern development."
+    "description": "Zenith creates custom websites with expertise in modern development.",
+    "legal": {
+      "title": "Legal Notice - Zenith",
+      "description": "Legal information and mandatory notices for Zenith, web development agency."
+    },
+    "privacy": {
+      "title": "Privacy Policy - Zenith",
+      "description": "Privacy policy and personal data protection for Zenith, GDPR compliant."
+    }
   },
   "home": {
     "title": "Welcome to Zenith"
@@ -36,9 +44,7 @@
     "webDesigner": "Web Designer",
     "fullstackDev": "Full-Stack Developer",
     "uiUx": "UI/UX Designer",
-    "performance": "Performance Expert",
-    "seoExpert": "SEO Expert",
-    "creative": "Digital Creative"
+    "seoExpert": "SEO Expert"
   },
   "services": {
     "title": "My Services",

@@ -1,7 +1,15 @@
 {
   "seo": {
     "title": "Zenith - Agence de Développement Web sur Mesure",
-    "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne."
+    "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne.",
+    "legal": {
+      "title": "Mentions Légales - Zenith",
+      "description": "Informations légales et mentions obligatoires de Zenith, agence de développement web."
+    },
+    "privacy": {
+      "title": "Politique de Confidentialité - Zenith",
+      "description": "Politique de confidentialité et protection des données personnelles de Zenith, conforme au RGPD."
+    }
   },
   "home": {
     "title": "Bienvenue chez Zenith"
@@ -36,9 +44,7 @@
     "webDesigner": "Web Designer",
     "fullstackDev": "Développeur Full-Stack",
     "uiUx": "UI/UX Designer",
-    "performance": "Expert Performance",
-    "seoExpert": "Expert SEO",
-    "creative": "Créatif Digital"
+    "seoExpert": "Expert SEO"
   },
   "services": {
     "title": "Nos Services",
