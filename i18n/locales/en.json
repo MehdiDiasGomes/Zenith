@@ -18,9 +18,9 @@
     "ariaLabel": "Main navigation",
     "logoAriaLabel": "Return to Zenith home",
     "home": "Home",
-    "services": "Services",
-    "projects": "Projects",
-    "pricing": "Pricing",
+    "services": "Our services",
+    "projects": "Our Projects",
+    "pricing": "Our Solutions",
     "contact": "Contact us",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
@@ -47,7 +47,7 @@
     "seoExpert": "SEO Expert"
   },
   "services": {
-    "title": "My Services",
+    "title": "Our Services",
     "subtitle": "Everything your business needs to succeed online",
     "learnMore": "Learn more",
     "ariaLabel": "Services section",
@@ -103,7 +103,7 @@
     "close": "Close promotional banner"
   },
   "pricing": {
-    "title": "Our Services",
+    "title": "Our Solutions",
     "subtitle": "Digital solutions designed for your business",
     "popular": "Popular",
     "startingFrom": "starting from",
