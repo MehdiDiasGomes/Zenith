@@ -5,14 +5,12 @@
   >
     <div ref="_elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
       <div class="mb-12 text-center">
-        <h2
-          class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
-        >
+        <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('pricing.title') }}
         </h2>
-        <p class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+        <h3 class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('pricing.subtitle') }}
-        </p>
+        </h3>
       </div>
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -20,10 +18,8 @@
           v-for="(plan, index) in pricingPlans"
           :key="plan.id"
           :ref="(el) => setCardRef(el, index)"
-          :class="[
-            'group relative flex flex-col overflow-hidden rounded-2xl border-2 border-dashed border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark',
-            getCardAnimationClass(index),
-          ]"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-dashed border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+          :class="getCardAnimationClass(index)"
         >
           <div class="p-6">
             <h3
@@ -40,8 +36,8 @@
 
             <ul class="space-y-3">
               <li
-                v-for="(feature, index) in plan.features"
-                :key="index"
+                v-for="(feature, featureIndex) in plan.features"
+                :key="featureIndex"
                 class="flex items-start gap-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
               >
                 <Icon
