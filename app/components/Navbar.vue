@@ -202,19 +202,22 @@ onMounted(() => {
     })
 
     if (visibleSections.size > 0) {
-      let topSection: IntersectionObserverEntry | null = null
-      let minTop: number = Number.POSITIVE_INFINITY
+      const entries: IntersectionObserverEntry[] = Array.from(visibleSections.values())
+      if (entries.length > 0) {
+        let topSection: IntersectionObserverEntry = entries[0]!
+        let minTop: number = entries[0]!.boundingClientRect.top
 
-      visibleSections.forEach((entry: IntersectionObserverEntry) => {
-        const rect: DOMRectReadOnly = entry.boundingClientRect
-        if (rect.top < minTop) {
-          minTop = rect.top
-          topSection = entry
+        for (const entry of entries) {
+          const rect: DOMRectReadOnly = entry.boundingClientRect
+          if (rect.top < minTop) {
+            minTop = rect.top
+            topSection = entry
+          }
         }
-      })
 
-      if (topSection && topSection.target instanceof Element) {
-        activeSection.value = `#${topSection.target.id}`
+        if (topSection.target instanceof Element) {
+          activeSection.value = `#${topSection.target.id}`
+        }
       }
     }
   }
