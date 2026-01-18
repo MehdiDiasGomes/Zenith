@@ -55,7 +55,7 @@
             class="mt-auto border-t border-zenith-bronze-dark/10 p-6 dark:border-zenith-gold-bronze/20"
           >
             <NuxtLink
-              to="/contact"
+              to="#contact"
               class="block rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-6 py-3 text-center font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
             >
               {{ $t('pricing.getQuote') }}
