@@ -18,9 +18,9 @@
     "ariaLabel": "Navigation principale",
     "logoAriaLabel": "Retour à l'accueil Zenith",
     "home": "Accueil",
-    "services": "Services",
-    "projects": "Projets",
-    "pricing": "Tarifs",
+    "services": "Nos Services",
+    "projects": "Nos Projets",
+    "pricing": "Nos solutions",
     "contact": "Contactez-nous",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
@@ -103,7 +103,7 @@
     "close": "Fermer la bannière promotionnelle"
   },
   "pricing": {
-    "title": "Nos prestations",
+    "title": "Nos Solutions",
     "subtitle": "Des solutions digitales pensées pour votre activité",
     "popular": "Populaire",
     "startingFrom": "à partir de",

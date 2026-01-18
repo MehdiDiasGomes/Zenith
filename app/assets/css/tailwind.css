@@ -166,42 +166,6 @@
   }
 
   h2 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h2 {
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h2 {
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h2 {
-      font-size: 2.5rem;
-      line-height: 3rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    h2 {
-      font-size: 3rem;
-      line-height: 3.5rem;
-    }
-  }
-
-  h3 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
@@ -210,23 +174,59 @@
   }
 
   @media (min-width: 640px) {
-    h3 {
+    h2 {
       font-size: 1.75rem;
       line-height: 2.25rem;
     }
   }
 
   @media (min-width: 768px) {
-    h3 {
+    h2 {
       font-size: 2rem;
       line-height: 2.5rem;
     }
   }
 
   @media (min-width: 1024px) {
-    h3 {
+    h2 {
       font-size: 2.25rem;
       line-height: 2.75rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+  }
+
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    color: hsl(var(--heading-primary));
+  }
+
+  @media (min-width: 640px) {
+    h3 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
   }
 

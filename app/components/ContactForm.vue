@@ -5,14 +5,12 @@
   >
     <div ref="_elementRef" class="relative mx-auto max-w-6xl">
       <div :class="animationClasses" class="mb-12 space-y-2 text-center">
-        <h2
-          class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
-        >
+        <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('contact.title') }}
         </h2>
-        <p class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+        <h3 class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('contact.subtitle') }}
-        </p>
+        </h3>
       </div>
 
       <div class="grid gap-12 lg:grid-cols-2">
@@ -102,11 +100,11 @@
                   <Checkbox :checked="value" @update:checked="handleChange" />
                 </FormControl>
                 <div v-auto-animate class="space-y-1 leading-none">
-                  <FormLabel class="text-sm font-normal cursor-pointer">
+                  <FormLabel class="cursor-pointer text-sm font-normal">
                     {{ $t('contact.form.consent.label') }}
                     <NuxtLink
                       to="/privacy"
-                      class="text-zenith-gold-vivid hover:text-zenith-champagne underline"
+                      class="text-zenith-gold-vivid underline hover:text-zenith-champagne"
                     >
                       {{ $t('contact.form.consent.linkText') }}
                     </NuxtLink>
@@ -175,11 +173,11 @@
                 />
               </div>
               <div class="flex-1">
-                <h3
+                <p
                   class="font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
                 >
                   {{ $t(contact.labelKey) }}
-                </h3>
+                </p>
                 <p
                   class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
                 >
@@ -205,11 +203,11 @@
                 />
               </div>
               <div class="flex-1">
-                <h3
+                <p
                   class="font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
                 >
                   {{ $t('contact.info.instagram.label') }}
-                </h3>
+                </p>
                 <p
                   class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
                 >

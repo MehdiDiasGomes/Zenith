@@ -1,4 +1,14 @@
-export const useTailwindAnimate = (animationClasses: string) => {
+/**
+ * Composable for Tailwind CSS animations with Intersection Observer
+ * @param animationClasses - Tailwind animation classes to apply when visible
+ * @returns Object containing element ref and computed classes
+ */
+export const useTailwindAnimate = (
+  animationClasses: string,
+): {
+  elementRef: Ref<HTMLElement | null>
+  classes: ComputedRef<string>
+} => {
   const elementRef = ref<HTMLElement | null>(null)
   const isVisible = ref<boolean>(false)
 

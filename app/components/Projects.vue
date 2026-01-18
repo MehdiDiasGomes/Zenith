@@ -10,11 +10,11 @@
         >
           {{ $t('projects.title') }}
         </h2>
-        <p
+        <h3
           class="mx-auto max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
           {{ $t('projects.subtitle') }}
-        </p>
+        </h3>
       </div>
 
       <div ref="_filterRef" :class="filterClasses" class="mb-8 flex justify-center">

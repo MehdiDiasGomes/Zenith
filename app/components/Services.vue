@@ -8,15 +8,13 @@
       <div class="mb-16 text-center">
         <h2
           id="services-heading"
-          class="mb-4 text-3xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-4xl"
+          class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ $t('services.title') }}
         </h2>
-        <p
-          class="mx-auto max-w-2xl text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-        >
+        <h3>
           {{ $t('services.subtitle') }}
-        </p>
+        </h3>
       </div>
 
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
@@ -53,9 +51,7 @@
                 />
               </div>
 
-              <h3
-                class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-2xl"
-              >
+              <h3 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
                 {{ $t(service.titleKey) }}
               </h3>
 

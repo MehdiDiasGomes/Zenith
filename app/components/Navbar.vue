@@ -184,18 +184,42 @@ const isActive = (path: string): boolean => {
 }
 
 onMounted(() => {
+  const visibleSections: Map<string, IntersectionObserverEntry> = new Map()
+
   const observerOptions = {
     root: null,
     rootMargin: '-100px 0px -66% 0px',
-    threshold: 0,
+    threshold: [0, 0.25, 0.5, 0.75, 1],
   }
 
   const observerCallback = (entries: IntersectionObserverEntry[]): void => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        activeSection.value = `#${entry.target.id}`
+        visibleSections.set(entry.target.id, entry)
+      } else {
+        visibleSections.delete(entry.target.id)
       }
     })
+
+    if (visibleSections.size > 0) {
+      const entries: IntersectionObserverEntry[] = Array.from(visibleSections.values())
+      if (entries.length > 0) {
+        let topSection: IntersectionObserverEntry = entries[0]!
+        let minTop: number = entries[0]!.boundingClientRect.top
+
+        for (const entry of entries) {
+          const rect: DOMRectReadOnly = entry.boundingClientRect
+          if (rect.top < minTop) {
+            minTop = rect.top
+            topSection = entry
+          }
+        }
+
+        if (topSection.target instanceof Element) {
+          activeSection.value = `#${topSection.target.id}`
+        }
+      }
+    }
   }
 
   const observer = new IntersectionObserver(observerCallback, observerOptions)
@@ -206,6 +230,7 @@ onMounted(() => {
   const handleScroll = (): void => {
     if (window.scrollY < 200) {
       activeSection.value = ''
+      visibleSections.clear()
     }
   }
 
