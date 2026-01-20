@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Zenith - Agence de Développement Web sur Mesure",
+    "title": "Zenith - Développeur Web Freelance sur Mesure",
     "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne.",
     "legal": {
       "title": "Mentions Légales - Zenith",
-      "description": "Informations légales et mentions obligatoires de Zenith, agence de développement web."
+      "description": "Informations légales et mentions obligatoires de Zenith, développeur web freelance."
     },
     "privacy": {
       "title": "Politique de Confidentialité - Zenith",
@@ -53,7 +53,7 @@
     "ariaLabel": "Section des services proposés",
     "webDev": {
       "title": "Site web professionnel",
-      "description": "Un site qui inspire confiance et transforme vos visiteurs en clients - disponible 24/7 pour développer votre activité",
+      "description": "Un site qui inspire confiance et transforme vos visiteurs en clients, disponible 24/7 pour développer votre activité",
       "imageAlt": "Illustration représentant le développement web professionnel"
     },
     "uiUx": {
@@ -63,12 +63,12 @@
     },
     "performance": {
       "title": "Visible sur Google",
-      "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services - sans dépendre de la publicité",
+      "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services, sans dépendre de la publicité",
       "imageAlt": "Illustration représentant l'optimisation SEO et le référencement"
     },
     "maintenance": {
       "title": "Tranquillité d'esprit",
-      "description": "Hébergement, mises à jour et support inclus - concentrez-vous sur votre métier, on s'occupe de la technique",
+      "description": "Hébergement, mises à jour et support inclus. Concentrez-vous sur votre métier, on s'occupe de la technique",
       "imageAlt": "Illustration représentant la maintenance et le support technique"
     }
   },
@@ -114,12 +114,12 @@
       "features": [
         "Design sur-mesure adapté à votre univers",
         "Mise en valeur des projets (galeries, visuels, descriptions)",
-        "Structure claire et fluide (UX optimisée)",
-        "Site entièrement responsive (mobile / tablette)",
+        "Structure optimisée",
+        "Site responsive",
         "Animations légères et transitions",
         "Formulaire de contact",
         "Optimisation SEO de base",
-        "Optimisation des performances (vitesse)",
+        "Optimisation des performances",
         "Sécurité de base",
         "Mise en ligne et tests"
       ]
@@ -132,11 +132,11 @@
         "Design moderne et professionnel",
         "Pages de présentation (services, à propos, contact, etc.)",
         "Appels à l'action stratégiques",
-        "Site responsive tous écrans",
+        "Site responsive",
         "Formulaires personnalisés",
-        "Optimisation SEO (balises, structure, contenus)",
+        "Optimisation SEO",
         "Optimisation des performances",
-        "Sécurité & protection de base",
+        "Sécurité de base",
         "Intégration des outils de suivi (analytics)",
         "Mise en ligne et accompagnement"
       ]
@@ -152,8 +152,8 @@
         "Configuration des livraisons",
         "Emails transactionnels automatisés",
         "Pages légales conformes",
-        "Optimisation SEO e-commerce",
-        "Optimisation vitesse et performance",
+        "Optimisation SEO",
+        "Optimisation des performances",
         "Sécurité renforcée",
         "Interface d'administration simple",
         "Formation à la prise en main",

@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Zenith - Custom Web Development Agency",
+    "title": "Zenith - Freelance Web Developer",
     "description": "Zenith creates custom websites with expertise in modern development.",
     "legal": {
       "title": "Legal Notice - Zenith",
-      "description": "Legal information and mandatory notices for Zenith, web development agency."
+      "description": "Legal information and mandatory notices for Zenith, freelance web developer."
     },
     "privacy": {
       "title": "Privacy Policy - Zenith",
@@ -53,7 +53,7 @@
     "ariaLabel": "Services section",
     "webDev": {
       "title": "Professional website",
-      "description": "A site that inspires trust and converts your visitors into clients - available 24/7 to grow your business",
+      "description": "A site that inspires trust and converts your visitors into clients, available 24/7 to grow your business",
       "imageAlt": "Illustration representing professional web development"
     },
     "uiUx": {
@@ -63,12 +63,12 @@
     },
     "performance": {
       "title": "Visible on Google",
-      "description": "Optimization so your clients find you when searching for your services - without relying on advertising",
+      "description": "Optimization so your clients find you when searching for your services, without relying on advertising",
       "imageAlt": "Illustration representing SEO optimization and search engine ranking"
     },
     "maintenance": {
       "title": "Peace of mind",
-      "description": "Hosting, updates, and support included - focus on your business, we handle the technical side",
+      "description": "Hosting, updates, and support included. Focus on your business, we handle the technical side",
       "imageAlt": "Illustration representing maintenance and technical support"
     }
   },
@@ -114,12 +114,12 @@
       "features": [
         "Custom design adapted to your universe",
         "Project highlighting (galleries, visuals, descriptions)",
-        "Clear and fluid structure (optimized UX)",
-        "Fully responsive site (mobile / tablet)",
+        "Optimized structure",
+        "Responsive site",
         "Smooth animations and transitions",
         "Contact form",
-        "Basic SEO optimization",
-        "Performance optimization (speed)",
+        "SEO optimization",
+        "Performance optimization",
         "Basic security",
         "Deployment and testing"
       ]
@@ -132,11 +132,11 @@
         "Modern and professional design",
         "Presentation pages (services, about, contact, etc.)",
         "Strategic calls to action",
-        "Responsive site for all screens",
+        "Responsive site",
         "Custom forms",
-        "SEO optimization (tags, structure, content)",
+        "SEO optimization",
         "Performance optimization",
-        "Basic security & protection",
+        "Basic security",
         "Analytics tools integration",
         "Deployment and support"
       ]
@@ -152,8 +152,8 @@
         "Shipping configuration",
         "Automated transactional emails",
         "Compliant legal pages",
-        "E-commerce SEO optimization",
-        "Speed and performance optimization",
+        "SEO optimization",
+        "Performance optimization",
         "Enhanced security",
         "Simple admin interface",
         "Training for handling",
