@@ -146,7 +146,7 @@
           :class="contactClasses"
           class="flex flex-col justify-between space-y-8"
         >
-          <div class="flex items-center justify-center">
+          <div class="flex items-center justify-start">
             <NuxtImg
               src="/assets/illustrations/contact_us.svg"
               alt="Contact illustration"
