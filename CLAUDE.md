@@ -500,7 +500,7 @@ export interface Technology {
    {
      "home": {
        "title": "Bienvenue chez Zenith",
-       "description": "Agence de développement web"
+       "description": "Développeur web freelance"
      },
      "actions": {
        "close": "Fermer",

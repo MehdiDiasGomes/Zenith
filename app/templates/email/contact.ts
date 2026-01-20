@@ -71,7 +71,7 @@ ${data.message}
           <tr>
             <td style="background-color: #fafaf9; padding: 24px 40px; text-align: center; border-top: 1px solid #e5e5e5;">
               <p style="margin: 0; color: #737373; font-size: 12px;">
-                © ${new Date().getFullYear()} Zenith - Agence de Développement Web
+                © ${new Date().getFullYear()} Zenith - Développeur Web Freelance
               </p>
             </td>
           </tr>
@@ -104,6 +104,6 @@ ${data.message}
 ---
 Pour répondre, envoyez un email à: ${data.email}
 
-© ${new Date().getFullYear()} Zenith - Agence de Développement Web
+© ${new Date().getFullYear()} Zenith - Développeur Web Freelance
   `.trim()
 }
