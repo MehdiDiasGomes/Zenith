@@ -53,7 +53,7 @@
     "ariaLabel": "Section des services proposés",
     "webDev": {
       "title": "Site web professionnel",
-      "description": "Un site qui inspire confiance et transforme vos visiteurs en clients - disponible 24/7 pour développer votre activité",
+      "description": "Un site qui inspire confiance et transforme vos visiteurs en clients, disponible 24/7 pour développer votre activité",
       "imageAlt": "Illustration représentant le développement web professionnel"
     },
     "uiUx": {
@@ -63,12 +63,12 @@
     },
     "performance": {
       "title": "Visible sur Google",
-      "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services - sans dépendre de la publicité",
+      "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services, sans dépendre de la publicité",
       "imageAlt": "Illustration représentant l'optimisation SEO et le référencement"
     },
     "maintenance": {
       "title": "Tranquillité d'esprit",
-      "description": "Hébergement, mises à jour et support inclus - concentrez-vous sur votre métier, on s'occupe de la technique",
+      "description": "Hébergement, mises à jour et support inclus. Concentrez-vous sur votre métier, on s'occupe de la technique",
       "imageAlt": "Illustration représentant la maintenance et le support technique"
     }
   },

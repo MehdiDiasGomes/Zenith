@@ -53,7 +53,7 @@
     "ariaLabel": "Services section",
     "webDev": {
       "title": "Professional website",
-      "description": "A site that inspires trust and converts your visitors into clients - available 24/7 to grow your business",
+      "description": "A site that inspires trust and converts your visitors into clients, available 24/7 to grow your business",
       "imageAlt": "Illustration representing professional web development"
     },
     "uiUx": {
@@ -63,12 +63,12 @@
     },
     "performance": {
       "title": "Visible on Google",
-      "description": "Optimization so your clients find you when searching for your services - without relying on advertising",
+      "description": "Optimization so your clients find you when searching for your services, without relying on advertising",
       "imageAlt": "Illustration representing SEO optimization and search engine ranking"
     },
     "maintenance": {
       "title": "Peace of mind",
-      "description": "Hosting, updates, and support included - focus on your business, we handle the technical side",
+      "description": "Hosting, updates, and support included. Focus on your business, we handle the technical side",
       "imageAlt": "Illustration representing maintenance and technical support"
     }
   },
