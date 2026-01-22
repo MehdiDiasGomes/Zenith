@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Zenith - Freelance Web Developer Thionville (57)",
-    "description": "Zenith creates custom websites with expertise in modern development. Based in the Thionville area (57), we support local SMEs.",
+    "description": "Zenith creates custom websites with expertise in modern development. Based in the Thionville area (57), I support local SMEs.",
     "legal": {
       "title": "Legal Notice - Zenith",
       "description": "Legal information and mandatory notices for Zenith, freelance web developer."
@@ -18,10 +18,10 @@
     "ariaLabel": "Main navigation",
     "logoAriaLabel": "Return to Zenith home",
     "home": "Home",
-    "services": "Our services",
-    "projects": "Our Projects",
-    "pricing": "Our Solutions",
-    "contact": "Contact us",
+    "services": "My services",
+    "projects": "My Projects",
+    "pricing": "My Solutions",
+    "contact": "Contact me",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
     "switchToLang": "Switch language to {lang}"
@@ -34,11 +34,11 @@
       "part3": "that ",
       "part4": "attracts clients."
     },
-    "subtitle": "Creation or redesign: we build high-performing websites for SMEs looking to grow.",
+    "subtitle": "Creation or redesign: I build high-performing websites for SMEs looking to grow.",
     "location": "Based in Thionville (57)",
     "cta": {
       "primary": "Get in touch",
-      "secondary": "Discover our work"
+      "secondary": "Discover my work"
     }
   },
   "marquee": {
@@ -48,7 +48,7 @@
     "seoExpert": "SEO Expert"
   },
   "services": {
-    "title": "Our Services",
+    "title": "My Services",
     "subtitle": "Everything your business needs to succeed online",
     "learnMore": "Learn more",
     "ariaLabel": "Services section",
@@ -69,7 +69,7 @@
     },
     "maintenance": {
       "title": "Peace of mind",
-      "description": "Hosting, updates, and support included. Focus on your business, we handle the technical side",
+      "description": "Hosting, updates, and support included. Focus on your business, I handle the technical side",
       "imageAlt": "Illustration representing maintenance and technical support"
     }
   },
@@ -107,7 +107,7 @@
       "part2Bold": "with no obligation on your part."
     },
     "button": {
-      "primary": "Request a quote",
+      "primary": "Get in touch",
       "phoneAriaLabel": "Call at {phone}"
     }
   },
@@ -116,7 +116,7 @@
     "close": "Close promotional banner"
   },
   "pricing": {
-    "title": "Our Solutions",
+    "title": "My Solutions",
     "subtitle": "Digital solutions designed for your business",
     "popular": "Popular",
     "startingFrom": "starting from",
@@ -175,8 +175,8 @@
     }
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Have a question? A project? Feel free to contact us, we'll get back to you as soon as possible.",
+    "title": "Contact Me",
+    "subtitle": "Have a question? A project? Feel free to contact me, I'll get back to you as soon as possible.",
     "map": {
       "ariaLabel": "Interactive map showing Zenith's location in Thionville",
       "loading": "Loading map..."
@@ -206,7 +206,7 @@
       "message": {
         "label": "Message",
         "placeholder": "Describe your project or ask your question...",
-        "description": "Share the details of your project with us",
+        "description": "Share the details of your project with me",
         "error": "Message must be at least 10 characters"
       },
       "consent": {
@@ -216,12 +216,12 @@
       },
       "submit": "Send message",
       "sending": "Sending...",
-      "success": "Message sent successfully! We'll respond quickly.",
+      "success": "Message sent successfully! I'll respond quickly.",
       "error": "An error occurred. Please try again."
     },
     "info": {
       "title": "Contact Information",
-      "description": "You can also reach us directly through these channels.",
+      "description": "You can also reach me directly through these channels.",
       "email": {
         "label": "Email"
       },
