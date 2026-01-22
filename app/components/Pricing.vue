@@ -18,7 +18,7 @@
           v-for="(plan, index) in pricingPlans"
           :key="plan.id"
           :ref="(el) => setCardRef(el, index)"
-          class="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-dashed border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-dashed bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
           :class="getCardAnimationClass(index)"
         >
           <div class="p-6">
