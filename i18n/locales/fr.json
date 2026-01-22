@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Zenith - Développeur Web Freelance Thionville (57)",
-    "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne. Basé dans le secteur de Thionville (57), nous accompagnons les PME locales.",
+    "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne. Basé dans le secteur de Thionville (57), j'accompagne les PME locales.",
     "legal": {
       "title": "Mentions Légales - Zenith",
       "description": "Informations légales et mentions obligatoires de Zenith, développeur web freelance."
@@ -18,10 +18,10 @@
     "ariaLabel": "Navigation principale",
     "logoAriaLabel": "Retour à l'accueil Zenith",
     "home": "Accueil",
-    "services": "Nos Services",
-    "projects": "Nos Projets",
-    "pricing": "Nos solutions",
-    "contact": "Contactez-nous",
+    "services": "Mes Services",
+    "projects": "Mes Projets",
+    "pricing": "Mes solutions",
+    "contact": "Me contacter",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
     "switchToLang": "Changer la langue vers {lang}"
@@ -34,11 +34,11 @@
       "part3": "qui ",
       "part4": "attire des clients."
     },
-    "subtitle": "Création ou refonte : nous construisons des sites performants pour les PME qui veulent croître.",
+    "subtitle": "Création ou refonte : je construis des sites performants pour les PME qui veulent croître.",
     "location": "Basé à Thionville (57)",
     "cta": {
       "primary": "Prendre contact",
-      "secondary": "Découvrir nos travaux"
+      "secondary": "Découvrir mes travaux"
     }
   },
   "marquee": {
@@ -48,7 +48,7 @@
     "seoExpert": "Expert SEO"
   },
   "services": {
-    "title": "Nos Services",
+    "title": "Mes Services",
     "subtitle": "Tout ce dont votre entreprise a besoin pour réussir en ligne",
     "learnMore": "En savoir plus",
     "ariaLabel": "Section des services proposés",
@@ -74,8 +74,8 @@
     }
   },
   "projects": {
-    "title": "Nos Projets",
-    "subtitle": "Découvrez nos réalisations",
+    "title": "Mes Projets",
+    "subtitle": "Découvrez mes réalisations",
     "viewProject": "Visiter le site",
     "viewCode": "Voir le code",
     "emptyState": {
@@ -108,7 +108,7 @@
       "part2Bold": "sans aucun engagement de votre part."
     },
     "button": {
-      "primary": "Demander un devis",
+      "primary": "Prendre contact",
       "phoneAriaLabel": "Appeler au {phone}"
     }
   },
@@ -117,7 +117,7 @@
     "close": "Fermer la bannière promotionnelle"
   },
   "pricing": {
-    "title": "Nos Solutions",
+    "title": "Mes Solutions",
     "subtitle": "Des solutions digitales pensées pour votre activité",
     "popular": "Populaire",
     "startingFrom": "à partir de",
@@ -176,8 +176,8 @@
     }
   },
   "contact": {
-    "title": "Contactez-nous",
-    "subtitle": "Une question ? Un projet ? N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.",
+    "title": "Me contacter",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.",
     "map": {
       "ariaLabel": "Carte interactive montrant la localisation de Zenith à Thionville",
       "loading": "Chargement de la carte..."
@@ -207,7 +207,7 @@
       "message": {
         "label": "Message",
         "placeholder": "Décrivez votre projet ou posez votre question...",
-        "description": "Partagez-nous les détails de votre projet",
+        "description": "Partagez les détails de votre projet",
         "error": "Le message doit contenir au moins 10 caractères"
       },
       "consent": {
@@ -217,12 +217,12 @@
       },
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
-      "success": "Message envoyé avec succès ! Nous vous répondrons rapidement.",
+      "success": "Message envoyé avec succès ! Je vous répondrai rapidement.",
       "error": "Une erreur est survenue. Veuillez réessayer."
     },
     "info": {
       "title": "Informations de contact",
-      "description": "Vous pouvez également nous contacter directement via ces canaux.",
+      "description": "Vous pouvez également me contacter directement via ces canaux.",
       "email": {
         "label": "Email"
       },
