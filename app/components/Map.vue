@@ -40,7 +40,7 @@ const updateTileLayer = (): void => {
   if (!map.value) return
 
   if (tileLayer.value) {
-    map.value.removeLayer(tileLayer.value)
+    map.value.removeLayer(tileLayer.value as unknown as L.Layer)
   }
 
   const isDark = colorMode.value === 'dark'
@@ -49,7 +49,7 @@ const updateTileLayer = (): void => {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 20,
-  }).addTo(map.value)
+  }).addTo(map.value as unknown as L.Map)
 }
 
 /**
@@ -85,7 +85,7 @@ const initMap = (): void => {
   })
 
   L.marker([THIONVILLE_LAT, THIONVILLE_LNG], { icon: customIcon })
-    .addTo(map.value)
+    .addTo(map.value as unknown as L.Map)
     .bindPopup(
       `
       <div class="p-4 text-center">
