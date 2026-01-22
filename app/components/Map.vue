@@ -109,7 +109,6 @@ const cleanupMap = (): void => {
   }
 }
 
-// Watch for color mode changes
 watch(
   () => colorMode.value,
   () => {
@@ -118,7 +117,6 @@ watch(
 )
 
 onMounted(() => {
-  // Wait for next tick to ensure DOM is ready
   nextTick(() => {
     initMap()
   })
@@ -136,7 +134,6 @@ onBeforeUnmount(() => {
   overflow: hidden;
 }
 
-/* Dark mode controls */
 .dark :deep(.leaflet-control-zoom a) {
   background-color: rgba(26, 26, 26, 0.9);
   color: #ff9d00;
@@ -149,7 +146,6 @@ onBeforeUnmount(() => {
   color: white;
 }
 
-/* Light mode controls */
 :deep(.leaflet-control-zoom a) {
   background-color: rgba(255, 255, 255, 0.95);
   color: #b6771d;
@@ -162,7 +158,6 @@ onBeforeUnmount(() => {
   color: white;
 }
 
-/* Dark mode popup */
 .dark :deep(.leaflet-popup-content-wrapper) {
   background-color: rgba(26, 26, 26, 0.95);
   border: 1px solid rgba(182, 119, 29, 0.3);
@@ -174,7 +169,6 @@ onBeforeUnmount(() => {
   background-color: rgba(26, 26, 26, 0.95);
 }
 
-/* Light mode popup */
 :deep(.leaflet-popup-content-wrapper) {
   background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(182, 119, 29, 0.3);
