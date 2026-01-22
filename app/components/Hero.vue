@@ -60,10 +60,19 @@
       <p
         ref="_subtitleRef"
         :class="subtitleClasses"
-        class="mx-auto mb-12 max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark md:text-lg"
+        class="mx-auto mb-6 max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark md:text-lg"
       >
         {{ $t('hero.subtitle') }}
       </p>
+
+      <div
+        ref="_locationRef"
+        :class="locationClasses"
+        class="mb-12 flex items-center justify-center gap-2 text-sm text-zenith-gold-bronze dark:text-zenith-champagne"
+      >
+        <MapPin :size="16" :aria-hidden="true" />
+        <span>{{ $t('hero.location') }}</span>
+      </div>
 
       <div
         ref="_ctaRef"
@@ -94,6 +103,8 @@
 </template>
 
 <script setup lang="ts">
+import { MapPin } from 'lucide-vue-next'
+
 const { elementRef: _badgeRef, classes: badgeClasses } = useTailwindAnimate(
   'animate-fade-down animate-delay-100 animate-duration-700',
 )
@@ -102,6 +113,9 @@ const { elementRef: _titleRef, classes: titleClasses } = useTailwindAnimate(
 )
 const { elementRef: _subtitleRef, classes: subtitleClasses } = useTailwindAnimate(
   'animate-fade-up animate-delay-500 animate-duration-700',
+)
+const { elementRef: _locationRef, classes: locationClasses } = useTailwindAnimate(
+  'animate-fade-up animate-delay-600 animate-duration-700',
 )
 const { elementRef: _ctaRef, classes: ctaClasses } = useTailwindAnimate(
   'animate-fade-up animate-delay-700 animate-duration-700',

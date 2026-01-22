@@ -1,7 +1,7 @@
 {
   "seo": {
-    "title": "Zenith - Freelance Web Developer",
-    "description": "Zenith creates custom websites with expertise in modern development.",
+    "title": "Zenith - Freelance Web Developer Thionville (57)",
+    "description": "Zenith creates custom websites with expertise in modern development. Based in the Thionville area (57), we support local SMEs.",
     "legal": {
       "title": "Legal Notice - Zenith",
       "description": "Legal information and mandatory notices for Zenith, freelance web developer."
@@ -35,6 +35,7 @@
       "part4": "attracts clients."
     },
     "subtitle": "Creation or redesign: we build high-performing websites for SMEs looking to grow.",
+    "location": "Based in Thionville (57)",
     "cta": {
       "primary": "Get in touch",
       "secondary": "Discover our work"
@@ -97,6 +98,18 @@
     "legal": "Legal notice",
     "privacy": "Privacy policy",
     "copyright": "© {year} Zenith. All rights reserved."
+  },
+  "cta": {
+    "title": "A question? A project?",
+    "subtitle": "Let's discuss it for free.",
+    "description": {
+      "part1": "I'm at your disposal to analyze your needs and propose the most suitable solution, ",
+      "part2Bold": "with no obligation on your part."
+    },
+    "button": {
+      "primary": "Request a quote",
+      "phoneAriaLabel": "Call at {phone}"
+    }
   },
   "promo": {
     "discount": "🎉 -15% on all projects until 04/30",

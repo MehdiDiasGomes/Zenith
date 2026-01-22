@@ -146,7 +146,7 @@
           :class="contactClasses"
           class="flex flex-col justify-between space-y-8"
         >
-          <div class="flex items-center justify-start">
+          <div class="flex items-center justify-center">
             <NuxtImg
               src="/assets/illustrations/contact_us.svg"
               alt="Contact illustration"
@@ -155,7 +155,7 @@
             />
           </div>
 
-          <div class="space-y-4">
+          <div class="flex items-center justify-between lg:flex-col lg:gap-4 lg:items-start max-sm:flex-col max-sm:gap-4 max-sm:items-start">
             <a
               v-for="contact in contactInfo"
               :key="contact.id"
