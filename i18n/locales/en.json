@@ -177,6 +177,10 @@
   "contact": {
     "title": "Contact Us",
     "subtitle": "Have a question? A project? Feel free to contact us, we'll get back to you as soon as possible.",
+    "map": {
+      "ariaLabel": "Interactive map showing Zenith's location in Thionville",
+      "loading": "Loading map..."
+    },
     "form": {
       "name": {
         "label": "Name",
