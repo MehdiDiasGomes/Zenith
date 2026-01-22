@@ -99,6 +99,19 @@
     "privacy": "Politique de confidentialité",
     "copyright": "© {year} Zenith. Tous droits réservés."
   },
+  "cta": {
+    "title": "Une question ? Un projet ?",
+    "subtitle": "Discutons-en gratuitement.",
+    "description": {
+      "part1": "Je suis à votre disposition pour analyser vos besoins et vous proposer la solution la plus adaptée, ",
+      "part2": "sans aucun engagement de votre part.",
+      "part2Bold": "sans aucun engagement de votre part."
+    },
+    "button": {
+      "primary": "Demander un devis",
+      "phoneAriaLabel": "Appeler au {phone}"
+    }
+  },
   "promo": {
     "discount": "🎉 -15% sur tous les projets jusqu'au 30/04",
     "close": "Fermer la bannière promotionnelle"

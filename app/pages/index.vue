@@ -3,6 +3,7 @@
     <Hero />
     <Marquee />
     <Services />
+    <CallToAction />
     <!-- <Projects /> -->
     <Pricing />
     <ContactForm />

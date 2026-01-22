@@ -240,7 +240,6 @@ import {
 } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { contactInfo } from '~/constants/contact'
-import { Separator } from 'radix-vue'
 
 const { t } = useI18n()
 
