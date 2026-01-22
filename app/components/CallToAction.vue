@@ -3,9 +3,9 @@
     class="relative overflow-hidden py-20 md:py-28"
     :aria-labelledby="ctaSectionId"
   >
-    <!-- Background image with parallax effect -->
+    <!-- Background image with parallax effect (desktop only) -->
     <div
-      class="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed"
       style="background-image: url('/assets/backgrounds/cta-background.webp')"
       aria-hidden="true"
     />
