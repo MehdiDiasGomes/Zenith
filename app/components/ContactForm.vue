@@ -146,13 +146,23 @@
           :class="contactClasses"
           class="flex flex-col justify-between space-y-8"
         >
-          <div class="flex items-center justify-center">
-            <NuxtImg
-              src="/assets/illustrations/contact_us.svg"
-              alt="Contact illustration"
-              class="h-64 w-64 md:h-80 md:w-80"
-              loading="lazy"
-            />
+          <div class="h-64 md:h-80">
+            <ClientOnly>
+              <Map />
+              <template #fallback>
+                <div
+                  class="flex h-full w-full items-center justify-center rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+                >
+                  <div class="flex items-center gap-2 text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                    <svg class="h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span class="text-sm">{{ $t('contact.map.loading') }}</span>
+                  </div>
+                </div>
+              </template>
+            </ClientOnly>
           </div>
 
           <div class="flex items-center justify-between lg:flex-col lg:gap-4 lg:items-start max-sm:flex-col max-sm:gap-4 max-sm:items-start">

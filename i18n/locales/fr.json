@@ -178,6 +178,10 @@
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Une question ? Un projet ? N'hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.",
+    "map": {
+      "ariaLabel": "Carte interactive montrant la localisation de Zenith à Thionville",
+      "loading": "Chargement de la carte..."
+    },
     "form": {
       "name": {
         "label": "Nom",
