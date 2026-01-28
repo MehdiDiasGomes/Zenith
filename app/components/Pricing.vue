@@ -31,10 +31,29 @@
         >
           <div class="p-6">
             <h3
-              class="mb-4 font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+              class="mb-2 font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t(plan.titleKey) }}
             </h3>
+
+            <div class="mb-4">
+              <div class="mb-1 flex items-center gap-2">
+                <span class="text-sm text-zenith-text-secondary-light/60 dark:text-zenith-text-secondary-dark/60 line-through">
+                  {{ plan.basePrice }}€
+                </span>
+                <span class="rounded-full bg-red-500 px-2 py-0.5 text-xs font-semibold text-white">
+                  -{{ DISCOUNT_PERCENTAGE }}%
+                </span>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                  {{ $t('pricing.startingFrom') }}
+                </span>
+                <span class="text-3xl font-bold text-zenith-gold-vivid">
+                  {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
+                </span>
+              </div>
+            </div>
 
             <p
               class="mb-6 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
@@ -75,11 +94,36 @@
           />
         </motion.article>
       </div>
+
+      <motion.div
+        class="mt-12 rounded-2xl border-2 border-zenith-gold-bronze/30 bg-zenith-bg-secondary-light/50 p-6 dark:bg-zenith-bg-secondary-dark/50"
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.5, delay: 0.3 }"
+        :in-view-options="{ once: true }"
+      >
+        <div class="flex items-start gap-3">
+          <Icon
+            name="Info"
+            size="20"
+            class="mt-0.5 shrink-0 text-zenith-gold-vivid"
+            aria-hidden="true"
+          />
+          <div>
+            <h4 class="mb-2 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+              {{ $t('pricing.priceInfo.title') }}
+            </h4>
+            <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+              {{ $t('pricing.priceInfo.description') }}
+            </p>
+          </div>
+        </div>
+      </motion.div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { motion } from 'motion-v'
-import { pricingPlans } from '~/constants/pricing'
+import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
 </script>
