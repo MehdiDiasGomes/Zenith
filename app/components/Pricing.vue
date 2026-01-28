@@ -31,7 +31,7 @@
         >
           <div class="p-6">
             <h3
-              class="mb-4 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+              class="mb-4 font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t(plan.titleKey) }}
             </h3>
