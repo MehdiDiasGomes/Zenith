@@ -113,8 +113,10 @@
     }
   },
   "promo": {
-    "discount": "🎉 -15% sur tous les projets jusqu'au 30/04",
-    "close": "Fermer la bannière promotionnelle"
+    "discount": "-30% sur tous les projets jusqu'au 30/04",
+    "description": "Offre limitée pour booster votre présence en ligne",
+    "cta": "En profiter",
+    "close": "Fermer"
   },
   "pricing": {
     "title": "Mes Solutions",

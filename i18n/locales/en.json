@@ -112,8 +112,10 @@
     }
   },
   "promo": {
-    "discount": "🎉 -15% on all projects until 04/30",
-    "close": "Close promotional banner"
+    "discount": "-30% on all projects until 04/30",
+    "description": "Limited offer to boost your online presence",
+    "cta": "Get started",
+    "close": "Close"
   },
   "pricing": {
     "title": "My Solutions",
