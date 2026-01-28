@@ -1,7 +1,7 @@
 <template>
   <section
     id="pricing"
-    class="relative bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
+    class="relative bg-zenith-bg-secondary-light px-4 py-20 dark:bg-zenith-bg-secondary-dark sm:px-6 lg:px-8"
   >
     <div class="mx-auto max-w-6xl">
       <motion.div
@@ -23,37 +23,31 @@
         <motion.article
           v-for="(plan, index) in pricingPlans"
           :key="plan.id"
-          class="group relative flex flex-col overflow-hidden rounded-2xl border-2 border-dashed bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-xl hover:shadow-zenith-gold-vivid/10 border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+          class="group relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-zenith-bg-light to-zenith-bg-secondary-light shadow-lg transition-all duration-300 hover:-translate-y-2 dark:from-zenith-bg-dark dark:to-zenith-bg-secondary-dark dark:shadow-none"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.5, delay: index * 0.1 }"
           :in-view-options="{ once: true }"
         >
-          <div class="p-6">
+          <!-- Popular badge for middle plan -->
+          <div
+            v-if="index === 1"
+            class="absolute -right-11 top-7 flex w-40 rotate-45 items-center justify-center bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid py-2 text-xs font-bold text-white shadow-lg"
+          >
+            {{ $t('pricing.popular') }}
+          </div>
+
+          <!-- Golden border top accent -->
+          <div
+            class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+
+          <div class="relative p-8">
             <h3
-              class="mb-2 font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+              class="mb-3 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t(plan.titleKey) }}
             </h3>
-
-            <div class="mb-4">
-              <div class="mb-1 flex items-center gap-2">
-                <span class="text-sm text-zenith-text-secondary-light/60 dark:text-zenith-text-secondary-dark/60 line-through">
-                  {{ plan.basePrice }}€
-                </span>
-                <span class="rounded-full bg-red-500 px-2 py-0.5 text-xs font-semibold text-white">
-                  -{{ DISCOUNT_PERCENTAGE }}%
-                </span>
-              </div>
-              <div class="flex items-baseline gap-2">
-                <span class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                  {{ $t('pricing.startingFrom') }}
-                </span>
-                <span class="text-3xl font-bold text-zenith-gold-vivid">
-                  {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
-                </span>
-              </div>
-            </div>
 
             <p
               class="mb-6 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
@@ -61,37 +55,60 @@
               {{ $t(plan.descriptionKey) }}
             </p>
 
-            <ul class="space-y-3">
+            <div class="mb-8">
+              <div class="mb-2 flex items-center gap-3">
+                <span class="text-lg text-zenith-text-secondary-light/50 dark:text-zenith-text-secondary-dark/50 line-through">
+                  {{ plan.basePrice }}€
+                </span>
+                <span class="rounded-full bg-gradient-to-r from-red-500 to-red-600 px-3 py-1 text-xs font-bold text-white shadow-md">
+                  -{{ DISCOUNT_PERCENTAGE }}%
+                </span>
+              </div>
+              <div class="flex items-end gap-2">
+                <span class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                  {{ $t('pricing.startingFrom') }}
+                </span>
+                <span class="text-5xl font-extrabold text-zenith-gold-vivid">
+                  {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
+                </span>
+              </div>
+              <p
+                v-if="plan.monthlyFeeKey"
+                class="mt-3 text-xs font-medium text-zenith-gold-vivid"
+              >
+                {{ $t(plan.monthlyFeeKey) }}
+              </p>
+            </div>
+
+            <div class="mb-6 h-px w-full bg-gradient-to-r from-transparent via-zenith-gold-bronze/30 to-transparent" />
+
+            <ul class="space-y-4">
               <li
                 v-for="(feature, featureIndex) in plan.features"
                 :key="featureIndex"
-                class="flex items-start gap-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                class="flex items-start gap-3 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
               >
-                <Icon
-                  name="Check"
-                  size="16"
-                  class="mt-0.5 shrink-0 text-zenith-gold-vivid"
-                  aria-hidden="true"
-                />
+                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zenith-gold-vivid/10">
+                  <Icon
+                    name="Check"
+                    size="14"
+                    class="text-zenith-gold-vivid"
+                    aria-hidden="true"
+                  />
+                </div>
                 <span>{{ $t(feature.textKey) }}</span>
               </li>
             </ul>
           </div>
 
-          <div
-            class="mt-auto border-t border-zenith-bronze-dark/10 p-6 dark:border-zenith-gold-bronze/20"
-          >
+          <div class="mt-auto p-8 pt-0">
             <NuxtLink
               to="#contact"
-              class="block rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-6 py-3 text-center font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
+              class="block rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-center text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
             >
               {{ $t('pricing.getQuote') }}
             </NuxtLink>
           </div>
-
-          <div
-            class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
-          />
         </motion.article>
       </div>
 

@@ -129,36 +129,36 @@
     "showcase": {
       "title": "Site vitrine",
       "description": "La solution essentielle pour présenter votre activité en ligne",
+      "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
       "features": [
         "Design moderne et responsive",
         "Jusqu'à 5 pages",
         "Formulaire de contact fonctionnel",
         "Optimisation SEO de base",
-        "Performance optimisée",
-        "Hébergement 1 an inclus"
+        "Performance optimisée"
       ]
     },
     "showcaseAdvanced": {
       "title": "Site vitrine avancé",
       "description": "Pour une présence en ligne complète et professionnelle",
+      "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
       "features": [
         "Design moderne et responsive",
         "Pages illimitées",
         "Formulaire de contact fonctionnel",
         "Optimisation SEO de base",
         "Performance optimisée",
-        "Hébergement 1 an inclus",
         "Blog / Section actualités",
         "Animations et interactions avancées",
         "Site multilingue (2 langues)",
         "Google Analytics configuré",
-        "Optimisation SEO avancée",
-        "3 mois de support technique inclus"
+        "Optimisation SEO avancée"
       ]
     },
     "eshop": {
       "title": "E-shop",
       "description": "Votre boutique en ligne clé en main pour vendre dès maintenant",
+      "monthlyFee": "+ 60€/mois (hébergement et maintenance)",
       "features": [
         "Catalogue produits illimité",
         "Panier et tunnel de commande optimisé",
@@ -168,8 +168,7 @@
         "Espace client avec historique",
         "Calcul automatique des frais de livraison",
         "Codes promo et réductions",
-        "Export des données (commandes, clients)",
-        "6 mois de support technique inclus"
+        "Formation complète à la gestion de votre boutique"
       ]
     }
   },

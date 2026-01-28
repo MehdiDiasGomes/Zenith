@@ -128,36 +128,36 @@
     "showcase": {
       "title": "Showcase site",
       "description": "The essential solution to present your business online",
+      "monthlyFee": "+ €30/month (hosting and maintenance)",
       "features": [
         "Modern and responsive design",
         "Up to 5 pages",
         "Functional contact form",
         "Basic SEO optimization",
-        "Optimized performance",
-        "1 year hosting included"
+        "Optimized performance"
       ]
     },
     "showcaseAdvanced": {
       "title": "Advanced showcase site",
       "description": "For a complete and professional online presence",
+      "monthlyFee": "+ €30/month (hosting and maintenance)",
       "features": [
         "Modern and responsive design",
         "Unlimited pages",
         "Functional contact form",
         "Basic SEO optimization",
         "Optimized performance",
-        "1 year hosting included",
         "Blog / News section",
         "Advanced animations and interactions",
         "Multilingual site (2 languages)",
         "Google Analytics configured",
-        "Advanced SEO optimization",
-        "3 months of technical support included"
+        "Advanced SEO optimization"
       ]
     },
     "eshop": {
       "title": "E-shop",
       "description": "Your turnkey online store to start selling now",
+      "monthlyFee": "+ €60/month (hosting and maintenance)",
       "features": [
         "Unlimited product catalog",
         "Optimized shopping cart and checkout",
@@ -167,8 +167,7 @@
         "Customer account with history",
         "Automatic shipping cost calculation",
         "Promo codes and discounts",
-        "Data export (orders, customers)",
-        "6 months of technical support included"
+        "Complete training for managing your store"
       ]
     }
   },
