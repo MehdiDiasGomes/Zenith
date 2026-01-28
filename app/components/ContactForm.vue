@@ -238,7 +238,7 @@ import { useForm } from 'vee-validate'
 import { z } from 'zod'
 
 import { Button } from '@/components/ui/button'
-import Checkbox from '@/components/ui/checkbox.vue'
+import { Checkbox } from '@/components/ui/checkbox'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import {
