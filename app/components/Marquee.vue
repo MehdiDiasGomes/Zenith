@@ -1,9 +1,10 @@
 <template>
   <motion.div
     class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
-    :initial="{ opacity: 0 }"
-    :while-in-view="{ opacity: 1 }"
-    style="transform-origin: left"
+    :initial="{ opacity: 0, y: 30 }"
+    :while-in-view="{ opacity: 1, y: 0 }"
+    :transition="{ duration: 0.5 }"
+    :in-view-options="{ once: true }"
   >
     <div class="animate-marquee flex whitespace-nowrap">
       <div v-for="index in 2" :key="index" class="flex shrink-0">

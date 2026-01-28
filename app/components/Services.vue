@@ -11,6 +11,7 @@
           :initial="{ opacity: 0, y: 20 }"
           :transition="{ duration: 0.5, delay: 0.2 }"
           :while-in-view="{ opacity: 1, y: 0 }"
+          :in-view-options="{ once: true }"
           class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ $t('services.title') }}
@@ -19,6 +20,7 @@
           :initial="{ opacity: 0, y: 20 }"
           :transition="{ duration: 0.5, delay: 0.4 }"
           :while-in-view="{ opacity: 1, y: 0 }"
+          :in-view-options="{ once: true }"
         >
           {{ $t('services.subtitle') }}
         </motion.h3>
@@ -31,7 +33,7 @@
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.5, delay: index * 0.2 }"
-          :viewport="{ once: true }"
+          :in-view-options="{ once: true }"
           class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 backdrop-blur-sm transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/20"
           :class="[
             index === 0 || index === 3
