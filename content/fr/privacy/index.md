@@ -2,12 +2,15 @@
 
 ## Responsable du traitement
 
-**Mehdi DIAS GOMES**
-Auto-entrepreneur
-SIRET : 99215661200010
+**Raison sociale** : Mehdi DIAS GOMES
 
-Adresse : 28 cité des sports, 57270 Uckange, France
-Email : contact@dg-zenith.com
+**Statut juridique** : Auto-entrepreneur
+
+**SIRET** : 99215661200010
+
+**Adresse** : 28 cité des sports, 57270 Uckange, France
+
+**Email** : contact@dg-zenith.com
 
 ## Introduction
 
