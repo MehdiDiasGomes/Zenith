@@ -1,8 +1,9 @@
 <template>
-  <div
-    ref="_elementRef"
-    :class="elementClasses"
+  <motion.div
     class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+    :initial="{ opacity: 0 }"
+    :while-in-view="{ opacity: 1 }"
+    style="transform-origin: left"
   >
     <div class="animate-marquee flex whitespace-nowrap">
       <div v-for="index in 2" :key="index" class="flex shrink-0">
@@ -16,15 +17,12 @@
         </span>
       </div>
     </div>
-  </div>
+  </motion.div>
 </template>
 
 <script setup lang="ts">
+import { motion } from 'motion-v'
 import { marqueeItems } from '~/constants/marquee'
-
-const { elementRef: _elementRef, classes: elementClasses } = useTailwindAnimate(
-  'animate-fade-up animate-delay-100 animate-duration-700',
-)
 </script>
 
 <style scoped>
