@@ -8,12 +8,10 @@
 </template>
 
 <script setup lang="ts">
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
-
 const mapContainer = ref<HTMLDivElement | null>(null)
-const map = ref<L.Map | null>(null)
-const tileLayer = ref<L.TileLayer | null>(null)
+const map = ref<any>(null)
+const tileLayer = ref<any>(null)
+let L: any = null
 
 const colorMode = useColorMode()
 
@@ -37,10 +35,10 @@ const getTileLayerUrl = (isDark: boolean): string => {
  * Updates the tile layer based on color mode
  */
 const updateTileLayer = (): void => {
-  if (!map.value) return
+  if (!map.value || !L) return
 
   if (tileLayer.value) {
-    map.value.removeLayer(tileLayer.value as unknown as L.Layer)
+    map.value.removeLayer(tileLayer.value)
   }
 
   const isDark = colorMode.value === 'dark'
@@ -49,14 +47,20 @@ const updateTileLayer = (): void => {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 20,
-  }).addTo(map.value as unknown as L.Map)
+  }).addTo(map.value)
 }
 
 /**
  * Initializes the Leaflet map with custom styling
  */
-const initMap = (): void => {
+const initMap = async (): Promise<void> => {
   if (!mapContainer.value) return
+
+  // Import Leaflet dynamically only on client
+  if (!L) {
+    L = (await import('leaflet')).default
+    await import('leaflet/dist/leaflet.css')
+  }
 
   map.value = L.map(mapContainer.value, {
     center: [THIONVILLE_LAT, THIONVILLE_LNG],
@@ -85,7 +89,7 @@ const initMap = (): void => {
   })
 
   L.marker([THIONVILLE_LAT, THIONVILLE_LNG], { icon: customIcon })
-    .addTo(map.value as unknown as L.Map)
+    .addTo(map.value)
     .bindPopup(
       `
       <div class="p-4 text-center">
@@ -117,8 +121,8 @@ watch(
 )
 
 onMounted(() => {
-  nextTick(() => {
-    initMap()
+  nextTick(async () => {
+    await initMap()
   })
 })
 
