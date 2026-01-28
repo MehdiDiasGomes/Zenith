@@ -37,7 +37,7 @@
     "subtitle": "Création ou refonte : je construis des sites performants pour les PME qui veulent croître.",
     "location": "Basé à Thionville (57)",
     "cta": {
-      "primary": "Prendre contact",
+      "primary": "Boostez votre visibilité",
       "secondary": "Découvrir mes travaux"
     }
   },
@@ -113,8 +113,10 @@
     }
   },
   "promo": {
-    "discount": "🎉 -15% sur tous les projets jusqu'au 30/04",
-    "close": "Fermer la bannière promotionnelle"
+    "discount": "-30% sur tous les projets jusqu'au 30/04",
+    "description": "Offre limitée pour booster votre présence en ligne",
+    "cta": "En profiter",
+    "close": "Fermer"
   },
   "pricing": {
     "title": "Mes Solutions",
@@ -122,56 +124,53 @@
     "popular": "Populaire",
     "startingFrom": "à partir de",
     "getQuote": "Demander un devis",
-    "portfolio": {
-      "title": "Portfolio",
-      "description": "Pour valoriser vos projets et votre identité",
-      "features": [
-        "Design sur-mesure adapté à votre univers",
-        "Mise en valeur des projets (galeries, visuels, descriptions)",
-        "Structure optimisée",
-        "Site responsive",
-        "Animations légères et transitions",
-        "Formulaire de contact",
-        "Optimisation SEO de base",
-        "Optimisation des performances",
-        "Sécurité de base",
-        "Mise en ligne et tests"
-      ]
+    "priceInfo": {
+      "title": "À propos des tarifs",
+      "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
     },
     "showcase": {
       "title": "Site vitrine",
-      "description": "Présenter votre activité et convertir des visiteurs en clients",
+      "description": "La solution essentielle pour présenter votre activité en ligne",
+      "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
       "features": [
-        "Arborescence et structure personnalisées",
-        "Design moderne et professionnel",
-        "Pages de présentation (services, à propos, contact, etc.)",
-        "Appels à l'action stratégiques",
-        "Site responsive",
-        "Formulaires personnalisés",
-        "Optimisation SEO",
-        "Optimisation des performances",
-        "Sécurité de base",
-        "Intégration des outils de suivi (analytics)",
-        "Mise en ligne et accompagnement"
+        "Design moderne et responsive",
+        "Jusqu'à 5 pages",
+        "Formulaire de contact fonctionnel",
+        "Optimisation SEO de base",
+        "Performance optimisée"
+      ]
+    },
+    "showcaseAdvanced": {
+      "title": "Site vitrine avancé",
+      "description": "Pour une présence en ligne complète et professionnelle",
+      "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
+      "features": [
+        "Design moderne et responsive",
+        "Pages illimitées",
+        "Formulaire de contact fonctionnel",
+        "Optimisation SEO de base",
+        "Performance optimisée",
+        "Blog / Section actualités",
+        "Animations et interactions avancées",
+        "Site multilingue (2 langues)",
+        "Google Analytics configuré",
+        "Optimisation SEO avancée"
       ]
     },
     "eshop": {
       "title": "E-shop",
-      "description": "Vendre en ligne avec une boutique fiable et évolutive",
+      "description": "Votre boutique en ligne clé en main pour vendre dès maintenant",
+      "monthlyFee": "+ 60€/mois (hébergement et maintenance)",
       "features": [
-        "Design e-commerce sur-mesure",
-        "Catalogue produits complet et personnalisable",
-        "Gestion des commandes et des clients",
-        "Paiements en ligne sécurisés",
-        "Configuration des livraisons",
-        "Emails transactionnels automatisés",
-        "Pages légales conformes",
-        "Optimisation SEO",
-        "Optimisation des performances",
-        "Sécurité renforcée",
-        "Interface d'administration simple",
-        "Formation à la prise en main",
-        "Mise en ligne et tests"
+        "Catalogue produits illimité",
+        "Panier et tunnel de commande optimisé",
+        "Paiement sécurisé (Stripe, PayPal)",
+        "Gestion des stocks en temps réel",
+        "Gestion des commandes et clients",
+        "Espace client avec historique",
+        "Calcul automatique des frais de livraison",
+        "Codes promo et réductions",
+        "Formation complète à la gestion de votre boutique"
       ]
     }
   },

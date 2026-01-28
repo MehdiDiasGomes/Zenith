@@ -2,28 +2,31 @@
 
 ## Site Publisher
 
-**Mehdi DIAS GOMES**
-Self-employed (Auto-entrepreneur)
-SIRET: 99215661200010
+**Business name**: Mehdi DIAS GOMES
 
-Address:
+**Legal status**: Self-employed (Auto-entrepreneur)
+
+**SIRET**: 99215661200010
+
+**Business address**:
 28 cité des sports
 57270 Uckange
 France
 
-Email: contact@dg-zenith.com
+**Contact**: contact@dg-zenith.com
 
 **Publication Director**: Mehdi DIAS GOMES
 
 ## Hosting
 
-This site is hosted by:
-**Vercel Inc.**
+**Hosting provider**: Vercel Inc.
+
+**Address**:
 340 S Lemon Ave #4133
 Walnut, CA 91789
 United States
 
-Website: https://vercel.com
+**Website**: [vercel.com](https://vercel.com)
 
 ## Intellectual Property
 

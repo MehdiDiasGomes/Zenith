@@ -4,30 +4,41 @@
     :aria-label="$t('services.ariaLabel')"
     class="relative px-4 py-20 sm:px-6 lg:px-8"
   >
-    <div ref="_elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
+    <div class="mx-auto max-w-6xl">
       <div class="mb-16 text-center">
-        <h2
+        <motion.h2
           id="services-heading"
+          :initial="{ opacity: 0, y: 20 }"
+          :transition="{ duration: 0.5, delay: 0.2 }"
+          :while-in-view="{ opacity: 1, y: 0 }"
+          :in-view-options="{ once: true }"
           class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ $t('services.title') }}
-        </h2>
-        <h3>
+        </motion.h2>
+        <motion.h3
+          :initial="{ opacity: 0, y: 20 }"
+          :transition="{ duration: 0.5, delay: 0.4 }"
+          :while-in-view="{ opacity: 1, y: 0 }"
+          :in-view-options="{ once: true }"
+        >
           {{ $t('services.subtitle') }}
-        </h3>
+        </motion.h3>
       </div>
 
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-        <div
+        <motion.div
           v-for="(service, index) in serviceList"
           :key="service.id"
-          :ref="(el) => setCardRef(el, index)"
+          :initial="{ opacity: 0, y: 20 }"
+          :while-in-view="{ opacity: 1, y: 0 }"
+          :transition="{ duration: 0.5, delay: index * 0.2 }"
+          :in-view-options="{ once: true }"
           class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 backdrop-blur-sm transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/20"
           :class="[
             index === 0 || index === 3
               ? 'p-6 md:col-span-2 md:row-span-2 md:p-8'
               : 'p-6 md:row-span-2',
-            getCardAnimationClass(index),
           ]"
         >
           <NuxtImg
@@ -73,79 +84,21 @@
           <div
             class="absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 to-zenith-gold-vivid/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { motion } from 'motion-v'
 import { services } from '~/constants/services'
 
-const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
-
 const serviceList = services
-const cardRefs = ref<(HTMLElement | null)[]>([])
-const visibleCards = ref<Set<number>>(new Set())
-
-const setCardRef = (
-  el: HTMLElement | Element | ComponentPublicInstance | null,
-  index: number,
-): void => {
-  if (el && 'nodeType' in el) {
-    cardRefs.value[index] = el as HTMLElement
-  }
-}
-
-const getCardAnimationClass = (index: number): string => {
-  const delays = [
-    'animate-delay-100',
-    'animate-delay-200',
-    'animate-delay-300',
-    'animate-delay-400',
-  ]
-  const animations = ['animate-zoom-in', 'animate-zoom-in', 'animate-zoom-in', 'animate-zoom-in']
-
-  if (visibleCards.value.has(index)) {
-    return `${animations[index]} ${delays[index]} animate-duration-700`
-  }
-  return 'opacity-0'
-}
 
 const getImageClass = (index: number): string => {
   return index === 0 || index === 3
     ? 'h-48 w-48 translate-x-8 md:h-64 md:w-64'
     : 'h-32 w-32 translate-x-6'
 }
-
-onMounted(() => {
-  if (!import.meta.client) return
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const index = cardRefs.value.findIndex((ref) => ref === entry.target)
-          if (index !== -1) {
-            visibleCards.value.add(index)
-          }
-        }
-      })
-    },
-    {
-      threshold: 0.15,
-      rootMargin: '0px',
-    },
-  )
-
-  cardRefs.value.forEach((ref) => {
-    if (ref && 'nodeType' in ref) {
-      observer.observe(ref)
-    }
-  })
-
-  onUnmounted(() => {
-    observer.disconnect()
-  })
-})
 </script>

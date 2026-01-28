@@ -2,12 +2,15 @@
 
 ## Data Controller
 
-**Mehdi DIAS GOMES**
-Self-employed (Auto-entrepreneur)
-SIRET: 99215661200010
+**Business name**: Mehdi DIAS GOMES
 
-Address: 28 cité des sports, 57270 Uckange, France
-Email: contact@dg-zenith.com
+**Legal status**: Self-employed (Auto-entrepreneur)
+
+**SIRET**: 99215661200010
+
+**Address**: 28 cité des sports, 57270 Uckange, France
+
+**Email**: contact@dg-zenith.com
 
 ## Introduction
 

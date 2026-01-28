@@ -37,7 +37,7 @@
     "subtitle": "Creation or redesign: I build high-performing websites for SMEs looking to grow.",
     "location": "Based in Thionville (57)",
     "cta": {
-      "primary": "Get in touch",
+      "primary": "Boost your visibility",
       "secondary": "Discover my work"
     }
   },
@@ -112,8 +112,10 @@
     }
   },
   "promo": {
-    "discount": "🎉 -15% on all projects until 04/30",
-    "close": "Close promotional banner"
+    "discount": "-30% on all projects until 04/30",
+    "description": "Limited offer to boost your online presence",
+    "cta": "Get started",
+    "close": "Close"
   },
   "pricing": {
     "title": "My Solutions",
@@ -121,56 +123,53 @@
     "popular": "Popular",
     "startingFrom": "starting from",
     "getQuote": "Get a quote",
-    "portfolio": {
-      "title": "Portfolio",
-      "description": "To showcase your projects and identity",
-      "features": [
-        "Custom design adapted to your universe",
-        "Project highlighting (galleries, visuals, descriptions)",
-        "Optimized structure",
-        "Responsive site",
-        "Smooth animations and transitions",
-        "Contact form",
-        "SEO optimization",
-        "Performance optimization",
-        "Basic security",
-        "Deployment and testing"
-      ]
+    "priceInfo": {
+      "title": "About pricing",
+      "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
     },
     "showcase": {
       "title": "Showcase site",
-      "description": "Present your business and convert visitors into customers",
+      "description": "The essential solution to present your business online",
+      "monthlyFee": "+ €30/month (hosting and maintenance)",
       "features": [
-        "Custom architecture and structure",
-        "Modern and professional design",
-        "Presentation pages (services, about, contact, etc.)",
-        "Strategic calls to action",
-        "Responsive site",
-        "Custom forms",
-        "SEO optimization",
-        "Performance optimization",
-        "Basic security",
-        "Analytics tools integration",
-        "Deployment and support"
+        "Modern and responsive design",
+        "Up to 5 pages",
+        "Functional contact form",
+        "Basic SEO optimization",
+        "Optimized performance"
+      ]
+    },
+    "showcaseAdvanced": {
+      "title": "Advanced showcase site",
+      "description": "For a complete and professional online presence",
+      "monthlyFee": "+ €30/month (hosting and maintenance)",
+      "features": [
+        "Modern and responsive design",
+        "Unlimited pages",
+        "Functional contact form",
+        "Basic SEO optimization",
+        "Optimized performance",
+        "Blog / News section",
+        "Advanced animations and interactions",
+        "Multilingual site (2 languages)",
+        "Google Analytics configured",
+        "Advanced SEO optimization"
       ]
     },
     "eshop": {
       "title": "E-shop",
-      "description": "Sell online with a reliable and scalable store",
+      "description": "Your turnkey online store to start selling now",
+      "monthlyFee": "+ €60/month (hosting and maintenance)",
       "features": [
-        "Custom e-commerce design",
-        "Complete and customizable product catalog",
+        "Unlimited product catalog",
+        "Optimized shopping cart and checkout",
+        "Secure payment (Stripe, PayPal)",
+        "Real-time inventory management",
         "Order and customer management",
-        "Secure online payments",
-        "Shipping configuration",
-        "Automated transactional emails",
-        "Compliant legal pages",
-        "SEO optimization",
-        "Performance optimization",
-        "Enhanced security",
-        "Simple admin interface",
-        "Training for handling",
-        "Deployment and testing"
+        "Customer account with history",
+        "Automatic shipping cost calculation",
+        "Promo codes and discounts",
+        "Complete training for managing your store"
       ]
     }
   },

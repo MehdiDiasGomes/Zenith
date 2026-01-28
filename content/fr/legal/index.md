@@ -2,28 +2,31 @@
 
 ## Éditeur du site
 
-**Mehdi DIAS GOMES**
-Auto-entrepreneur
-SIRET : 99215661200010
+**Raison sociale** : Mehdi DIAS GOMES
 
-Adresse :
+**Statut juridique** : Auto-entrepreneur
+
+**SIRET** : 99215661200010
+
+**Adresse du siège social** :
 28 cité des sports
 57270 Uckange
 France
 
-Email : contact@dg-zenith.com
+**Contact** : contact@dg-zenith.com
 
 **Directeur de publication** : Mehdi DIAS GOMES
 
 ## Hébergement
 
-Le site est hébergé par :
-**Vercel Inc.**
+**Hébergeur** : Vercel Inc.
+
+**Adresse** :
 340 S Lemon Ave #4133
 Walnut, CA 91789
 États-Unis
 
-Site web : https://vercel.com
+**Site web** : [vercel.com](https://vercel.com)
 
 ## Propriété intellectuelle
 
