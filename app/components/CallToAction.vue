@@ -17,35 +17,43 @@
     />
 
     <div class="relative z-10 mx-auto max-w-5xl px-4 text-center">
-      <h2
+      <motion.h2
         :id="ctaSectionId"
-        ref="_titleRef"
-        :class="titleClasses"
         class="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl"
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.5 }"
+        :in-view-options="{ once: true }"
       >
         {{ $t('cta.title') }}
-      </h2>
+      </motion.h2>
 
-      <p
-        ref="_subtitleRef"
-        :class="subtitleClasses"
+      <motion.p
         class="mb-6 text-2xl font-semibold text-white/95 md:text-3xl"
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.5, delay: 0.1 }"
+        :in-view-options="{ once: true }"
       >
         {{ $t('cta.subtitle') }}
-      </p>
+      </motion.p>
 
-      <p
-        ref="_descriptionRef"
-        :class="descriptionClasses"
+      <motion.p
         class="mx-auto mb-12 max-w-3xl text-base text-white/90 md:text-lg"
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.5, delay: 0.2 }"
+        :in-view-options="{ once: true }"
       >
         {{ $t('cta.description.part1') }}<strong class="font-bold text-zenith-gold-vivid">{{ $t('cta.description.part2Bold') }}</strong>
-      </p>
+      </motion.p>
 
-      <div
-        ref="_buttonsRef"
-        :class="buttonsClasses"
+      <motion.div
         class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.5, delay: 0.3 }"
+        :in-view-options="{ once: true }"
       >
         <Button
           as-child
@@ -68,13 +76,14 @@
             <span>{{ phoneNumber }}</span>
           </a>
         </Button>
-      </div>
+      </motion.div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { Phone } from 'lucide-vue-next'
+import { motion } from 'motion-v'
 import { Button } from '@/components/ui/button'
 import { contactInfo } from '~/constants/contact'
 
@@ -83,19 +92,6 @@ const ctaSectionId = 'cta-section'
 const phoneContact = contactInfo.find((contact) => contact.id === 'phone')
 const phoneNumber = phoneContact?.value || ''
 const phoneHref = phoneContact?.href || ''
-
-const { elementRef: _titleRef, classes: titleClasses } = useTailwindAnimate(
-  'animate-fade-up animate-delay-100 animate-duration-700',
-)
-const { elementRef: _subtitleRef, classes: subtitleClasses } = useTailwindAnimate(
-  'animate-fade-up animate-delay-300 animate-duration-700',
-)
-const { elementRef: _descriptionRef, classes: descriptionClasses } = useTailwindAnimate(
-  'animate-fade-up animate-delay-500 animate-duration-700',
-)
-const { elementRef: _buttonsRef, classes: buttonsClasses } = useTailwindAnimate(
-  'animate-fade-up animate-delay-700 animate-duration-700',
-)
 
 /**
  * Smoothly scrolls to the contact section

@@ -3,18 +3,29 @@
     id="contact"
     class="relative overflow-hidden bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
   >
-    <div ref="_elementRef" class="relative mx-auto max-w-6xl">
-      <div :class="animationClasses" class="mb-12 space-y-2 text-center">
+    <div class="relative mx-auto max-w-6xl">
+      <motion.div
+        class="mb-12 space-y-2 text-center"
+        :initial="{ opacity: 0, y: 20 }"
+        :while-in-view="{ opacity: 1, y: 0 }"
+        :transition="{ duration: 0.5 }"
+        :in-view-options="{ once: true }"
+      >
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('contact.title') }}
         </h2>
         <h3 class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('contact.subtitle') }}
         </h3>
-      </div>
+      </motion.div>
 
       <div class="grid gap-12 lg:grid-cols-2">
-        <div ref="_formRef" :class="formClasses">
+        <motion.div
+          :initial="{ opacity: 0, x: -30 }"
+          :while-in-view="{ opacity: 1, x: 0 }"
+          :transition="{ duration: 0.5, delay: 0.1 }"
+          :in-view-options="{ once: true }"
+        >
           <form
             class="group relative space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
             @submit="onSubmit"
@@ -139,12 +150,14 @@
               {{ $t('contact.form.error') }}
             </p>
           </form>
-        </div>
+        </motion.div>
 
-        <div
-          ref="_contactRef"
-          :class="contactClasses"
+        <motion.div
           class="flex flex-col justify-between space-y-8"
+          :initial="{ opacity: 0, x: 30 }"
+          :while-in-view="{ opacity: 1, x: 0 }"
+          :transition="{ duration: 0.5, delay: 0.2 }"
+          :in-view-options="{ once: true }"
         >
           <div class="h-64 md:h-80">
             <ClientOnly>
@@ -226,7 +239,7 @@
               </div>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>
@@ -236,6 +249,7 @@
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import { z } from 'zod'
+import { motion } from 'motion-v'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -252,14 +266,6 @@ import { Textarea } from '@/components/ui/textarea'
 import { contactInfo } from '~/constants/contact'
 
 const { t } = useI18n()
-
-const { elementRef: _elementRef, animationClasses } = useScrollAnimation('fade-up')
-const { elementRef: _formRef, classes: formClasses } = useTailwindAnimate(
-  'animate-fade-right animate-delay-100 animate-duration-700',
-)
-const { elementRef: _contactRef, classes: contactClasses } = useTailwindAnimate(
-  'animate-fade-left animate-delay-300 animate-duration-700',
-)
 
 const formSchema = toTypedSchema(
   z.object({
