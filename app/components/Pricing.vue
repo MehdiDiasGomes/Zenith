@@ -113,7 +113,7 @@
       </div>
 
       <motion.div
-        class="mt-12 rounded-2xl border-2 border-zenith-gold-bronze/30 bg-zenith-bg-secondary-light/50 p-6 dark:bg-zenith-bg-secondary-dark/50"
+        class="mt-12 rounded-2xl border border-zenith-gold-bronze/30 bg-zenith-bg-secondary-light/50 p-6 dark:bg-zenith-bg-secondary-dark/50"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
         :transition="{ duration: 0.5, delay: 0.3 }"
