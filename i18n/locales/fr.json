@@ -114,7 +114,7 @@
     },
     "button": {
       "primary": "Prendre contact",
-      "phoneAriaLabel": "Appeler au {phone}"
+      "faq": "Consulter la FAQ"
     }
   },
   "promo": {

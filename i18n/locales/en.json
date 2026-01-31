@@ -113,7 +113,7 @@
     },
     "button": {
       "primary": "Get in touch",
-      "phoneAriaLabel": "Call at {phone}"
+      "faq": "View FAQ"
     }
   },
   "promo": {

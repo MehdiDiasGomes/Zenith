@@ -68,13 +68,9 @@
           as-child
           class="rounded-lg border border-white bg-transparent px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-white hover:text-zenith-gold-vivid"
         >
-          <a
-            :href="phoneHref"
-            :aria-label="$t('cta.button.phoneAriaLabel', { phone: phoneNumber })"
-          >
-            <Phone :size="20" :aria-hidden="true" />
-            <span>{{ phoneNumber }}</span>
-          </a>
+          <NuxtLink to="/faq">
+            {{ $t('cta.button.faq') }}
+          </NuxtLink>
         </Button>
       </motion.div>
     </div>
@@ -82,16 +78,10 @@
 </template>
 
 <script setup lang="ts">
-import { Phone } from 'lucide-vue-next'
 import { motion } from 'motion-v'
 import { Button } from '@/components/ui/button'
-import { contactInfo } from '~/constants/contact'
 
-const ctaSectionId = 'cta-section'
-
-const phoneContact = contactInfo.find((contact) => contact.id === 'phone')
-const phoneNumber = phoneContact?.value || ''
-const phoneHref = phoneContact?.href || ''
+const ctaSectionId: string = 'cta-section'
 
 /**
  * Smoothly scrolls to the contact section
@@ -99,12 +89,12 @@ const phoneHref = phoneContact?.href || ''
  */
 const scrollToContact = (event: Event): void => {
   event.preventDefault()
-  const contactSection = document.getElementById('contact')
+  const contactSection: HTMLElement | null = document.getElementById('contact')
 
   if (contactSection) {
-    const navbarHeight = 100
-    const elementPosition = contactSection.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.scrollY - navbarHeight
+    const navbarHeight: number = 100
+    const elementPosition: number = contactSection.getBoundingClientRect().top
+    const offsetPosition: number = elementPosition + window.scrollY - navbarHeight
 
     window.scrollTo({
       top: offsetPosition,
