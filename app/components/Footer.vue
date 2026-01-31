@@ -34,6 +34,12 @@
           >
             {{ $t('footer.privacy') }}
           </NuxtLink>
+          <NuxtLink
+            to="faq"
+            class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
+          >
+            {{ $t('footer.faq') }}
+          </NuxtLink>
         </nav>
 
         <p
