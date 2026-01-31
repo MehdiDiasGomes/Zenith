@@ -30,7 +30,7 @@ module.exports = {
         // Zenith Brand Colors
         'zenith-bronze-dark': '#7B542F',
         'zenith-gold-bronze': '#B6771D',
-        'zenith-gold-vivid': '#FF9D00',
+        'zenith-gold-vivid': '#DAA520',
         'zenith-champagne': '#FFCF71',
         'zenith-bg-dark': '#0A0A0A',
         'zenith-bg-light': '#FAFAF9',
