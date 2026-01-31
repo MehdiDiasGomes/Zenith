@@ -10,9 +10,9 @@
         <div class="relative flex h-16 items-center justify-between md:h-20">
           <NuxtLink to="/" class="group flex items-center" :aria-label="$t('nav.logoAriaLabel')">
             <NuxtImg
-              src="/images/brand/z_logo.webp"
+              src="/images/brand/logo.png"
               alt="Zenith Logo"
-              class="h-8 w-auto md:h-12"
+              class="h-10 w-auto md:h-14"
               loading="eager"
             />
           </NuxtLink>

@@ -9,6 +9,10 @@
     "privacy": {
       "title": "Politique de Confidentialité - Zenith",
       "description": "Politique de confidentialité et protection des données personnelles de Zenith, conforme au RGPD."
+    },
+    "faq": {
+      "title": "FAQ - Zenith",
+      "description": "Retrouvez les réponses aux questions fréquentes sur nos services de création de sites web."
     }
   },
   "home": {
@@ -97,6 +101,7 @@
     "legalNavAriaLabel": "Navigation légale",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
+    "faq": "FAQ",
     "copyright": "© {year} Zenith. Tous droits réservés."
   },
   "cta": {
@@ -109,7 +114,7 @@
     },
     "button": {
       "primary": "Prendre contact",
-      "phoneAriaLabel": "Appeler au {phone}"
+      "faq": "Consulter la FAQ"
     }
   },
   "promo": {
@@ -154,7 +159,8 @@
         "Animations et interactions avancées",
         "Site multilingue (2 langues)",
         "Google Analytics configuré",
-        "Optimisation SEO avancée"
+        "Optimisation SEO avancée",
+        "Design de logo personnalisé"
       ]
     },
     "eshop": {
@@ -230,6 +236,41 @@
       },
       "instagram": {
         "label": "Instagram"
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Retrouvez les réponses aux questions les plus courantes sur mes services et ma façon de travailler.",
+    "cta": {
+      "text": "Vous avez d'autres questions ?",
+      "description": "Je suis disponible pour répondre à toutes vos interrogations et discuter de votre projet.",
+      "button": "Me contacter"
+    },
+    "items": {
+      "process": {
+        "question": "Comment se déroule un projet avec vous ?",
+        "answer": "Chaque projet débute par un échange pour comprendre vos besoins et objectifs. Je vous propose ensuite une maquette pour validation, puis je développe votre site. Vous êtes impliqué à chaque étape pour garantir un résultat qui vous correspond parfaitement."
+      },
+      "timeline": {
+        "question": "Quels sont les délais de réalisation ?",
+        "answer": "Un site vitrine classique prend généralement 2 à 3 semaines. Pour un site vitrine avancé, comptez 3 à 5 semaines. Un e-shop nécessite 4 à 6 semaines. Ces délais peuvent varier selon la complexité et votre réactivité pour les validations."
+      },
+      "pricing": {
+        "question": "Comment sont calculés vos tarifs ?",
+        "answer": "Mes tarifs sont basés sur le type de site (vitrine, avancé, e-shop) et les fonctionnalités souhaitées. Je vous fournis un devis détaillé et transparent avant tout engagement. Pas de mauvaise surprise : le prix annoncé est le prix final."
+      },
+      "maintenance": {
+        "question": "Proposez-vous la maintenance du site ?",
+        "answer": "Oui, je propose un forfait mensuel qui couvre l'hébergement, les mises à jour de sécurité, les sauvegardes régulières et les petites modifications. Vous pouvez ainsi vous concentrer sur votre activité en toute sérénité."
+      },
+      "autonomy": {
+        "question": "Pourrai-je modifier mon site moi-même ?",
+        "answer": "Selon vos besoins, je peux intégrer une interface d'administration simple pour gérer vos contenus (textes, images, articles de blog). Une formation est incluse pour vous rendre autonome sur les modifications courantes."
+      },
+      "payment": {
+        "question": "Quels sont les moyens de paiement acceptés ?",
+        "answer": "J'accepte les virements bancaires et les paiements par carte. Un acompte de 30% est demandé au démarrage du projet, le solde étant réglé à la livraison du site."
       }
     }
   }

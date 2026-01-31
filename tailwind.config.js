@@ -30,7 +30,7 @@ module.exports = {
         // Zenith Brand Colors
         'zenith-bronze-dark': '#7B542F',
         'zenith-gold-bronze': '#B6771D',
-        'zenith-gold-vivid': '#FF9D00',
+        'zenith-gold-vivid': '#DAA520',
         'zenith-champagne': '#FFCF71',
         'zenith-bg-dark': '#0A0A0A',
         'zenith-bg-light': '#FAFAF9',
@@ -97,18 +97,18 @@ module.exports = {
       keyframes: {
         'accordion-down': {
           from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 'var(--reka-accordion-content-height)' },
         },
         'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
+          from: { height: 'var(--reka-accordion-content-height)' },
           to: { height: 0 },
         },
         'collapsible-down': {
           from: { height: 0 },
-          to: { height: 'var(--radix-collapsible-content-height)' },
+          to: { height: 'var(--reka-collapsible-content-height)' },
         },
         'collapsible-up': {
-          from: { height: 'var(--radix-collapsible-content-height)' },
+          from: { height: 'var(--reka-collapsible-content-height)' },
           to: { height: 0 },
         },
       },

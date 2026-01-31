@@ -93,7 +93,7 @@ const initMap = async (): Promise<void> => {
     .bindPopup(
       `
       <div class="p-4 text-center">
-        <img src="/images/brand/z_logo.webp" alt="Zenith" class="mx-auto mb-2 h-12 w-auto" />
+        <img src="/images/brand/logo.png" alt="Zenith" class="mx-auto mb-2 h-12 w-auto" />
         <p class="text-sm font-semibold text-black">Thionville (57)</p>
       </div>
     `,
