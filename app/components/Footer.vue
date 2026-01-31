@@ -10,7 +10,7 @@
             <NuxtImg
               src="/images/brand/logo.png"
               alt="Zenith Logo"
-              class="h-12 w-auto"
+              class="h-16 w-auto"
               loading="lazy"
             />
           </NuxtLink>
