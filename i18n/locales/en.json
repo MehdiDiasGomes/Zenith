@@ -268,8 +268,8 @@
         "answer": "Depending on your needs, I can integrate a simple admin interface to manage your content (texts, images, blog posts). Training is included to make you autonomous for common modifications."
       },
       "payment": {
-        "question": "What payment methods do you accept?",
-        "answer": "I accept bank transfers and card payments. A 30% deposit is required at project start, with the balance due upon site delivery."
+        "question": "How does payment work?",
+        "answer": "Payment is made in 3 stages: a first payment at project launch, a second upon mockup validation, and the balance at final delivery. I accept bank transfers and card payments."
       }
     }
   }
