@@ -17,7 +17,20 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     'motion-v/nuxt',
+    '@nuxtjs/sitemap',
   ],
+  site: {
+    url: 'https://www.dg-zenith.com',
+    name: 'Zenith',
+  },
+  sitemap: {
+    urls: [
+      { loc: '/', changefreq: 'weekly', priority: 1.0 },
+      { loc: '/faq', changefreq: 'monthly', priority: 0.8 },
+      { loc: '/legal', changefreq: 'yearly', priority: 0.3 },
+      { loc: '/privacy', changefreq: 'yearly', priority: 0.3 },
+    ],
+  },
   fonts: {
     families: [{ name: 'Trirong', provider: 'google' }],
     defaults: {

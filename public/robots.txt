@@ -1,1 +1,8 @@
+# Zenith - robots.txt
+# https://www.dg-zenith.com
 
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.dg-zenith.com/sitemap.xml
