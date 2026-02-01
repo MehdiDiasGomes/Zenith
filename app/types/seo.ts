@@ -24,6 +24,7 @@ export interface OrganizationSchema {
   logo: string
   image: string
   email: string
+  telephone: string
   address: PostalAddress
   areaServed: GeoCircle
   sameAs: string[]

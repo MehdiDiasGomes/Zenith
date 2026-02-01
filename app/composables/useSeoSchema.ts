@@ -30,6 +30,7 @@ export function useOrganizationSchema(): OrganizationSchema {
     logo: `${SITE_URL}/images/brand/z_logo.png`,
     image: `${SITE_URL}/og-image.webp`,
     email: 'contact@dg-zenith.com',
+    telephone: '+33 7 89 62 69 27',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '28 cité des sports',
@@ -41,7 +42,7 @@ export function useOrganizationSchema(): OrganizationSchema {
       '@type': 'GeoCircle',
       name: 'Thionville, Moselle, Grand Est, France',
     },
-    sameAs: ['https://www.instagram.com/zenith.webdesign/'],
+    sameAs: ['https://www.instagram.com/dg_zenith/'],
     priceRange: '€€',
     serviceType: [
       'Web Development',
