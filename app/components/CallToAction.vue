@@ -57,7 +57,7 @@
       >
         <Button
           as-child
-          class="rounded-lg border border-white bg-white px-6 py-3 font-semibold text-zenith-gold-vivid transition-all duration-200 hover:bg-transparent hover:text-white"
+          class="w-full rounded-lg border border-white bg-white px-6 py-3 font-semibold text-zenith-gold-vivid transition-all duration-200 hover:bg-transparent hover:text-white sm:w-auto"
         >
           <a href="#contact" @click="scrollToContact">
             {{ $t('cta.button.primary') }}
@@ -66,7 +66,7 @@
 
         <Button
           as-child
-          class="rounded-lg border border-white bg-transparent px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-white hover:text-zenith-gold-vivid"
+          class="w-full rounded-lg border border-white bg-transparent px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-white hover:text-zenith-gold-vivid sm:w-auto"
         >
           <NuxtLink to="/faq">
             {{ $t('cta.button.faq') }}
