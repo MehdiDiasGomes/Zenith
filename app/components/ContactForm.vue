@@ -114,7 +114,7 @@
                   <FormLabel class="cursor-pointer text-sm font-normal">
                     {{ $t('contact.form.consent.label') }}
                     <NuxtLink
-                      to="/privacy"
+                      :to="localePath('/privacy')"
                       class="text-zenith-gold-vivid underline hover:text-zenith-champagne"
                     >
                       {{ $t('contact.form.consent.linkText') }}
@@ -266,6 +266,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { contactInfo } from '~/constants/contact'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const formSchema = toTypedSchema(
   z.object({

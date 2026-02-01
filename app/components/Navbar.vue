@@ -8,7 +8,7 @@
     >
       <div class="px-4 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between md:h-20">
-          <NuxtLink to="/" class="group flex items-center" :aria-label="$t('nav.logoAriaLabel')">
+          <NuxtLink :to="localePath('/')" class="group flex items-center" :aria-label="$t('nav.logoAriaLabel')">
             <NuxtImg
               src="/images/brand/logo.png"
               alt="Zenith Logo"
@@ -22,7 +22,7 @@
               :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
               v-for="item in navItems"
               :key="item.to"
-              :to="item.to.startsWith('#') ? undefined : item.to"
+              :to="item.to.startsWith('#') ? undefined : localePath(item.to)"
               :href="item.to.startsWith('#') ? item.to : undefined"
               class="group relative cursor-pointer text-base font-medium text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
               :aria-current="isActive(item.to) ? 'page' : undefined"
@@ -76,7 +76,7 @@
                 :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
                 v-for="item in navItems"
                 :key="item.to"
-                :to="item.to.startsWith('#') ? undefined : item.to"
+                :to="item.to.startsWith('#') ? undefined : localePath(item.to)"
                 :href="item.to.startsWith('#') ? item.to : undefined"
                 class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
                 :class="
@@ -111,6 +111,7 @@
 import { navItems } from '~/constants/navigation'
 
 const route = useRoute()
+const localePath = useLocalePath()
 
 const mobileMenuOpen = ref<boolean>(false)
 const activeSection = ref<string>('')
@@ -144,13 +145,13 @@ const scrollToSection = (event: Event, anchor: string): void => {
 
 const scrollToTop = (event: Event): void => {
   event.preventDefault()
-  if (route.path === '/') {
+  if (route.path === '/' || route.path === '/en') {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     })
   } else {
-    navigateTo('/')
+    navigateTo(localePath('/'))
   }
   closeMobileMenu()
 }
@@ -159,12 +160,12 @@ const handleNavClick = (event: Event, path: string): void => {
   if (path === '/') {
     scrollToTop(event)
   } else if (path.startsWith('#')) {
-    if (route.path === '/') {
+    if (route.path === '/' || route.path === '/en') {
       scrollToSection(event, path)
     } else {
       event.preventDefault()
       closeMobileMenu()
-      navigateTo(`/${path}`)
+      navigateTo(localePath('/') + path)
     }
   } else {
     closeMobileMenu()
@@ -176,9 +177,9 @@ const isActive = (path: string): boolean => {
     return activeSection.value === path
   }
   if (path === '/') {
-    return route.path === '/' && activeSection.value === ''
+    return (route.path === '/' || route.path === '/en') && activeSection.value === ''
   }
-  return route.path.startsWith(path)
+  return route.path.startsWith(path) || route.path.startsWith(localePath(path))
 }
 
 onMounted(() => {
