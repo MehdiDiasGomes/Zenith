@@ -106,9 +106,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
+import type { FaqPageSchema } from '@/types/seo'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+
+const faqPageSchema: FaqPageSchema = useFaqPageSchema(faqItems)
 
 useSeoMeta({
   title: () => t('seo.faq.title'),
@@ -129,6 +132,12 @@ useHead({
     {
       rel: 'canonical',
       href: 'https://www.dg-zenith.com/faq',
+    },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(faqPageSchema),
     },
   ],
 })

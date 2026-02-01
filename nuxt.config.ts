@@ -55,6 +55,13 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'locales',
     defaultLocale: 'fr',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    baseUrl: 'https://www.dg-zenith.com',
   },
   shadcn: {
     prefix: '',
