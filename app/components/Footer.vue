@@ -6,7 +6,7 @@
     <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="flex flex-col items-center gap-8">
         <div ref="_logoRef" :class="logoClasses">
-          <NuxtLink to="/" :aria-label="$t('nav.logoAriaLabel')">
+          <NuxtLink :to="localePath('/')" :aria-label="$t('nav.logoAriaLabel')">
             <NuxtImg
               src="/images/brand/logo.png"
               alt="Zenith Logo"
@@ -23,21 +23,21 @@
           class="flex flex-wrap items-center justify-center gap-4"
         >
           <NuxtLink
-            to="legal"
+            :to="localePath('/legal')"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
           >
             {{ $t('footer.legal') }}
           </NuxtLink>
           <span class="text-zenith-gold-vivid" aria-hidden="true">•</span>
           <NuxtLink
-            to="privacy"
+            :to="localePath('/privacy')"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
           >
             {{ $t('footer.privacy') }}
           </NuxtLink>
           <span class="text-zenith-gold-vivid" aria-hidden="true">•</span>
           <NuxtLink
-            to="faq"
+            :to="localePath('/faq')"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
           >
             {{ $t('footer.faq') }}
@@ -57,6 +57,7 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath()
 const currentYear = computed<number>(() => new Date().getFullYear())
 
 const { elementRef: _logoRef, classes: logoClasses } = useTailwindAnimate(

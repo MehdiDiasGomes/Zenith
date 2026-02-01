@@ -86,7 +86,7 @@
             {{ $t('faq.cta.description') }}
           </p>
           <NuxtLink
-            to="/#contact"
+            :to="localePath('/') + '#contact'"
             class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
           >
             {{ $t('faq.cta.button') }}
@@ -108,6 +108,7 @@ import {
 } from '@/components/ui/accordion'
 
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 useSeoMeta({
   title: () => t('seo.faq.title'),

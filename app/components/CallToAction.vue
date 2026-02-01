@@ -68,7 +68,7 @@
           as-child
           class="w-full rounded-lg border border-white bg-transparent px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-white hover:text-zenith-gold-vivid sm:w-auto"
         >
-          <NuxtLink to="/faq">
+          <NuxtLink :to="localePath('/faq')">
             {{ $t('cta.button.faq') }}
           </NuxtLink>
         </Button>
@@ -81,6 +81,7 @@
 import { motion } from 'motion-v'
 import { Button } from '@/components/ui/button'
 
+const localePath = useLocalePath()
 const ctaSectionId: string = 'cta-section'
 
 /**
