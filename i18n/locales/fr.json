@@ -1,18 +1,18 @@
 {
   "seo": {
-    "title": "Zenith - Développeur Web Freelance Thionville (57)",
-    "description": "Zenith crée des sites web sur mesure avec une expertise en développement moderne. Basé dans le secteur de Thionville (57), j'accompagne les PME locales.",
+    "title": "Création Site Web Thionville, Metz (57) | Zenith",
+    "description": "Création de sites internet professionnels pour PME et artisans à Thionville, Metz et alentours. Sites vitrines, e-commerce. Devis gratuit, accompagnement personnalisé.",
     "legal": {
-      "title": "Mentions Légales - Zenith",
-      "description": "Informations légales et mentions obligatoires de Zenith, développeur web freelance."
+      "title": "Mentions Légales | Zenith - Création Site Web",
+      "description": "Mentions légales de Zenith, création de sites internet professionnels à Thionville et Metz."
     },
     "privacy": {
-      "title": "Politique de Confidentialité - Zenith",
+      "title": "Politique de Confidentialité | Zenith",
       "description": "Politique de confidentialité et protection des données personnelles de Zenith, conforme au RGPD."
     },
     "faq": {
-      "title": "FAQ - Zenith",
-      "description": "Retrouvez les réponses aux questions fréquentes sur nos services de création de sites web."
+      "title": "FAQ Création Site Web | Zenith Thionville, Metz",
+      "description": "Questions fréquentes sur la création de sites internet : tarifs, délais, maintenance. Zenith accompagne les PME à Thionville et Metz."
     }
   },
   "home": {
@@ -39,7 +39,7 @@
       "part4": "attire des clients."
     },
     "subtitle": "Création ou refonte : je construis des sites performants pour les PME qui veulent croître.",
-    "location": "Basé à Thionville (57)",
+    "location": "Thionville, Metz et alentours (57)",
     "cta": {
       "primary": "Boostez votre visibilité",
       "secondary": "Découvrir mes travaux"
@@ -163,9 +163,9 @@
     "eshop": {
       "title": "E-shop",
       "description": "Votre boutique en ligne clé en main pour vendre dès maintenant",
-      "monthlyFee": "+ 60€/mois (hébergement et maintenance)",
+      "monthlyFee": "+ 80€/mois (hébergement et maintenance)",
       "features": [
-        "Catalogue produits illimité",
+        "Catalogue de 20 produits",
         "Panier et tunnel de commande optimisé",
         "Paiement sécurisé (Stripe, PayPal)",
         "Gestion des stocks en temps réel",
@@ -181,7 +181,7 @@
     "title": "Me contacter",
     "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.",
     "map": {
-      "ariaLabel": "Carte interactive montrant la localisation de Zenith à Thionville",
+      "ariaLabel": "Carte interactive montrant la zone d'intervention de Zenith : Thionville, Metz et alentours",
       "loading": "Chargement de la carte..."
     },
     "form": {

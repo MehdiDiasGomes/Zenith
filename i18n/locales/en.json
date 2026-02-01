@@ -1,18 +1,18 @@
 {
   "seo": {
-    "title": "Zenith - Freelance Web Developer Thionville (57)",
-    "description": "Zenith creates custom websites with expertise in modern development. Based in the Thionville area (57), I support local SMEs.",
+    "title": "Website Creation Thionville, Metz (57) | Zenith",
+    "description": "Professional website creation for SMEs and businesses in Thionville, Metz and surrounding areas. Showcase sites, e-commerce. Free quote, personalized support.",
     "legal": {
-      "title": "Legal Notice - Zenith",
-      "description": "Legal information and mandatory notices for Zenith, freelance web developer."
+      "title": "Legal Notice | Zenith - Website Creation",
+      "description": "Legal notice for Zenith, professional website creation in Thionville and Metz."
     },
     "privacy": {
-      "title": "Privacy Policy - Zenith",
+      "title": "Privacy Policy | Zenith",
       "description": "Privacy policy and personal data protection for Zenith, GDPR compliant."
     },
     "faq": {
-      "title": "FAQ - Zenith",
-      "description": "Find answers to frequently asked questions about my web design services."
+      "title": "FAQ Website Creation | Zenith Thionville, Metz",
+      "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs in Thionville and Metz."
     }
   },
   "home": {
@@ -39,7 +39,7 @@
       "part4": "attracts clients."
     },
     "subtitle": "Creation or redesign: I build high-performing websites for SMEs looking to grow.",
-    "location": "Based in Thionville (57)",
+    "location": "Thionville, Metz and surrounding areas (57)",
     "cta": {
       "primary": "Boost your visibility",
       "secondary": "Discover my work"
@@ -162,9 +162,9 @@
     "eshop": {
       "title": "E-shop",
       "description": "Your turnkey online store to start selling now",
-      "monthlyFee": "+ €60/month (hosting and maintenance)",
+      "monthlyFee": "+ €80/month (hosting and maintenance)",
       "features": [
-        "Unlimited product catalog",
+        "20 product catalog",
         "Optimized shopping cart and checkout",
         "Secure payment (Stripe, PayPal)",
         "Real-time inventory management",
@@ -180,7 +180,7 @@
     "title": "Contact Me",
     "subtitle": "Have a question? A project? Feel free to contact me, I'll get back to you as soon as possible.",
     "map": {
-      "ariaLabel": "Interactive map showing Zenith's location in Thionville",
+      "ariaLabel": "Interactive map showing Zenith's service area: Thionville, Metz and surroundings",
       "loading": "Loading map..."
     },
     "form": {

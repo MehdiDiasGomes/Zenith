@@ -23,24 +23,12 @@
         <motion.article
           v-for="(plan, index) in pricingPlans"
           :key="plan.id"
-          class="group relative flex flex-col overflow-hidden rounded-3xl bg-gradient-to-b from-zenith-bg-light to-zenith-bg-secondary-light shadow-lg transition-all duration-300 hover:-translate-y-2 dark:from-zenith-bg-dark dark:to-zenith-bg-secondary-dark dark:shadow-none"
+          class="group relative flex flex-col overflow-hidden rounded-3xl border border-zenith-gold-bronze/30 bg-zenith-bg-light transition-all duration-300 hover:-translate-y-2 hover:border-zenith-gold-vivid dark:bg-zenith-bg-dark"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.5, delay: index * 0.1 }"
           :in-view-options="{ once: true }"
         >
-          <!-- Popular badge for middle plan -->
-          <div
-            v-if="index === 1"
-            class="absolute -right-11 top-7 flex w-40 rotate-45 items-center justify-center bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid py-2 text-xs font-bold text-white shadow-lg"
-          >
-            {{ $t('pricing.popular') }}
-          </div>
-
-          <!-- Golden border top accent -->
-          <div
-            class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          />
 
           <div class="relative p-8">
             <h3

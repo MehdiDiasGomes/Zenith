@@ -27,7 +27,7 @@
           :in-view-options="{ once: true }"
         >
           <form
-            class="group relative space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-8 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+            class="group relative space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light md:p-8 p-4 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
             @submit="onSubmit"
           >
             <FormField v-slot="{ componentField }" name="name">

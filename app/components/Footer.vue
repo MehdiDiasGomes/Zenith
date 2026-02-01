@@ -20,7 +20,7 @@
           ref="_navRef"
           :class="navClasses"
           :aria-label="$t('footer.legalNavAriaLabel')"
-          class="flex flex-wrap items-center justify-center gap-4"
+          class="flex flex-col items-center gap-3 sm:flex-row sm:gap-4"
         >
           <NuxtLink
             :to="localePath('/legal')"
@@ -28,14 +28,14 @@
           >
             {{ $t('footer.legal') }}
           </NuxtLink>
-          <span class="text-zenith-gold-vivid" aria-hidden="true">•</span>
+          <span class="hidden text-zenith-gold-vivid sm:inline" aria-hidden="true">•</span>
           <NuxtLink
             :to="localePath('/privacy')"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
           >
             {{ $t('footer.privacy') }}
           </NuxtLink>
-          <span class="text-zenith-gold-vivid" aria-hidden="true">•</span>
+          <span class="hidden text-zenith-gold-vivid sm:inline" aria-hidden="true">•</span>
           <NuxtLink
             :to="localePath('/faq')"
             class="text-sm text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"

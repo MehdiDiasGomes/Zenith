@@ -29,7 +29,8 @@ useHead({
     { name: 'googlebot', content: 'index, follow' },
   ],
   link: [
-    { rel: 'icon', type: 'image/png', href: '/images/brand/z_logo.png' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
   ],
   script: [
     {

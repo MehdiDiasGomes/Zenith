@@ -40,7 +40,7 @@ export function useOrganizationSchema(): OrganizationSchema {
     },
     areaServed: {
       '@type': 'GeoCircle',
-      name: 'Thionville, Moselle, Grand Est, France',
+      name: 'Thionville, Metz et alentours, Moselle (57), Grand Est, France',
     },
     sameAs: ['https://www.instagram.com/dg_zenith/'],
     priceRange: '€€',

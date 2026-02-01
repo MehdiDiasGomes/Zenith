@@ -130,7 +130,7 @@ const scrollToSection = (event: Event, anchor: string): void => {
   const targetElement = document.getElementById(targetId)
 
   if (targetElement) {
-    const navbarHeight = 100
+    const navbarHeight = window.innerWidth >= 768 ? 30 : 10
     const elementPosition = targetElement.getBoundingClientRect().top
     const offsetPosition = elementPosition + window.scrollY - navbarHeight
 
