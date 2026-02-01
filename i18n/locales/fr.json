@@ -163,9 +163,9 @@
     "eshop": {
       "title": "E-shop",
       "description": "Votre boutique en ligne clé en main pour vendre dès maintenant",
-      "monthlyFee": "+ 60€/mois (hébergement et maintenance)",
+      "monthlyFee": "+ 80€/mois (hébergement et maintenance)",
       "features": [
-        "Catalogue produits illimité",
+        "Catalogue de 20 produits",
         "Panier et tunnel de commande optimisé",
         "Paiement sécurisé (Stripe, PayPal)",
         "Gestion des stocks en temps réel",

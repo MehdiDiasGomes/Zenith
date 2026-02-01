@@ -162,9 +162,9 @@
     "eshop": {
       "title": "E-shop",
       "description": "Your turnkey online store to start selling now",
-      "monthlyFee": "+ €60/month (hosting and maintenance)",
+      "monthlyFee": "+ €80/month (hosting and maintenance)",
       "features": [
-        "Unlimited product catalog",
+        "20 product catalog",
         "Optimized shopping cart and checkout",
         "Secure payment (Stripe, PayPal)",
         "Real-time inventory management",
