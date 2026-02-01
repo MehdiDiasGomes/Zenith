@@ -321,6 +321,41 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+.prose h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .prose h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .prose h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .prose h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+}
+
 @layer utilities {
   .glass-effect {
     @apply border-black/10 bg-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
