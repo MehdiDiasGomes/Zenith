@@ -139,9 +139,9 @@
       "features": [
         "Modern and responsive design",
         "Up to 5 pages",
-        "Functional contact form",
-        "Basic SEO optimization",
-        "Optimized performance"
+        "Contact form",
+        "Visible on Google",
+        "Fast website"
       ]
     },
     "showcaseAdvanced": {
@@ -151,14 +151,11 @@
       "features": [
         "Modern and responsive design",
         "Unlimited pages",
-        "Functional contact form",
-        "Basic SEO optimization",
-        "Optimized performance",
+        "Contact form",
+        "Visible on Google",
+        "Fast website",
         "Blog / News section",
-        "Advanced animations and interactions",
         "Multilingual site (2 languages)",
-        "Google Analytics configured",
-        "Advanced SEO optimization",
         "Custom logo design"
       ]
     },
@@ -249,7 +246,7 @@
     "items": {
       "process": {
         "question": "How does a project with you work?",
-        "answer": "Each project starts with a discussion to understand your needs and goals. I then propose a mockup for validation, followed by the development of your site. You're involved at every step to ensure a result that suits you perfectly."
+        "answer": "Each project starts with a discussion to understand your needs and goals. I then propose a mockup for validation, followed by the development of your site. You're involved at every step to ensure a result that meets your expectations."
       },
       "timeline": {
         "question": "What are the delivery timelines?",

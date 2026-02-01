@@ -140,9 +140,9 @@
       "features": [
         "Design moderne et responsive",
         "Jusqu'à 5 pages",
-        "Formulaire de contact fonctionnel",
-        "Optimisation SEO de base",
-        "Performance optimisée"
+        "Formulaire de contact",
+        "Visible sur Google",
+        "Site rapide"
       ]
     },
     "showcaseAdvanced": {
@@ -152,14 +152,11 @@
       "features": [
         "Design moderne et responsive",
         "Pages illimitées",
-        "Formulaire de contact fonctionnel",
-        "Optimisation SEO de base",
-        "Performance optimisée",
+        "Formulaire de contact",
+        "Visible sur Google",
+        "Site rapide",
         "Blog / Section actualités",
-        "Animations et interactions avancées",
         "Site multilingue (2 langues)",
-        "Google Analytics configuré",
-        "Optimisation SEO avancée",
         "Design de logo personnalisé"
       ]
     },
@@ -250,7 +247,7 @@
     "items": {
       "process": {
         "question": "Comment se déroule un projet avec vous ?",
-        "answer": "Chaque projet débute par un échange pour comprendre vos besoins et objectifs. Je vous propose ensuite une maquette pour validation, puis je développe votre site. Vous êtes impliqué à chaque étape pour garantir un résultat qui vous correspond parfaitement."
+        "answer": "Chaque projet débute par un échange pour comprendre vos besoins et objectifs. Je vous propose ensuite une maquette pour validation, puis je développe votre site. Vous êtes impliqué à chaque étape pour garantir un résultat fidèle à vos attentes."
       },
       "timeline": {
         "question": "Quels sont les délais de réalisation ?",
