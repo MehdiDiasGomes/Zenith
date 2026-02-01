@@ -41,9 +41,6 @@ export const pricingPlans: PricingPlan[] = [
       { textKey: 'pricing.showcaseAdvanced.features.5' },
       { textKey: 'pricing.showcaseAdvanced.features.6' },
       { textKey: 'pricing.showcaseAdvanced.features.7' },
-      { textKey: 'pricing.showcaseAdvanced.features.8' },
-      { textKey: 'pricing.showcaseAdvanced.features.9' },
-      { textKey: 'pricing.showcaseAdvanced.features.10' },
     ],
   },
   {
