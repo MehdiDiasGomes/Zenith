@@ -34,7 +34,7 @@
           :while-in-view="{ opacity: 1, y: 0 }"
           :transition="{ duration: 0.5, delay: index * 0.2 }"
           :in-view-options="{ once: true }"
-          class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 backdrop-blur-sm transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/20"
+          class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-zenith-gold-vivid/20"
           :class="[
             index === 0 || index === 3
               ? 'p-6 md:col-span-2 md:row-span-2 md:p-8'
