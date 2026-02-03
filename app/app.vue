@@ -18,20 +18,8 @@ const organizationSchema: OrganizationSchema = useOrganizationSchema()
 
 useHead({
   htmlAttrs: {
-    lang: () => locale.value,
+    lang: () => locale.value, 
   },
-  meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'theme-color', content: '#0a0a0a' },
-    { name: 'author', content: 'Zenith' },
-    { name: 'robots', content: 'index, follow' },
-    { name: 'googlebot', content: 'index, follow' },
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-  ],
   script: [
     {
       type: 'application/ld+json',
