@@ -38,7 +38,6 @@
                     type="text"
                     :placeholder="$t('contact.form.name.placeholder')"
                     v-bind="componentField"
-                    class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
                   />
                 </FormControl>
                 <FormMessage />
@@ -53,7 +52,6 @@
                     type="email"
                     :placeholder="$t('contact.form.email.placeholder')"
                     v-bind="componentField"
-                    class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
                   />
                 </FormControl>
                 <FormMessage />
@@ -65,9 +63,7 @@
                 <FormLabel>{{ $t('contact.form.subject.label') }}</FormLabel>
                 <Select v-bind="componentField">
                   <FormControl>
-                    <SelectTrigger
-                      class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
-                    >
+                    <SelectTrigger>
                       <SelectValue :placeholder="$t('contact.form.subject.placeholder')" />
                     </SelectTrigger>
                   </FormControl>
@@ -98,7 +94,6 @@
                     :placeholder="$t('contact.form.message.placeholder')"
                     v-bind="componentField"
                     :rows="6"
-                    class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
                   />
                 </FormControl>
                 <FormMessage />
