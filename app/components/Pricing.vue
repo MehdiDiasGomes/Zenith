@@ -8,7 +8,7 @@
         class="mb-12 text-center"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5 }"
+        :transition="{ duration: 0.3 }"
         :in-view-options="{ once: true }"
       >
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
@@ -26,7 +26,7 @@
           class="group relative flex flex-col overflow-hidden rounded-3xl border border-zenith-gold-bronze/30 bg-zenith-bg-light transition-all duration-300 hover:-translate-y-2 hover:border-zenith-gold-vivid dark:bg-zenith-bg-dark"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: index * 0.1 }"
+          :transition="{ duration: 0.3, delay: index * 0.05 }"
           :in-view-options="{ once: true }"
         >
 
@@ -104,7 +104,7 @@
         class="mt-12 rounded-2xl border border-zenith-gold-bronze/30 bg-zenith-bg-secondary-light/50 p-6 dark:bg-zenith-bg-secondary-dark/50"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
+        :transition="{ duration: 0.3, delay: 0.15 }"
         :in-view-options="{ once: true }"
       >
         <div class="flex items-start gap-3">

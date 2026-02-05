@@ -9,7 +9,7 @@
         <motion.h2
           id="services-heading"
           :initial="{ opacity: 0, y: 20 }"
-          :transition="{ duration: 0.5, delay: 0.2 }"
+          :transition="{ duration: 0.3, delay: 0.1 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
           class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
@@ -18,7 +18,7 @@
         </motion.h2>
         <motion.h3
           :initial="{ opacity: 0, y: 20 }"
-          :transition="{ duration: 0.5, delay: 0.4 }"
+          :transition="{ duration: 0.3, delay: 0.2 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
         >
@@ -32,7 +32,7 @@
           :key="service.id"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: index * 0.2 }"
+          :transition="{ duration: 0.3, delay: index * 0.1 }"
           :in-view-options="{ once: true }"
           class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-zenith-gold-vivid/20"
           :class="[

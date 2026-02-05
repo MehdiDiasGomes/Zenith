@@ -8,7 +8,7 @@
         class="mb-12 space-y-2 text-center"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5 }"
+        :transition="{ duration: 0.3 }"
         :in-view-options="{ once: true }"
       >
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
@@ -23,7 +23,7 @@
         <motion.div
           :initial="{ opacity: 0, x: -30 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.1 }"
+          :transition="{ duration: 0.3, delay: 0.05 }"
           :in-view-options="{ once: true }"
         >
           <form
@@ -151,7 +151,7 @@
           class="flex flex-col justify-between space-y-8"
           :initial="{ opacity: 0, x: 30 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.2 }"
+          :transition="{ duration: 0.3, delay: 0.1 }"
           :in-view-options="{ once: true }"
         >
           <div class="h-64 md:h-80">

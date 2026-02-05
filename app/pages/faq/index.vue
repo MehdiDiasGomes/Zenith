@@ -5,7 +5,7 @@
         <motion.h1
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.2 }"
+          :transition="{ duration: 0.3, delay: 0.1 }"
           :in-view-options="{ once: true }"
           class="mb-4 text-zenith-gold-vivid"
         >
@@ -14,7 +14,7 @@
         <motion.p
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.4 }"
+          :transition="{ duration: 0.3, delay: 0.2 }"
           :in-view-options="{ once: true }"
           class="mx-auto max-w-2xl text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
@@ -28,7 +28,7 @@
           :key="item.id"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: 0.2 + index * 0.1 }"
+          :transition="{ duration: 0.3, delay: 0.1 + index * 0.05 }"
           :in-view-options="{ once: true }"
         >
           <AccordionItem
@@ -52,7 +52,7 @@
       <motion.section
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
+        :transition="{ duration: 0.3, delay: 0.15 }"
         :in-view-options="{ once: true }"
         class="mt-16 flex flex-col items-center gap-8 rounded-2xl bg-white/5 p-8 backdrop-blur-sm md:flex-row md:gap-12 md:p-12 dark:bg-black/20"
         aria-labelledby="cta-heading"
@@ -60,7 +60,7 @@
         <motion.div
           :initial="{ opacity: 0, scale: 0.9 }"
           :while-in-view="{ opacity: 1, scale: 1 }"
-          :transition="{ duration: 0.6, delay: 0.2 }"
+          :transition="{ duration: 0.3, delay: 0.1 }"
           :in-view-options="{ once: true }"
           class="flex w-full justify-center md:w-1/2"
         >
@@ -75,7 +75,7 @@
         <motion.div
           :initial="{ opacity: 0, x: 20 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.4 }"
+          :transition="{ duration: 0.3, delay: 0.2 }"
           :in-view-options="{ once: true }"
           class="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left"
         >

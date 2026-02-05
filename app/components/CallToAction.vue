@@ -22,7 +22,7 @@
         class="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5 }"
+        :transition="{ duration: 0.3 }"
         :in-view-options="{ once: true }"
       >
         {{ $t('cta.title') }}
@@ -32,7 +32,7 @@
         class="mb-6 text-2xl font-semibold text-white/95 md:text-3xl"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.1 }"
+        :transition="{ duration: 0.3, delay: 0.05 }"
         :in-view-options="{ once: true }"
       >
         {{ $t('cta.subtitle') }}
@@ -42,7 +42,7 @@
         class="mx-auto mb-12 max-w-3xl text-base text-white/90 md:text-lg"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.2 }"
+        :transition="{ duration: 0.3, delay: 0.1 }"
         :in-view-options="{ once: true }"
       >
         {{ $t('cta.description.part1') }}<strong class="font-bold text-zenith-gold-vivid">{{ $t('cta.description.part2Bold') }}</strong>
@@ -52,7 +52,7 @@
         class="flex flex-col items-center justify-center gap-4 sm:flex-row"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
+        :transition="{ duration: 0.3, delay: 0.15 }"
         :in-view-options="{ once: true }"
       >
         <Button

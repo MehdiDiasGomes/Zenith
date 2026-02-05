@@ -3,7 +3,7 @@
     class="relative overflow-hidden border-y border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light py-6 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
     :initial="{ opacity: 0, y: 30 }"
     :while-in-view="{ opacity: 1, y: 0 }"
-    :transition="{ duration: 0.5 }"
+    :transition="{ duration: 0.3 }"
     :in-view-options="{ once: true }"
   >
     <div class="animate-marquee flex whitespace-nowrap">
@@ -37,7 +37,7 @@ import { marqueeItems } from '~/constants/marquee'
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .animate-marquee:hover {
