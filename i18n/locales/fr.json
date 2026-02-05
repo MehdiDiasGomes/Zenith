@@ -49,7 +49,9 @@
     "webDesigner": "Web Designer",
     "fullstackDev": "Développeur Full-Stack",
     "uiUx": "UI/UX Designer",
-    "seoExpert": "Expert SEO"
+    "seoExpert": "Expert SEO",
+    "limitedOffer": "Offre limitée",
+    "discount": "-30% sur toutes les prestations"
   },
   "services": {
     "title": "Mes Services",

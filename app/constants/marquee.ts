@@ -4,8 +4,10 @@ export interface MarqueeItem {
 }
 
 export const marqueeItems: MarqueeItem[] = [
-  { id: 'web-designer', textKey: 'marquee.webDesigner' },
-  { id: 'fullstack-dev', textKey: 'marquee.fullstackDev' },
-  { id: 'ui-ux', textKey: 'marquee.uiUx' },
-  { id: 'seo-expert', textKey: 'marquee.seoExpert' },
+  { id: 'promo-limited-1', textKey: 'marquee.limitedOffer' },
+  { id: 'promo-discount-1', textKey: 'marquee.discount' },
+  { id: 'promo-limited-2', textKey: 'marquee.limitedOffer' },
+  { id: 'promo-discount-2', textKey: 'marquee.discount' },
+  { id: 'promo-limited-3', textKey: 'marquee.limitedOffer' },
+  { id: 'promo-discount-3', textKey: 'marquee.discount' },
 ]
