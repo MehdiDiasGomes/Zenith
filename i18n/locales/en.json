@@ -269,5 +269,16 @@
         "answer": "Payment is made in 3 stages: a first payment at project launch, a second upon mockup validation, and the balance at final delivery. I accept bank transfers and card payments."
       }
     }
+  },
+  "settings": {
+    "ariaLabel": "Settings",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "language": {
+      "title": "Language"
+    }
   }
 }

@@ -270,5 +270,16 @@
         "answer": "Le paiement s'effectue en 3 étapes : un premier versement au lancement du projet, un deuxième à la validation de la maquette, et le solde à la livraison finale. J'accepte les virements bancaires et les paiements par carte."
       }
     }
+  },
+  "settings": {
+    "ariaLabel": "Paramètres",
+    "theme": {
+      "title": "Thème",
+      "light": "Clair",
+      "dark": "Sombre"
+    },
+    "language": {
+      "title": "Langue"
+    }
   }
 }
