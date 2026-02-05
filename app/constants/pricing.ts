@@ -61,6 +61,17 @@ export const pricingPlans: PricingPlan[] = [
       { textKey: 'pricing.eshop.features.8' },
     ],
   },
+  {
+    id: 'seo-audit',
+    titleKey: 'pricing.seoAudit.title',
+    descriptionKey: 'pricing.seoAudit.description',
+    basePrice: 0,
+    features: [
+      { textKey: 'pricing.seoAudit.features.0' },
+      { textKey: 'pricing.seoAudit.features.1' },
+      { textKey: 'pricing.seoAudit.features.2' },
+    ],
+  },
 ]
 
 export const DISCOUNT_PERCENTAGE = 30

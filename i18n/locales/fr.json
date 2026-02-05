@@ -131,6 +131,7 @@
     "popular": "Populaire",
     "startingFrom": "à partir de",
     "getQuote": "Demander un devis",
+    "requestAudit": "Demander un audit",
     "priceInfo": {
       "title": "À propos des tarifs",
       "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
@@ -177,7 +178,17 @@
         "Codes promo et réductions",
         "Formation complète à la gestion de votre boutique"
       ]
-    }
+    },
+    "seoAudit": {
+      "title": "Audit SEO",
+      "description": "Analyse gratuite de votre visibilité en ligne",
+      "features": [
+        "Pourquoi tu n'apparais pas",
+        "Les 3 points à corriger en priorité",
+        "Solutions concrètes"
+      ]
+    },
+    "free": "Gratuit"
   },
   "contact": {
     "title": "Me contacter",
@@ -203,7 +214,7 @@
         "error": "Veuillez sélectionner un sujet",
         "options": {
           "showcase": "Projet de site vitrine",
-          "portfolio": "Projet de portfolio",
+          "seoaudit": "Audit SEO",
           "eshop": "Projet e-commerce",
           "other": "Autre demande"
         }

@@ -71,8 +71,8 @@
                     <SelectItem value="showcase">
                       {{ $t('contact.form.subject.options.showcase') }}
                     </SelectItem>
-                    <SelectItem value="portfolio">
-                      {{ $t('contact.form.subject.options.portfolio') }}
+                    <SelectItem value="seoaudit">
+                      {{ $t('contact.form.subject.options.seoaudit') }}
                     </SelectItem>
                     <SelectItem value="eshop">
                       {{ $t('contact.form.subject.options.eshop') }}

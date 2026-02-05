@@ -130,6 +130,7 @@
     "popular": "Popular",
     "startingFrom": "starting from",
     "getQuote": "Get a quote",
+    "requestAudit": "Request an audit",
     "priceInfo": {
       "title": "About pricing",
       "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
@@ -176,7 +177,17 @@
         "Promo codes and discounts",
         "Complete training for managing your store"
       ]
-    }
+    },
+    "seoAudit": {
+      "title": "SEO Audit",
+      "description": "Free analysis of your online visibility",
+      "features": [
+        "Why you don't appear",
+        "The 3 priority points to fix",
+        "Concrete solutions"
+      ]
+    },
+    "free": "Free"
   },
   "contact": {
     "title": "Contact Me",
@@ -202,7 +213,7 @@
         "error": "Please select a subject",
         "options": {
           "showcase": "Showcase website project",
-          "portfolio": "Portfolio project",
+          "seoaudit": "SEO Audit",
           "eshop": "E-commerce project",
           "other": "Other inquiry"
         }
