@@ -6,7 +6,7 @@
     <div class="flex items-center">
       <button
         type="button"
-        aria-label="Paramètres"
+        :aria-label="$t('settings.ariaLabel')"
         class="flex h-14 w-14 shrink-0 items-center justify-center rounded-l-full transition-all duration-500"
         :class="
           isOpen
@@ -32,7 +32,7 @@
             <h3
               class="mb-3 text-sm font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
-              Thème
+              {{ $t('settings.theme.title') }}
             </h3>
             <div class="flex gap-2">
               <button
@@ -46,7 +46,7 @@
                 @click="setTheme('light')"
               >
                 <Icon name="Sun" size="16" aria-hidden="true" />
-                Clair
+                {{ $t('settings.theme.light') }}
               </button>
               <button
                 type="button"
@@ -59,7 +59,7 @@
                 @click="setTheme('dark')"
               >
                 <Icon name="Moon" size="16" aria-hidden="true" />
-                Sombre
+                {{ $t('settings.theme.dark') }}
               </button>
             </div>
           </div>
@@ -68,7 +68,7 @@
             <h3
               class="mb-3 text-sm font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
-              Langue
+              {{ $t('settings.language.title') }}
             </h3>
             <div class="flex gap-2">
               <button

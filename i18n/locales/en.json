@@ -49,7 +49,9 @@
     "webDesigner": "Web Designer",
     "fullstackDev": "Full-Stack Developer",
     "uiUx": "UI/UX Designer",
-    "seoExpert": "SEO Expert"
+    "seoExpert": "SEO Expert",
+    "limitedOffer": "Limited offer",
+    "discount": "-30% on all services"
   },
   "services": {
     "title": "My Services",
@@ -128,6 +130,7 @@
     "popular": "Popular",
     "startingFrom": "starting from",
     "getQuote": "Get a quote",
+    "requestAudit": "Request an audit",
     "priceInfo": {
       "title": "About pricing",
       "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
@@ -174,7 +177,17 @@
         "Promo codes and discounts",
         "Complete training for managing your store"
       ]
-    }
+    },
+    "seoAudit": {
+      "title": "SEO Audit",
+      "description": "Free analysis of your online visibility",
+      "features": [
+        "Analysis of your current visibility",
+        "The 3 priority points to fix",
+        "Concrete improvement recommendations"
+      ]
+    },
+    "free": "Free"
   },
   "contact": {
     "title": "Contact Me",
@@ -200,7 +213,7 @@
         "error": "Please select a subject",
         "options": {
           "showcase": "Showcase website project",
-          "portfolio": "Portfolio project",
+          "seoaudit": "SEO Audit",
           "eshop": "E-commerce project",
           "other": "Other inquiry"
         }
@@ -268,6 +281,17 @@
         "question": "How does payment work?",
         "answer": "Payment is made in 3 stages: a first payment at project launch, a second upon mockup validation, and the balance at final delivery. I accept bank transfers and card payments."
       }
+    }
+  },
+  "settings": {
+    "ariaLabel": "Settings",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "language": {
+      "title": "Language"
     }
   }
 }

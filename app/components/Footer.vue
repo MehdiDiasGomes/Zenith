@@ -8,7 +8,7 @@
         <div ref="_logoRef" :class="logoClasses">
           <NuxtLink :to="localePath('/')" :aria-label="$t('nav.logoAriaLabel')">
             <NuxtImg
-              src="/images/brand/logo.png"
+              src="/images/brand/logo.webp"
               alt="Zenith Logo"
               class="h-16 w-auto"
               loading="lazy"

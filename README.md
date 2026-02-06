@@ -1,7 +1,7 @@
 # Zenith
 
 <div align="center">
-  <img src="public/images/brand/logo.png" alt="Zenith Logo" width="200"/>
+  <img src="public/images/brand/logo.webp" alt="Zenith Logo" width="200"/>
 
 **Agence de développement web et design sur mesure**
 

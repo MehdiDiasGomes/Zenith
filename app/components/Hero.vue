@@ -5,25 +5,33 @@
     <motion.div
       :initial="{ opacity: 0 }"
       :animate="{ opacity: 0.5 }"
-      :transition="{ duration: 1.5, ease: 'easeOut' }"
+      :transition="{ duration: 0.9, ease: 'easeOut' }"
     >
       <NuxtImg
-        src="/images/decorations/left_spotlight.png"
+        src="/images/decorations/left_spotlight.webp"
         alt=""
+        width="800"
+        height="1200"
         class="pointer-events-none absolute left-0 top-0 h-full w-auto"
         loading="eager"
+        :preload="true"
+        fetchpriority="high"
       />
     </motion.div>
     <motion.div
       :initial="{ opacity: 0 }"
       :animate="{ opacity: 1 }"
-      :transition="{ duration: 1.2 }"
+      :transition="{ duration: 0.7 }"
     >
       <NuxtImg
-        src="/images/decorations/right_spotlight.png"
+        src="/images/decorations/right_spotlight.webp"
         alt=""
+        width="800"
+        height="1200"
         class="pointer-events-none absolute right-0 top-0 h-full w-auto"
         loading="eager"
+        :preload="true"
+        fetchpriority="high"
       />
     </motion.div>
     <div class="relative z-10 mx-auto max-w-5xl text-center">
@@ -31,7 +39,7 @@
         class="mb-8 flex justify-center"
         :initial="{ opacity: 0, y: -20 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.8 }"
+        :transition="{ duration: 0.5 }"
       >
         <div
           class="inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/20 bg-zenith-bg-secondary-light/50 px-4 py-2 backdrop-blur-sm dark:bg-zenith-bg-secondary-dark/50"
@@ -41,7 +49,7 @@
               class="absolute inline-flex h-full w-full rounded-full bg-zenith-gold-vivid"
               :initial="{ scale: 1, opacity: 0.75 }"
               :animate="{ scale: 1.5, opacity: 0 }"
-              :transition="{ duration: 1.5 }"
+              :transition="{ duration: 0.9 }"
             />
             <span class="relative inline-flex h-2 w-2 rounded-full bg-zenith-gold-vivid" />
           </span>
@@ -57,7 +65,7 @@
         class="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl"
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.2 }"
+        :transition="{ duration: 0.3, delay: 0.1 }"
       >
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part1') }}
@@ -66,7 +74,7 @@
           class="bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne bg-clip-text text-transparent"
           :initial="{ opacity: 0 }"
           :animate="{ opacity: 1 }"
-          :transition="{ duration: 0.5, delay: 0.2 }"
+          :transition="{ duration: 0.3, delay: 0.1 }"
         >
           {{ $t('hero.title.part2') }}
         </motion.span>
@@ -83,7 +91,7 @@
         class="mx-auto mb-6 max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark md:text-lg"
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.4 }"
+        :transition="{ duration: 0.3, delay: 0.2 }"
       >
         {{ $t('hero.subtitle') }}
       </motion.p>
@@ -92,7 +100,7 @@
         class="mb-12 flex items-center justify-center gap-2 text-sm text-zenith-gold-bronze dark:text-zenith-champagne"
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.6 }"
+        :transition="{ duration: 0.3, delay: 0.3 }"
       >
         <MapPin :size="16" :aria-hidden="true" />
         <span>{{ $t('hero.location') }}</span>
@@ -102,7 +110,7 @@
         class="flex flex-col items-center justify-center gap-4 sm:flex-row"
         :initial="{ opacity: 0, y: 20 }"
         :animate="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.8 }"
+        :transition="{ duration: 0.3, delay: 0.4 }"
       >
         <a
           href="#contact"

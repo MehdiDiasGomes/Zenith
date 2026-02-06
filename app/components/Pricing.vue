@@ -8,7 +8,7 @@
         class="mb-12 text-center"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5 }"
+        :transition="{ duration: 0.3 }"
         :in-view-options="{ once: true }"
       >
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
@@ -26,7 +26,7 @@
           class="group relative flex flex-col overflow-hidden rounded-3xl border border-zenith-gold-bronze/30 bg-zenith-bg-light transition-all duration-300 hover:-translate-y-2 hover:border-zenith-gold-vivid dark:bg-zenith-bg-dark"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.5, delay: index * 0.1 }"
+          :transition="{ duration: 0.3, delay: index * 0.05 }"
           :in-view-options="{ once: true }"
         >
 
@@ -44,28 +44,37 @@
             </p>
 
             <div class="mb-8">
-              <div class="mb-2 flex items-center gap-3">
-                <span class="text-lg text-zenith-text-secondary-light/50 dark:text-zenith-text-secondary-dark/50 line-through">
-                  {{ plan.basePrice }}€
-                </span>
-                <span class="rounded-full bg-gradient-to-r from-red-500 to-red-600 px-3 py-1 text-xs font-bold text-white shadow-md">
-                  -{{ DISCOUNT_PERCENTAGE }}%
-                </span>
-              </div>
-              <div class="flex items-end gap-2">
-                <span class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                  {{ $t('pricing.startingFrom') }}
-                </span>
-                <span class="text-5xl font-extrabold text-zenith-gold-vivid">
-                  {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
-                </span>
-              </div>
-              <p
-                v-if="plan.monthlyFeeKey"
-                class="mt-3 text-xs font-medium text-zenith-gold-vivid"
-              >
-                {{ $t(plan.monthlyFeeKey) }}
-              </p>
+              <template v-if="plan.basePrice === 0">
+                <div class="flex items-end justify-start py-4">
+                  <span class="text-5xl font-extrabold text-zenith-gold-vivid">
+                    {{ $t('pricing.free') }}
+                  </span>
+                </div>
+              </template>
+              <template v-else>
+                <div class="mb-2 flex items-center gap-3">
+                  <span class="text-lg text-zenith-text-secondary-light/50 dark:text-zenith-text-secondary-dark/50 line-through">
+                    {{ plan.basePrice }}€
+                  </span>
+                  <span class="rounded-full bg-gradient-to-r from-red-500 to-red-600 px-3 py-1 text-xs font-bold text-white shadow-md">
+                    -{{ DISCOUNT_PERCENTAGE }}%
+                  </span>
+                </div>
+                <div class="flex items-end gap-2">
+                  <span class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                    {{ $t('pricing.startingFrom') }}
+                  </span>
+                  <span class="text-5xl font-extrabold text-zenith-gold-vivid">
+                    {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
+                  </span>
+                </div>
+                <p
+                  v-if="plan.monthlyFeeKey"
+                  class="mt-3 text-xs font-medium text-zenith-gold-vivid"
+                >
+                  {{ $t(plan.monthlyFeeKey) }}
+                </p>
+              </template>
             </div>
 
             <div class="mb-6 h-px w-full bg-gradient-to-r from-transparent via-zenith-gold-bronze/30 to-transparent" />
@@ -94,7 +103,7 @@
               to="#contact"
               class="block rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-center text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
             >
-              {{ $t('pricing.getQuote') }}
+              {{ plan.id === 'seo-audit' ? $t('pricing.requestAudit') : $t('pricing.getQuote') }}
             </NuxtLink>
           </div>
         </motion.article>
@@ -104,7 +113,7 @@
         class="mt-12 rounded-2xl border border-zenith-gold-bronze/30 bg-zenith-bg-secondary-light/50 p-6 dark:bg-zenith-bg-secondary-dark/50"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5, delay: 0.3 }"
+        :transition="{ duration: 0.3, delay: 0.15 }"
         :in-view-options="{ once: true }"
       >
         <div class="flex items-start gap-3">

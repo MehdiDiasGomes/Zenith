@@ -49,7 +49,9 @@
     "webDesigner": "Web Designer",
     "fullstackDev": "Développeur Full-Stack",
     "uiUx": "UI/UX Designer",
-    "seoExpert": "Expert SEO"
+    "seoExpert": "Expert SEO",
+    "limitedOffer": "Offre limitée",
+    "discount": "-30% sur toutes les prestations"
   },
   "services": {
     "title": "Mes Services",
@@ -129,6 +131,7 @@
     "popular": "Populaire",
     "startingFrom": "à partir de",
     "getQuote": "Demander un devis",
+    "requestAudit": "Demander un audit",
     "priceInfo": {
       "title": "À propos des tarifs",
       "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
@@ -175,7 +178,17 @@
         "Codes promo et réductions",
         "Formation complète à la gestion de votre boutique"
       ]
-    }
+    },
+    "seoAudit": {
+      "title": "Audit SEO",
+      "description": "Analyse gratuite de votre visibilité en ligne",
+      "features": [
+        "Analyse de votre visibilité actuelle",
+        "Les 3 points prioritaires à corriger",
+        "Recommandations d'amélioration concrètes"
+      ]
+    },
+    "free": "Gratuit"
   },
   "contact": {
     "title": "Me contacter",
@@ -201,7 +214,7 @@
         "error": "Veuillez sélectionner un sujet",
         "options": {
           "showcase": "Projet de site vitrine",
-          "portfolio": "Projet de portfolio",
+          "seoaudit": "Audit SEO",
           "eshop": "Projet e-commerce",
           "other": "Autre demande"
         }
@@ -269,6 +282,17 @@
         "question": "Comment fonctionne le paiement ?",
         "answer": "Le paiement s'effectue en 3 étapes : un premier versement au lancement du projet, un deuxième à la validation de la maquette, et le solde à la livraison finale. J'accepte les virements bancaires et les paiements par carte."
       }
+    }
+  },
+  "settings": {
+    "ariaLabel": "Paramètres",
+    "theme": {
+      "title": "Thème",
+      "light": "Clair",
+      "dark": "Sombre"
+    },
+    "language": {
+      "title": "Langue"
     }
   }
 }

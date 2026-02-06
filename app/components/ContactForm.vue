@@ -8,7 +8,7 @@
         class="mb-12 space-y-2 text-center"
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.5 }"
+        :transition="{ duration: 0.3 }"
         :in-view-options="{ once: true }"
       >
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
@@ -23,7 +23,7 @@
         <motion.div
           :initial="{ opacity: 0, x: -30 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.1 }"
+          :transition="{ duration: 0.3, delay: 0.05 }"
           :in-view-options="{ once: true }"
         >
           <form
@@ -38,7 +38,6 @@
                     type="text"
                     :placeholder="$t('contact.form.name.placeholder')"
                     v-bind="componentField"
-                    class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
                   />
                 </FormControl>
                 <FormMessage />
@@ -53,7 +52,6 @@
                     type="email"
                     :placeholder="$t('contact.form.email.placeholder')"
                     v-bind="componentField"
-                    class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
                   />
                 </FormControl>
                 <FormMessage />
@@ -65,9 +63,7 @@
                 <FormLabel>{{ $t('contact.form.subject.label') }}</FormLabel>
                 <Select v-bind="componentField">
                   <FormControl>
-                    <SelectTrigger
-                      class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
-                    >
+                    <SelectTrigger>
                       <SelectValue :placeholder="$t('contact.form.subject.placeholder')" />
                     </SelectTrigger>
                   </FormControl>
@@ -75,8 +71,8 @@
                     <SelectItem value="showcase">
                       {{ $t('contact.form.subject.options.showcase') }}
                     </SelectItem>
-                    <SelectItem value="portfolio">
-                      {{ $t('contact.form.subject.options.portfolio') }}
+                    <SelectItem value="seoaudit">
+                      {{ $t('contact.form.subject.options.seoaudit') }}
                     </SelectItem>
                     <SelectItem value="eshop">
                       {{ $t('contact.form.subject.options.eshop') }}
@@ -98,7 +94,6 @@
                     :placeholder="$t('contact.form.message.placeholder')"
                     v-bind="componentField"
                     :rows="6"
-                    class="border-zenith-bronze-dark/20 focus:border-zenith-gold-vivid focus:ring-zenith-gold-vivid/20"
                   />
                 </FormControl>
                 <FormMessage />
@@ -114,7 +109,7 @@
                   <FormLabel class="cursor-pointer text-sm font-normal">
                     {{ $t('contact.form.consent.label') }}
                     <NuxtLink
-                      :to="localePath('/privacy')"
+                      :to="localePath('/legal')"
                       class="text-zenith-gold-vivid underline hover:text-zenith-champagne"
                     >
                       {{ $t('contact.form.consent.linkText') }}
@@ -156,12 +151,12 @@
           class="flex flex-col justify-between space-y-8"
           :initial="{ opacity: 0, x: 30 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.5, delay: 0.2 }"
+          :transition="{ duration: 0.3, delay: 0.1 }"
           :in-view-options="{ once: true }"
         >
           <div class="h-64 md:h-80">
             <ClientOnly>
-              <Map />
+              <LazyMap />
               <template #fallback>
                 <div
                   class="flex h-full w-full items-center justify-center rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
