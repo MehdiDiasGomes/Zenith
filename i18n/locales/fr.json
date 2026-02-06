@@ -294,5 +294,98 @@
     "language": {
       "title": "Langue"
     }
+  },
+  "servicePages": {
+    "webDev": {
+      "seo": {
+        "title": "Création Site Web Professionnel | Zenith Thionville",
+        "description": "Création de sites web professionnels sur mesure pour PME et artisans. Design moderne, responsive et optimisé pour convertir vos visiteurs en clients."
+      },
+      "hero": {
+        "titleWhite": "Site web",
+        "titleGradient": "professionnel",
+        "subtitle": "Un site qui inspire confiance et transforme vos visiteurs en clients, disponible 24/7 pour développer votre activité"
+      },
+      "intro": {
+        "title": "Votre entreprise mérite un site web à la hauteur de vos ambitions",
+        "description": "Dans un monde où 75% des clients jugent la crédibilité d'une entreprise sur son site web, votre présence en ligne n'est plus une option, c'est une nécessité stratégique."
+      },
+      "benefits": {
+        "title": "Les avantages d'un site professionnel",
+        "items": {
+          "credibility": {
+            "title": "Crédibilité renforcée",
+            "description": "Un site professionnel inspire confiance et positionne votre entreprise comme un acteur sérieux de votre secteur"
+          },
+          "availability": {
+            "title": "Disponibilité 24/7",
+            "description": "Vos clients peuvent découvrir vos services à tout moment, même en dehors de vos heures d'ouverture"
+          },
+          "conversion": {
+            "title": "Génération de leads",
+            "description": "Transformez vos visiteurs en prospects qualifiés grâce à des formulaires de contact optimisés"
+          },
+          "competition": {
+            "title": "Avantage concurrentiel",
+            "description": "Démarquez-vous de vos concurrents avec un site moderne qui met en valeur votre expertise"
+          }
+        }
+      },
+      "features": {
+        "title": "Ce qui est inclus",
+        "items": {
+          "responsive": {
+            "title": "Design responsive",
+            "description": "Votre site s'adapte parfaitement à tous les écrans : mobile, tablette et ordinateur"
+          },
+          "modern": {
+            "title": "Design moderne",
+            "description": "Une interface élégante et professionnelle qui reflète l'image de votre entreprise"
+          },
+          "performance": {
+            "title": "Performance optimale",
+            "description": "Site rapide et fluide pour une expérience utilisateur irréprochable"
+          },
+          "seo": {
+            "title": "Optimisé pour Google",
+            "description": "Structure et contenus optimisés pour améliorer votre visibilité sur les moteurs de recherche"
+          },
+          "forms": {
+            "title": "Formulaires de contact",
+            "description": "Facilitez la prise de contact avec des formulaires simples et efficaces"
+          },
+          "maintenance": {
+            "title": "Maintenance incluse",
+            "description": "Hébergement, sauvegardes et mises à jour de sécurité pris en charge"
+          }
+        }
+      },
+      "process": {
+        "title": "Comment ça fonctionne",
+        "steps": {
+          "consultation": {
+            "title": "Consultation gratuite",
+            "description": "Nous discutons de vos besoins, objectifs et de la vision de votre projet"
+          },
+          "design": {
+            "title": "Création de la maquette",
+            "description": "Je conçois le design de votre site et vous le soumets pour validation"
+          },
+          "development": {
+            "title": "Développement",
+            "description": "Je développe votre site en respectant les meilleures pratiques du web"
+          },
+          "launch": {
+            "title": "Mise en ligne",
+            "description": "Votre site est mis en ligne et vous êtes formé à son utilisation"
+          }
+        }
+      },
+      "cta": {
+        "title": "Prêt à développer votre activité en ligne ?",
+        "description": "Discutons de votre projet lors d'un échange gratuit et sans engagement.",
+        "button": "Demander un devis gratuit"
+      }
+    }
   }
 }

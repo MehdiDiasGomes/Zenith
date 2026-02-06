@@ -293,5 +293,98 @@
     "language": {
       "title": "Language"
     }
+  },
+  "servicePages": {
+    "webDev": {
+      "seo": {
+        "title": "Professional Website Creation | Zenith Thionville",
+        "description": "Custom professional website creation for SMEs and businesses. Modern, responsive design optimized to convert your visitors into clients."
+      },
+      "hero": {
+        "titleWhite": "Professional",
+        "titleGradient": "website",
+        "subtitle": "A site that inspires trust and converts your visitors into clients, available 24/7 to grow your business"
+      },
+      "intro": {
+        "title": "Your business deserves a website that matches your ambitions",
+        "description": "In a world where 75% of customers judge a company's credibility by its website, your online presence is no longer optional—it's a strategic necessity."
+      },
+      "benefits": {
+        "title": "The benefits of a professional website",
+        "items": {
+          "credibility": {
+            "title": "Enhanced credibility",
+            "description": "A professional website inspires trust and positions your company as a serious player in your industry"
+          },
+          "availability": {
+            "title": "24/7 availability",
+            "description": "Your clients can discover your services anytime, even outside your business hours"
+          },
+          "conversion": {
+            "title": "Lead generation",
+            "description": "Turn your visitors into qualified prospects with optimized contact forms"
+          },
+          "competition": {
+            "title": "Competitive advantage",
+            "description": "Stand out from your competitors with a modern site that showcases your expertise"
+          }
+        }
+      },
+      "features": {
+        "title": "What's included",
+        "items": {
+          "responsive": {
+            "title": "Responsive design",
+            "description": "Your site adapts seamlessly to all screens: mobile, tablet, and desktop"
+          },
+          "modern": {
+            "title": "Modern design",
+            "description": "An elegant and professional interface that reflects your company's image"
+          },
+          "performance": {
+            "title": "Optimal performance",
+            "description": "Fast and smooth website for an impeccable user experience"
+          },
+          "seo": {
+            "title": "Optimized for Google",
+            "description": "Structure and content optimized to improve your visibility on search engines"
+          },
+          "forms": {
+            "title": "Contact forms",
+            "description": "Facilitate contact with simple and effective forms"
+          },
+          "maintenance": {
+            "title": "Maintenance included",
+            "description": "Hosting, backups, and security updates taken care of"
+          }
+        }
+      },
+      "process": {
+        "title": "How it works",
+        "steps": {
+          "consultation": {
+            "title": "Free consultation",
+            "description": "We discuss your needs, goals, and project vision"
+          },
+          "design": {
+            "title": "Mockup creation",
+            "description": "I design your website and submit it to you for validation"
+          },
+          "development": {
+            "title": "Development",
+            "description": "I develop your site following web best practices"
+          },
+          "launch": {
+            "title": "Launch",
+            "description": "Your site goes live and you're trained on how to use it"
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to grow your business online?",
+        "description": "Let's discuss your project in a free, no-obligation conversation.",
+        "button": "Request a free quote"
+      }
+    }
   }
 }

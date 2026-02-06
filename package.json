@@ -19,6 +19,8 @@
     "@alpinejs/intersect": "^3.14.9",
     "@emailjs/browser": "^4.4.1",
     "@formkit/auto-animate": "^0.8.2",
+    "@lottiefiles/lottie-player": "^2.0.12",
+    "@lottiefiles/vue-lottie-player": "^1.1.0",
     "@nuxt/content": "^3.11.0",
     "@nuxt/fonts": "0.10.3",
     "@nuxt/image": "^2.0.0",
