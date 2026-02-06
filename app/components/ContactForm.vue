@@ -109,7 +109,7 @@
                   <FormLabel class="cursor-pointer text-sm font-normal">
                     {{ $t('contact.form.consent.label') }}
                     <NuxtLink
-                      :to="localePath('/privacy')"
+                      :to="localePath('/legal')"
                       class="text-zenith-gold-vivid underline hover:text-zenith-champagne"
                     >
                       {{ $t('contact.form.consent.linkText') }}
@@ -156,7 +156,7 @@
         >
           <div class="h-64 md:h-80">
             <ClientOnly>
-              <Map />
+              <LazyMap />
               <template #fallback>
                 <div
                   class="flex h-full w-full items-center justify-center rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"

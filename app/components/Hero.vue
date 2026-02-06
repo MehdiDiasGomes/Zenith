@@ -8,10 +8,14 @@
       :transition="{ duration: 0.9, ease: 'easeOut' }"
     >
       <NuxtImg
-        src="/images/decorations/left_spotlight.png"
+        src="/images/decorations/left_spotlight.webp"
         alt=""
+        width="800"
+        height="1200"
         class="pointer-events-none absolute left-0 top-0 h-full w-auto"
         loading="eager"
+        :preload="true"
+        fetchpriority="high"
       />
     </motion.div>
     <motion.div
@@ -20,10 +24,14 @@
       :transition="{ duration: 0.7 }"
     >
       <NuxtImg
-        src="/images/decorations/right_spotlight.png"
+        src="/images/decorations/right_spotlight.webp"
         alt=""
+        width="800"
+        height="1200"
         class="pointer-events-none absolute right-0 top-0 h-full w-auto"
         loading="eager"
+        :preload="true"
+        fetchpriority="high"
       />
     </motion.div>
     <div class="relative z-10 mx-auto max-w-5xl text-center">

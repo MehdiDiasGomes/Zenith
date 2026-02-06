@@ -26,7 +26,7 @@ This project is the website for **Zenith**, a custom web development and design 
 
 ### Brand Identity
 
-**Logo**: `public/images/brand/z_logo.png` - Golden gradient logo with "ZENITH" text
+**Logo**: `public/images/brand/z_logo.webp` - Golden gradient logo with "ZENITH" text
 
 **Color Palette** (Gold/Bronze luxury theme):
 

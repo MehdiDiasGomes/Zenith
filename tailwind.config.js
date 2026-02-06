@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        trirong: ['Trirong', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
         // Zenith Brand Colors

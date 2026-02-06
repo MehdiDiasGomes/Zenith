@@ -34,7 +34,7 @@ L'ensemble du contenu de ce site (textes, images, logos, graphismes) est la prop
 
 ## Données personnelles
 
-Pour toute information concernant la collecte et le traitement de vos données personnelles, veuillez consulter notre [Politique de confidentialité](/fr/privacy).
+Pour toute information concernant la collecte et le traitement de vos données personnelles, veuillez consulter notre [Politique de confidentialité](/privacy).
 
 ## Cookies
 
