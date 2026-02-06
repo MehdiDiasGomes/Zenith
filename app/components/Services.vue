@@ -118,7 +118,7 @@ const getImageClass = (index: number): string => {
 const getServiceLink = (serviceId: string): string => {
   const serviceLinks: Record<string, string> = {
     'web-dev': localePath('/services/web-dev'),
-    'ui-ux': localePath('/contact'),
+    'ui-ux': localePath('/services/ux-design'),
     'performance': localePath('/contact'),
     'maintenance': localePath('/contact'),
   }

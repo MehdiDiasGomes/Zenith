@@ -385,6 +385,76 @@
         "description": "Let's discuss your project in a free, no-obligation conversation.",
         "button": "Request a free quote"
       }
+    },
+    "uxDesign": {
+      "seo": {
+        "title": "UX/UI Design & Conversion | Zenith Thionville",
+        "description": "UX/UI design optimized for conversion. Clear navigation and effective call-to-actions to turn your visitors into loyal customers."
+      },
+      "hero": {
+        "titleWhite": "Design that",
+        "titleGradient": "converts",
+        "subtitle": "Clear navigation and effective call-to-actions so your prospects can easily contact you"
+      },
+      "intro": {
+        "title": "User experience determines your website's success",
+        "description": "94% of first impressions are design-related. A poorly designed website drives away potential customers in seconds. Don't let your design be a barrier to your growth."
+      },
+      "benefits": {
+        "title": "Why invest in user experience",
+        "items": {
+          "navigation": {
+            "title": "Intuitive navigation",
+            "description": "Your visitors instantly find what they're looking for thanks to clear information architecture"
+          },
+          "conversion": {
+            "title": "Optimized conversion rate",
+            "description": "Strategically placed call-to-actions that naturally encourage your prospects to take action"
+          },
+          "trust": {
+            "title": "Enhanced trust",
+            "description": "A polished and professional design that reassures visitors and encourages them to trust you"
+          },
+          "retention": {
+            "title": "Customer retention",
+            "description": "A positive experience that makes customers want to return and recommend your services"
+          }
+        }
+      },
+      "features": {
+        "title": "My UX Design approach",
+        "items": {
+          "userResearch": {
+            "title": "User analysis",
+            "description": "In-depth study of your target audience to understand their needs and behaviors"
+          },
+          "wireframes": {
+            "title": "Clear architecture",
+            "description": "Wireframe design to structure information in a logical and intuitive way"
+          },
+          "prototyping": {
+            "title": "Interactive prototyping",
+            "description": "Clickable mockups to validate usability before development"
+          },
+          "cta": {
+            "title": "Effective call-to-actions",
+            "description": "Optimized buttons and forms to maximize conversions"
+          },
+          "testing": {
+            "title": "User testing",
+            "description": "Experience validation with real users to guarantee effectiveness"
+          },
+          "optimization": {
+            "title": "Continuous optimization",
+            "description": "Performance analysis and adjustments to constantly improve results"
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to transform your conversion rate?",
+        "description": "Let's discuss your UX project to create an experience that converts visitors into customers.",
+        "button": "Improve my design"
+      }
     }
   }
 }

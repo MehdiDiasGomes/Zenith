@@ -386,6 +386,76 @@
         "description": "Discutons de votre projet lors d'un échange gratuit et sans engagement.",
         "button": "Demander un devis gratuit"
       }
+    },
+    "uxDesign": {
+      "seo": {
+        "title": "UX/UI Design & Conversion | Zenith Thionville",
+        "description": "Design UX/UI optimisé pour la conversion. Navigation claire et appels à l'action efficaces pour transformer vos visiteurs en clients fidèles."
+      },
+      "hero": {
+        "titleWhite": "Design qui",
+        "titleGradient": "convertit",
+        "subtitle": "Navigation claire et appels à l'action efficaces pour que vos prospects vous contactent facilement"
+      },
+      "intro": {
+        "title": "L'expérience utilisateur détermine le succès de votre site web",
+        "description": "94% des premières impressions sont liées au design. Un site mal conçu fait fuir vos clients potentiels en quelques secondes. Ne laissez plus votre design être un frein à votre croissance."
+      },
+      "benefits": {
+        "title": "Pourquoi miser sur l'expérience utilisateur",
+        "items": {
+          "navigation": {
+            "title": "Navigation intuitive",
+            "description": "Vos visiteurs trouvent instantanément ce qu'ils cherchent grâce à une architecture d'information claire"
+          },
+          "conversion": {
+            "title": "Taux de conversion optimisé",
+            "description": "Des appels à l'action stratégiquement placés qui incitent naturellement vos prospects à passer à l'action"
+          },
+          "trust": {
+            "title": "Confiance renforcée",
+            "description": "Un design soigné et professionnel qui rassure vos visiteurs et les encourage à vous faire confiance"
+          },
+          "retention": {
+            "title": "Fidélisation client",
+            "description": "Une expérience positive qui donne envie à vos clients de revenir et de recommander vos services"
+          }
+        }
+      },
+      "features": {
+        "title": "Ma méthode UX Design",
+        "items": {
+          "userResearch": {
+            "title": "Analyse utilisateur",
+            "description": "Étude approfondie de votre cible pour comprendre leurs besoins et comportements"
+          },
+          "wireframes": {
+            "title": "Architecture claire",
+            "description": "Conception de wireframes pour structurer l'information de façon logique et intuitive"
+          },
+          "prototyping": {
+            "title": "Prototypage interactif",
+            "description": "Maquettes cliquables pour valider l'ergonomie avant le développement"
+          },
+          "cta": {
+            "title": "Appels à l'action efficaces",
+            "description": "Boutons et formulaires optimisés pour maximiser les conversions"
+          },
+          "testing": {
+            "title": "Tests utilisateur",
+            "description": "Validation de l'expérience avec de vrais utilisateurs pour garantir l'efficacité"
+          },
+          "optimization": {
+            "title": "Optimisation continue",
+            "description": "Analyse des performances et ajustements pour améliorer constamment les résultats"
+          }
+        }
+      },
+      "cta": {
+        "title": "Prêt à transformer votre taux de conversion ?",
+        "description": "Discutons de votre projet UX pour créer une expérience qui convertit vos visiteurs en clients.",
+        "button": "Améliorer mon design"
+      }
     }
   }
 }
