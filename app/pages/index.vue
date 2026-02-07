@@ -22,13 +22,13 @@ useSeoMeta({
   description: () => t('seo.description'),
   ogTitle: () => t('seo.title'),
   ogDescription: () => t('seo.description'),
-  ogImage: 'https://www.dg-zenith.com/og-image.webp',
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
   ogUrl: 'https://www.dg-zenith.com',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.title'),
   twitterDescription: () => t('seo.description'),
-  twitterImage: 'https://www.dg-zenith.com/og-image.webp',
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
 
 useHead({

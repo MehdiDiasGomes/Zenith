@@ -87,13 +87,13 @@ useSeoMeta({
   description: () => t('seo.faq.description'),
   ogTitle: () => t('seo.faq.title'),
   ogDescription: () => t('seo.faq.description'),
-  ogImage: 'https://www.dg-zenith.com/og-image.webp',
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
   ogUrl: 'https://www.dg-zenith.com/faq',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.faq.title'),
   twitterDescription: () => t('seo.faq.description'),
-  twitterImage: 'https://www.dg-zenith.com/og-image.webp',
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
 
 useHead({

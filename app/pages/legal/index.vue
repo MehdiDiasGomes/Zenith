@@ -17,13 +17,13 @@ useSeoMeta({
   description: () => t('seo.legal.description'),
   ogTitle: () => t('seo.legal.title'),
   ogDescription: () => t('seo.legal.description'),
-  ogImage: 'https://www.dg-zenith.com/og-image.webp',
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
   ogUrl: 'https://www.dg-zenith.com/legal',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.legal.title'),
   twitterDescription: () => t('seo.legal.description'),
-  twitterImage: 'https://www.dg-zenith.com/og-image.webp',
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
   robots: 'noindex, follow',
 })
 

@@ -46,13 +46,13 @@ useSeoMeta({
   description: () => t('servicePages.webDev.seo.description'),
   ogTitle: () => t('servicePages.webDev.seo.title'),
   ogDescription: () => t('servicePages.webDev.seo.description'),
-  ogImage: 'https://www.dg-zenith.com/og-image.webp',
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
   ogUrl: 'https://www.dg-zenith.com/services/web-dev',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('servicePages.webDev.seo.title'),
   twitterDescription: () => t('servicePages.webDev.seo.description'),
-  twitterImage: 'https://www.dg-zenith.com/og-image.webp',
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
 
 useHead({

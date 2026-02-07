@@ -46,13 +46,13 @@ useSeoMeta({
   description: () => t('servicePages.uxDesign.seo.description'),
   ogTitle: () => t('servicePages.uxDesign.seo.title'),
   ogDescription: () => t('servicePages.uxDesign.seo.description'),
-  ogImage: 'https://www.dg-zenith.com/og-image.webp',
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
   ogUrl: 'https://www.dg-zenith.com/services/ux-design',
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('servicePages.uxDesign.seo.title'),
   twitterDescription: () => t('servicePages.uxDesign.seo.description'),
-  twitterImage: 'https://www.dg-zenith.com/og-image.webp',
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
 
 useHead({
