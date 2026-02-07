@@ -17,44 +17,22 @@
     />
 
     <div class="relative z-10 mx-auto max-w-5xl px-4 text-center">
-      <motion.h2
+      <h2
         :id="ctaSectionId"
         class="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3 }"
-        :in-view-options="{ once: true }"
       >
         {{ $t('cta.title') }}
-      </motion.h2>
+      </h2>
 
-      <motion.p
-        class="mb-6 text-2xl font-semibold text-white/95 md:text-3xl"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3, delay: 0.05 }"
-        :in-view-options="{ once: true }"
-      >
+      <p class="mb-6 text-2xl font-semibold text-white/95 md:text-3xl">
         {{ $t('cta.subtitle') }}
-      </motion.p>
+      </p>
 
-      <motion.p
-        class="mx-auto mb-12 max-w-3xl text-base text-white/90 md:text-lg"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3, delay: 0.1 }"
-        :in-view-options="{ once: true }"
-      >
+      <p class="mx-auto mb-12 max-w-3xl text-base text-white/90 md:text-lg">
         {{ $t('cta.description.part1') }}<strong class="font-bold text-zenith-gold-vivid">{{ $t('cta.description.part2Bold') }}</strong>
-      </motion.p>
+      </p>
 
-      <motion.div
-        class="flex flex-col items-center justify-center gap-4 sm:flex-row"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3, delay: 0.15 }"
-        :in-view-options="{ once: true }"
-      >
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <Button
           as-child
           class="w-full rounded-lg border border-white bg-white px-6 py-3 font-semibold text-zenith-gold-vivid transition-all duration-200 hover:bg-transparent hover:text-white sm:w-auto"
@@ -72,13 +50,12 @@
             {{ $t('cta.button.faq') }}
           </NuxtLink>
         </Button>
-      </motion.div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { motion } from 'motion-v'
 import { Button } from '@/components/ui/button'
 
 const localePath = useLocalePath()

@@ -2,34 +2,20 @@
   <main class="faq-wrapper px-4 pb-20 pt-24 sm:px-6 md:pt-32 lg:px-8 lg:pt-40">
     <div class="mx-auto max-w-4xl">
       <header class="mb-12 text-center">
-        <motion.h1
-          :initial="{ opacity: 0, y: 20 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.3, delay: 0.1 }"
-          :in-view-options="{ once: true }"
-          class="mb-4 text-zenith-gold-vivid"
-        >
+        <h1 class="mb-4 text-zenith-gold-vivid">
           {{ $t('faq.title') }}
-        </motion.h1>
-        <motion.p
-          :initial="{ opacity: 0, y: 20 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.3, delay: 0.2 }"
-          :in-view-options="{ once: true }"
+        </h1>
+        <p
           class="mx-auto max-w-2xl text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
           {{ $t('faq.subtitle') }}
-        </motion.p>
+        </p>
       </header>
 
       <Accordion type="single" collapsible class="w-full space-y-4">
-        <motion.div
-          v-for="(item, index) in faqItems"
+        <div
+          v-for="item in faqItems"
           :key="item.id"
-          :initial="{ opacity: 0, y: 20 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.3, delay: 0.1 + index * 0.05 }"
-          :in-view-options="{ once: true }"
         >
           <AccordionItem
             :value="item.id"
@@ -46,39 +32,23 @@
               </p>
             </AccordionContent>
           </AccordionItem>
-        </motion.div>
+        </div>
       </Accordion>
 
-      <motion.section
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3, delay: 0.15 }"
-        :in-view-options="{ once: true }"
+      <section
         class="mt-16 flex flex-col items-center gap-8 rounded-2xl bg-white/5 p-8 backdrop-blur-sm md:flex-row md:gap-12 md:p-12 dark:bg-black/20"
         aria-labelledby="cta-heading"
       >
-        <motion.div
-          :initial="{ opacity: 0, scale: 0.9 }"
-          :while-in-view="{ opacity: 1, scale: 1 }"
-          :transition="{ duration: 0.3, delay: 0.1 }"
-          :in-view-options="{ once: true }"
-          class="flex w-full justify-center md:w-1/2"
-        >
+        <div class="flex w-full justify-center md:w-1/2">
           <NuxtImg
             src="/assets/illustrations/faq.svg"
             alt="Illustration FAQ"
             class="h-auto w-full max-w-xs md:max-w-sm"
             loading="lazy"
           />
-        </motion.div>
+        </div>
 
-        <motion.div
-          :initial="{ opacity: 0, x: 20 }"
-          :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.3, delay: 0.2 }"
-          :in-view-options="{ once: true }"
-          class="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left"
-        >
+        <div class="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
           <h2 id="cta-heading" class="mb-4 text-zenith-gold-vivid">
             {{ $t('faq.cta.text') }}
           </h2>
@@ -91,14 +61,13 @@
           >
             {{ $t('faq.cta.button') }}
           </NuxtLink>
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
     </div>
   </main>
 </template>
 
 <script lang="ts" setup>
-import { motion } from 'motion-v'
 import { faqItems } from '@/constants/faq'
 import {
   Accordion,
