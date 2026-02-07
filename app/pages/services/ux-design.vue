@@ -34,45 +34,17 @@
 </template>
 
 <script setup lang="ts">
+import type { ServiceBenefit, ServiceFeature } from '~/types/services'
+
 const { t } = useI18n()
 
 definePageMeta({
   layout: 'default',
 })
 
-// SEO Meta
-useSeoMeta({
-  title: () => t('servicePages.uxDesign.seo.title'),
-  description: () => t('servicePages.uxDesign.seo.description'),
-  ogTitle: () => t('servicePages.uxDesign.seo.title'),
-  ogDescription: () => t('servicePages.uxDesign.seo.description'),
-  ogImage: 'https://www.dg-zenith.com/og-image.png',
-  ogUrl: 'https://www.dg-zenith.com/services/ux-design',
-  ogType: 'website',
-  twitterCard: 'summary_large_image',
-  twitterTitle: () => t('servicePages.uxDesign.seo.title'),
-  twitterDescription: () => t('servicePages.uxDesign.seo.description'),
-  twitterImage: 'https://www.dg-zenith.com/og-image.png',
-})
+useServiceSeo('uxDesign', 'ux-design')
 
-useHead({
-  link: [
-    {
-      rel: 'canonical',
-      href: 'https://www.dg-zenith.com/services/ux-design',
-    },
-  ],
-})
-
-// Benefits data
-interface Benefit {
-  key: string
-  icon: string
-  title: string
-  description: string
-}
-
-const benefits: Benefit[] = [
+const benefits: ServiceBenefit[] = [
   {
     key: 'navigation',
     icon: 'Navigation',
@@ -99,15 +71,7 @@ const benefits: Benefit[] = [
   },
 ]
 
-// Features data
-interface Feature {
-  key: string
-  icon: string
-  title: string
-  description: string
-}
-
-const features: Feature[] = [
+const features: ServiceFeature[] = [
   {
     key: 'userResearch',
     icon: 'Users',
