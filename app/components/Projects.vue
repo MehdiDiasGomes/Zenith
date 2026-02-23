@@ -1,17 +1,17 @@
 <template>
   <section
     id="projects"
-    class="relative bg-zenith-bg-secondary-light px-4 py-20 dark:bg-zenith-bg-secondary-dark sm:px-6 lg:px-8"
+    class="relative px-4 py-20 sm:px-6 lg:px-8"
   >
     <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
       <div class="mb-12 text-center">
         <h2
-          class="mb-4 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
+          class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ $t('projects.title') }}
         </h2>
         <h3
-          class="mx-auto max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+          class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
           {{ $t('projects.subtitle') }}
         </h3>
@@ -22,7 +22,7 @@
           class="inline-flex rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-1 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
         >
           <button
-            v-for="category in categories"
+            v-for="category in visibleCategories"
             :key="category.id"
             type="button"
             :class="
@@ -79,52 +79,57 @@
             <article
               v-for="project in filteredProjects"
               :key="project.id"
-              class="group relative overflow-hidden rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 hover:border-zenith-gold-vivid/50 hover:shadow-2xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+              class="group relative aspect-square overflow-hidden rounded-2xl border border-zenith-gold-bronze/20 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-lg hover:shadow-zenith-gold-vivid/20"
             >
-              <div
-                class="relative h-48 overflow-hidden bg-zenith-bg-secondary-light dark:bg-zenith-bg-secondary-dark"
-              >
-                <NuxtImg
-                  :src="project.image"
-                  :alt="$t(project.titleKey)"
-                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-zenith-bg-dark/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                />
+              <!-- Full card image background -->
+              <NuxtImg
+                :src="project.image"
+                :alt="$t(project.titleKey)"
+                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+
+              <!-- Dark gradient at bottom for title readability -->
+              <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+              <!-- Title always visible -->
+              <div class="absolute inset-x-0 bottom-0 z-10 p-6 transition-opacity duration-500 group-hover:opacity-0">
+                <h3 class="text-lg font-semibold text-white">
+                  {{ $t(project.titleKey) }}
+                </h3>
               </div>
 
-              <div class="p-6">
-                <h3
-                  class="mb-2 text-xl font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-                >
+              <!-- Content overlay on hover -->
+              <div
+                class="absolute inset-0 z-20 flex flex-col justify-end p-6 bg-black/85 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+              >
+                <h3 class="mb-3 text-xl font-bold text-white">
                   {{ $t(project.titleKey) }}
                 </h3>
 
-                <p
-                  class="mb-4 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                >
+                <p class="mb-4 text-sm text-white/90">
                   {{ $t(project.descriptionKey) }}
                 </p>
 
-                <div class="mb-4 flex flex-wrap gap-2">
+                <!-- Technologies badges -->
+                <div class="mb-6 flex flex-wrap gap-2">
                   <span
                     v-for="tech in project.technologies"
                     :key="tech"
-                    class="rounded-full bg-zenith-gold-vivid/10 px-3 py-1 text-xs font-medium text-zenith-gold-vivid"
+                    class="rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white"
                   >
                     {{ tech }}
                   </span>
                 </div>
 
+                <!-- CTA links -->
                 <div class="flex gap-3">
                   <a
                     v-if="project.link"
                     :href="project.link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 text-sm font-semibold text-zenith-gold-vivid transition-colors hover:text-zenith-gold-bronze"
+                    class="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-white/80"
                   >
                     <Icon name="ExternalLink" size="16" aria-hidden="true" />
                     {{ $t('projects.viewProject') }}
@@ -134,17 +139,13 @@
                     :href="project.github"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 text-sm font-semibold text-zenith-gold-vivid transition-colors hover:text-zenith-gold-bronze"
+                    class="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-white/80"
                   >
                     <Icon name="Github" size="16" aria-hidden="true" />
                     {{ $t('projects.viewCode') }}
                   </a>
                 </div>
               </div>
-
-              <div
-                class="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-hover:w-full"
-              />
             </article>
           </TransitionGroup>
         </div>
@@ -157,6 +158,15 @@
 import { projects, categories, type ProjectCategory } from '~/constants/projects'
 
 const selectedCategory = ref<ProjectCategory>('all')
+
+const visibleCategories = computed(() => {
+  return categories.filter((category) => {
+    if (category.id === 'all') {
+      return true
+    }
+    return projects.some((project) => project.category === category.id)
+  })
+})
 
 const filteredProjects = computed(() => {
   if (selectedCategory.value === 'all') {
