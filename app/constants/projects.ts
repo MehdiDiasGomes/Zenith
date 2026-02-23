@@ -24,13 +24,23 @@ export const categories: Category[] = [
 ]
 
 export const projects: Project[] = [
+  // {
+  //   id: 'kb-clean',
+  //   titleKey: 'projects.kbClean.title',
+  //   descriptionKey: 'projects.kbClean.description',
+  //   image: '/images/projects/kb-clean.png',
+  //   category: 'showcase',
+  //   technologies: ['Nuxt 4', 'TailwindCSS', 'Shadcn', 'Resend', 'TypeScript'],
+  //   link: 'https://kb-clean.vercel.app',
+  // },
   {
-    id: 'kb-clean',
-    titleKey: 'projects.kbClean.title',
-    descriptionKey: 'projects.kbClean.description',
-    image: '/images/projects/kb-clean.png',
+    id: 'barber-house',
+    titleKey: 'projects.barberHouse.title',
+    descriptionKey: 'projects.barberHouse.description',
+    image: '/images/projects/barber-house.png',
     category: 'showcase',
-    technologies: ['Nuxt 4', 'TailwindCSS', 'Shadcn', 'Resend', 'TypeScript'],
-    link: 'https://kb-clean.vercel.app',
+    technologies: ['Next.js', 'TailwindCSS', 'TypeScript'],
+    link: 'https://barber-house-blue.vercel.app/',
+    github: 'https://github.com/MehdiDiasGomes/Barber-House',
   },
 ]

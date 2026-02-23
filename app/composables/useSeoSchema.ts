@@ -28,7 +28,7 @@ export function useOrganizationSchema(): OrganizationSchema {
     description: t('seo.description'),
     url: SITE_URL,
     logo: `${SITE_URL}/images/brand/z_logo.webp`,
-    image: `${SITE_URL}/og-image.webp`,
+    image: `${SITE_URL}/og-image.png`,
     email: 'contact@dg-zenith.com',
     telephone: '+33 7 89 62 69 27',
     address: {

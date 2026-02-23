@@ -84,6 +84,7 @@
     "subtitle": "Discover my work",
     "viewProject": "Visit site",
     "viewCode": "View code",
+    "viewDetails": "View details",
     "emptyState": {
       "title": "No projects available",
       "subtitle": "New projects coming soon in this category"
@@ -97,6 +98,10 @@
     "kbClean": {
       "title": "KB Clean",
       "description": "Showcase website for an eco-friendly waste bin cleaning company with contact system and multilingual management"
+    },
+    "barberHouse": {
+      "title": "Barber House",
+      "description": "Demo showcase website for a barbershop displaying services, team, and contact form"
     }
   },
   "footer": {
@@ -292,6 +297,169 @@
     },
     "language": {
       "title": "Language"
+    }
+  },
+  "servicePages": {
+    "webDev": {
+      "seo": {
+        "title": "Professional Website Creation | Zenith Thionville",
+        "description": "Custom professional website creation for SMEs and businesses. Modern, responsive design optimized to convert your visitors into clients."
+      },
+      "hero": {
+        "titleWhite": "Professional",
+        "titleGradient": "website",
+        "subtitle": "A site that inspires trust and converts your visitors into clients, available 24/7 to grow your business"
+      },
+      "intro": {
+        "title": "Your business deserves a website that matches your ambitions",
+        "description": "In a world where 75% of customers judge a company's credibility by its website, your online presence is no longer optional—it's a strategic necessity."
+      },
+      "benefits": {
+        "title": "The benefits of a professional website",
+        "items": {
+          "credibility": {
+            "title": "Enhanced credibility",
+            "description": "A professional website inspires trust and positions your company as a serious player in your industry"
+          },
+          "availability": {
+            "title": "24/7 availability",
+            "description": "Your clients can discover your services anytime, even outside your business hours"
+          },
+          "conversion": {
+            "title": "Lead generation",
+            "description": "Turn your visitors into qualified prospects with optimized contact forms"
+          },
+          "competition": {
+            "title": "Competitive advantage",
+            "description": "Stand out from your competitors with a modern site that showcases your expertise"
+          }
+        }
+      },
+      "features": {
+        "title": "What's included",
+        "items": {
+          "responsive": {
+            "title": "Responsive design",
+            "description": "Your site adapts seamlessly to all screens: mobile, tablet, and desktop"
+          },
+          "modern": {
+            "title": "Modern design",
+            "description": "An elegant and professional interface that reflects your company's image"
+          },
+          "performance": {
+            "title": "Optimal performance",
+            "description": "Fast and smooth website for an impeccable user experience"
+          },
+          "seo": {
+            "title": "Optimized for Google",
+            "description": "Structure and content optimized to improve your visibility on search engines"
+          },
+          "forms": {
+            "title": "Contact forms",
+            "description": "Facilitate contact with simple and effective forms"
+          },
+          "maintenance": {
+            "title": "Maintenance included",
+            "description": "Hosting, backups, and security updates taken care of"
+          }
+        }
+      },
+      "process": {
+        "title": "How it works",
+        "steps": {
+          "consultation": {
+            "title": "Free consultation",
+            "description": "We discuss your needs, goals, and project vision"
+          },
+          "design": {
+            "title": "Mockup creation",
+            "description": "I design your website and submit it to you for validation"
+          },
+          "development": {
+            "title": "Development",
+            "description": "I develop your site following web best practices"
+          },
+          "launch": {
+            "title": "Launch",
+            "description": "Your site goes live and you're trained on how to use it"
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to grow your business online?",
+        "description": "Let's discuss your project in a free, no-obligation conversation.",
+        "button": "Request a free quote"
+      }
+    },
+    "uxDesign": {
+      "seo": {
+        "title": "UX/UI Design & Conversion | Zenith Thionville",
+        "description": "UX/UI design optimized for conversion. Clear navigation and effective call-to-actions to turn your visitors into loyal customers."
+      },
+      "hero": {
+        "titleWhite": "Design that",
+        "titleGradient": "converts",
+        "subtitle": "Clear navigation and effective call-to-actions so your prospects can easily contact you"
+      },
+      "intro": {
+        "title": "User experience determines your website's success",
+        "description": "94% of first impressions are design-related. A poorly designed website drives away potential customers in seconds. Don't let your design be a barrier to your growth."
+      },
+      "benefits": {
+        "title": "Why invest in user experience",
+        "items": {
+          "navigation": {
+            "title": "Intuitive navigation",
+            "description": "Your visitors instantly find what they're looking for thanks to clear information architecture"
+          },
+          "conversion": {
+            "title": "Optimized conversion rate",
+            "description": "Strategically placed call-to-actions that naturally encourage your prospects to take action"
+          },
+          "trust": {
+            "title": "Enhanced trust",
+            "description": "A polished and professional design that reassures visitors and encourages them to trust you"
+          },
+          "retention": {
+            "title": "Customer retention",
+            "description": "A positive experience that makes customers want to return and recommend your services"
+          }
+        }
+      },
+      "features": {
+        "title": "My UX Design approach",
+        "items": {
+          "userResearch": {
+            "title": "User analysis",
+            "description": "In-depth study of your target audience to understand their needs and behaviors"
+          },
+          "wireframes": {
+            "title": "Clear architecture",
+            "description": "Wireframe design to structure information in a logical and intuitive way"
+          },
+          "prototyping": {
+            "title": "Interactive prototyping",
+            "description": "Clickable mockups to validate usability before development"
+          },
+          "cta": {
+            "title": "Effective call-to-actions",
+            "description": "Optimized buttons and forms to maximize conversions"
+          },
+          "testing": {
+            "title": "User testing",
+            "description": "Experience validation with real users to guarantee effectiveness"
+          },
+          "optimization": {
+            "title": "Continuous optimization",
+            "description": "Performance analysis and adjustments to constantly improve results"
+          }
+        }
+      },
+      "cta": {
+        "title": "Ready to transform your conversion rate?",
+        "description": "Let's discuss your UX project to create an experience that converts visitors into customers.",
+        "button": "Improve my design"
+      }
     }
   }
 }

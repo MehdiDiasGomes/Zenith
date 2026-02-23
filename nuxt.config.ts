@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
     '@nuxt/image',
-    'motion-v/nuxt',
     '@nuxtjs/sitemap',
   ],
   site: {

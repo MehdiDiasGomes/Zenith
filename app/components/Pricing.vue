@@ -4,30 +4,20 @@
     class="relative bg-zenith-bg-secondary-light px-4 py-20 dark:bg-zenith-bg-secondary-dark sm:px-6 lg:px-8"
   >
     <div class="mx-auto max-w-6xl">
-      <motion.div
-        class="mb-12 text-center"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3 }"
-        :in-view-options="{ once: true }"
-      >
+      <div class="mb-12 text-center">
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('pricing.title') }}
         </h2>
         <h3 class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('pricing.subtitle') }}
         </h3>
-      </motion.div>
+      </div>
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <motion.article
-          v-for="(plan, index) in pricingPlans"
+        <article
+          v-for="plan in pricingPlans"
           :key="plan.id"
           class="group relative flex flex-col overflow-hidden rounded-3xl border border-zenith-gold-bronze/30 bg-zenith-bg-light transition-all duration-300 hover:-translate-y-2 hover:border-zenith-gold-vivid dark:bg-zenith-bg-dark"
-          :initial="{ opacity: 0, y: 20 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.3, delay: index * 0.05 }"
-          :in-view-options="{ once: true }"
         >
 
           <div class="relative p-8">
@@ -106,15 +96,11 @@
               {{ plan.id === 'seo-audit' ? $t('pricing.requestAudit') : $t('pricing.getQuote') }}
             </NuxtLink>
           </div>
-        </motion.article>
+        </article>
       </div>
 
-      <motion.div
+      <div
         class="mt-12 rounded-2xl border border-zenith-gold-bronze/30 bg-zenith-bg-secondary-light/50 p-6 dark:bg-zenith-bg-secondary-dark/50"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3, delay: 0.15 }"
-        :in-view-options="{ once: true }"
       >
         <div class="flex items-start gap-3">
           <Icon
@@ -132,12 +118,11 @@
             </p>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { motion } from 'motion-v'
 import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
 </script>

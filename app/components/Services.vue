@@ -6,34 +6,21 @@
   >
     <div class="mx-auto max-w-6xl">
       <div class="mb-16 text-center">
-        <motion.h2
+        <h2
           id="services-heading"
-          :initial="{ opacity: 0, y: 20 }"
-          :transition="{ duration: 0.3, delay: 0.1 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :in-view-options="{ once: true }"
           class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ $t('services.title') }}
-        </motion.h2>
-        <motion.h3
-          :initial="{ opacity: 0, y: 20 }"
-          :transition="{ duration: 0.3, delay: 0.2 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :in-view-options="{ once: true }"
-        >
+        </h2>
+        <h3>
           {{ $t('services.subtitle') }}
-        </motion.h3>
+        </h3>
       </div>
 
       <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-        <motion.div
+        <div
           v-for="(service, index) in serviceList"
           :key="service.id"
-          :initial="{ opacity: 0, y: 20 }"
-          :while-in-view="{ opacity: 1, y: 0 }"
-          :transition="{ duration: 0.3, delay: index * 0.1 }"
-          :in-view-options="{ once: true }"
           class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-zenith-gold-vivid/20"
           :class="[
             index === 0 || index === 3
@@ -72,33 +59,42 @@
                 {{ $t(service.descriptionKey) }}
               </p>
             </div>
-
-            <!-- <div
-              class="mt-6 flex items-center gap-2 text-sm font-semibold text-zenith-gold-vivid opacity-0 transition-all duration-300 group-hover:opacity-100"
-            >
-              <span>{{ $t('services.learnMore') }}</span>
-              <Icon name="ArrowRight" size="16" aria-hidden="true" />
-            </div> -->
           </div>
 
           <div
             class="absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 to-zenith-gold-vivid/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { motion } from 'motion-v'
 import { services } from '~/constants/services'
 
+const localePath = useLocalePath()
 const serviceList = services
 
 const getImageClass = (index: number): string => {
   return index === 0 || index === 3
     ? 'h-48 w-48 translate-x-8 md:h-64 md:w-64'
     : 'h-32 w-32 translate-x-6'
+}
+
+/**
+ * Maps service IDs to their respective page URLs with locale prefix
+ * @param serviceId - The ID of the service
+ * @returns The localized URL path for the service page
+ */
+const getServiceLink = (serviceId: string): string => {
+  const serviceLinks: Record<string, string> = {
+    'web-dev': localePath('/services/web-dev'),
+    'ui-ux': localePath('/services/ux-design'),
+    'performance': localePath('/contact'),
+    'maintenance': localePath('/contact'),
+  }
+
+  return serviceLinks[serviceId] || localePath('/contact')
 }
 </script>

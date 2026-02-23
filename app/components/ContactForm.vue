@@ -4,28 +4,17 @@
     class="relative overflow-hidden bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
   >
     <div class="relative mx-auto max-w-6xl">
-      <motion.div
-        class="mb-12 space-y-2 text-center"
-        :initial="{ opacity: 0, y: 20 }"
-        :while-in-view="{ opacity: 1, y: 0 }"
-        :transition="{ duration: 0.3 }"
-        :in-view-options="{ once: true }"
-      >
+      <div class="mb-12 space-y-2 text-center">
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('contact.title') }}
         </h2>
         <h3 class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('contact.subtitle') }}
         </h3>
-      </motion.div>
+      </div>
 
       <div class="grid gap-12 lg:grid-cols-2">
-        <motion.div
-          :initial="{ opacity: 0, x: -30 }"
-          :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.3, delay: 0.05 }"
-          :in-view-options="{ once: true }"
-        >
+        <div>
           <form
             class="group relative space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light md:p-8 p-4 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
             @submit="onSubmit"
@@ -145,15 +134,9 @@
               {{ $t('contact.form.error') }}
             </p>
           </form>
-        </motion.div>
+        </div>
 
-        <motion.div
-          class="flex flex-col justify-between space-y-8"
-          :initial="{ opacity: 0, x: 30 }"
-          :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.3, delay: 0.1 }"
-          :in-view-options="{ once: true }"
-        >
+        <div class="flex flex-col justify-between space-y-8">
           <div class="h-64 md:h-80">
             <ClientOnly>
               <LazyMap />
@@ -234,7 +217,7 @@
               </div>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   </section>
@@ -244,7 +227,6 @@
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import { z } from 'zod'
-import { motion } from 'motion-v'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
