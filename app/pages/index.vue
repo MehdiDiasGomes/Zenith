@@ -4,7 +4,7 @@
     <Marquee />
     <Services />
     <CallToAction />
-    <!-- <Projects /> -->
+     <Projects /> 
     <Pricing />
     <ContactForm />
   </div>

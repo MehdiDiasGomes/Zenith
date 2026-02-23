@@ -84,6 +84,7 @@
     "subtitle": "Découvrez mes réalisations",
     "viewProject": "Visiter le site",
     "viewCode": "Voir le code",
+    "viewDetails": "Voir les détails",
     "emptyState": {
       "title": "Aucun projet disponible",
       "subtitle": "De nouveaux projets arrivent bientôt dans cette catégorie"
@@ -97,6 +98,10 @@
     "kbClean": {
       "title": "KB Clean",
       "description": "Site vitrine pour une société de nettoyage de bacs à déchets écologique avec système de contact et gestion multilingue"
+    },
+    "barberHouse": {
+      "title": "Barber House",
+      "description": "Site vitrine pour un salon de barbier avec galerie photos, services et système de prise de rendez-vous (projet de démonstration)"
     }
   },
   "footer": {

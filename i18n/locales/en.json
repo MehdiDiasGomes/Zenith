@@ -84,6 +84,7 @@
     "subtitle": "Discover my work",
     "viewProject": "Visit site",
     "viewCode": "View code",
+    "viewDetails": "View details",
     "emptyState": {
       "title": "No projects available",
       "subtitle": "New projects coming soon in this category"
@@ -97,6 +98,10 @@
     "kbClean": {
       "title": "KB Clean",
       "description": "Showcase website for an eco-friendly waste bin cleaning company with contact system and multilingual management"
+    },
+    "barberHouse": {
+      "title": "Barber House",
+      "description": "Showcase website for a barbershop with photo gallery, services, and appointment booking system (demo project)"
     }
   },
   "footer": {
