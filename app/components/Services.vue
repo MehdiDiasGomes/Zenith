@@ -59,20 +59,6 @@
                 {{ $t(service.descriptionKey) }}
               </p>
             </div>
-
-            <NuxtLink
-              :to="getServiceLink(service.id)"
-              class="group/link mt-6 flex w-fit items-center gap-2 text-sm font-semibold text-zenith-gold-vivid opacity-70 transition-all duration-300 md:opacity-0 md:group-hover:opacity-100"
-              :aria-label="`${$t('services.learnMore')} - ${$t(service.titleKey)}`"
-            >
-              <span>{{ $t('services.learnMore') }}</span>
-              <Icon
-                name="ArrowRight"
-                size="16"
-                aria-hidden="true"
-                class="stroke-[2.5] transition-transform duration-300 group-hover/link:translate-x-1"
-              />
-            </NuxtLink>
           </div>
 
           <div
