@@ -101,7 +101,7 @@
     },
     "barberHouse": {
       "title": "Barber House",
-      "description": "Site vitrine pour un salon de barbier avec galerie photos, services et système de prise de rendez-vous (projet de démonstration)"
+      "description": "Site vitrine de démonstration pour un salon de barbier affichant les services, l'équipe et un formulaire de contact"
     }
   },
   "footer": {
