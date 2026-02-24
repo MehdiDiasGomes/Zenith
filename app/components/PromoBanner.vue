@@ -9,41 +9,49 @@
   >
     <div
       v-if="isPromoBannerVisible"
-      class="fixed bottom-0 left-0 right-0 z-50 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-md"
+      class="fixed bottom-4 left-4 right-4 z-50 sm:left-6 sm:right-auto sm:max-w-sm"
       role="banner"
     >
       <div
-        class="rounded-none bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid p-4 sm:rounded-2xl"
+        class="overflow-hidden rounded-2xl border border-zenith-gold-vivid/30 bg-zenith-bg-dark/95 p-4 shadow-xl shadow-black/20 backdrop-blur-xl"
       >
-        <div class="flex items-start justify-between gap-3">
-          <div class="flex items-start gap-3">
-            <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/20">
-              <Icon name="Sparkles" size="20" class="text-white" aria-hidden="true" />
-            </div>
-            <div class="flex-1">
-              <p class="mb-1 text-sm font-bold text-white">
-                {{ $t('promo.discount') }}
-              </p>
-              <p class="mb-3 text-xs text-white/90">
-                {{ $t('promo.description') }}
-              </p>
-              <a
-                href="#pricing"
-                class="inline-block rounded-lg bg-white px-4 py-2 text-xs font-semibold text-zenith-gold-bronze transition-all duration-200 hover:bg-white/90"
-                @click="closeBanner"
-              >
-                {{ $t('promo.cta') }}
-              </a>
-            </div>
+        <!-- Gold accent line -->
+        <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne" />
+
+        <div class="flex items-start gap-3">
+          <!-- Icon -->
+          <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-zenith-gold-vivid/15">
+            <Icon name="Percent" size="18" class="text-zenith-gold-vivid" aria-hidden="true" />
           </div>
-          <button
-            type="button"
-            :aria-label="$t('promo.close')"
-            class="rounded-md p-1 text-white transition-colors duration-200 hover:bg-white/20"
-            @click="closeBanner"
-          >
-            <Icon name="X" size="16" aria-hidden="true" />
-          </button>
+
+          <!-- Content -->
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-semibold text-white">
+              {{ $t('promo.discount') }}
+            </p>
+            <p class="mt-0.5 text-xs text-white/60">
+              {{ $t('promo.description') }}
+            </p>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-2">
+            <a
+              href="#pricing"
+              class="rounded-lg bg-zenith-gold-vivid px-3 py-1.5 text-xs font-semibold text-zenith-bg-dark transition-all duration-200 hover:bg-zenith-champagne"
+              @click="closeBanner"
+            >
+              {{ $t('promo.cta') }}
+            </a>
+            <button
+              type="button"
+              :aria-label="$t('promo.close')"
+              class="rounded-lg p-1.5 text-white/40 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+              @click="closeBanner"
+            >
+              <Icon name="X" size="14" aria-hidden="true" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
