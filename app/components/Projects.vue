@@ -1,6 +1,6 @@
 <template>
   <section id="projects" class="relative px-4 py-20 sm:px-6 lg:px-8">
-    <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
+    <div class="mx-auto max-w-6xl">
       <!-- Section Header -->
       <div class="mb-12 text-center">
         <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
@@ -12,12 +12,7 @@
       </div>
 
       <!-- Category Filter -->
-      <div
-        v-if="visibleCategories.length > 1"
-        ref="_filterRef"
-        :class="filterClasses"
-        class="mb-10 flex justify-center"
-      >
+      <div v-if="visibleCategories.length > 1" class="mb-10 flex justify-center">
         <div
           class="inline-flex rounded-full border border-zenith-bronze-dark/10 bg-zenith-bg-light/80 p-1.5 backdrop-blur-sm dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/80"
         >
@@ -38,22 +33,11 @@
         </div>
       </div>
 
-      <!-- Projects Grid -->
-      <Transition
-        enter-active-class="transition-all duration-500 ease-out"
-        enter-from-class="opacity-0 translate-y-4"
-        enter-to-class="opacity-100 translate-y-0"
-        leave-active-class="transition-all duration-300 ease-in"
-        leave-from-class="opacity-100 translate-y-0"
-        leave-to-class="opacity-0 translate-y-4"
-        mode="out-in"
+      <!-- Empty State -->
+      <div
+        v-if="filteredProjects.length === 0"
+        class="flex flex-col items-center justify-center py-20"
       >
-        <!-- Empty State -->
-        <div
-          v-if="filteredProjects.length === 0"
-          key="empty"
-          class="flex flex-col items-center justify-center py-20"
-        >
           <div
             class="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-zenith-gold-vivid/10"
           >
@@ -69,17 +53,9 @@
           </p>
         </div>
 
-        <!-- Projects List -->
-        <div v-else key="projects" :class="gridClasses">
-          <TransitionGroup
-            enter-active-class="transition-all duration-500 ease-out"
-            enter-from-class="opacity-0 scale-95"
-            enter-to-class="opacity-100 scale-100"
-            leave-active-class="transition-all duration-300 ease-in"
-            leave-from-class="opacity-100 scale-100"
-            leave-to-class="opacity-0 scale-95"
-          >
-            <article
+      <!-- Projects List -->
+      <div v-else :class="gridClasses">
+        <article
               v-for="project in filteredProjects"
               :key="project.id"
               class="group overflow-hidden rounded-3xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark"
@@ -155,10 +131,8 @@
                   </span>
                 </div>
               </div>
-            </article>
-          </TransitionGroup>
-        </div>
-      </Transition>
+        </article>
+      </div>
     </div>
   </section>
 </template>
@@ -194,9 +168,4 @@ const gridClasses = computed(() => {
   }
   return 'grid gap-8 md:grid-cols-2 lg:grid-cols-3'
 })
-
-const { elementRef, animationClasses } = useScrollAnimation('fade-left')
-const { elementRef: _filterRef, classes: filterClasses } = useTailwindAnimate(
-  'animate-fade-down animate-delay-200 animate-duration-700',
-)
 </script>
