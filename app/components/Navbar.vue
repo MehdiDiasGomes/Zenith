@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed left-0 right-0 z-50 px-4 pt-4 transition-all duration-300 sm:px-6 sm:pt-6 lg:px-8"
+    class="fixed left-0 right-0 z-[1000] px-4 pt-4 transition-all duration-300 sm:px-6 sm:pt-6 lg:px-8"
   >
     <nav
       :aria-label="$t('nav.ariaLabel')"

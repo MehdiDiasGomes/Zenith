@@ -5,6 +5,7 @@
     class="relative px-4 py-20 sm:px-6 lg:px-8"
   >
     <div class="mx-auto max-w-6xl">
+      <!-- Section Header -->
       <div class="mb-16 text-center">
         <h2
           id="services-heading"
@@ -17,54 +18,67 @@
         </h3>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-        <div
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-6 md:gap-5">
+        <article
           v-for="(service, index) in serviceList"
           :key="service.id"
-          class="group relative col-span-1 overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-zenith-gold-vivid/20"
-          :class="[
-            index === 0 || index === 3
-              ? 'p-6 md:col-span-2 md:row-span-2 md:p-8'
-              : 'p-6 md:row-span-2',
-          ]"
+          class="group relative overflow-hidden rounded-2xl border transition-all duration-500"
+          :class="getCardClasses(index)"
         >
-          <NuxtImg
-            :src="service.imagePath"
-            :alt="$t(service.imageAltKey)"
-            class="pointer-events-none absolute -bottom-4 -right-12 opacity-20 transition-all duration-700 ease-out group-hover:translate-x-0 group-hover:opacity-30"
-            :class="getImageClass(index)"
-            loading="lazy"
+          <!-- Background Pattern -->
+          <div
+            class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+            :style="{
+              backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
+              backgroundSize: '24px 24px',
+            }"
           />
 
-          <div class="relative z-10 flex h-full flex-col justify-between">
-            <div :class="index === 0 || index === 3 ? 'max-w-lg' : 'max-w-xs'">
+          <!-- Content -->
+          <div class="relative z-10 flex h-full flex-col">
+            <!-- Number Badge -->
+            <div class="mb-6 flex items-start justify-between">
               <div
-                class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-zenith-gold-vivid/20"
+                class="flex h-14 w-14 items-center justify-center rounded-2xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:bg-zenith-gold-vivid group-hover:shadow-lg group-hover:shadow-zenith-gold-vivid/25"
               >
                 <Icon
                   :name="service.icon"
-                  size="32"
-                  class="text-zenith-gold-vivid"
+                  size="28"
+                  class="text-zenith-gold-vivid transition-colors duration-300 group-hover:text-white"
                   aria-hidden="true"
                 />
               </div>
+              <span
+                class="font-mono text-4xl font-bold text-zenith-gold-vivid/10 transition-colors duration-300 group-hover:text-zenith-gold-vivid/20"
+              >
+                0{{ index + 1 }}
+              </span>
+            </div>
 
-              <h3 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            <!-- Text Content -->
+            <div class="flex-1">
+              <h3
+                class="mb-3 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+              >
                 {{ $t(service.titleKey) }}
               </h3>
 
               <p
-                class="text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                class="text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                :class="index === 0 || index === 3 ? 'md:max-w-md' : ''"
               >
                 {{ $t(service.descriptionKey) }}
               </p>
             </div>
+
           </div>
 
+          <!-- Hover Gradient -->
           <div
-            class="absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 to-zenith-gold-vivid/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            class="pointer-events-none absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 via-transparent to-zenith-gold-vivid/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -73,28 +87,20 @@
 <script setup lang="ts">
 import { services } from '~/constants/services'
 
-const localePath = useLocalePath()
 const serviceList = services
 
-const getImageClass = (index: number): string => {
-  return index === 0 || index === 3
-    ? 'h-48 w-48 translate-x-8 md:h-64 md:w-64'
-    : 'h-32 w-32 translate-x-6'
-}
-
 /**
- * Maps service IDs to their respective page URLs with locale prefix
- * @param serviceId - The ID of the service
- * @returns The localized URL path for the service page
+ * Returns the appropriate CSS classes for each card based on its position
+ * @param index - The index of the card in the grid
+ * @returns CSS class string for card styling
  */
-const getServiceLink = (serviceId: string): string => {
-  const serviceLinks: Record<string, string> = {
-    'web-dev': localePath('/services/web-dev'),
-    'ui-ux': localePath('/services/ux-design'),
-    'performance': localePath('/contact'),
-    'maintenance': localePath('/contact'),
-  }
+const getCardClasses = (index: number): string => {
+  const baseClasses =
+    'border-zenith-bronze-dark/10 bg-zenith-bg-light hover:border-zenith-gold-vivid/30 hover:shadow-xl hover:shadow-zenith-gold-vivid/5 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark'
 
-  return serviceLinks[serviceId] || localePath('/contact')
+  if (index === 0 || index === 3) {
+    return `${baseClasses} p-6 md:col-span-4 md:p-8`
+  }
+  return `${baseClasses} p-6 md:col-span-2`
 }
 </script>

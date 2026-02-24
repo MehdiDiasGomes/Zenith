@@ -1,25 +1,20 @@
 <template>
-  <section
-    id="projects"
-    class="relative px-4 py-20 sm:px-6 lg:px-8"
-  >
-    <div ref="elementRef" :class="animationClasses" class="mx-auto max-w-6xl">
+  <section id="projects" class="relative px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-6xl">
+      <!-- Section Header -->
       <div class="mb-12 text-center">
-        <h2
-          class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-        >
+        <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('projects.title') }}
         </h2>
-        <h3
-          class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-        >
+        <h3 class="text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('projects.subtitle') }}
         </h3>
       </div>
 
-      <div ref="_filterRef" :class="filterClasses" class="mb-8 flex justify-center">
+      <!-- Category Filter -->
+      <div v-if="visibleCategories.length > 1" class="mb-10 flex justify-center">
         <div
-          class="inline-flex rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-light p-1 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
+          class="inline-flex rounded-full border border-zenith-bronze-dark/10 bg-zenith-bg-light/80 p-1.5 backdrop-blur-sm dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/80"
         >
           <button
             v-for="category in visibleCategories"
@@ -27,10 +22,10 @@
             type="button"
             :class="
               selectedCategory === category.id
-                ? 'bg-zenith-gold-vivid text-white shadow-md'
-                : 'text-zenith-text-secondary-light hover:bg-zenith-gold-vivid/10 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark'
+                ? 'bg-zenith-gold-vivid text-white shadow-lg shadow-zenith-gold-vivid/25'
+                : 'text-zenith-text-secondary-light hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark'
             "
-            class="rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200"
+            class="rounded-full px-5 py-2 text-sm font-medium transition-all duration-300"
             @click="selectedCategory = category.id"
           >
             {{ $t(category.labelKey) }}
@@ -38,20 +33,11 @@
         </div>
       </div>
 
-      <Transition
-        enter-active-class="transition-all duration-500 ease-out"
-        enter-from-class="opacity-0 translate-y-4"
-        enter-to-class="opacity-100 translate-y-0"
-        leave-active-class="transition-all duration-300 ease-in"
-        leave-from-class="opacity-100 translate-y-0"
-        leave-to-class="opacity-0 translate-y-4"
-        mode="out-in"
+      <!-- Empty State -->
+      <div
+        v-if="filteredProjects.length === 0"
+        class="flex flex-col items-center justify-center py-20"
       >
-        <div
-          v-if="filteredProjects.length === 0"
-          key="empty"
-          class="flex flex-col items-center justify-center py-20"
-        >
           <div
             class="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-zenith-gold-vivid/10"
           >
@@ -67,89 +53,86 @@
           </p>
         </div>
 
-        <div v-else key="projects" :class="gridClasses">
-          <TransitionGroup
-            enter-active-class="transition-all duration-500 ease-out"
-            enter-from-class="opacity-0 scale-95"
-            enter-to-class="opacity-100 scale-100"
-            leave-active-class="transition-all duration-300 ease-in"
-            leave-from-class="opacity-100 scale-100"
-            leave-to-class="opacity-0 scale-95"
-          >
-            <article
+      <!-- Projects List -->
+      <div v-else :class="gridClasses">
+        <article
               v-for="project in filteredProjects"
               :key="project.id"
-              class="group relative aspect-square overflow-hidden rounded-2xl border border-zenith-gold-bronze/20 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-lg hover:shadow-zenith-gold-vivid/20"
+              class="group overflow-hidden rounded-3xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark"
             >
-              <!-- Full card image background -->
-              <NuxtImg
-                :src="project.image"
-                :alt="$t(project.titleKey)"
-                class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
+              <!-- Image Container -->
+              <div class="relative aspect-square overflow-hidden">
+                <NuxtImg
+                  :src="project.image"
+                  :alt="$t(project.titleKey)"
+                  class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  loading="lazy"
+                />
 
-              <!-- Dark gradient at bottom for title readability -->
-              <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <!-- Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                />
 
-              <!-- Title always visible -->
-              <div class="absolute inset-x-0 bottom-0 z-10 p-6 transition-opacity duration-500 group-hover:opacity-0">
-                <h3 class="text-lg font-semibold text-white">
-                  {{ $t(project.titleKey) }}
-                </h3>
-              </div>
-
-              <!-- Content overlay on hover -->
-              <div
-                class="absolute inset-0 z-20 flex flex-col justify-end p-6 bg-black/85 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-              >
-                <h3 class="mb-3 text-xl font-bold text-white">
-                  {{ $t(project.titleKey) }}
-                </h3>
-
-                <p class="mb-4 text-sm text-white/90">
-                  {{ $t(project.descriptionKey) }}
-                </p>
-
-                <!-- Technologies badges -->
-                <div class="mb-6 flex flex-wrap gap-2">
-                  <span
-                    v-for="tech in project.technologies"
-                    :key="tech"
-                    class="rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white"
-                  >
-                    {{ tech }}
-                  </span>
-                </div>
-
-                <!-- CTA links -->
-                <div class="flex gap-3">
+                <!-- Quick Actions (visible on hover) -->
+                <div
+                  class="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 transition-all duration-500 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
+                >
                   <a
                     v-if="project.link"
                     :href="project.link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-white/80"
+                    class="flex flex-1 items-center justify-center gap-2 rounded-full bg-white/90 px-4 py-2.5 text-sm font-semibold text-zenith-bg-dark backdrop-blur-sm transition-all hover:bg-white"
+                    :aria-label="$t('projects.viewProject')"
+                    @click.stop
                   >
                     <Icon name="ExternalLink" size="16" aria-hidden="true" />
-                    {{ $t('projects.viewProject') }}
+                    <span>{{ $t('projects.viewProject') }}</span>
                   </a>
                   <a
                     v-if="project.github"
                     :href="project.github"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-white/80"
+                    class="flex items-center justify-center rounded-full bg-white/90 p-2.5 text-zenith-bg-dark backdrop-blur-sm transition-all hover:bg-white"
+                    :aria-label="$t('projects.viewCode')"
+                    @click.stop
                   >
-                    <Icon name="Github" size="16" aria-hidden="true" />
-                    {{ $t('projects.viewCode') }}
+                    <Icon name="Github" size="18" aria-hidden="true" />
                   </a>
                 </div>
               </div>
-            </article>
-          </TransitionGroup>
-        </div>
-      </Transition>
+
+              <!-- Content -->
+              <div class="p-6">
+                <!-- Title -->
+                <h3
+                  class="mb-2 text-lg font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+                >
+                  {{ $t(project.titleKey) }}
+                </h3>
+
+                <!-- Description -->
+                <p
+                  class="mb-4 line-clamp-2 text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                >
+                  {{ $t(project.descriptionKey) }}
+                </p>
+
+                <!-- Technologies -->
+                <div class="flex flex-wrap gap-1.5">
+                  <span
+                    v-for="tech in project.technologies"
+                    :key="tech"
+                    class="rounded-full bg-zenith-gold-vivid/10 px-2.5 py-1 text-xs font-medium text-zenith-gold-vivid"
+                  >
+                    {{ tech }}
+                  </span>
+                </div>
+              </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>
@@ -185,9 +168,4 @@ const gridClasses = computed(() => {
   }
   return 'grid gap-8 md:grid-cols-2 lg:grid-cols-3'
 })
-
-const { elementRef, animationClasses } = useScrollAnimation('fade-left')
-const { elementRef: _filterRef, classes: filterClasses } = useTailwindAnimate(
-  'animate-fade-down animate-delay-200 animate-duration-700',
-)
 </script>
