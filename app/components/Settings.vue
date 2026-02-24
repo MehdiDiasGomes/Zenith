@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed bottom-20 z-50 transition-all duration-500 ease-out"
+    class="fixed bottom-20 z-[1000] transition-all duration-500 ease-out"
     :class="isOpen ? 'right-0' : '-right-[19rem]'"
   >
     <div class="flex items-center">

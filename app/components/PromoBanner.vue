@@ -9,7 +9,7 @@
   >
     <div
       v-if="isPromoBannerVisible"
-      class="fixed bottom-4 left-4 right-4 z-50 sm:left-6 sm:right-auto sm:max-w-sm"
+      class="fixed bottom-4 left-4 right-4 z-[1000] sm:left-6 sm:right-auto sm:max-w-sm"
       role="banner"
     >
       <div
