@@ -11,7 +11,6 @@
         </h3>
       </div>
 
-      <!-- Category Filter -->
       <div v-if="visibleCategories.length > 1" class="mb-10 flex justify-center">
         <div
           class="inline-flex rounded-full border border-zenith-bronze-dark/10 bg-zenith-bg-light/80 p-1.5 backdrop-blur-sm dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/80"
@@ -33,7 +32,6 @@
         </div>
       </div>
 
-      <!-- Empty State -->
       <div
         v-if="filteredProjects.length === 0"
         class="flex flex-col items-center justify-center py-20"
@@ -53,14 +51,12 @@
           </p>
         </div>
 
-      <!-- Projects List -->
       <div v-else :class="gridClasses">
         <article
               v-for="project in filteredProjects"
               :key="project.id"
               class="group overflow-hidden rounded-3xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark"
             >
-              <!-- Image Container -->
               <div class="relative aspect-square overflow-hidden">
                 <NuxtImg
                   :src="project.image"
@@ -69,14 +65,12 @@
                   loading="lazy"
                 />
 
-                <!-- Gradient Overlay -->
                 <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100"
                 />
 
-                <!-- Quick Actions (visible on hover) -->
                 <div
-                  class="absolute bottom-4 left-4 right-4 flex gap-2 opacity-0 transition-all duration-500 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0"
+                  class="absolute bottom-4 left-4 right-4 flex gap-2 transition-all duration-500 opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0"
                 >
                   <a
                     v-if="project.link"
@@ -104,23 +98,19 @@
                 </div>
               </div>
 
-              <!-- Content -->
               <div class="p-6">
-                <!-- Title -->
                 <h3
                   class="mb-2 text-lg font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
                 >
                   {{ $t(project.titleKey) }}
                 </h3>
 
-                <!-- Description -->
                 <p
                   class="mb-4 line-clamp-2 text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
                 >
                   {{ $t(project.descriptionKey) }}
                 </p>
 
-                <!-- Technologies -->
                 <div class="flex flex-wrap gap-1.5">
                   <span
                     v-for="tech in project.technologies"

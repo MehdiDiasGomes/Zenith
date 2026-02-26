@@ -15,25 +15,16 @@ let L: any = null
 
 const colorMode = useColorMode()
 
-// Thionville coordinates
 const THIONVILLE_LAT = 49.3583
 const THIONVILLE_LNG = 6.1681
 const ZOOM_LEVEL = 13
 
-/**
- * Gets the appropriate tile layer URL based on color mode
- * @param isDark - Whether dark mode is active
- * @returns Tile layer URL
- */
 const getTileLayerUrl = (isDark: boolean): string => {
   return isDark
     ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
     : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
 }
 
-/**
- * Updates the tile layer based on color mode
- */
 const updateTileLayer = (): void => {
   if (!map.value || !L) return
 
@@ -50,13 +41,9 @@ const updateTileLayer = (): void => {
   }).addTo(map.value)
 }
 
-/**
- * Initializes the Leaflet map with custom styling
- */
 const initMap = async (): Promise<void> => {
   if (!mapContainer.value) return
 
-  // Import Leaflet dynamically only on client
   if (!L) {
     L = (await import('leaflet')).default
     await import('leaflet/dist/leaflet.css')
@@ -103,9 +90,6 @@ const initMap = async (): Promise<void> => {
     )
 }
 
-/**
- * Cleans up the map instance
- */
 const cleanupMap = (): void => {
   if (map.value) {
     map.value.remove()
