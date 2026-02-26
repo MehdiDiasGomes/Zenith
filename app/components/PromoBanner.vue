@@ -15,16 +15,13 @@
       <div
         class="overflow-hidden rounded-2xl border border-zenith-gold-vivid/30 bg-zenith-bg-dark/95 p-4 shadow-xl shadow-black/20 backdrop-blur-xl"
       >
-        <!-- Gold accent line -->
         <div class="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne" />
 
         <div class="flex items-start gap-3">
-          <!-- Icon -->
           <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-zenith-gold-vivid/15">
             <Icon name="Percent" size="18" class="text-zenith-gold-vivid" aria-hidden="true" />
           </div>
 
-          <!-- Content -->
           <div class="flex-1 min-w-0">
             <p class="text-sm font-semibold text-white">
               {{ $t('promo.discount') }}
@@ -34,7 +31,6 @@
             </p>
           </div>
 
-          <!-- Actions -->
           <div class="flex items-center gap-2">
             <a
               href="#pricing"

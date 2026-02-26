@@ -5,7 +5,6 @@
     class="relative px-4 py-20 sm:px-6 lg:px-8"
   >
     <div class="mx-auto max-w-6xl">
-      <!-- Section Header -->
       <div class="mb-16 text-center">
         <h2
           id="services-heading"
@@ -18,7 +17,6 @@
         </h3>
       </div>
 
-      <!-- Bento Grid -->
       <div class="grid grid-cols-1 gap-4 md:grid-cols-6 md:gap-5">
         <article
           v-for="(service, index) in serviceList"
@@ -26,7 +24,6 @@
           class="group relative overflow-hidden rounded-2xl border transition-all duration-500"
           :class="getCardClasses(index)"
         >
-          <!-- Background Pattern -->
           <div
             class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
             :style="{
@@ -35,9 +32,7 @@
             }"
           />
 
-          <!-- Content -->
           <div class="relative z-10 flex h-full flex-col">
-            <!-- Number Badge -->
             <div class="mb-6 flex items-start justify-between">
               <div
                 class="flex h-14 w-14 items-center justify-center rounded-2xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:bg-zenith-gold-vivid group-hover:shadow-lg group-hover:shadow-zenith-gold-vivid/25"
@@ -56,7 +51,6 @@
               </span>
             </div>
 
-            <!-- Text Content -->
             <div class="flex-1">
               <h3
                 class="mb-3 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
@@ -74,7 +68,6 @@
 
           </div>
 
-          <!-- Hover Gradient -->
           <div
             class="pointer-events-none absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 via-transparent to-zenith-gold-vivid/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           />
