@@ -45,7 +45,7 @@
         </div>
       </div>
 
-      <h1 class="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+      <h1 class="mb-6 font-bold leading-tight md:text-4xl lg:text-5xl">
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part1') }}
         </span>
