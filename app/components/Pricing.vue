@@ -22,7 +22,7 @@
 
           <div class="relative p-8">
             <h3
-              class="mb-3 text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+              class="mb-3 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t(plan.titleKey) }}
             </h3>
