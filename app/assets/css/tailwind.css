@@ -322,41 +322,57 @@ body {
 }
 
 .prose h1 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 800;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
   letter-spacing: -0.025em;
 }
 
-@media (min-width: 640px) {
-  .prose h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
+.prose h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
-@media (min-width: 768px) {
-  .prose h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
+.prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
-@media (min-width: 1024px) {
-  .prose h1 {
-    font-size: 3.5rem;
-    line-height: 4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .prose h1 {
-    font-size: 4rem;
-    line-height: 4.5rem;
-  }
+.prose p,
+.prose strong,
+.prose li {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 @layer utilities {
+  .text-xxl {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .text-l {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .text-m {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .text-s {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .glass-effect {
     @apply border-black/10 bg-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
   }
@@ -396,7 +412,6 @@ body {
     @apply transition-all duration-300 ease-out;
   }
 
-  /* Scroll animations */
   .animate-in {
     @apply translate-x-0 translate-y-0 scale-100 opacity-100;
   }
