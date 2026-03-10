@@ -57,7 +57,7 @@
               :key="project.id"
               class="group overflow-hidden rounded-3xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark"
             >
-              <div class="relative aspect-square overflow-hidden">
+              <div class="relative aspect-[16/10] overflow-hidden">
                 <NuxtImg
                   :src="project.image"
                   :alt="$t(project.titleKey)"
