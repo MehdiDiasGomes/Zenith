@@ -125,11 +125,9 @@ module.exports = {
     function ({ addUtilities }) {
       addUtilities({
         '.mp-home': {
-          padding: '0 3%',
-          '@screen sm': { padding: '0 5%' },
-          '@screen md': { padding: '0 8%' },
-          '@screen lg': { padding: '0 10%' },
-          '@screen 2xl': { padding: '0 25%' },
+          padding: '0 1rem',
+          '@screen sm': { padding: '0 1.5rem' },
+          '@screen lg': { padding: '0 2rem' },
         },
         '.text-xl': {
           '@screen sm': { fontSize: '2rem', lineHeight: '2rem' },
