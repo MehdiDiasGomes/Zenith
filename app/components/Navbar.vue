@@ -22,34 +22,28 @@
           </NuxtLink>
 
           <div class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-            <component
-              :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
+            <NuxtLink
               v-for="item in navItems"
               :key="item.to"
-              :to="item.to.startsWith('#') ? undefined : localePath(item.to)"
-              :href="item.to.startsWith('#') ? item.to : undefined"
+              :to="localePath(item.to)"
               class="group relative cursor-pointer text-base font-medium text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
               :aria-current="isActive(item.to) ? 'page' : undefined"
-              :aria-label="item.to === '/' ? $t('nav.home') : undefined"
-              @click="handleNavClick($event, item.to)"
             >
-              <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
-              <template v-else>{{ $t(item.label) }}</template>
+              {{ $t(item.label) }}
               <span
                 class="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300"
                 :class="isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'"
               />
-            </component>
+            </NuxtLink>
           </div>
 
           <div class="flex items-center gap-3">
-            <a
-              href="#contact"
+            <NuxtLink
+              :to="localePath('/contact')"
               class="hidden items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid md:inline-flex"
-              @click="handleNavClick($event, '#contact')"
             >
               {{ $t('nav.contact') }}
-            </a>
+            </NuxtLink>
 
             <button
               type="button"
@@ -76,12 +70,10 @@
             class="border-t border-zenith-bronze-dark/10 py-4 dark:border-zenith-gold-bronze/20 md:hidden"
           >
             <div class="flex flex-col gap-2">
-              <component
-                :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
+              <NuxtLink
                 v-for="item in navItems"
                 :key="item.to"
-                :to="item.to.startsWith('#') ? undefined : localePath(item.to)"
-                :href="item.to.startsWith('#') ? item.to : undefined"
+                :to="localePath(item.to)"
                 class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
                 :class="
                   isActive(item.to)
@@ -89,20 +81,9 @@
                     : 'text-zenith-text-primary-light hover:bg-zenith-bg-secondary-light dark:text-zenith-text-primary-dark dark:hover:bg-zenith-bg-secondary-dark'
                 "
                 :aria-current="isActive(item.to) ? 'page' : undefined"
-                :aria-label="item.to === '/' ? $t('nav.home') : undefined"
-                @click="handleNavClick($event, item.to)"
               >
-                <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
-                <template v-else>{{ $t(item.label) }}</template>
-              </component>
-
-              <a
-                href="#contact"
-                class="inline-flex items-center justify-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-                @click="handleNavClick($event, '#contact')"
-              >
-                {{ $t('nav.contact') }}
-              </a>
+                {{ $t(item.label) }}
+              </NuxtLink>
             </div>
           </div>
         </Transition>
@@ -118,137 +99,19 @@ const route = useRoute()
 const localePath = useLocalePath()
 
 const mobileMenuOpen = ref<boolean>(false)
-const activeSection = ref<string>('')
 
 const toggleMobileMenu = (): void => {
   mobileMenuOpen.value = !mobileMenuOpen.value
 }
 
-const closeMobileMenu = (): void => {
-  mobileMenuOpen.value = false
-}
-
-const scrollToSection = (event: Event, anchor: string): void => {
-  event.preventDefault()
-  const targetId = anchor.replace('#', '')
-  const targetElement = document.getElementById(targetId)
-
-  if (targetElement) {
-    const navbarHeight = window.innerWidth >= 768 ? 30 : 10
-    const elementPosition = targetElement.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.scrollY - navbarHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-
-    closeMobileMenu()
-  }
-}
-
-const scrollToTop = (event: Event): void => {
-  event.preventDefault()
-  if (route.path === '/' || route.path === '/en') {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  } else {
-    navigateTo(localePath('/'))
-  }
-  closeMobileMenu()
-}
-
-const handleNavClick = (event: Event, path: string): void => {
-  if (path === '/') {
-    scrollToTop(event)
-  } else if (path.startsWith('#')) {
-    if (route.path === '/' || route.path === '/en') {
-      scrollToSection(event, path)
-    } else {
-      event.preventDefault()
-      closeMobileMenu()
-      navigateTo(localePath('/') + path)
-    }
-  } else {
-    closeMobileMenu()
-  }
-}
-
 const isActive = (path: string): boolean => {
-  if (path.startsWith('#')) {
-    return activeSection.value === path
-  }
-  if (path === '/') {
-    return (route.path === '/' || route.path === '/en') && activeSection.value === ''
-  }
-  return route.path.startsWith(path) || route.path.startsWith(localePath(path))
+  return route.path === localePath(path)
 }
-
-onMounted(() => {
-  const visibleSections: Map<string, IntersectionObserverEntry> = new Map()
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '-100px 0px -66% 0px',
-    threshold: [0, 0.25, 0.5, 0.75, 1],
-  }
-
-  const observerCallback = (entries: IntersectionObserverEntry[]): void => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        visibleSections.set(entry.target.id, entry)
-      } else {
-        visibleSections.delete(entry.target.id)
-      }
-    })
-
-    if (visibleSections.size > 0) {
-      const entries: IntersectionObserverEntry[] = Array.from(visibleSections.values())
-      if (entries.length > 0) {
-        let topSection: IntersectionObserverEntry = entries[0]!
-        let minTop: number = entries[0]!.boundingClientRect.top
-
-        for (const entry of entries) {
-          const rect: DOMRectReadOnly = entry.boundingClientRect
-          if (rect.top < minTop) {
-            minTop = rect.top
-            topSection = entry
-          }
-        }
-
-        if (topSection.target instanceof Element) {
-          activeSection.value = `#${topSection.target.id}`
-        }
-      }
-    }
-  }
-
-  const observer = new IntersectionObserver(observerCallback, observerOptions)
-
-  const sections = document.querySelectorAll('section[id]')
-  sections.forEach((section) => observer.observe(section))
-
-  const handleScroll = (): void => {
-    if (window.scrollY < 200) {
-      activeSection.value = ''
-      visibleSections.clear()
-    }
-  }
-
-  window.addEventListener('scroll', handleScroll)
-
-  onUnmounted(() => {
-    observer.disconnect()
-    window.removeEventListener('scroll', handleScroll)
-  })
-})
 
 watch(
   () => route.path,
   () => {
-    closeMobileMenu()
+    mobileMenuOpen.value = false
   },
 )
 </script>

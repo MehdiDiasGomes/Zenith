@@ -22,13 +22,31 @@
     "ariaLabel": "Main navigation",
     "logoAriaLabel": "Return to Zenith home",
     "home": "Home",
-    "services": "My services",
-    "projects": "My Projects",
-    "pricing": "My Solutions",
-    "contact": "Contact me",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "contact": "Contact",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
     "switchToLang": "Switch language to {lang}"
+  },
+  "pages": {
+    "services": {
+      "title": "Services",
+      "description": "Discover the services offered by Zenith to develop your online presence"
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "description": "Discover the projects completed by Zenith for its clients"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "description": "Discover the pricing and solutions offered by Zenith"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Zenith to discuss your project"
+    }
   },
   "hero": {
     "availability": "Currently available",

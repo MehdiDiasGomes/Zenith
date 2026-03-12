@@ -140,6 +140,7 @@
 
   /* Typography - Global heading and text styles */
   h1 {
+    margin: 0;
     font-size: 1.875rem;
     line-height: 2.5rem;
     font-weight: 800;
