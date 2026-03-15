@@ -7,9 +7,6 @@
       <!-- Fade edges -->
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark" aria-hidden="true" />
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark" aria-hidden="true" />
-      <!-- Ambient glow -->
-      <div class="pointer-events-none absolute -right-32 top-0 h-96 w-96 rounded-full bg-zenith-gold-vivid/5 blur-3xl" aria-hidden="true" />
-
       <div class="relative z-10 mx-auto max-w-6xl pb-16">
         <!-- Eyebrow -->
         <div class="hero-fade mb-8 flex items-center gap-3">

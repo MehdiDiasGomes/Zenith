@@ -14,12 +14,6 @@
         class="pointer-events-none absolute inset-0 bg-gradient-to-r from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark"
         aria-hidden="true"
       />
-      <!-- Ambient glow -->
-      <div
-        class="pointer-events-none absolute left-0 top-0 h-96 w-96 -translate-x-1/3 -translate-y-1/4 rounded-full bg-zenith-gold-vivid/5 blur-3xl"
-        aria-hidden="true"
-      />
-
       <!-- Large decorative "?" -->
       <div
         class="pointer-events-none absolute right-0 top-0 select-none font-mono text-[22rem] font-black leading-none text-zenith-gold-vivid/[0.03] dark:text-zenith-gold-vivid/[0.04]"
