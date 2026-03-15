@@ -433,9 +433,12 @@
     }
   },
   "faq": {
+    "eyebrow": "Support",
+    "itemsLabel": "questions",
     "title": "Frequently Asked Questions",
     "subtitle": "Find answers to the most common questions about my services and how I work.",
     "cta": {
+      "eyebrow": "Let's talk",
       "text": "Have more questions?",
       "description": "I'm available to answer all your questions and discuss your project.",
       "button": "Contact me"
