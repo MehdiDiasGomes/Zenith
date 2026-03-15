@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-20"
+    class="relative overflow-hidden px-4 pb-16 pt-28 sm:pt-36 sm:pb-20 md:pt-44 md:pb-24"
   >
     <div>
       <NuxtImg
