@@ -33,11 +33,113 @@
   "pages": {
     "services": {
       "title": "Services",
-      "description": "Discover the services offered by Zenith to develop your online presence"
+      "description": "Discover the services offered by Zenith to develop your online presence",
+      "hero": {
+        "titleWhite": "Websites that",
+        "titleGradient": "make a difference.",
+        "subtitle": "From design to launch, Zenith creates tailor-made digital experiences that turn your visitors into customers.",
+        "badge": "First call free · No commitment"
+      },
+      "intro": {
+        "eyebrow": "About",
+        "title": "A human-scale agency,",
+        "titleGradient": "results that match.",
+        "description": "I take the time to understand your business, your audience and your goals — to design a digital solution that truly represents you: high-performing, accessible and built to convert."
+      },
+      "features": {
+        "title": "What I do for you",
+        "webDev": {
+          "title": "Custom web development",
+          "description": "Showcase sites, portfolios, web apps — hand-coded for optimal performance and pixel-perfect rendering across all devices."
+        },
+        "uiUx": {
+          "title": "Conversion-focused UI/UX design",
+          "description": "Refined interfaces, intuitive navigation, clear calls to action. Every pixel is designed to guide your visitors toward getting in touch."
+        },
+        "seo": {
+          "title": "SEO & Google visibility",
+          "description": "Technical and editorial SEO optimization so your customers find you first — without relying solely on paid ads."
+        },
+        "maintenance": {
+          "title": "Hosting & maintenance included",
+          "description": "Your site stays fast, secure and up to date. We handle the technical side so you can focus on your business."
+        },
+        "multilingual": {
+          "title": "Multilingual websites",
+          "description": "Reach an international audience with a site available in multiple languages, perfectly tailored to each market."
+        },
+        "identity": {
+          "title": "Visual identity & logo",
+          "description": "Logo creation and consistent brand guidelines to establish your brand image for the long term."
+        }
+      },
+      "process": {
+        "eyebrow": "How it works",
+        "title": "A simple, transparent process — no surprises",
+        "subtitle": "From first call to launch, I keep you informed at every step.",
+        "steps": {
+          "discovery": {
+            "title": "Discovery call",
+            "description": "A 30-minute call to understand your project, your audience and your goals. A free space to talk openly — no commitment on your end.",
+            "badge": "Free"
+          },
+          "proposal": {
+            "title": "Proposal & detailed quote",
+            "description": "Within 48h, I send you a clear proposal: project scope, delivery timeline, exact price. No bad surprises."
+          },
+          "build": {
+            "title": "Design & development",
+            "description": "I show you mockups before writing a single line of code. You approve, I build. Regular check-ins so you always know where things stand."
+          },
+          "launch": {
+            "title": "Launch & ongoing support",
+            "description": "Careful launch, training on managing your site if needed, and post-launch follow-up. I stay available."
+          }
+        }
+      },
+      "benefits": {
+        "eyebrow": "Why me",
+        "description": "I work alone, with no middleman. You have a single point of contact from the first call to launch — and well beyond.",
+        "title": "What you gain by working with me",
+        "stats": {
+          "delay": "average delivery time",
+          "price": "for the first call",
+          "commitment": "commitment required"
+        },
+        "tailored": {
+          "title": "100% tailor-made",
+          "description": "No templates, no generic solutions. Every project is built from scratch to meet your specific needs and identity."
+        },
+        "fast": {
+          "title": "Fast delivery",
+          "description": "A site delivered in 2 to 4 weeks depending on complexity, with a clear process and regular progress updates."
+        },
+        "transparent": {
+          "title": "Clear & transparent pricing",
+          "description": "Detailed quote before any commitment. No bad surprises, no hidden fees."
+        },
+        "support": {
+          "title": "Personalized support",
+          "description": "One dedicated contact from brief to launch, available and responsive at every step of your project."
+        }
+      },
+      "cta": {
+        "title": "Ready to launch your project?",
+        "description": "Let's talk about your vision. First call is free and commitment-free — I'll suggest a solution tailored to your budget and goals.",
+        "button": "Get in touch",
+        "reassurance": "Reply guaranteed within 24h · No commitment"
+      }
     },
     "portfolio": {
       "title": "Portfolio",
-      "description": "Discover the projects completed by Zenith for its clients"
+      "description": "Discover the projects completed by Zenith for its clients",
+      "eyebrow": "My work",
+      "hero": {
+        "titleWhite": "Projects built",
+        "titleGradient": "to convert.",
+        "subtitle": "Each project is tailor-made, from design to launch. Here are a few examples that illustrate my approach.",
+        "badge": "New projects being added"
+      }
     },
     "pricing": {
       "title": "Pricing",
@@ -75,6 +177,9 @@
     "title": "My Services",
     "subtitle": "Everything your business needs to succeed online",
     "learnMore": "Learn more",
+    "eyebrow": "What I do",
+    "ctaButton": "See all my services",
+    "moreServices": "SEO, maintenance, hosting — full support from start to finish.",
     "ariaLabel": "Services section",
     "webDev": {
       "title": "Professional website",
@@ -130,6 +235,7 @@
     "copyright": "© {year} Zenith. All rights reserved."
   },
   "cta": {
+    "eyebrow": "Let's talk about your project",
     "title": "A question? A project?",
     "subtitle": "Let's discuss it for free.",
     "description": {
@@ -139,6 +245,11 @@
     "button": {
       "primary": "Get in touch",
       "faq": "View FAQ"
+    },
+    "badges": {
+      "free": "First call free",
+      "noCommitment": "No commitment",
+      "replyTime": "Reply within 24h"
     }
   },
   "promo": {

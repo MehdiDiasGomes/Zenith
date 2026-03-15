@@ -33,11 +33,113 @@
   "pages": {
     "services": {
       "title": "Services",
-      "description": "Découvrez les services proposés par Zenith pour développer votre présence en ligne"
+      "description": "Découvrez les services proposés par Zenith pour développer votre présence en ligne",
+      "hero": {
+        "titleWhite": "Des sites web qui",
+        "titleGradient": "font la différence.",
+        "subtitle": "De la conception au lancement, Zenith crée des expériences digitales sur-mesure qui transforment vos visiteurs en clients.",
+        "badge": "Premier échange gratuit · Sans engagement"
+      },
+      "intro": {
+        "eyebrow": "À propos",
+        "title": "Une agence à taille humaine,",
+        "titleGradient": "des résultats à la hauteur.",
+        "description": "Je prends le temps de comprendre votre activité, votre cible et vos objectifs pour concevoir une solution digitale qui vous ressemble — performante, accessible et pensée pour convertir."
+      },
+      "features": {
+        "title": "Ce que je fais pour vous",
+        "webDev": {
+          "title": "Développement web sur mesure",
+          "description": "Sites vitrines, portfolios, applications web — codés à la main pour des performances optimales et un rendu irréprochable sur tous les écrans."
+        },
+        "uiUx": {
+          "title": "Design UI/UX orienté conversion",
+          "description": "Interfaces soignées, navigation intuitive, appels à l'action clairs. Chaque pixel est pensé pour guider vos visiteurs vers la prise de contact."
+        },
+        "seo": {
+          "title": "Référencement & visibilité Google",
+          "description": "Optimisation SEO technique et éditoriale pour que vos clients vous trouvent en premier, sans dépendre uniquement des publicités payantes."
+        },
+        "maintenance": {
+          "title": "Hébergement & maintenance inclus",
+          "description": "Votre site reste rapide, sécurisé et à jour. Nous gérons la technique pour que vous puissiez vous concentrer sur votre métier."
+        },
+        "multilingual": {
+          "title": "Sites multilingues",
+          "description": "Touchez une audience internationale avec un site disponible en plusieurs langues, parfaitement adapté à chaque marché."
+        },
+        "identity": {
+          "title": "Identité visuelle & logo",
+          "description": "Création de logo et charte graphique cohérente pour asseoir votre image de marque sur le long terme."
+        }
+      },
+      "process": {
+        "eyebrow": "Comment ça marche",
+        "title": "Un processus simple, transparent, sans surprise",
+        "subtitle": "Du premier échange à la mise en ligne, je vous tiens informé à chaque étape.",
+        "steps": {
+          "discovery": {
+            "title": "Échange découverte",
+            "description": "Un appel de 30 minutes pour comprendre votre projet, votre cible et vos attentes. C'est le moment d'échanger librement — sans engagement de votre côté.",
+            "badge": "Gratuit"
+          },
+          "proposal": {
+            "title": "Proposition & devis détaillé",
+            "description": "Sous 48h, je vous envoie une proposition claire : périmètre du projet, délai de livraison, tarif exact. Aucune mauvaise surprise."
+          },
+          "build": {
+            "title": "Conception & développement",
+            "description": "Je vous présente les maquettes avant de coder. Vous validez, je développe. Des points réguliers pour que vous suiviez l'avancement en temps réel."
+          },
+          "launch": {
+            "title": "Livraison & accompagnement",
+            "description": "Mise en ligne soignée, formation à la gestion de votre site si besoin, et suivi post-lancement. Je reste disponible."
+          }
+        }
+      },
+      "benefits": {
+        "eyebrow": "Pourquoi moi",
+        "description": "Je travaille seul, sans intermédiaire. Vous avez un interlocuteur unique du premier échange à la mise en ligne — et longtemps après.",
+        "title": "Ce que vous gagnez à travailler avec moi",
+        "stats": {
+          "delay": "délai moyen de livraison",
+          "price": "pour le premier échange",
+          "commitment": "engagement requis"
+        },
+        "tailored": {
+          "title": "100 % sur mesure",
+          "description": "Pas de template, pas de solution générique. Chaque projet est conçu de zéro pour répondre précisément à vos besoins et votre identité."
+        },
+        "fast": {
+          "title": "Livraison rapide",
+          "description": "Un site livré en 2 à 4 semaines selon la complexité, avec un processus clair et des points d'avancement réguliers."
+        },
+        "transparent": {
+          "title": "Prix clairs et transparents",
+          "description": "Devis détaillé avant tout engagement. Aucune mauvaise surprise, aucun frais caché."
+        },
+        "support": {
+          "title": "Accompagnement personnalisé",
+          "description": "Un interlocuteur unique du brief au lancement, disponible et réactif à chaque étape de votre projet."
+        }
+      },
+      "cta": {
+        "title": "Prêt à lancer votre projet ?",
+        "description": "Discutons ensemble de votre vision. Premier échange gratuit et sans engagement — je vous propose une solution adaptée à votre budget et vos objectifs.",
+        "button": "Prendre contact",
+        "reassurance": "Réponse garantie sous 24h · Sans engagement"
+      }
     },
     "portfolio": {
       "title": "Portfolio",
-      "description": "Découvrez les projets réalisés par Zenith pour ses clients"
+      "description": "Découvrez les projets réalisés par Zenith pour ses clients",
+      "eyebrow": "Mes réalisations",
+      "hero": {
+        "titleWhite": "Des projets pensés",
+        "titleGradient": "pour convertir.",
+        "subtitle": "Chaque projet est conçu sur mesure, du design à la mise en ligne. Voici quelques réalisations qui illustrent mon approche.",
+        "badge": "Nouveaux projets en cours d'ajout"
+      }
     },
     "pricing": {
       "title": "Tarifs",
@@ -75,6 +177,9 @@
     "title": "Mes Services",
     "subtitle": "Tout ce dont votre entreprise a besoin pour réussir en ligne",
     "learnMore": "En savoir plus",
+    "eyebrow": "Ce que je fais",
+    "ctaButton": "Voir tous mes services",
+    "moreServices": "Référencement, maintenance, hébergement — un accompagnement complet de A à Z.",
     "ariaLabel": "Section des services proposés",
     "webDev": {
       "title": "Site web professionnel",
@@ -130,6 +235,7 @@
     "copyright": "© {year} Zenith. Tous droits réservés."
   },
   "cta": {
+    "eyebrow": "Parlons de votre projet",
     "title": "Une question ? Un projet ?",
     "subtitle": "Discutons-en gratuitement.",
     "description": {
@@ -140,6 +246,11 @@
     "button": {
       "primary": "Prendre contact",
       "faq": "Consulter la FAQ"
+    },
+    "badges": {
+      "free": "Premier échange gratuit",
+      "noCommitment": "Sans engagement",
+      "replyTime": "Réponse sous 24h"
     }
   },
   "promo": {
