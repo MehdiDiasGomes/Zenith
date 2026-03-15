@@ -1,11 +1,19 @@
 <template>
   <div>
     <Hero />
-    <Marquee />
-    <Services />
-    <CallToAction />
-     <Projects /> 
-    <PricingTeaser />
+    <SectionDivider />
+    <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
+      <Services />
+    </div>
+    <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
+      <CallToAction />
+    </div>
+    <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
+      <Projects />
+    </div>
+    <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
+      <PricingTeaser />
+    </div>
   </div>
 </template>
 
