@@ -44,9 +44,6 @@
 
         <!-- Trust badge -->
         <div class="hero-fade hero-fade-delay-3 inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/30 bg-zenith-gold-vivid/5 px-4 py-2 dark:border-zenith-gold-vivid/20">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-            <path d="M7 1L8.8 5.2L13.5 5.6L10.1 8.5L11.2 13.1L7 10.5L2.8 13.1L3.9 8.5L0.5 5.6L5.2 5.2L7 1Z" fill="currentColor" class="text-zenith-gold-vivid" />
-          </svg>
           <span class="text-xs font-semibold text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
             {{ $t('pages.services.hero.badge') }}
           </span>

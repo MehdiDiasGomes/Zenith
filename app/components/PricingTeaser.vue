@@ -33,9 +33,6 @@
 
         <!-- Installment badge -->
         <div class="inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/30 bg-zenith-gold-vivid/5 px-4 py-2 dark:border-zenith-gold-vivid/20">
-          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" class="text-zenith-gold-vivid">
-            <path d="M6.5 1L8.09 4.26L11.5 4.77L9 7.24L9.59 10.5L6.5 8.87L3.41 10.5L4 7.24L1.5 4.77L4.91 4.26L6.5 1Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" />
-          </svg>
           <span class="text-xs font-semibold text-zenith-gold-vivid">
             {{ $t('pricing.installment') }}
           </span>
