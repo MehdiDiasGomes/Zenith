@@ -13,6 +13,14 @@
     "faq": {
       "title": "FAQ Création Site Web | Zenith Thionville, Metz",
       "description": "Questions fréquentes sur la création de sites internet : tarifs, délais, maintenance. Zenith accompagne les PME à Thionville et Metz."
+    },
+    "offerCatalogName": "Services de création web",
+    "service": {
+      "webDev": "Développement web sur mesure",
+      "uiux": "Design UI/UX",
+      "seo": "Optimisation SEO",
+      "ecommerce": "Développement e-commerce",
+      "maintenance": "Maintenance et support web"
     }
   },
   "home": {
@@ -28,11 +36,13 @@
     "contact": "Contact",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
-    "switchToLang": "Changer la langue vers {lang}"
+    "switchToLang": "Changer la langue vers {lang}",
+    "faqLabel": "FAQ"
   },
   "pages": {
     "services": {
       "title": "Services",
+      "seoTitle": "Création Site Web sur Mesure — Services | Zenith Thionville, Metz",
       "description": "Découvrez les services proposés par Zenith pour développer votre présence en ligne",
       "hero": {
         "titleWhite": "Des sites web qui",
@@ -134,6 +144,7 @@
     },
     "portfolio": {
       "title": "Portfolio",
+      "seoTitle": "Réalisations — Sites Web PME & Artisans | Zenith",
       "description": "Découvrez les projets réalisés par Zenith pour ses clients",
       "eyebrow": "Mes réalisations",
       "hero": {
@@ -145,6 +156,7 @@
     },
     "pricing": {
       "title": "Tarifs",
+      "seoTitle": "Tarifs Création Site Web | Zenith Thionville, Metz",
       "description": "Découvrez les tarifs et solutions proposées par Zenith",
       "eyebrow": "Tarification transparente",
       "hero": {
@@ -167,6 +179,20 @@
       "trustItems": {
         "response": "Réponse sous 24h",
         "noCommitment": "Sans engagement"
+      },
+      "floatingCards": {
+        "response": {
+          "label": "Réponse",
+          "value": "sous 24h"
+        },
+        "quote": {
+          "label": "Devis",
+          "value": "100% gratuit"
+        },
+        "commitment": {
+          "label": "Engagement",
+          "value": "Zéro"
+        }
       }
     }
   },
@@ -399,7 +425,8 @@
         "Recommandations d'amélioration concrètes"
       ]
     },
-    "free": "Gratuit"
+    "free": "Gratuit",
+    "noCard": "Sans carte bancaire"
   },
   "contact": {
     "title": "Me contacter",
