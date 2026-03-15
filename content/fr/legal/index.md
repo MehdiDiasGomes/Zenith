@@ -40,6 +40,10 @@ Pour toute information concernant la collecte et le traitement de vos données p
 
 Ce site utilise uniquement des cookies techniques nécessaires à son bon fonctionnement (préférences d'affichage, langue). Aucun cookie de tracking, publicitaire ou analytique n'est utilisé.
 
+## Cartographie
+
+Les cartes interactives utilisées sur ce site sont fournies par [OpenStreetMap](https://www.openstreetmap.org/copyright) (© les contributeurs OpenStreetMap, licence [ODbL](https://opendatacommons.org/licenses/odbl/)) et [CARTO](https://carto.com/attributions) (© CARTO).
+
 ## Contact
 
 Pour toute question concernant ces mentions légales, vous pouvez nous contacter via le [formulaire de contact](/#contact) ou par email à contact@dg-zenith.com.
