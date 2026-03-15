@@ -5,7 +5,7 @@
   >
     <!-- Background photo -->
     <div
-      class="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed"
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
       style="background-image: url('/assets/backgrounds/cta-background.webp')"
       aria-hidden="true"
     />
@@ -49,10 +49,10 @@
       <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <!-- Primary CTA -->
         <Button as-child variant="gold" size="lg" class="w-full sm:w-auto">
-          <a href="#contact" @click="scrollToContact">
+          <NuxtLink :to="localePath('/contact')">
             {{ $t('cta.button.primary') }}
             <ArrowRight :size="16" aria-hidden="true" />
-          </a>
+          </NuxtLink>
         </Button>
 
         <!-- Secondary CTA -->
@@ -93,24 +93,4 @@ const reassuranceBadges = computed<string[]>(() => [
   t('cta.badges.noCommitment'),
   t('cta.badges.replyTime'),
 ])
-
-/**
- * Smoothly scrolls to the contact section
- * @param event - Click event to prevent default behavior
- */
-const scrollToContact = (event: Event): void => {
-  event.preventDefault()
-  const contactSection: HTMLElement | null = document.getElementById('contact')
-
-  if (contactSection) {
-    const navbarHeight: number = 100
-    const elementPosition: number = contactSection.getBoundingClientRect().top
-    const offsetPosition: number = elementPosition + window.scrollY - navbarHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-  }
-}
 </script>
