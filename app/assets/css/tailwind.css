@@ -17,25 +17,25 @@
     --glow-purple: 270 100% 80% / 0.3;
     --glow-blue: 220 90% 70% / 0.3;
 
-    --app-background: 0 2% 98%;
-    --background: 0 0% 100%;
+    --app-background: 35 25% 94%;
+    --background: 35 28% 93%;
 
-    --heading-primary: 0 0% 9%;
-    --text-primary: 0 0% 15%;
-    --text-secondary: 0 0% 40%;
-    --text-muted: 0 0% 50%;
+    --heading-primary: 35 10% 10%;
+    --text-primary: 35 8% 14%;
+    --text-secondary: 35 5% 38%;
+    --text-muted: 35 4% 48%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 35 15% 95%;
+    --muted-foreground: 35 5% 44%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover: 35 25% 96%;
+    --popover-foreground: 35 10% 5%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card: 35 22% 95%;
+    --card-foreground: 35 10% 5%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 35 12% 88%;
+    --input: 35 12% 88%;
 
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
@@ -65,34 +65,34 @@
   }
 
   .dark {
-    --app-background: 226 81% 7%;
-    --background: 0 0% 3.9%;
+    --app-background: 40 4% 7%;
+    --background: 40 4% 6%;
 
-    --heading-primary: 0 0% 98%;
-    --text-primary: 0 0% 90%;
-    --text-secondary: 0 0% 70%;
-    --text-muted: 0 0% 60%;
+    --heading-primary: 35 20% 92%;
+    --text-primary: 35 16% 88%;
+    --text-secondary: 35 8% 64%;
+    --text-muted: 35 6% 52%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 40 4% 14%;
+    --muted-foreground: 35 6% 58%;
 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 40 4% 8%;
+    --popover-foreground: 35 20% 92%;
 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 40 4% 9%;
+    --card-foreground: 35 20% 92%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 40 4% 18%;
+    --input: 40 4% 16%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 35 20% 92%;
+    --primary-foreground: 40 4% 7%;
 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 40 4% 15%;
+    --secondary-foreground: 35 20% 92%;
 
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 40 4% 15%;
+    --accent-foreground: 35 20% 92%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
