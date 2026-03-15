@@ -112,9 +112,27 @@ import ServiceProcess from '~/components/services/ServiceProcess.vue'
 import ServiceBenefits from '~/components/services/ServiceBenefits.vue'
 
 const { t } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
 
 useSeoMeta({
-  title: () => `${t('pages.services.title')} | Zenith`,
+  title: () => t('pages.services.seoTitle'),
   description: () => t('pages.services.description'),
+  ogTitle: () => t('pages.services.seoTitle'),
+  ogDescription: () => t('pages.services.description'),
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
+  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('pages.services.seoTitle'),
+  twitterDescription: () => t('pages.services.description'),
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
+
+usePageCanonical()
+
+useJsonLd(useBreadcrumbSchema([
+  { name: t('nav.home'), url: localePath('/') },
+  { name: t('pages.services.title'), url: localePath('/services') },
+]))
 </script>

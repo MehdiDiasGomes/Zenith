@@ -250,7 +250,7 @@
               <div class="text-right">
                 <p class="text-4xl font-bold text-zenith-gold-vivid">{{ $t('pricing.free') }}</p>
                 <p class="mt-0.5 text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                  Sans carte bancaire
+                  {{ $t('pricing.noCard') }}
                 </p>
               </div>
               <Button as-child variant="gold">
@@ -401,10 +401,28 @@ const getPlanClasses = (planId: string): string => {
 }
 
 
+const route = useRoute()
+
 useSeoMeta({
-  title: () => `${t('pages.pricing.title')} | Zenith`,
+  title: () => t('pages.pricing.seoTitle'),
   description: () => t('pages.pricing.description'),
+  ogTitle: () => t('pages.pricing.seoTitle'),
+  ogDescription: () => t('pages.pricing.description'),
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
+  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('pages.pricing.seoTitle'),
+  twitterDescription: () => t('pages.pricing.description'),
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
+
+usePageCanonical()
+
+useJsonLd(useBreadcrumbSchema([
+  { name: t('nav.home'), url: localePath('/') },
+  { name: t('pages.pricing.title'), url: localePath('/pricing') },
+]))
 </script>
 
 <style scoped>
