@@ -143,11 +143,29 @@
     },
     "pricing": {
       "title": "Tarifs",
-      "description": "Découvrez les tarifs et solutions proposées par Zenith"
+      "description": "Découvrez les tarifs et solutions proposées par Zenith",
+      "eyebrow": "Tarification transparente",
+      "hero": {
+        "titleWhite": "Des prix clairs,",
+        "titleGradient": "sans mauvaise surprise.",
+        "subtitle": "Chaque devis est détaillé, chaque ligne justifiée. Le prix annoncé est le prix final.",
+        "discountBadge": "-30% sur toutes les prestations — offre limitée"
+      }
     },
     "contact": {
-      "title": "Contact",
-      "description": "Contactez Zenith pour discuter de votre projet"
+      "title": "Contact | Zenith — Création Site Web Thionville, Metz",
+      "description": "Décrivez votre projet à Zenith et obtenez un devis gratuit sous 24h. Accompagnement personnalisé pour les PME et artisans à Thionville, Metz et alentours.",
+      "eyebrow": "Parlons de votre projet",
+      "hero": {
+        "titleWhite": "Un échange suffit pour",
+        "titleGradient": "tout changer.",
+        "subtitle": "Décrivez-moi votre projet en quelques lignes — je reviens vers vous sous 24h avec un plan d'action concret et un devis sans engagement.",
+        "badge": "Réponse garantie sous 24h"
+      },
+      "trustItems": {
+        "response": "Réponse sous 24h",
+        "noCommitment": "Sans engagement"
+      }
     }
   },
   "hero": {
@@ -161,8 +179,8 @@
     "subtitle": "Création ou refonte : je construis des sites performants pour les PME qui veulent croître.",
     "location": "Thionville, Metz et alentours (57)",
     "cta": {
-      "primary": "Boostez votre visibilité",
-      "secondary": "Découvrir mes travaux"
+      "primary": "Démarrer mon projet",
+      "secondary": "Voir les réalisations"
     }
   },
   "marquee": {
@@ -262,10 +280,41 @@
   "pricing": {
     "title": "Mes Solutions",
     "subtitle": "Des solutions digitales pensées pour votre activité",
+    "eyebrow": "Tarifs",
     "popular": "Populaire",
+    "teaserTitle": "Transparent, sans engagement.",
+    "teaserSubtitle": "Des formules claires pour chaque besoin. Consultez les détails, fonctionnalités incluses et modalités de paiement.",
+    "teaserNote": "+ Audit SEO offert, sans carte bancaire.",
+    "teaserCta": "Voir les détails et fonctionnalités",
     "startingFrom": "à partir de",
     "getQuote": "Demander un devis",
-    "requestAudit": "Demander un audit",
+    "requestAudit": "Demander mon audit gratuit",
+    "discountLabel": "Offre -30%",
+    "originalPrice": "Prix habituel",
+    "installment": "Paiement en 3x sans frais",
+    "paymentTitle": "Comment fonctionne le paiement ?",
+    "paymentSubtitle": "Trois versements liés aux jalons du projet — vous ne payez que ce qui est livré.",
+    "paymentSteps": {
+      "start": {
+        "label": "Au démarrage",
+        "percent": "40%",
+        "description": "Acompte pour réserver votre place et lancer les travaux. On commence à travailler."
+      },
+      "mockup": {
+        "label": "À la validation des maquettes",
+        "percent": "30%",
+        "description": "Vous validez le design. On passe au développement. Aucune ligne de code sans votre accord."
+      },
+      "delivery": {
+        "label": "À la livraison",
+        "percent": "30%",
+        "description": "Votre site est en ligne, vous êtes satisfait. Seulement là, on solde la facture."
+      }
+    },
+    "paymentNote": "Paiement par virement bancaire uniquement. Devis signé requis avant démarrage.",
+    "auditEyebrow": "Offre sans engagement",
+    "auditTitle": "Audit SEO offert — découvrez pourquoi Google ne vous trouve pas",
+    "auditSubtitle": "Un diagnostic gratuit de votre visibilité en ligne. Sans engagement, sans prise de tête.",
     "priceInfo": {
       "title": "À propos des tarifs",
       "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
@@ -327,6 +376,7 @@
   "contact": {
     "title": "Me contacter",
     "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.",
+    "badge": "Réponse garantie sous 24h",
     "map": {
       "ariaLabel": "Carte interactive montrant la zone d'intervention de Zenith : Thionville, Metz et alentours",
       "loading": "Chargement de la carte..."
@@ -413,8 +463,8 @@
         "answer": "Selon vos besoins, je peux intégrer une interface d'administration simple pour gérer vos contenus (textes, images, articles de blog). Une formation est incluse pour vous rendre autonome sur les modifications courantes."
       },
       "payment": {
-        "question": "Comment fonctionne le paiement ?",
-        "answer": "Le paiement s'effectue en 3 étapes : un premier versement au lancement du projet, un deuxième à la validation de la maquette, et le solde à la livraison finale. J'accepte les virements bancaires et les paiements par carte."
+        "question": "Comment fonctionne le paiement en 3 fois ?",
+        "answer": "Le paiement est échelonné sur 3 jalons projet : 40% à la signature du devis pour lancer les travaux, 30% à la validation des maquettes, et 30% à la livraison finale. Ce n'est pas du crédit — chaque versement correspond à une étape concrète livrée. Vous ne payez que ce qui est fait. Paiement par virement bancaire uniquement."
       }
     }
   },

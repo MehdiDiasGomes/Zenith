@@ -143,11 +143,29 @@
     },
     "pricing": {
       "title": "Pricing",
-      "description": "Discover the pricing and solutions offered by Zenith"
+      "description": "Discover the pricing and solutions offered by Zenith",
+      "eyebrow": "Transparent pricing",
+      "hero": {
+        "titleWhite": "Clear prices,",
+        "titleGradient": "no hidden surprises.",
+        "subtitle": "Every quote is detailed, every line justified. The quoted price is the final price.",
+        "discountBadge": "-30% on all services — limited offer"
+      }
     },
     "contact": {
-      "title": "Contact",
-      "description": "Contact Zenith to discuss your project"
+      "title": "Contact | Zenith — Web Design Agency",
+      "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses.",
+      "eyebrow": "Let's talk about your project",
+      "hero": {
+        "titleWhite": "One conversation can",
+        "titleGradient": "change everything.",
+        "subtitle": "Describe your project in a few lines — I'll get back to you within 24 hours with a concrete action plan and a no-commitment quote.",
+        "badge": "Response guaranteed within 24h"
+      },
+      "trustItems": {
+        "response": "Reply within 24h",
+        "noCommitment": "No commitment"
+      }
     }
   },
   "hero": {
@@ -161,8 +179,8 @@
     "subtitle": "Creation or redesign: I build high-performing websites for SMEs looking to grow.",
     "location": "Thionville, Metz and surrounding areas (57)",
     "cta": {
-      "primary": "Boost your visibility",
-      "secondary": "Discover my work"
+      "primary": "Start my project",
+      "secondary": "See our work"
     }
   },
   "marquee": {
@@ -261,10 +279,41 @@
   "pricing": {
     "title": "My Solutions",
     "subtitle": "Digital solutions designed for your business",
+    "eyebrow": "Pricing",
     "popular": "Popular",
+    "teaserTitle": "Transparent, no commitment.",
+    "teaserSubtitle": "Clear packages for every need. Check the full details, included features and payment terms.",
+    "teaserNote": "+ Free SEO audit, no credit card required.",
+    "teaserCta": "See details and features",
     "startingFrom": "starting from",
     "getQuote": "Get a quote",
-    "requestAudit": "Request an audit",
+    "requestAudit": "Request my free audit",
+    "discountLabel": "-30% offer",
+    "originalPrice": "Regular price",
+    "installment": "Payment in 3 instalments, interest-free",
+    "paymentTitle": "How does payment work?",
+    "paymentSubtitle": "Three payments tied to project milestones — you only pay for what's delivered.",
+    "paymentSteps": {
+      "start": {
+        "label": "At project start",
+        "percent": "40%",
+        "description": "Deposit to reserve your spot and kick off the work. We get started."
+      },
+      "mockup": {
+        "label": "At mockup approval",
+        "percent": "30%",
+        "description": "You approve the design. We move to development. No code written without your sign-off."
+      },
+      "delivery": {
+        "label": "At delivery",
+        "percent": "30%",
+        "description": "Your site is live and you're happy. Only then do we settle the invoice."
+      }
+    },
+    "paymentNote": "Bank transfer only. Signed quote required before project start.",
+    "auditEyebrow": "No commitment offer",
+    "auditTitle": "Free SEO audit — find out why Google can't find you",
+    "auditSubtitle": "A free diagnosis of your online visibility. No commitment, no hassle.",
     "priceInfo": {
       "title": "About pricing",
       "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
@@ -326,6 +375,7 @@
   "contact": {
     "title": "Contact Me",
     "subtitle": "Have a question? A project? Feel free to contact me, I'll get back to you as soon as possible.",
+    "badge": "Response guaranteed within 24h",
     "map": {
       "ariaLabel": "Interactive map showing Zenith's service area: Thionville, Metz and surroundings",
       "loading": "Loading map..."
@@ -412,8 +462,8 @@
         "answer": "Depending on your needs, I can integrate a simple admin interface to manage your content (texts, images, blog posts). Training is included to make you autonomous for common modifications."
       },
       "payment": {
-        "question": "How does payment work?",
-        "answer": "Payment is made in 3 stages: a first payment at project launch, a second upon mockup validation, and the balance at final delivery. I accept bank transfers and card payments."
+        "question": "How does the 3-installment payment work?",
+        "answer": "Payment is split across 3 project milestones: 40% upon signing the quote to start work, 30% upon mockup approval, and 30% at final delivery. This is not a credit arrangement — each payment corresponds to a concrete delivered milestone. You only pay for what's done. Bank transfer only."
       }
     }
   },

@@ -1,223 +1,320 @@
 <template>
-  <section
-    id="contact"
-    class="relative overflow-hidden bg-zenith-bg-light px-4 py-20 dark:bg-zenith-bg-dark sm:px-6 lg:px-8"
-  >
-    <div class="relative mx-auto max-w-6xl">
-      <div class="mb-12 space-y-2 text-center">
-        <h2 class="mb-4 text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
-          {{ $t('contact.title') }}
-        </h2>
-        <h3 class="text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-          {{ $t('contact.subtitle') }}
-        </h3>
-      </div>
+  <section id="contact" class="relative overflow-hidden">
+    <div
+      class="grid overflow-hidden rounded-2xl border border-zenith-bronze-dark/10 dark:border-zenith-gold-bronze/15 lg:grid-cols-[2fr_3fr]"
+    >
+      <!-- Left Info Panel -->
+      <div
+        class="relative flex flex-col gap-8 overflow-hidden bg-zenith-bg-secondary-light px-8 py-10 dark:bg-[#141412] lg:px-10 lg:py-12"
+      >
+        <!-- Gold left accent bar -->
+        <div
+          class="absolute inset-y-0 left-0 z-10 w-0.5 bg-gradient-to-b from-transparent via-zenith-gold-vivid/70 to-transparent"
+          aria-hidden="true"
+        />
+        <!-- Decorative corner element -->
+        <div
+          class="pointer-events-none absolute right-0 top-0 h-48 w-48 rounded-bl-full bg-zenith-gold-vivid/3 blur-2xl"
+          aria-hidden="true"
+        />
 
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div>
-          <form
-            class="group relative space-y-6 rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light md:p-8 p-4 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
-            @submit="onSubmit"
-          >
-            <FormField v-slot="{ componentField }" name="name">
-              <FormItem v-auto-animate>
-                <FormLabel>{{ $t('contact.form.name.label') }}</FormLabel>
-                <FormControl>
-                  <Input
-                    type="text"
-                    :placeholder="$t('contact.form.name.placeholder')"
-                    v-bind="componentField"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            </FormField>
-
-            <FormField v-slot="{ componentField }" name="email">
-              <FormItem v-auto-animate>
-                <FormLabel>{{ $t('contact.form.email.label') }}</FormLabel>
-                <FormControl>
-                  <Input
-                    type="email"
-                    :placeholder="$t('contact.form.email.placeholder')"
-                    v-bind="componentField"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            </FormField>
-
-            <FormField v-slot="{ componentField }" name="subject">
-              <FormItem v-auto-animate>
-                <FormLabel>{{ $t('contact.form.subject.label') }}</FormLabel>
-                <Select v-bind="componentField">
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue :placeholder="$t('contact.form.subject.placeholder')" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="showcase">
-                      {{ $t('contact.form.subject.options.showcase') }}
-                    </SelectItem>
-                    <SelectItem value="seoaudit">
-                      {{ $t('contact.form.subject.options.seoaudit') }}
-                    </SelectItem>
-                    <SelectItem value="eshop">
-                      {{ $t('contact.form.subject.options.eshop') }}
-                    </SelectItem>
-                    <SelectItem value="other">
-                      {{ $t('contact.form.subject.options.other') }}
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            </FormField>
-
-            <FormField v-slot="{ componentField }" name="message">
-              <FormItem v-auto-animate>
-                <FormLabel>{{ $t('contact.form.message.label') }}</FormLabel>
-                <FormControl>
-                  <Textarea
-                    :placeholder="$t('contact.form.message.placeholder')"
-                    v-bind="componentField"
-                    :rows="6"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            </FormField>
-
-            <FormField v-slot="{ value, handleChange }" name="consent">
-              <FormItem class="flex flex-row items-start space-x-3 space-y-0">
-                <FormControl>
-                  <Checkbox :checked="value" @update:checked="handleChange" />
-                </FormControl>
-                <div v-auto-animate class="space-y-1 leading-none">
-                  <FormLabel class="cursor-pointer text-sm font-normal">
-                    {{ $t('contact.form.consent.label') }}
-                    <NuxtLink
-                      :to="localePath('/legal')"
-                      class="text-zenith-gold-vivid underline hover:text-zenith-champagne"
-                    >
-                      {{ $t('contact.form.consent.linkText') }}
-                    </NuxtLink>
-                  </FormLabel>
-                  <FormMessage />
-                </div>
-              </FormItem>
-            </FormField>
-
-            <Button
-              type="submit"
-              :disabled="isSubmitting"
-              class="w-full rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-6 py-3 font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid disabled:opacity-50"
-            >
-              <span v-if="!isSubmitting">{{ $t('contact.form.submit') }}</span>
-              <span v-else class="flex items-center justify-center gap-2">
-                <Icon name="Loader2" class="animate-spin" size="16" />
-                {{ $t('contact.form.sending') }}
-              </span>
-            </Button>
-
-            <p
-              v-if="submitStatus === 'success'"
-              class="text-center text-sm font-medium text-green-600 dark:text-green-400"
-            >
-              {{ $t('contact.form.success') }}
-            </p>
-            <p
-              v-if="submitStatus === 'error'"
-              class="text-center text-sm font-medium text-red-600 dark:text-red-400"
-            >
-              {{ $t('contact.form.error') }}
-            </p>
-          </form>
+        <!-- Panel header -->
+        <div class="space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-zenith-gold-vivid">
+            {{ $t('contact.title') }}
+          </span>
+          <p class="text-xl font-semibold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            {{ $t('contact.subtitle') }}
+          </p>
         </div>
 
-        <div class="flex flex-col justify-between space-y-8">
-          <div class="h-64 md:h-80">
+        <!-- Response badge -->
+        <div class="inline-flex w-fit items-center gap-2 rounded-full border border-zenith-gold-bronze/25 bg-zenith-gold-vivid/5 px-3.5 py-1.5 dark:border-zenith-gold-vivid/15">
+          <span class="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-zenith-gold-vivid opacity-50" />
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-zenith-gold-vivid" />
+          </span>
+          <span class="text-xs font-medium text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            {{ $t('contact.badge') }}
+          </span>
+        </div>
+
+        <!-- Contact info items -->
+        <div class="flex flex-col gap-5">
+          <a
+            v-for="contact in contactInfo"
+            :key="contact.id"
+            :href="contact.href"
+            class="group flex items-center gap-4"
+          >
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 group-hover:border-zenith-gold-vivid/40 group-hover:bg-zenith-gold-vivid/8 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-dark"
+            >
+              <Icon
+                :name="contact.icon"
+                size="18"
+                class="text-zenith-gold-bronze transition-colors duration-300 group-hover:text-zenith-gold-vivid dark:text-zenith-gold-vivid"
+                aria-hidden="true"
+              />
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                {{ $t(contact.labelKey) }}
+              </p>
+              <p class="text-sm font-medium text-zenith-text-primary-light transition-colors duration-200 group-hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark">
+                {{ contact.value }}
+              </p>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/dg_zenith/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-4"
+          >
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-light transition-all duration-300 group-hover:border-zenith-gold-vivid/40 group-hover:bg-zenith-gold-vivid/8 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-dark"
+            >
+              <Icon
+                name="Instagram"
+                size="18"
+                class="text-zenith-gold-bronze transition-colors duration-300 group-hover:text-zenith-gold-vivid dark:text-zenith-gold-vivid"
+                aria-hidden="true"
+              />
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                {{ $t('contact.info.instagram.label') }}
+              </p>
+              <p class="text-sm font-medium text-zenith-text-primary-light transition-colors duration-200 group-hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark">
+                @dg_zenith
+              </p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Map -->
+        <div class="-mb-10 -mx-8 mt-auto lg:-mb-12 lg:-mx-10">
+          <div class="h-44 lg:h-52">
             <ClientOnly>
               <LazyMap />
               <template #fallback>
                 <div
-                  class="flex h-full w-full items-center justify-center rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-secondary-dark"
+                  class="flex h-full w-full items-center justify-center bg-zenith-bg-light dark:bg-zenith-bg-dark"
                 >
                   <div class="flex items-center gap-2 text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                    <svg class="h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg
+                      class="h-4 w-4 animate-spin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                     </svg>
-                    <span class="text-sm">{{ $t('contact.map.loading') }}</span>
+                    <span class="text-xs">{{ $t('contact.map.loading') }}</span>
                   </div>
                 </div>
               </template>
             </ClientOnly>
           </div>
-
-          <div class="flex items-center justify-between lg:flex-col lg:gap-4 lg:items-start max-sm:flex-col max-sm:gap-4 max-sm:items-start">
-            <a
-              v-for="contact in contactInfo"
-              :key="contact.id"
-              :href="contact.href"
-              class="group flex w-fit items-center gap-4"
-            >
-              <div
-                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light transition-all duration-300 group-hover:scale-110 group-hover:border-zenith-gold-vivid/30 group-hover:bg-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
-              >
-                <Icon
-                  :name="contact.icon"
-                  size="24"
-                  class="text-zenith-gold-vivid transition-transform duration-300 group-hover:scale-110"
-                  aria-hidden="true"
-                />
-              </div>
-              <div class="flex-1">
-                <p
-                  class="font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-                >
-                  {{ $t(contact.labelKey) }}
-                </p>
-                <p
-                  class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                >
-                  {{ contact.value }}
-                </p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.instagram.com/dg_zenith/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group flex w-fit items-center gap-4"
-            >
-              <div
-                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light transition-all duration-300 group-hover:scale-110 group-hover:border-zenith-gold-vivid/30 group-hover:bg-zenith-gold-vivid/10 dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark"
-              >
-                <Icon
-                  name="Instagram"
-                  size="24"
-                  class="text-zenith-gold-vivid transition-transform duration-300 group-hover:scale-110"
-                  aria-hidden="true"
-                />
-              </div>
-              <div class="flex-1">
-                <p
-                  class="font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-                >
-                  {{ $t('contact.info.instagram.label') }}
-                </p>
-                <p
-                  class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                >
-                  @dg_zenith
-                </p>
-              </div>
-            </a>
-          </div>
         </div>
+      </div>
+
+      <!-- Right Form Panel -->
+      <div class="bg-zenith-bg-light px-8 py-10 dark:bg-zenith-bg-dark lg:px-12 lg:py-12">
+        <form class="flex flex-col gap-8" @submit="onSubmit" novalidate>
+
+          <!-- Name + Email row -->
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <!-- Name -->
+            <FormField v-slot="{ componentField, meta }" name="name">
+              <FormItem class="group space-y-0">
+                <FormLabel
+                  class="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
+                >
+                  {{ $t('contact.form.name.label') }}
+                </FormLabel>
+                <FormControl>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      :placeholder="$t('contact.form.name.placeholder')"
+                      :aria-invalid="meta.validated && !meta.valid"
+                      class="w-full border-0 bg-transparent py-2.5 text-sm text-zenith-text-primary-light outline-none placeholder:text-zenith-text-secondary-light/30 dark:text-zenith-text-primary-dark dark:placeholder:text-zenith-text-secondary-dark/25"
+                      v-bind="componentField"
+                    />
+                    <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
+                    <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-focus-within:w-full" aria-hidden="true" />
+                  </div>
+                </FormControl>
+                <FormMessage class="mt-1.5 text-xs" />
+              </FormItem>
+            </FormField>
+
+            <!-- Email -->
+            <FormField v-slot="{ componentField, meta }" name="email">
+              <FormItem class="group space-y-0">
+                <FormLabel
+                  class="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
+                >
+                  {{ $t('contact.form.email.label') }}
+                </FormLabel>
+                <FormControl>
+                  <div class="relative">
+                    <input
+                      type="email"
+                      :placeholder="$t('contact.form.email.placeholder')"
+                      :aria-invalid="meta.validated && !meta.valid"
+                      class="w-full border-0 bg-transparent py-2.5 text-sm text-zenith-text-primary-light outline-none placeholder:text-zenith-text-secondary-light/30 dark:text-zenith-text-primary-dark dark:placeholder:text-zenith-text-secondary-dark/25"
+                      v-bind="componentField"
+                    />
+                    <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
+                    <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-focus-within:w-full" aria-hidden="true" />
+                  </div>
+                </FormControl>
+                <FormMessage class="mt-1.5 text-xs" />
+              </FormItem>
+            </FormField>
+          </div>
+
+          <!-- Subject -->
+          <FormField v-slot="{ componentField }" name="subject">
+            <FormItem class="group space-y-0">
+              <FormLabel
+                class="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
+              >
+                {{ $t('contact.form.subject.label') }}
+              </FormLabel>
+              <Select v-bind="componentField">
+                <FormControl>
+                  <div class="relative">
+                    <SelectTrigger
+                      class="h-auto w-full rounded-none border-0 bg-transparent px-0 py-2.5 text-sm shadow-none ring-0 focus:ring-0"
+                    >
+                      <SelectValue
+                        :placeholder="$t('contact.form.subject.placeholder')"
+                        class="data-[placeholder]:text-zenith-text-secondary-light/40 dark:data-[placeholder]:text-zenith-text-secondary-dark/25"
+                      />
+                    </SelectTrigger>
+                    <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
+                    <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-focus-within:w-full" aria-hidden="true" />
+                  </div>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="showcase">
+                    {{ $t('contact.form.subject.options.showcase') }}
+                  </SelectItem>
+                  <SelectItem value="seoaudit">
+                    {{ $t('contact.form.subject.options.seoaudit') }}
+                  </SelectItem>
+                  <SelectItem value="eshop">
+                    {{ $t('contact.form.subject.options.eshop') }}
+                  </SelectItem>
+                  <SelectItem value="other">
+                    {{ $t('contact.form.subject.options.other') }}
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage class="mt-1.5 text-xs" />
+            </FormItem>
+          </FormField>
+
+          <!-- Message -->
+          <FormField v-slot="{ componentField, meta }" name="message">
+            <FormItem class="group space-y-0">
+              <FormLabel
+                class="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
+              >
+                {{ $t('contact.form.message.label') }}
+              </FormLabel>
+              <FormControl>
+                <div class="relative">
+                  <textarea
+                    :placeholder="$t('contact.form.message.placeholder')"
+                    :aria-invalid="meta.validated && !meta.valid"
+                    rows="5"
+                    class="w-full resize-none border-0 bg-transparent py-2.5 text-sm text-zenith-text-primary-light outline-none placeholder:text-zenith-text-secondary-light/30 dark:text-zenith-text-primary-dark dark:placeholder:text-zenith-text-secondary-dark/25"
+                    v-bind="componentField"
+                  />
+                  <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
+                  <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-focus-within:w-full" aria-hidden="true" />
+                </div>
+              </FormControl>
+              <FormMessage class="mt-1.5 text-xs" />
+            </FormItem>
+          </FormField>
+
+          <!-- Consent -->
+          <FormField v-slot="{ value, handleChange }" name="consent">
+            <FormItem class="flex flex-row items-start gap-3 space-y-0">
+              <FormControl>
+                <Checkbox
+                  :checked="value"
+                  class="mt-0.5 border-zenith-gold-bronze/30 data-[state=checked]:border-zenith-gold-vivid data-[state=checked]:bg-zenith-gold-vivid dark:border-zenith-gold-bronze/25"
+                  @update:checked="handleChange"
+                />
+              </FormControl>
+              <div v-auto-animate class="space-y-1 leading-none">
+                <FormLabel class="cursor-pointer text-xs font-normal leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                  {{ $t('contact.form.consent.label') }}
+                  <NuxtLink
+                    :to="localePath('/legal')"
+                    class="text-zenith-gold-vivid underline underline-offset-2 transition-colors duration-200 hover:text-zenith-champagne"
+                  >
+                    {{ $t('contact.form.consent.linkText') }}
+                  </NuxtLink>
+                </FormLabel>
+                <FormMessage class="text-xs" />
+              </div>
+            </FormItem>
+          </FormField>
+
+          <!-- Submit -->
+          <div class="flex flex-col gap-3">
+            <Button type="submit" variant="gold" size="lg" :disabled="isSubmitting" class="w-full">
+              <span v-if="!isSubmitting" class="inline-flex items-center gap-2 whitespace-nowrap">
+                {{ $t('contact.form.submit') }}
+                <ArrowRight :size="16" aria-hidden="true" />
+              </span>
+              <span v-else class="flex items-center gap-2">
+                <svg class="h-4 w-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                </svg>
+                {{ $t('contact.form.sending') }}
+              </span>
+            </Button>
+
+            <!-- Status messages -->
+            <Transition
+              enter-active-class="transition-all duration-300 ease-out"
+              enter-from-class="opacity-0 -translate-y-1"
+              enter-to-class="opacity-100 translate-y-0"
+              leave-active-class="transition-all duration-200 ease-in"
+              leave-from-class="opacity-100 translate-y-0"
+              leave-to-class="opacity-0 -translate-y-1"
+            >
+              <p
+                v-if="submitStatus === 'success'"
+                class="rounded-lg border border-green-500/20 bg-green-500/5 px-4 py-2.5 text-center text-xs font-medium text-green-600 dark:text-green-400"
+                role="alert"
+              >
+                {{ $t('contact.form.success') }}
+              </p>
+              <p
+                v-else-if="submitStatus === 'error'"
+                class="rounded-lg border border-red-500/20 bg-red-500/5 px-4 py-2.5 text-center text-xs font-medium text-red-600 dark:text-red-400"
+                role="alert"
+              >
+                {{ $t('contact.form.error') }}
+              </p>
+            </Transition>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -227,11 +324,11 @@
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import { z } from 'zod'
+import { ArrowRight } from 'lucide-vue-next'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
 import {
   Select,
   SelectContent,
@@ -239,7 +336,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Textarea } from '@/components/ui/textarea'
 import { contactInfo } from '~/constants/contact'
 
 const { t } = useI18n()
