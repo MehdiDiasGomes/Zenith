@@ -16,10 +16,14 @@ const { locale } = useI18n()
 
 const organizationSchema: OrganizationSchema = useOrganizationSchema()
 
+const i18nHead = useLocaleHead({ addSeoAttributes: true })
+
 useHead({
   htmlAttrs: {
-    lang: () => locale.value, 
+    lang: () => locale.value,
   },
+  link: computed(() => i18nHead.value.link ?? []),
+  meta: computed(() => i18nHead.value.meta ?? []),
   script: [
     {
       type: 'application/ld+json',
