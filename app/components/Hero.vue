@@ -8,6 +8,7 @@
         alt=""
         width="800"
         height="1200"
+        sizes="sm:50vw lg:600px"
         class="pointer-events-none absolute left-0 top-0 h-full w-auto opacity-50"
         loading="eager"
         :preload="true"

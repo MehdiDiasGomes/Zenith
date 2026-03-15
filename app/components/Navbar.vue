@@ -40,6 +40,8 @@
           <NuxtImg
             src="/images/brand/logo.webp"
             alt="Zenith Logo"
+            width="600"
+            height="600"
             class="h-9 w-auto transition-all duration-300 group-hover:brightness-110 md:h-12"
             loading="eager"
           />
@@ -134,6 +136,8 @@
           <NuxtImg
             src="/images/brand/logo.webp"
             alt="Zenith Logo"
+            width="600"
+            height="600"
             class="h-8 w-auto"
             loading="eager"
           />
