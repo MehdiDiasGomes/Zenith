@@ -1,0 +1,53 @@
+# Zenith — Agence de Création de Sites Web
+
+> Zenith est une agence professionnelle de création de sites internet basée à Uckange (Moselle, 57), France. Fondée par Mehdi Dias Gomes, développeur web full-stack, Zenith conçoit des sites vitrines, e-commerces et applications web sur mesure pour les PME, artisans et commerçants de la région Thionville–Metz et au-delà.
+
+## Services
+
+- **Site vitrine** — Site internet professionnel sur mesure, livré en 2 à 3 semaines
+- **Site vitrine avancé** — Avec blog, multilingue ou fonctionnalités spécifiques, livré en 3 à 5 semaines
+- **E-commerce / E-shop** — Boutique en ligne avec intégration Stripe et PayPal, livré en 4 à 6 semaines
+- **Design UI/UX** — Conception d'interfaces modernes, accessibles et orientées conversion
+- **Optimisation SEO** — Audit SEO gratuit, optimisation technique et éditoriale, Core Web Vitals
+- **Maintenance mensuelle** — Hébergement, mises à jour de sécurité, sauvegardes (à partir de 30 €/mois)
+- **Création d'identité visuelle** — Logo et charte graphique
+
+## Tarifs
+
+- Site vitrine : à partir de 800 €, + 30 €/mois (hébergement et maintenance)
+- Site vitrine avancé : à partir de 1 200 €, + 30 €/mois
+- E-shop : à partir de 2 000 €, + 80 €/mois
+- Paiement en 3 fois (40 % à la signature, 30 % à la validation des maquettes, 30 % à la livraison)
+- Virement bancaire uniquement — sans carte bancaire requise
+
+## Processus
+
+1. Appel découverte gratuit de 30 minutes — sans engagement
+2. Devis détaillé remis sous 48 h
+3. Présentation des maquettes avant tout développement
+4. Développement avec points d'avancement réguliers
+5. Mise en ligne soignée, formation et suivi post-lancement
+
+## Contact
+
+- Email : contact@dg-zenith.com
+- Téléphone : +33 7 89 62 69 27
+- Adresse : 28 cité des sports, 57270 Uckange, France
+- Zone d'intervention : Thionville, Metz, Moselle (57), Grand Est, France
+- Site web : https://www.dg-zenith.com
+- Instagram : https://www.instagram.com/dg_zenith/
+
+## Pages
+
+- / : Page d'accueil
+- /services : Présentation complète des services
+- /portfolio : Réalisations clients
+- /pricing : Tarifs et formules
+- /contact : Formulaire de contact et coordonnées
+- /faq : Questions fréquentes (délais, tarifs, processus)
+
+## Version anglaise
+
+An English version of this site is available at https://www.dg-zenith.com/en/
+
+Zenith is a web development and design agency based in Thionville, Moselle, France. Founded by Mehdi Dias Gomes, Zenith builds custom websites, e-commerce stores, and web applications for SMEs and independent businesses in the Thionville–Metz area and beyond.
