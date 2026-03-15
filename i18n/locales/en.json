@@ -253,6 +253,26 @@
       "description": "Demo showcase website for a barbershop displaying services, team, and contact form"
     }
   },
+  "legal": {
+    "category": "Legal Notice",
+    "backHome": "Back to home",
+    "updatedAt": {
+      "label": "Last updated:",
+      "date": "January 22, 2025"
+    },
+    "tocTitle": "Contents",
+    "tocLabel": "Table of contents"
+  },
+  "privacy": {
+    "category": "Privacy Policy",
+    "backHome": "Back to home",
+    "updatedAt": {
+      "label": "Last updated:",
+      "date": "January 22, 2025"
+    },
+    "tocTitle": "Contents",
+    "tocLabel": "Table of contents"
+  },
   "footer": {
     "legalNavAriaLabel": "Legal navigation",
     "legal": "Legal notice",
