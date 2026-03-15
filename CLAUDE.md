@@ -61,7 +61,10 @@ This project is the website for **Zenith**, a custom web development and design 
 
 **Component Styling Guidelines**:
 
-- Buttons: Gold background (#FF9D00) with golden glow on hover
+- Buttons: **Glass outline style** — `border + bg-transparent/low-opacity + backdrop-blur-sm`, NO filled/solid backgrounds
+  - Primary CTA: `border-zenith-gold-vivid/70 bg-zenith-gold-vivid/10 text-zenith-gold-vivid` → hover: `border-zenith-gold-vivid bg-zenith-gold-vivid/20 shadow-zenith-gold-vivid/20`
+  - Secondary: `border-white/30 bg-transparent text-white/90 backdrop-blur-sm` → hover: `border-white/60 bg-white/10 text-white`
+  - All buttons use `rounded-lg`, `px-7 py-3.5`, `font-semibold`, `transition-all duration-300`
 - Cards: Bronze borders (#B6771D) with subtle hover effects
 - Forms: Inputs with vivid gold focus states
 - Navigation: Links with animated golden underline
