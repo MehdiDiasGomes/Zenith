@@ -42,9 +42,11 @@
       },
       "intro": {
         "eyebrow": "À propos",
-        "title": "Une agence à taille humaine,",
+        "title": "Un accompagnement sur mesure,",
         "titleGradient": "des résultats à la hauteur.",
-        "description": "Je prends le temps de comprendre votre activité, votre cible et vos objectifs pour concevoir une solution digitale qui vous ressemble — performante, accessible et pensée pour convertir."
+        "description": "Je prends le temps de comprendre votre activité, votre cible et vos objectifs pour concevoir une solution digitale qui vous ressemble — performante, accessible et pensée pour convertir.",
+        "photoAlt": "Mehdi Dias Gomes, fondateur de Zenith",
+        "photoRole": "Fondateur & Développeur web"
       },
       "features": {
         "title": "Ce que je fais pour vous",
@@ -183,13 +185,19 @@
       "secondary": "Voir les réalisations"
     }
   },
-  "marquee": {
-    "webDesigner": "Web Designer",
-    "fullstackDev": "Développeur Full-Stack",
-    "uiUx": "UI/UX Designer",
-    "seoExpert": "Expert SEO",
-    "limitedOffer": "Offre limitée",
-    "discount": "-30% sur toutes les prestations"
+  "divider": {
+    "custom": {
+      "title": "Sur mesure",
+      "subtitle": "Adapté à votre activité et vos objectifs"
+    },
+    "pricing": {
+      "title": "Prix transparent",
+      "subtitle": "Devis gratuit, tarif fixe sans surprise"
+    },
+    "support": {
+      "title": "Suivi complet",
+      "subtitle": "De la maquette à la mise en ligne"
+    }
   },
   "services": {
     "title": "Mes Services",
