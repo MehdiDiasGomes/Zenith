@@ -76,35 +76,28 @@
         <span>{{ $t('hero.location') }}</span>
       </div>
 
-      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-          @click="scrollToContact"
-        >
-          {{ $t('hero.cta.primary') }}
-        </a>
+      <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <Button as-child variant="gold">
+          <NuxtLink :to="localePath('/contact')">
+            {{ $t('hero.cta.primary') }}
+            <ArrowRight :size="16" aria-hidden="true" />
+          </NuxtLink>
+        </Button>
+
+        <Button as-child variant="ghost">
+          <NuxtLink :to="localePath('/portfolio')">
+            {{ $t('hero.cta.secondary') }}
+            <ArrowRight :size="16" aria-hidden="true" />
+          </NuxtLink>
+        </Button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { MapPin } from 'lucide-vue-next'
+import { ArrowRight, MapPin } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 
-const scrollToContact = (event: Event): void => {
-  event.preventDefault()
-  const contactSection = document.getElementById('contact')
-
-  if (contactSection) {
-    const navbarHeight = 100
-    const elementPosition = contactSection.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.scrollY - navbarHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-  }
-}
+const localePath = useLocalePath()
 </script>

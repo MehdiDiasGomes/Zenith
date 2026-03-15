@@ -19,8 +19,11 @@
   <!-- Sticky Navbar -->
   <nav
     :aria-label="$t('nav.ariaLabel')"
-    class="sticky top-0 z-[999] bg-zenith-bg-light/95 backdrop-blur-md transition-shadow duration-300 dark:bg-zenith-bg-dark/95"
-    :class="isScrolled ? 'shadow-lg shadow-black/10 dark:shadow-black/40' : ''"
+    class="fixed left-0 right-0 top-0 z-[999] bg-zenith-bg-light/95 backdrop-blur-md transition-all duration-300 dark:bg-zenith-bg-dark/95"
+    :class="[
+      isScrolled ? 'shadow-lg shadow-black/10 dark:shadow-black/40' : '',
+      isHidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0',
+    ]"
   >
     <!-- Gold gradient bottom border -->
     <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zenith-gold-bronze/60 to-transparent dark:via-zenith-gold-vivid/40" />
@@ -69,12 +72,11 @@
         <!-- Right: CTA + Hamburger -->
         <div class="flex items-center gap-3">
           <!-- Desktop CTA -->
-          <NuxtLink
-            :to="localePath('/contact')"
-            class="group hidden items-center gap-2 overflow-hidden rounded-lg border border-zenith-gold-bronze/60 px-5 py-2.5 text-sm font-semibold text-zenith-gold-bronze transition-all duration-300 hover:bg-zenith-gold-vivid hover:border-zenith-gold-vivid hover:text-zenith-bg-dark hover:shadow-md hover:shadow-zenith-gold-vivid/30 md:inline-flex dark:border-zenith-gold-vivid/50 dark:text-zenith-gold-vivid dark:hover:bg-zenith-gold-vivid dark:hover:text-zenith-bg-dark"
-          >
-            {{ $t('nav.contact') }}
-          </NuxtLink>
+          <Button as-child variant="gold" size="sm" class="hidden md:inline-flex">
+            <NuxtLink :to="localePath('/contact')">
+              {{ $t('nav.contact') }}
+            </NuxtLink>
+          </Button>
 
           <!-- Mobile Hamburger -->
           <button
@@ -177,13 +179,11 @@
 
       <!-- Drawer CTA -->
       <div class="border-t border-zenith-gold-bronze/10 p-6 dark:border-zenith-gold-vivid/10">
-        <NuxtLink
-          :to="localePath('/contact')"
-          class="flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid py-3.5 text-sm font-semibold text-zenith-bg-dark shadow-md shadow-zenith-gold-vivid/20 transition-all duration-300 hover:shadow-lg hover:shadow-zenith-gold-vivid/30"
-          @click="closeMobileMenu"
-        >
-          {{ $t('nav.contact') }}
-        </NuxtLink>
+        <Button as-child variant="gold" class="w-full">
+          <NuxtLink :to="localePath('/contact')" @click="closeMobileMenu">
+            {{ $t('nav.contact') }}
+          </NuxtLink>
+        </Button>
       </div>
     </aside>
   </Transition>
@@ -197,6 +197,8 @@ const localePath = useLocalePath()
 
 const mobileMenuOpen = ref<boolean>(false)
 const isScrolled = ref<boolean>(false)
+const isHidden = ref<boolean>(false)
+let lastScrollY: number = 0
 
 /** Nav items without contact (shown separately as CTA on desktop) */
 const desktopNavItems = computed(() =>
@@ -216,7 +218,10 @@ const isActive = (path: string): boolean => {
 }
 
 const handleScroll = (): void => {
-  isScrolled.value = window.scrollY > 20
+  const currentScrollY: number = window.scrollY
+  isScrolled.value = currentScrollY > 20
+  isHidden.value = currentScrollY > 80 && currentScrollY > lastScrollY
+  lastScrollY = currentScrollY
 }
 
 onMounted(() => {

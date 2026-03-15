@@ -55,12 +55,12 @@
           <p class="mb-6 text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
             {{ $t('faq.cta.description') }}
           </p>
-          <NuxtLink
-            :to="localePath('/') + '#contact'"
-            class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-          >
-            {{ $t('faq.cta.button') }}
-          </NuxtLink>
+          <Button as-child variant="gold">
+            <NuxtLink :to="localePath('/contact')">
+              {{ $t('faq.cta.button') }}
+              <ArrowRight :size="16" aria-hidden="true" />
+            </NuxtLink>
+          </Button>
         </div>
       </section>
     </div>
@@ -68,6 +68,8 @@
 </template>
 
 <script lang="ts" setup>
+import { ArrowRight } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 import { faqItems } from '@/constants/faq'
 import {
   Accordion,

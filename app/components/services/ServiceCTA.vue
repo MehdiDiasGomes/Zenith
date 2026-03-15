@@ -31,15 +31,12 @@
 
       <!-- CTA Button -->
       <div class="flex flex-col items-center gap-4">
-        <NuxtLink
-          :to="localePath('/contact')"
-          class="group inline-flex items-center gap-3 rounded-lg bg-zenith-gold-vivid px-8 py-4 text-sm font-semibold text-zenith-bg-dark shadow-lg shadow-zenith-gold-vivid/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-zenith-gold-vivid/40"
-        >
-          {{ buttonText }}
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">
-            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </NuxtLink>
+        <Button as-child variant="solid" size="xl">
+          <NuxtLink :to="localePath('/contact')">
+            {{ buttonText }}
+            <ArrowRight :size="16" aria-hidden="true" />
+          </NuxtLink>
+        </Button>
 
         <!-- Reassurance text -->
         <p class="flex items-center gap-2 text-xs text-white/50">
@@ -59,6 +56,9 @@ interface ServiceCTAProps {
   description: string
   buttonText: string
 }
+
+import { ArrowRight } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 
 defineProps<ServiceCTAProps>()
 

@@ -64,29 +64,40 @@
             <div
               class="absolute bottom-0 left-0 right-0 flex items-center gap-2 p-4 transition-all duration-400 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100"
             >
-              <a
+              <Button
                 v-if="project.link"
-                :href="project.link"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-zenith-gold-vivid px-4 py-2.5 text-xs font-semibold text-zenith-bg-dark transition-all duration-200 hover:bg-zenith-champagne"
-                :aria-label="$t('projects.viewProject')"
+                as-child
+                variant="solid"
+                size="sm"
+                class="flex-1"
                 @click.stop
               >
-                <Icon name="ExternalLink" size="14" aria-hidden="true" />
-                {{ $t('projects.viewProject') }}
-              </a>
-              <a
+                <a
+                  :href="project.link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  :aria-label="$t('projects.viewProject')"
+                >
+                  <ExternalLink :size="13" aria-hidden="true" />
+                  {{ $t('projects.viewProject') }}
+                </a>
+              </Button>
+              <Button
                 v-if="project.github"
-                :href="project.github"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center justify-center rounded-lg border border-white/30 bg-white/10 p-2.5 text-white backdrop-blur-sm transition-all duration-200 hover:bg-white/20"
-                :aria-label="$t('projects.viewCode')"
+                as-child
+                variant="white"
+                size="icon"
                 @click.stop
               >
-                <Icon name="Github" size="16" aria-hidden="true" />
-              </a>
+                <a
+                  :href="project.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  :aria-label="$t('projects.viewCode')"
+                >
+                  <Github :size="15" aria-hidden="true" />
+                </a>
+              </Button>
             </div>
 
             <!-- Project index number -->
@@ -132,6 +143,8 @@
 </template>
 
 <script setup lang="ts">
+import { ExternalLink, Github } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 import { projects, categories, type ProjectCategory } from '~/constants/projects'
 
 const selectedCategory = ref<ProjectCategory>('all')
