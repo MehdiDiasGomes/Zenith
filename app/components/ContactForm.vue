@@ -125,8 +125,8 @@
       </div>
 
       <!-- Right Form Panel -->
-      <div class="bg-zenith-bg-light px-8 py-10 dark:bg-zenith-bg-dark lg:px-12 lg:py-12">
-        <form class="flex flex-col gap-8" @submit="onSubmit" novalidate>
+      <div class="flex h-full flex-col bg-zenith-bg-light px-8 py-10 dark:bg-zenith-bg-dark lg:px-12 lg:py-12">
+        <form class="flex h-full flex-col gap-8" @submit="onSubmit" novalidate>
 
           <!-- Name + Email row -->
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -225,19 +225,18 @@
 
           <!-- Message -->
           <FormField v-slot="{ componentField, meta }" name="message">
-            <FormItem class="group space-y-0">
+            <FormItem class="group flex flex-1 flex-col space-y-0">
               <FormLabel
                 class="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
               >
                 {{ $t('contact.form.message.label') }}
               </FormLabel>
-              <FormControl>
-                <div class="relative">
+              <FormControl class="flex-1">
+                <div class="relative flex h-full flex-col">
                   <textarea
                     :placeholder="$t('contact.form.message.placeholder')"
                     :aria-invalid="meta.validated && !meta.valid"
-                    rows="5"
-                    class="w-full resize-none border-0 bg-transparent py-2.5 text-sm text-zenith-text-primary-light outline-none placeholder:text-zenith-text-secondary-light/30 dark:text-zenith-text-primary-dark dark:placeholder:text-zenith-text-secondary-dark/25"
+                    class="h-full w-full flex-1 resize-none border-0 bg-transparent py-2.5 text-sm text-zenith-text-primary-light outline-none placeholder:text-zenith-text-secondary-light/30 dark:text-zenith-text-primary-dark dark:placeholder:text-zenith-text-secondary-dark/25"
                     v-bind="componentField"
                   />
                   <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
