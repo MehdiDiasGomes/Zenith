@@ -71,7 +71,7 @@
     </section>
 
     <!-- Pricing plans -->
-    <section class="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="pricing-heading">
+    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="pricing-heading">
       <h2 id="pricing-heading" class="sr-only">{{ $t('pricing.title') }}</h2>
       <div class="mx-auto max-w-6xl">
         <!-- 3 main plans -->
@@ -271,7 +271,7 @@
     </section>
 
     <!-- Payment milestones -->
-    <section class="px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="payment-heading">
+    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="payment-heading">
       <div class="mx-auto max-w-6xl">
         <div class="rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light px-6 py-10 dark:border-zenith-gold-bronze/10 dark:bg-zenith-bg-secondary-dark md:px-10">
           <!-- Header -->
@@ -348,7 +348,9 @@
     </section>
 
     <!-- CTA -->
-    <CallToAction />
+    <div v-reveal="{ duration: 700, distance: 40 }">
+      <CallToAction />
+    </div>
   </div>
 </template>
 

@@ -57,10 +57,14 @@
     </section>
 
     <!-- Projects grid (existing component) -->
-    <Projects />
+    <div v-reveal="{ duration: 700, distance: 40 }">
+      <Projects />
+    </div>
 
     <!-- CTA -->
-    <CallToAction />
+    <div v-reveal="{ duration: 700, distance: 40 }">
+      <CallToAction />
+    </div>
   </div>
 </template>
 
