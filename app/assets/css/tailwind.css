@@ -8,6 +8,16 @@
   }
 
   :root {
+    /* ── Type scale ─────────────────────────────────────────────── */
+    --type-hero:        clamp(1.875rem, 4vw, 2.75rem);
+    --type-display:     clamp(1.875rem, 4.5vw, 3rem);
+    --type-heading:     clamp(1.5rem, 3vw, 2.25rem);
+    --type-subheading:  clamp(1.125rem, 1.75vw, 1.375rem);
+    --type-lead:        1.125rem;
+    --type-body:        1rem;
+    --type-small:       0.875rem;
+    --type-xs:          0.75rem;
+
     --mauve: 261, 100%, 76%, 1;
     --foreground: 260 96% 50%;
     --darkblue: 225 36% 14%;
@@ -142,155 +152,57 @@
     background: hsl(var(--app-background));
   }
 
-  /* Typography - Global heading and text styles */
+  /* Typography - Global heading and text styles (sizes via CSS variables) */
   h1 {
     margin: 0;
-    font-size: 1.875rem;
-    line-height: 2.5rem;
+    font-size: var(--type-hero);
+    line-height: 1.1;
     font-weight: 800;
     letter-spacing: -0.025em;
     color: hsl(var(--heading-primary));
   }
 
   h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: var(--type-heading);
+    line-height: 1.2;
     font-weight: 700;
     letter-spacing: -0.025em;
     color: hsl(var(--heading-primary));
   }
 
-  @media (min-width: 640px) {
-    h2 {
-      font-size: 1.75rem;
-      line-height: 2.25rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h2 {
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h2 {
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    h2 {
-      font-size: 2.5rem;
-      line-height: 3rem;
-    }
-  }
-
   h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 400;
-    letter-spacing: -0.025em;
+    font-size: var(--type-subheading);
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: -0.015em;
     color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h3 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h3 {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h3 {
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
   }
 
   h4 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: var(--type-small);
+    line-height: 1.4;
     font-weight: 600;
     color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h4 {
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
   }
 
   h5 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: var(--type-small);
+    line-height: 1.5;
     font-weight: 600;
     color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h5 {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h5 {
-      font-size: 1.375rem;
-      line-height: 2rem;
-    }
   }
 
   h6 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: var(--type-xs);
+    line-height: 1.5;
     font-weight: 600;
     color: hsl(var(--heading-primary));
   }
 
-  @media (min-width: 640px) {
-    h6 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
   p {
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-size: var(--type-body);
+    line-height: 1.75;
     color: hsl(var(--text-primary));
-  }
-
-  @media (min-width: 768px) {
-    p {
-      font-size: 1.125rem;
-      line-height: 1.875rem;
-    }
   }
 }
 
@@ -325,6 +237,15 @@ body {
 }
 
 @layer utilities {
+  /* Semantic type utilities — use when explicit override of global heading/body styles is needed */
+  .type-display    { font-size: var(--type-display);    line-height: 1.15; }
+  .type-heading    { font-size: var(--type-heading);    line-height: 1.2; }
+  .type-subheading { font-size: var(--type-subheading); line-height: 1.4; }
+  .type-lead       { font-size: var(--type-lead);       line-height: 1.7; }
+  .type-body       { font-size: var(--type-body);       line-height: 1.75; }
+  .type-small      { font-size: var(--type-small);      line-height: 1.6; }
+  .type-xs         { font-size: var(--type-xs);         line-height: 1.5; }
+
   .text-xxl {
     font-size: 3rem;
     line-height: 3.5rem;

@@ -14,11 +14,11 @@
         </div>
         <h2
           :id="processId"
-          class="text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
+          class="font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ $t('pages.services.process.title') }}
         </h2>
-        <p class="mt-4 max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+        <p class="mt-4 max-w-2xl text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('pages.services.process.subtitle') }}
         </p>
       </div>
@@ -49,7 +49,7 @@
             </div>
             <div>
               <div class="mb-1 flex items-center gap-3">
-                <h3 class="text-lg font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+                <h3 class="font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
                   {{ step.title }}
                 </h3>
                 <span
@@ -59,7 +59,7 @@
                   {{ step.badge }}
                 </span>
               </div>
-              <p class="text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+              <p class="leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
                 {{ step.description }}
               </p>
             </div>

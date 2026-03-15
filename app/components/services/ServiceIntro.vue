@@ -14,13 +14,13 @@
           </div>
           <h2
             :id="introId"
-            class="mb-6 text-2xl font-bold leading-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl lg:text-4xl"
+            class="mb-6 font-bold leading-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
           >
             <slot name="title">
               {{ title }}
             </slot>
           </h2>
-          <p class="text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark md:text-lg">
+          <p class="type-lead leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
             {{ description }}
           </p>
         </div>

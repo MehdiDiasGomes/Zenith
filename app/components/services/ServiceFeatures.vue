@@ -8,7 +8,7 @@
       <div class="mb-20">
         <h2
           :id="featuresId"
-          class="text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
+          class="font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
         >
           {{ title }}
         </h2>
@@ -31,10 +31,10 @@
               </span>
               <span class="h-px w-6 bg-zenith-gold-bronze/30" aria-hidden="true" />
             </div>
-            <h3 class="mb-4 text-xl font-bold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-2xl">
+            <h3 class="mb-4 font-bold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
               {{ feature.title }}
             </h3>
-            <p class="text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            <p class="leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
               {{ feature.description }}
             </p>
           </div>

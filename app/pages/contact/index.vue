@@ -34,7 +34,7 @@
           <!-- Left: text -->
           <div>
             <h1
-              class="hero-fade hero-fade-delay-1 text-4xl font-bold leading-[1.1] tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark sm:text-5xl lg:text-6xl"
+              class="hero-fade hero-fade-delay-1 font-bold leading-[1.1] tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t('pages.contact.hero.titleWhite') }}
               <br />
@@ -46,7 +46,7 @@
             </h1>
 
             <p
-              class="hero-fade hero-fade-delay-2 mt-6 text-lg leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+              class="hero-fade hero-fade-delay-2 mt-6 type-lead leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
             >
               {{ $t('pages.contact.hero.subtitle') }}
             </p>

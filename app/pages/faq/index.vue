@@ -40,7 +40,7 @@
         <!-- Title row + count badge -->
         <div class="flex items-end justify-between gap-8">
           <h1
-            class="hero-fade hero-fade-delay-1 max-w-2xl text-4xl font-bold leading-tight tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark sm:text-5xl lg:text-6xl"
+            class="hero-fade hero-fade-delay-1 max-w-2xl font-bold leading-tight tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
           >
             {{ $t('faq.title') }}
           </h1>
@@ -60,7 +60,7 @@
         </div>
 
         <p
-          class="hero-fade hero-fade-delay-2 mt-5 max-w-xl text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+          class="hero-fade hero-fade-delay-2 mt-5 max-w-xl leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
           {{ $t('faq.subtitle') }}
         </p>
@@ -155,7 +155,7 @@
               </div>
               <h2
                 id="faq-cta-heading"
-                class="mb-3 text-2xl font-bold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
+                class="mb-3 font-bold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
               >
                 {{ $t('faq.cta.text') }}
               </h2>
