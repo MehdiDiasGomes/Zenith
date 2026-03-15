@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
   :root {
     --mauve: 261, 100%, 76%, 1;
     --foreground: 260 96% 50%;

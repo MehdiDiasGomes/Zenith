@@ -182,43 +182,43 @@
           </div>
 
           <!-- Subject -->
-          <FormField v-slot="{ componentField }" name="subject">
+          <FormField v-slot="{ value, handleChange, handleBlur }" name="subject">
             <FormItem class="group space-y-0">
               <FormLabel
                 class="mb-1 block text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
               >
                 {{ $t('contact.form.subject.label') }}
               </FormLabel>
-              <Select v-bind="componentField">
-                <FormControl>
-                  <div class="relative">
-                    <SelectTrigger
-                      class="h-auto w-full rounded-none border-0 bg-transparent px-0 py-2.5 text-sm shadow-none ring-0 focus:ring-0"
-                    >
-                      <SelectValue
-                        :placeholder="$t('contact.form.subject.placeholder')"
-                        class="data-[placeholder]:text-zenith-text-secondary-light/40 dark:data-[placeholder]:text-zenith-text-secondary-dark/25"
-                      />
-                    </SelectTrigger>
-                    <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
-                    <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-focus-within:w-full" aria-hidden="true" />
-                  </div>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="showcase">
-                    {{ $t('contact.form.subject.options.showcase') }}
-                  </SelectItem>
-                  <SelectItem value="seoaudit">
-                    {{ $t('contact.form.subject.options.seoaudit') }}
-                  </SelectItem>
-                  <SelectItem value="eshop">
-                    {{ $t('contact.form.subject.options.eshop') }}
-                  </SelectItem>
-                  <SelectItem value="other">
-                    {{ $t('contact.form.subject.options.other') }}
-                  </SelectItem>
-                </SelectContent>
-              </Select>
+              <FormControl>
+                <div class="relative">
+                  <select
+                    :value="value"
+                    class="w-full appearance-none border-0 bg-transparent py-2.5 pr-6 text-sm outline-none"
+                    :class="
+                      value
+                        ? 'text-zenith-text-primary-light dark:text-zenith-text-primary-dark'
+                        : 'text-zenith-text-secondary-light/40 dark:text-zenith-text-secondary-dark/25'
+                    "
+                    @change="handleChange(($event.target as HTMLSelectElement).value)"
+                    @blur="handleBlur"
+                  >
+                    <option value="" disabled :selected="!value">
+                      {{ $t('contact.form.subject.placeholder') }}
+                    </option>
+                    <option value="showcase">{{ $t('contact.form.subject.options.showcase') }}</option>
+                    <option value="seoaudit">{{ $t('contact.form.subject.options.seoaudit') }}</option>
+                    <option value="eshop">{{ $t('contact.form.subject.options.eshop') }}</option>
+                    <option value="other">{{ $t('contact.form.subject.options.other') }}</option>
+                  </select>
+                  <!-- Chevron -->
+                  <ChevronDown
+                    class="pointer-events-none absolute right-0 top-1/2 h-4 w-4 -translate-y-1/2 text-zenith-text-secondary-light/40 transition-colors duration-200 group-focus-within:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark/30"
+                    aria-hidden="true"
+                  />
+                  <span class="absolute bottom-0 left-0 h-px w-full bg-zenith-gold-bronze/20 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
+                  <span class="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300 group-focus-within:w-full" aria-hidden="true" />
+                </div>
+              </FormControl>
               <FormMessage class="mt-1.5 text-xs" />
             </FormItem>
           </FormField>
@@ -324,18 +324,11 @@
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import { z } from 'zod'
-import { ArrowRight } from 'lucide-vue-next'
+import { ArrowRight, ChevronDown } from 'lucide-vue-next'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
 import { contactInfo } from '~/constants/contact'
 
 const { t } = useI18n()
