@@ -434,9 +434,12 @@
     }
   },
   "faq": {
+    "eyebrow": "Support",
+    "itemsLabel": "questions",
     "title": "Questions fréquentes",
     "subtitle": "Retrouvez les réponses aux questions les plus courantes sur mes services et ma façon de travailler.",
     "cta": {
+      "eyebrow": "Parlons-en",
       "text": "Vous avez d'autres questions ?",
       "description": "Je suis disponible pour répondre à toutes vos interrogations et discuter de votre projet.",
       "button": "Me contacter"
