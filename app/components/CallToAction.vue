@@ -30,7 +30,7 @@
       <!-- Main title -->
       <h2
         :id="ctaSectionId"
-        class="mb-3 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl"
+        class="mb-3 type-display font-bold leading-tight text-white"
       >
         {{ $t('cta.title') }}
       </h2>
@@ -41,7 +41,7 @@
       </p>
 
       <!-- Description -->
-      <p class="mx-auto mb-12 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg">
+      <p class="mx-auto mb-12 max-w-2xl type-lead leading-relaxed text-white/70">
         {{ $t('cta.description.part1') }}<strong class="font-semibold text-white/90">{{ $t('cta.description.part2Bold') }}</strong>
       </p>
 

@@ -32,7 +32,7 @@
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-end lg:gap-16">
           <div>
             <h1
-              class="hero-fade hero-fade-delay-1 text-4xl font-bold leading-[1.1] tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark sm:text-5xl lg:text-6xl"
+              class="hero-fade hero-fade-delay-1 font-bold leading-[1.1] tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t('pages.pricing.hero.titleWhite') }}
               <br />
@@ -43,7 +43,7 @@
           </div>
 
           <div class="hero-fade hero-fade-delay-2">
-            <p class="text-lg leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            <p class="type-lead leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
               {{ $t('pages.pricing.hero.subtitle') }}
             </p>
             <!-- Discount badge -->

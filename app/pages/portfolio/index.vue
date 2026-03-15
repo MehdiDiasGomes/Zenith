@@ -24,7 +24,7 @@
           <div>
             <h1
               id="portfolio-hero"
-              class="hero-fade hero-fade-delay-1 text-4xl font-bold leading-[1.1] tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark sm:text-5xl lg:text-6xl"
+              class="hero-fade hero-fade-delay-1 font-bold leading-[1.1] tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
             >
               {{ $t('pages.portfolio.hero.titleWhite') }}
               <br />
@@ -35,7 +35,7 @@
           </div>
 
           <div class="hero-fade hero-fade-delay-2">
-            <p class="text-lg leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            <p class="type-lead leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
               {{ $t('pages.portfolio.hero.subtitle') }}
             </p>
             <!-- "More coming soon" badge -->

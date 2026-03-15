@@ -32,11 +32,11 @@
           </div>
           <h2
             :id="benefitsId"
-            class="text-2xl font-bold leading-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl lg:text-4xl"
+            class="font-bold leading-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
           >
             {{ title }}
           </h2>
-          <p class="mt-6 text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+          <p class="mt-6 leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
             {{ $t('pages.services.benefits.description') }}
           </p>
         </div>

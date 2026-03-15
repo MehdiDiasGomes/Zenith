@@ -20,12 +20,12 @@
     <div class="relative z-10 mx-auto max-w-3xl text-center">
       <h2
         :id="ctaId"
-        class="mb-4 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl"
+        class="mb-4 type-display font-bold leading-tight text-white"
       >
         {{ title }}
       </h2>
 
-      <p class="mb-10 text-base leading-relaxed text-white/80 md:text-lg">
+      <p class="mb-10 type-lead leading-relaxed text-white/80">
         {{ description }}
       </p>
 
