@@ -90,35 +90,20 @@
         <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
           {{ $t('services.moreServices') }}
         </p>
-        <NuxtLink
-          :to="localePath('/services')"
-          class="group inline-flex flex-shrink-0 items-center gap-2 rounded-lg border border-zenith-gold-bronze/40 bg-zenith-gold-vivid/8 px-5 py-2.5 text-sm font-semibold text-zenith-gold-vivid backdrop-blur-sm transition-all duration-300 hover:border-zenith-gold-vivid hover:bg-zenith-gold-vivid/15 hover:shadow-md hover:shadow-zenith-gold-vivid/15 dark:border-zenith-gold-vivid/30 dark:hover:border-zenith-gold-vivid"
-          :aria-label="$t('services.ctaButton')"
-        >
-          {{ $t('services.ctaButton') }}
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 16 16"
-            fill="none"
-            aria-hidden="true"
-            class="transition-transform duration-300 group-hover:translate-x-1"
-          >
-            <path
-              d="M3 8H13M13 8L9 4M13 8L9 12"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </NuxtLink>
+        <Button as-child variant="gold" :aria-label="$t('services.ctaButton')">
+          <NuxtLink :to="localePath('/services')">
+            {{ $t('services.ctaButton') }}
+            <ArrowRight :size="14" aria-hidden="true" />
+          </NuxtLink>
+        </Button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ArrowRight } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 import { services } from '~/constants/services'
 
 const localePath = useLocalePath()

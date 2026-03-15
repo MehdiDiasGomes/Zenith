@@ -89,12 +89,11 @@
           </div>
 
           <div class="mt-auto p-8 pt-0">
-            <NuxtLink
-              to="#contact"
-              class="block rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-center text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-            >
-              {{ plan.id === 'seo-audit' ? $t('pricing.requestAudit') : $t('pricing.getQuote') }}
-            </NuxtLink>
+            <Button as-child variant="gold" class="w-full justify-center">
+              <NuxtLink :to="localePath('/contact')">
+                {{ plan.id === 'seo-audit' ? $t('pricing.requestAudit') : $t('pricing.getQuote') }}
+              </NuxtLink>
+            </Button>
           </div>
         </article>
       </div>
@@ -124,5 +123,8 @@
 </template>
 
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
 import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
+
+const localePath = useLocalePath()
 </script>

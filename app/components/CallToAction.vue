@@ -48,32 +48,15 @@
       <!-- Actions -->
       <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
         <!-- Primary CTA -->
-        <Button
-          as-child
-          class="group relative w-full overflow-hidden rounded-lg border border-zenith-gold-vivid/70 bg-zenith-gold-vivid/10 px-7 py-3.5 font-semibold text-zenith-gold-vivid backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-zenith-gold-vivid hover:bg-zenith-gold-vivid/20 hover:shadow-lg hover:shadow-zenith-gold-vivid/20 sm:w-auto"
-        >
+        <Button as-child variant="gold" size="lg" class="w-full sm:w-auto">
           <a href="#contact" @click="scrollToContact">
-            <span class="relative flex items-center gap-2">
-              {{ $t('cta.button.primary') }}
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden="true"
-                class="transition-transform duration-300 group-hover:translate-x-1"
-              >
-                <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
+            {{ $t('cta.button.primary') }}
+            <ArrowRight :size="16" aria-hidden="true" />
           </a>
         </Button>
 
         <!-- Secondary CTA -->
-        <Button
-          as-child
-          class="w-full rounded-lg border border-white/30 bg-transparent px-7 py-3.5 font-semibold text-white/90 backdrop-blur-sm transition-all duration-300 hover:border-white/60 hover:bg-white/10 hover:text-white sm:w-auto"
-        >
+        <Button as-child variant="white" size="lg" class="w-full sm:w-auto">
           <NuxtLink :to="localePath('/faq')">
             {{ $t('cta.button.faq') }}
           </NuxtLink>
@@ -98,6 +81,7 @@
 </template>
 
 <script setup lang="ts">
+import { ArrowRight } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 
 const { t } = useI18n()

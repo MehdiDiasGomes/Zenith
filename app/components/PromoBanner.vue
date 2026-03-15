@@ -32,13 +32,9 @@
           </div>
 
           <div class="flex items-center gap-2">
-            <a
-              href="#pricing"
-              class="rounded-lg bg-zenith-gold-vivid px-3 py-1.5 text-xs font-semibold text-zenith-bg-dark transition-all duration-200 hover:bg-zenith-champagne"
-              @click="closeBanner"
-            >
-              {{ $t('promo.cta') }}
-            </a>
+            <Button as-child variant="solid" size="sm" @click="closeBanner">
+              <a href="#pricing">{{ $t('promo.cta') }}</a>
+            </Button>
             <button
               type="button"
               :aria-label="$t('promo.close')"
@@ -55,6 +51,8 @@
 </template>
 
 <script setup lang="ts">
+import { Button } from '@/components/ui/button'
+
 const { isPromoBannerVisible, initializeBanner, closeBanner } = usePromoBanner()
 
 onMounted(() => {

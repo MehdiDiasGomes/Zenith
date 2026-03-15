@@ -5,8 +5,7 @@
     <Services />
     <CallToAction />
      <Projects /> 
-    <Pricing />
-    <ContactForm />
+    <PricingTeaser />
   </div>
 </template>
 
