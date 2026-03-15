@@ -13,6 +13,14 @@
     "faq": {
       "title": "FAQ Website Creation | Zenith Thionville, Metz",
       "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs in Thionville and Metz."
+    },
+    "offerCatalogName": "Web creation services",
+    "service": {
+      "webDev": "Custom web development",
+      "uiux": "UI/UX Design",
+      "seo": "SEO Optimization",
+      "ecommerce": "E-commerce development",
+      "maintenance": "Website maintenance and support"
     }
   },
   "home": {
@@ -28,11 +36,13 @@
     "contact": "Contact",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
-    "switchToLang": "Switch language to {lang}"
+    "switchToLang": "Switch language to {lang}",
+    "faqLabel": "FAQ"
   },
   "pages": {
     "services": {
       "title": "Services",
+      "seoTitle": "Custom Website Development — Services | Zenith Thionville, Metz",
       "description": "Discover the services offered by Zenith to develop your online presence",
       "hero": {
         "titleWhite": "Websites that",
@@ -134,6 +144,7 @@
     },
     "portfolio": {
       "title": "Portfolio",
+      "seoTitle": "Portfolio — Websites for SMEs & Businesses | Zenith",
       "description": "Discover the projects completed by Zenith for its clients",
       "eyebrow": "My work",
       "hero": {
@@ -145,6 +156,7 @@
     },
     "pricing": {
       "title": "Pricing",
+      "seoTitle": "Website Pricing | Zenith Thionville, Metz",
       "description": "Discover the pricing and solutions offered by Zenith",
       "eyebrow": "Transparent pricing",
       "hero": {
@@ -167,6 +179,20 @@
       "trustItems": {
         "response": "Reply within 24h",
         "noCommitment": "No commitment"
+      },
+      "floatingCards": {
+        "response": {
+          "label": "Response",
+          "value": "within 24h"
+        },
+        "quote": {
+          "label": "Quote",
+          "value": "100% free"
+        },
+        "commitment": {
+          "label": "Commitment",
+          "value": "Zero"
+        }
       }
     }
   },
@@ -398,7 +424,8 @@
         "Concrete improvement recommendations"
       ]
     },
-    "free": "Free"
+    "free": "Free",
+    "noCard": "No credit card required"
   },
   "contact": {
     "title": "Contact Me",
