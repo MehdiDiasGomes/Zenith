@@ -42,9 +42,11 @@
       },
       "intro": {
         "eyebrow": "About",
-        "title": "A human-scale agency,",
+        "title": "A personal approach,",
         "titleGradient": "results that match.",
-        "description": "I take the time to understand your business, your audience and your goals — to design a digital solution that truly represents you: high-performing, accessible and built to convert."
+        "description": "I take the time to understand your business, your audience and your goals — to design a digital solution that truly represents you: high-performing, accessible and built to convert.",
+        "photoAlt": "Mehdi Dias Gomes, founder of Zenith",
+        "photoRole": "Founder & Web Developer"
       },
       "features": {
         "title": "What I do for you",
@@ -153,7 +155,7 @@
       }
     },
     "contact": {
-      "title": "Contact | Zenith — Web Design Agency",
+      "title": "Contact | Zenith — Web Design &amp; Development",
       "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses.",
       "eyebrow": "Let's talk about your project",
       "hero": {
@@ -183,13 +185,19 @@
       "secondary": "See our work"
     }
   },
-  "marquee": {
-    "webDesigner": "Web Designer",
-    "fullstackDev": "Full-Stack Developer",
-    "uiUx": "UI/UX Designer",
-    "seoExpert": "SEO Expert",
-    "limitedOffer": "Limited offer",
-    "discount": "-30% on all services"
+  "divider": {
+    "custom": {
+      "title": "Custom-built",
+      "subtitle": "Crafted around your business and goals"
+    },
+    "pricing": {
+      "title": "Transparent pricing",
+      "subtitle": "Free quote, fixed price with no surprises"
+    },
+    "support": {
+      "title": "Full support",
+      "subtitle": "From design mockup to live launch"
+    }
   },
   "services": {
     "title": "My Services",
