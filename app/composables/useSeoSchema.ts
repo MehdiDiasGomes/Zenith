@@ -10,6 +10,9 @@ import type {
   BreadcrumbSchema,
   BreadcrumbItem,
   FaqItemInput,
+  ImageObject,
+  ServiceArea,
+  OfferCatalog,
 } from '@/types/seo'
 
 const SITE_URL: string = 'https://www.dg-zenith.com'
@@ -21,16 +24,42 @@ const SITE_URL: string = 'https://www.dg-zenith.com'
 export function useOrganizationSchema(): OrganizationSchema {
   const { t, locale } = useI18n()
 
+  const logo: ImageObject = {
+    '@type': 'ImageObject',
+    url: `${SITE_URL}/images/brand/logo.webp`,
+    width: 600,
+    height: 600,
+  }
+
+  const areaServed: ServiceArea[] = [
+    { '@type': 'City', name: 'Thionville' },
+    { '@type': 'City', name: 'Metz' },
+    { '@type': 'AdministrativeArea', name: 'Moselle' },
+    { '@type': 'AdministrativeArea', name: 'Grand Est' },
+  ]
+
+  const hasOfferCatalog: OfferCatalog = {
+    '@type': 'OfferCatalog',
+    name: t('seo.offerCatalogName'),
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t('seo.service.webDev') } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t('seo.service.uiux') } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t('seo.service.seo') } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t('seo.service.ecommerce') } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t('seo.service.maintenance') } },
+    ],
+  }
+
   const schema: OrganizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Zenith',
     description: t('seo.description'),
     url: SITE_URL,
-    logo: `${SITE_URL}/images/brand/z_logo.webp`,
+    logo,
     image: `${SITE_URL}/og-image.png`,
     email: 'contact@dg-zenith.com',
-    telephone: '+33 7 89 62 69 27',
+    telephone: '+33789626927',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '28 cité des sports',
@@ -38,19 +67,10 @@ export function useOrganizationSchema(): OrganizationSchema {
       postalCode: '57270',
       addressCountry: 'FR',
     },
-    areaServed: {
-      '@type': 'GeoCircle',
-      name: 'Thionville, Metz et alentours, Moselle (57), Grand Est, France',
-    },
+    areaServed,
     sameAs: ['https://www.instagram.com/dg_zenith/'],
     priceRange: '€€',
-    serviceType: [
-      'Web Development',
-      'Web Design',
-      'UI/UX Design',
-      'SEO Optimization',
-      'E-commerce Development',
-    ],
+    hasOfferCatalog,
     inLanguage: locale.value === 'fr' ? 'fr-FR' : 'en-US',
   }
 
