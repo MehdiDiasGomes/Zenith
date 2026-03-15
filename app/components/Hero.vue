@@ -58,7 +58,7 @@
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part3') }}
         </span>
-        <span class="dark:text-zenith-text-secondary-dark">
+        <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part4') }}
         </span>
       </h1>
@@ -87,7 +87,6 @@
         <Button as-child variant="ghost">
           <NuxtLink :to="localePath('/portfolio')">
             {{ $t('hero.cta.secondary') }}
-            <ArrowRight :size="16" aria-hidden="true" />
           </NuxtLink>
         </Button>
       </div>
