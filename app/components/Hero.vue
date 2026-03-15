@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-20"
+    class="relative overflow-hidden px-4 pb-16 pt-28 sm:pt-36 sm:pb-20 md:pt-44 md:pb-24"
   >
     <div>
       <NuxtImg
@@ -8,6 +8,7 @@
         alt=""
         width="800"
         height="1200"
+        sizes="sm:50vw lg:600px"
         class="pointer-events-none absolute left-0 top-0 h-full w-auto opacity-50"
         loading="eager"
         :preload="true"
@@ -45,7 +46,7 @@
         </div>
       </div>
 
-      <h1 class="mb-6 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+      <h1 class="mb-6 font-bold leading-tight">
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part1') }}
         </span>
@@ -58,13 +59,13 @@
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part3') }}
         </span>
-        <span class="dark:text-zenith-text-secondary-dark">
+        <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
           {{ $t('hero.title.part4') }}
         </span>
       </h1>
 
       <p
-        class="mx-auto mb-6 max-w-2xl text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark md:text-lg"
+        class="mx-auto mb-6 max-w-2xl type-lead text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
       >
         {{ $t('hero.subtitle') }}
       </p>
@@ -76,35 +77,27 @@
         <span>{{ $t('hero.location') }}</span>
       </div>
 
-      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a
-          href="#contact"
-          class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-          @click="scrollToContact"
-        >
-          {{ $t('hero.cta.primary') }}
-        </a>
+      <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <Button as-child variant="gold">
+          <NuxtLink :to="localePath('/contact')">
+            {{ $t('hero.cta.primary') }}
+            <ArrowRight :size="16" aria-hidden="true" />
+          </NuxtLink>
+        </Button>
+
+        <Button as-child variant="ghost">
+          <NuxtLink :to="localePath('/portfolio')">
+            {{ $t('hero.cta.secondary') }}
+          </NuxtLink>
+        </Button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { MapPin } from 'lucide-vue-next'
+import { ArrowRight, MapPin } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 
-const scrollToContact = (event: Event): void => {
-  event.preventDefault()
-  const contactSection = document.getElementById('contact')
-
-  if (contactSection) {
-    const navbarHeight = 100
-    const elementPosition = contactSection.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.scrollY - navbarHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-  }
-}
+const localePath = useLocalePath()
 </script>

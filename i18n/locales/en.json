@@ -13,6 +13,14 @@
     "faq": {
       "title": "FAQ Website Creation | Zenith Thionville, Metz",
       "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs in Thionville and Metz."
+    },
+    "offerCatalogName": "Web creation services",
+    "service": {
+      "webDev": "Custom web development",
+      "uiux": "UI/UX Design",
+      "seo": "SEO Optimization",
+      "ecommerce": "E-commerce development",
+      "maintenance": "Website maintenance and support"
     }
   },
   "home": {
@@ -22,13 +30,171 @@
     "ariaLabel": "Main navigation",
     "logoAriaLabel": "Return to Zenith home",
     "home": "Home",
-    "services": "My services",
-    "projects": "My Projects",
-    "pricing": "My Solutions",
-    "contact": "Contact me",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "contact": "Contact",
     "toggleTheme": "Toggle theme",
     "toggleMenu": "Toggle menu",
-    "switchToLang": "Switch language to {lang}"
+    "switchToLang": "Switch language to {lang}",
+    "faqLabel": "FAQ"
+  },
+  "pages": {
+    "services": {
+      "title": "Services",
+      "seoTitle": "Custom Website Development — Services | Zenith Thionville, Metz",
+      "description": "Discover the services offered by Zenith to develop your online presence",
+      "hero": {
+        "titleWhite": "Websites that",
+        "titleGradient": "make a difference.",
+        "subtitle": "From design to launch, Zenith creates tailor-made digital experiences that turn your visitors into customers.",
+        "badge": "First call free · No commitment"
+      },
+      "intro": {
+        "eyebrow": "About",
+        "title": "A personal approach,",
+        "titleGradient": "results that match.",
+        "description": "I take the time to understand your business, your audience and your goals — to design a digital solution that truly represents you: high-performing, accessible and built to convert.",
+        "photoAlt": "Mehdi Dias Gomes, founder of Zenith",
+        "photoRole": "Founder & Web Developer"
+      },
+      "features": {
+        "title": "What I do for you",
+        "webDev": {
+          "title": "Custom web development",
+          "description": "Showcase sites, portfolios, web apps — hand-coded for optimal performance and pixel-perfect rendering across all devices."
+        },
+        "uiUx": {
+          "title": "Conversion-focused UI/UX design",
+          "description": "Refined interfaces, intuitive navigation, clear calls to action. Every pixel is designed to guide your visitors toward getting in touch."
+        },
+        "seo": {
+          "title": "SEO & Google visibility",
+          "description": "Technical and editorial SEO optimization so your customers find you first — without relying solely on paid ads."
+        },
+        "maintenance": {
+          "title": "Hosting & maintenance included",
+          "description": "Your site stays fast, secure and up to date. We handle the technical side so you can focus on your business."
+        },
+        "multilingual": {
+          "title": "Multilingual websites",
+          "description": "Reach an international audience with a site available in multiple languages, perfectly tailored to each market."
+        },
+        "identity": {
+          "title": "Visual identity & logo",
+          "description": "Logo creation and consistent brand guidelines to establish your brand image for the long term."
+        }
+      },
+      "process": {
+        "eyebrow": "How it works",
+        "title": "A simple, transparent process — no surprises",
+        "subtitle": "From first call to launch, I keep you informed at every step.",
+        "steps": {
+          "discovery": {
+            "title": "Discovery call",
+            "description": "A 30-minute call to understand your project, your audience and your goals. A free space to talk openly — no commitment on your end.",
+            "badge": "Free"
+          },
+          "proposal": {
+            "title": "Proposal & detailed quote",
+            "description": "Within 48h, I send you a clear proposal: project scope, delivery timeline, exact price. No bad surprises."
+          },
+          "build": {
+            "title": "Design & development",
+            "description": "I show you mockups before writing a single line of code. You approve, I build. Regular check-ins so you always know where things stand."
+          },
+          "launch": {
+            "title": "Launch & ongoing support",
+            "description": "Careful launch, training on managing your site if needed, and post-launch follow-up. I stay available."
+          }
+        }
+      },
+      "benefits": {
+        "eyebrow": "Why me",
+        "description": "I work alone, with no middleman. You have a single point of contact from the first call to launch — and well beyond.",
+        "title": "What you gain by working with me",
+        "stats": {
+          "delay": "average delivery time",
+          "price": "for the first call",
+          "commitment": "commitment required"
+        },
+        "tailored": {
+          "title": "100% tailor-made",
+          "description": "No templates, no generic solutions. Every project is built from scratch to meet your specific needs and identity."
+        },
+        "fast": {
+          "title": "Fast delivery",
+          "description": "A site delivered in 2 to 4 weeks depending on complexity, with a clear process and regular progress updates."
+        },
+        "transparent": {
+          "title": "Clear & transparent pricing",
+          "description": "Detailed quote before any commitment. No bad surprises, no hidden fees."
+        },
+        "support": {
+          "title": "Personalized support",
+          "description": "One dedicated contact from brief to launch, available and responsive at every step of your project."
+        }
+      },
+      "cta": {
+        "title": "Ready to launch your project?",
+        "description": "Let's talk about your vision. First call is free and commitment-free — I'll suggest a solution tailored to your budget and goals.",
+        "button": "Get in touch",
+        "reassurance": "Reply guaranteed within 24h · No commitment"
+      }
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "seoTitle": "Portfolio — Websites for SMEs & Businesses | Zenith",
+      "description": "Discover the projects completed by Zenith for its clients",
+      "eyebrow": "My work",
+      "hero": {
+        "titleWhite": "Projects built",
+        "titleGradient": "to convert.",
+        "subtitle": "Each project is tailor-made, from design to launch. Here are a few examples that illustrate my approach.",
+        "badge": "New projects being added"
+      }
+    },
+    "pricing": {
+      "title": "Pricing",
+      "seoTitle": "Website Pricing | Zenith Thionville, Metz",
+      "description": "Discover the pricing and solutions offered by Zenith",
+      "eyebrow": "Transparent pricing",
+      "hero": {
+        "titleWhite": "Clear prices,",
+        "titleGradient": "no hidden surprises.",
+        "subtitle": "Every quote is detailed, every line justified. The quoted price is the final price.",
+        "discountBadge": "-30% on all services — limited offer"
+      }
+    },
+    "contact": {
+      "title": "Contact | Zenith — Web Design &amp; Development",
+      "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses.",
+      "eyebrow": "Let's talk about your project",
+      "hero": {
+        "titleWhite": "One conversation can",
+        "titleGradient": "change everything.",
+        "subtitle": "Describe your project in a few lines — I'll get back to you within 24 hours with a concrete action plan and a no-commitment quote.",
+        "badge": "Response guaranteed within 24h"
+      },
+      "trustItems": {
+        "response": "Reply within 24h",
+        "noCommitment": "No commitment"
+      },
+      "floatingCards": {
+        "response": {
+          "label": "Response",
+          "value": "within 24h"
+        },
+        "quote": {
+          "label": "Quote",
+          "value": "100% free"
+        },
+        "commitment": {
+          "label": "Commitment",
+          "value": "Zero"
+        }
+      }
+    }
   },
   "hero": {
     "availability": "Currently available",
@@ -41,22 +207,31 @@
     "subtitle": "Creation or redesign: I build high-performing websites for SMEs looking to grow.",
     "location": "Thionville, Metz and surrounding areas (57)",
     "cta": {
-      "primary": "Boost your visibility",
-      "secondary": "Discover my work"
+      "primary": "Start my project",
+      "secondary": "See our work"
     }
   },
-  "marquee": {
-    "webDesigner": "Web Designer",
-    "fullstackDev": "Full-Stack Developer",
-    "uiUx": "UI/UX Designer",
-    "seoExpert": "SEO Expert",
-    "limitedOffer": "Limited offer",
-    "discount": "-30% on all services"
+  "divider": {
+    "custom": {
+      "title": "Custom-built",
+      "subtitle": "Crafted around your business and goals"
+    },
+    "pricing": {
+      "title": "Transparent pricing",
+      "subtitle": "Free quote, fixed price with no surprises"
+    },
+    "support": {
+      "title": "Full support",
+      "subtitle": "From design mockup to live launch"
+    }
   },
   "services": {
     "title": "My Services",
     "subtitle": "Everything your business needs to succeed online",
     "learnMore": "Learn more",
+    "eyebrow": "What I do",
+    "ctaButton": "See all my services",
+    "moreServices": "SEO, maintenance, hosting — full support from start to finish.",
     "ariaLabel": "Services section",
     "webDev": {
       "title": "Professional website",
@@ -104,6 +279,26 @@
       "description": "Demo showcase website for a barbershop displaying services, team, and contact form"
     }
   },
+  "legal": {
+    "category": "Legal Notice",
+    "backHome": "Back to home",
+    "updatedAt": {
+      "label": "Last updated:",
+      "date": "January 22, 2025"
+    },
+    "tocTitle": "Contents",
+    "tocLabel": "Table of contents"
+  },
+  "privacy": {
+    "category": "Privacy Policy",
+    "backHome": "Back to home",
+    "updatedAt": {
+      "label": "Last updated:",
+      "date": "January 22, 2025"
+    },
+    "tocTitle": "Contents",
+    "tocLabel": "Table of contents"
+  },
   "footer": {
     "legalNavAriaLabel": "Legal navigation",
     "legal": "Legal notice",
@@ -112,6 +307,7 @@
     "copyright": "© {year} Zenith. All rights reserved."
   },
   "cta": {
+    "eyebrow": "Let's talk about your project",
     "title": "A question? A project?",
     "subtitle": "Let's discuss it for free.",
     "description": {
@@ -121,6 +317,11 @@
     "button": {
       "primary": "Get in touch",
       "faq": "View FAQ"
+    },
+    "badges": {
+      "free": "First call free",
+      "noCommitment": "No commitment",
+      "replyTime": "Reply within 24h"
     }
   },
   "promo": {
@@ -132,10 +333,41 @@
   "pricing": {
     "title": "My Solutions",
     "subtitle": "Digital solutions designed for your business",
+    "eyebrow": "Pricing",
     "popular": "Popular",
+    "teaserTitle": "Transparent, no commitment.",
+    "teaserSubtitle": "Clear packages for every need. Check the full details, included features and payment terms.",
+    "teaserNote": "+ Free SEO audit, no credit card required.",
+    "teaserCta": "See details and features",
     "startingFrom": "starting from",
     "getQuote": "Get a quote",
-    "requestAudit": "Request an audit",
+    "requestAudit": "Request my free audit",
+    "discountLabel": "-30% offer",
+    "originalPrice": "Regular price",
+    "installment": "Payment in 3 instalments, interest-free",
+    "paymentTitle": "How does payment work?",
+    "paymentSubtitle": "Three payments tied to project milestones — you only pay for what's delivered.",
+    "paymentSteps": {
+      "start": {
+        "label": "At project start",
+        "percent": "40%",
+        "description": "Deposit to reserve your spot and kick off the work. We get started."
+      },
+      "mockup": {
+        "label": "At mockup approval",
+        "percent": "30%",
+        "description": "You approve the design. We move to development. No code written without your sign-off."
+      },
+      "delivery": {
+        "label": "At delivery",
+        "percent": "30%",
+        "description": "Your site is live and you're happy. Only then do we settle the invoice."
+      }
+    },
+    "paymentNote": "Bank transfer only. Signed quote required before project start.",
+    "auditEyebrow": "No commitment offer",
+    "auditTitle": "Free SEO audit — find out why Google can't find you",
+    "auditSubtitle": "A free diagnosis of your online visibility. No commitment, no hassle.",
     "priceInfo": {
       "title": "About pricing",
       "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
@@ -192,11 +424,13 @@
         "Concrete improvement recommendations"
       ]
     },
-    "free": "Free"
+    "free": "Free",
+    "noCard": "No credit card required"
   },
   "contact": {
     "title": "Contact Me",
     "subtitle": "Have a question? A project? Feel free to contact me, I'll get back to you as soon as possible.",
+    "badge": "Response guaranteed within 24h",
     "map": {
       "ariaLabel": "Interactive map showing Zenith's service area: Thionville, Metz and surroundings",
       "loading": "Loading map..."
@@ -254,9 +488,12 @@
     }
   },
   "faq": {
+    "eyebrow": "Support",
+    "itemsLabel": "questions",
     "title": "Frequently Asked Questions",
     "subtitle": "Find answers to the most common questions about my services and how I work.",
     "cta": {
+      "eyebrow": "Let's talk",
       "text": "Have more questions?",
       "description": "I'm available to answer all your questions and discuss your project.",
       "button": "Contact me"
@@ -283,8 +520,8 @@
         "answer": "Depending on your needs, I can integrate a simple admin interface to manage your content (texts, images, blog posts). Training is included to make you autonomous for common modifications."
       },
       "payment": {
-        "question": "How does payment work?",
-        "answer": "Payment is made in 3 stages: a first payment at project launch, a second upon mockup validation, and the balance at final delivery. I accept bank transfers and card payments."
+        "question": "How does the 3-installment payment work?",
+        "answer": "Payment is split across 3 project milestones: 40% upon signing the quote to start work, 30% upon mockup approval, and 30% at final delivery. This is not a credit arrangement — each payment corresponds to a concrete delivered milestone. You only pay for what's done. Bank transfer only."
       }
     }
   },

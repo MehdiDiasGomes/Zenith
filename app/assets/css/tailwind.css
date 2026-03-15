@@ -3,7 +3,21 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+
   :root {
+    /* ── Type scale ─────────────────────────────────────────────── */
+    --type-hero:        clamp(1.875rem, 4vw, 2.75rem);
+    --type-display:     clamp(1.875rem, 4.5vw, 3rem);
+    --type-heading:     clamp(1.5rem, 3vw, 2.25rem);
+    --type-subheading:  clamp(1.125rem, 1.75vw, 1.375rem);
+    --type-lead:        1.125rem;
+    --type-body:        1rem;
+    --type-small:       0.875rem;
+    --type-xs:          0.75rem;
+
     --mauve: 261, 100%, 76%, 1;
     --foreground: 260 96% 50%;
     --darkblue: 225 36% 14%;
@@ -17,25 +31,25 @@
     --glow-purple: 270 100% 80% / 0.3;
     --glow-blue: 220 90% 70% / 0.3;
 
-    --app-background: 0 2% 98%;
-    --background: 0 0% 100%;
+    --app-background: 35 25% 94%;
+    --background: 35 28% 93%;
 
-    --heading-primary: 0 0% 9%;
-    --text-primary: 0 0% 15%;
-    --text-secondary: 0 0% 40%;
-    --text-muted: 0 0% 50%;
+    --heading-primary: 35 10% 10%;
+    --text-primary: 35 8% 14%;
+    --text-secondary: 35 5% 38%;
+    --text-muted: 35 4% 48%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 35 15% 95%;
+    --muted-foreground: 35 5% 44%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover: 35 25% 96%;
+    --popover-foreground: 35 10% 5%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card: 35 22% 95%;
+    --card-foreground: 35 10% 5%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 35 12% 88%;
+    --input: 35 12% 88%;
 
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
@@ -65,34 +79,34 @@
   }
 
   .dark {
-    --app-background: 226 81% 7%;
-    --background: 0 0% 3.9%;
+    --app-background: 40 4% 7%;
+    --background: 40 4% 6%;
 
-    --heading-primary: 0 0% 98%;
-    --text-primary: 0 0% 90%;
-    --text-secondary: 0 0% 70%;
-    --text-muted: 0 0% 60%;
+    --heading-primary: 35 20% 92%;
+    --text-primary: 35 16% 88%;
+    --text-secondary: 35 8% 64%;
+    --text-muted: 35 6% 52%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 40 4% 14%;
+    --muted-foreground: 35 6% 58%;
 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 40 4% 8%;
+    --popover-foreground: 35 20% 92%;
 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 40 4% 9%;
+    --card-foreground: 35 20% 92%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 40 4% 18%;
+    --input: 40 4% 16%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 35 20% 92%;
+    --primary-foreground: 40 4% 7%;
 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 40 4% 15%;
+    --secondary-foreground: 35 20% 92%;
 
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 40 4% 15%;
+    --accent-foreground: 35 20% 92%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -138,182 +152,57 @@
     background: hsl(var(--app-background));
   }
 
-  /* Typography - Global heading and text styles */
+  /* Typography - Global heading and text styles (sizes via CSS variables) */
   h1 {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    margin: 0;
+    font-size: var(--type-hero);
+    line-height: 1.1;
     font-weight: 800;
     letter-spacing: -0.025em;
     color: hsl(var(--heading-primary));
   }
 
-  @media (min-width: 640px) {
-    h1 {
-      font-size: 2.5rem;
-      line-height: 3rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h1 {
-      font-size: 3rem;
-      line-height: 3.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h1 {
-      font-size: 3.5rem;
-      line-height: 4rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    h1 {
-      font-size: 4rem;
-      line-height: 4.5rem;
-    }
-  }
-
   h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: var(--type-heading);
+    line-height: 1.2;
     font-weight: 700;
     letter-spacing: -0.025em;
     color: hsl(var(--heading-primary));
   }
 
-  @media (min-width: 640px) {
-    h2 {
-      font-size: 1.75rem;
-      line-height: 2.25rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h2 {
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h2 {
-      font-size: 2.25rem;
-      line-height: 2.75rem;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    h2 {
-      font-size: 2.5rem;
-      line-height: 3rem;
-    }
-  }
-
   h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 400;
-    letter-spacing: -0.025em;
+    font-size: var(--type-subheading);
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: -0.015em;
     color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h3 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h3 {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h3 {
-      font-size: 1.5rem;
-      line-height: 2rem;
-    }
   }
 
   h4 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: var(--type-small);
+    line-height: 1.4;
     font-weight: 600;
     color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h4 {
-      font-size: 1rem;
-      line-height: 1.5rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    h4 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
   }
 
   h5 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: var(--type-small);
+    line-height: 1.5;
     font-weight: 600;
     color: hsl(var(--heading-primary));
-  }
-
-  @media (min-width: 640px) {
-    h5 {
-      font-size: 1.25rem;
-      line-height: 1.875rem;
-    }
-  }
-
-  @media (min-width: 768px) {
-    h5 {
-      font-size: 1.375rem;
-      line-height: 2rem;
-    }
   }
 
   h6 {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: var(--type-xs);
+    line-height: 1.5;
     font-weight: 600;
     color: hsl(var(--heading-primary));
   }
 
-  @media (min-width: 640px) {
-    h6 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
   p {
-    font-size: 1rem;
-    line-height: 1.75rem;
+    font-size: var(--type-body);
+    line-height: 1.75;
     color: hsl(var(--text-primary));
-  }
-
-  @media (min-width: 768px) {
-    p {
-      font-size: 1.125rem;
-      line-height: 1.875rem;
-    }
   }
 }
 
@@ -322,41 +211,66 @@ body {
 }
 
 .prose h1 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 800;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
   letter-spacing: -0.025em;
 }
 
-@media (min-width: 640px) {
-  .prose h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-  }
+.prose h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
-@media (min-width: 768px) {
-  .prose h1 {
-    font-size: 3rem;
-    line-height: 3.5rem;
-  }
+.prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
 }
 
-@media (min-width: 1024px) {
-  .prose h1 {
-    font-size: 3.5rem;
-    line-height: 4rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .prose h1 {
-    font-size: 4rem;
-    line-height: 4.5rem;
-  }
+.prose p,
+.prose strong,
+.prose li {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 @layer utilities {
+  /* Semantic type utilities — use when explicit override of global heading/body styles is needed */
+  .type-display    { font-size: var(--type-display);    line-height: 1.15; }
+  .type-heading    { font-size: var(--type-heading);    line-height: 1.2; }
+  .type-subheading { font-size: var(--type-subheading); line-height: 1.4; }
+  .type-lead       { font-size: var(--type-lead);       line-height: 1.7; }
+  .type-body       { font-size: var(--type-body);       line-height: 1.75; }
+  .type-small      { font-size: var(--type-small);      line-height: 1.6; }
+  .type-xs         { font-size: var(--type-xs);         line-height: 1.5; }
+
+  .text-xxl {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .text-l {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .text-m {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .text-s {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .glass-effect {
     @apply border-black/10 bg-black/5 backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
   }
@@ -396,7 +310,6 @@ body {
     @apply transition-all duration-300 ease-out;
   }
 
-  /* Scroll animations */
   .animate-in {
     @apply translate-x-0 translate-y-0 scale-100 opacity-100;
   }

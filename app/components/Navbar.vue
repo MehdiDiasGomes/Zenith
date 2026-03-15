@@ -1,114 +1,196 @@
 <template>
-  <div
-    class="fixed left-0 right-0 z-[1000] px-4 pt-4 transition-all duration-300 sm:px-6 sm:pt-6 lg:px-8"
+  <!-- Mobile overlay backdrop -->
+  <Transition
+    enter-active-class="transition-opacity duration-300 ease-out"
+    enter-from-class="opacity-0"
+    enter-to-class="opacity-100"
+    leave-active-class="transition-opacity duration-200 ease-in"
+    leave-from-class="opacity-100"
+    leave-to-class="opacity-0"
   >
-    <nav
-      :aria-label="$t('nav.ariaLabel')"
-      class="mx-auto max-w-6xl rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-light/90 shadow-xl shadow-black/10 backdrop-blur-xl dark:border-zenith-gold-bronze/20 dark:bg-zenith-bg-dark/90 dark:shadow-black/30"
-    >
-      <div class="px-4 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between md:h-20">
+    <div
+      v-if="mobileMenuOpen"
+      class="fixed inset-0 z-[998] bg-black/60 backdrop-blur-sm md:hidden"
+      aria-hidden="true"
+      @click="closeMobileMenu"
+    />
+  </Transition>
+
+  <!-- Sticky Navbar -->
+  <nav
+    :aria-label="$t('nav.ariaLabel')"
+    class="fixed left-0 right-0 top-0 z-[999] bg-zenith-bg-light/95 backdrop-blur-md transition-all duration-300 dark:bg-zenith-bg-dark/95"
+    :class="[
+      isScrolled ? 'shadow-lg shadow-black/10 dark:shadow-black/40' : '',
+      isHidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0',
+    ]"
+  >
+    <!-- Gold gradient bottom border -->
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zenith-gold-bronze/60 to-transparent dark:via-zenith-gold-vivid/40" />
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between md:h-20">
+
+        <!-- Logo -->
+        <NuxtLink
+          :to="localePath('/')"
+          class="group relative z-10 flex flex-shrink-0 items-center"
+          :aria-label="$t('nav.logoAriaLabel')"
+        >
+          <NuxtImg
+            src="/images/brand/logo.webp"
+            alt="Zenith Logo"
+            width="600"
+            height="600"
+            class="h-9 w-auto transition-all duration-300 group-hover:brightness-110 md:h-12"
+            loading="eager"
+          />
+        </NuxtLink>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden items-center gap-0 md:flex lg:gap-1">
           <NuxtLink
-            :to="localePath('/')"
-            class="group flex items-center"
-            :aria-label="$t('nav.logoAriaLabel')"
+            v-for="item in desktopNavItems"
+            :key="item.to"
+            :to="localePath(item.to)"
+            class="group relative px-4 py-2 text-sm font-medium transition-colors duration-200 lg:px-5"
+            :class="
+              isActive(item.to)
+                ? 'text-zenith-gold-vivid'
+                : 'text-zenith-text-secondary-light hover:text-zenith-text-primary-light dark:text-zenith-text-secondary-dark dark:hover:text-zenith-text-primary-dark'
+            "
+            :aria-current="isActive(item.to) ? 'page' : undefined"
           >
-            <NuxtImg
-              src="/images/brand/logo.webp"
-              alt="Zenith Logo"
-              class="h-10 w-auto md:h-14"
-              loading="eager"
+            {{ $t(item.label) }}
+
+            <!-- Active underline -->
+            <span
+              v-if="isActive(item.to)"
+              class="absolute bottom-0 left-4 right-4 h-px bg-zenith-gold-vivid lg:left-5 lg:right-5"
             />
           </NuxtLink>
-
-          <div class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
-            <component
-              :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
-              v-for="item in navItems"
-              :key="item.to"
-              :to="item.to.startsWith('#') ? undefined : localePath(item.to)"
-              :href="item.to.startsWith('#') ? item.to : undefined"
-              class="group relative cursor-pointer text-base font-medium text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
-              :aria-current="isActive(item.to) ? 'page' : undefined"
-              :aria-label="item.to === '/' ? $t('nav.home') : undefined"
-              @click="handleNavClick($event, item.to)"
-            >
-              <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
-              <template v-else>{{ $t(item.label) }}</template>
-              <span
-                class="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-300"
-                :class="isActive(item.to) ? 'w-full' : 'w-0 group-hover:w-full'"
-              />
-            </component>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <a
-              href="#contact"
-              class="hidden items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid md:inline-flex"
-              @click="handleNavClick($event, '#contact')"
-            >
-              {{ $t('nav.contact') }}
-            </a>
-
-            <button
-              type="button"
-              :aria-label="$t('nav.toggleMenu')"
-              :aria-expanded="mobileMenuOpen"
-              class="rounded-lg bg-zenith-bg-secondary-light p-2.5 text-zenith-gold-bronze transition-all duration-200 hover:text-zenith-gold-vivid dark:bg-zenith-bg-secondary-dark md:hidden"
-              @click="toggleMobileMenu"
-            >
-              <Icon :name="mobileMenuOpen ? 'X' : 'Menu'" size="20" aria-hidden="true" />
-            </button>
-          </div>
         </div>
 
-        <Transition
-          enter-active-class="transition-all duration-300 ease-out"
-          enter-from-class="opacity-0 -translate-y-2"
-          enter-to-class="opacity-100 translate-y-0"
-          leave-active-class="transition-all duration-200 ease-in"
-          leave-from-class="opacity-100 translate-y-0"
-          leave-to-class="opacity-0 -translate-y-2"
-        >
-          <div
-            v-if="mobileMenuOpen"
-            class="border-t border-zenith-bronze-dark/10 py-4 dark:border-zenith-gold-bronze/20 md:hidden"
-          >
-            <div class="flex flex-col gap-2">
-              <component
-                :is="item.to.startsWith('#') ? 'a' : 'NuxtLink'"
-                v-for="item in navItems"
-                :key="item.to"
-                :to="item.to.startsWith('#') ? undefined : localePath(item.to)"
-                :href="item.to.startsWith('#') ? item.to : undefined"
-                class="flex cursor-pointer items-center gap-2 rounded-lg px-4 py-3 text-base font-medium transition-all duration-200"
-                :class="
-                  isActive(item.to)
-                    ? 'bg-zenith-gold-vivid/10 text-zenith-gold-vivid'
-                    : 'text-zenith-text-primary-light hover:bg-zenith-bg-secondary-light dark:text-zenith-text-primary-dark dark:hover:bg-zenith-bg-secondary-dark'
-                "
-                :aria-current="isActive(item.to) ? 'page' : undefined"
-                :aria-label="item.to === '/' ? $t('nav.home') : undefined"
-                @click="handleNavClick($event, item.to)"
-              >
-                <Icon v-if="item.to === '/'" name="Home" size="20" aria-hidden="true" />
-                <template v-else>{{ $t(item.label) }}</template>
-              </component>
+        <!-- Right: CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <!-- Desktop CTA -->
+          <Button as-child variant="gold" size="sm" class="hidden md:inline-flex">
+            <NuxtLink :to="localePath('/contact')">
+              {{ $t('nav.contact') }}
+            </NuxtLink>
+          </Button>
 
-              <a
-                href="#contact"
-                class="inline-flex items-center justify-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-                @click="handleNavClick($event, '#contact')"
-              >
-                {{ $t('nav.contact') }}
-              </a>
-            </div>
-          </div>
-        </Transition>
+          <!-- Mobile Hamburger -->
+          <button
+            type="button"
+            :aria-label="$t('nav.toggleMenu')"
+            :aria-expanded="mobileMenuOpen"
+            class="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-xl border border-zenith-gold-bronze/30 transition-all duration-200 hover:border-zenith-gold-vivid/60 hover:bg-zenith-gold-vivid/5 dark:border-zenith-gold-vivid/20 md:hidden"
+            @click="toggleMobileMenu"
+          >
+            <!-- Hamburger lines animating into X -->
+            <span
+              class="h-px w-5 origin-center bg-zenith-gold-bronze transition-all duration-300 dark:bg-zenith-gold-vivid"
+              :class="mobileMenuOpen ? 'translate-y-[5px] rotate-45' : ''"
+            />
+            <span
+              class="h-px w-5 bg-zenith-gold-bronze transition-all duration-300 dark:bg-zenith-gold-vivid"
+              :class="mobileMenuOpen ? 'w-0 opacity-0' : ''"
+            />
+            <span
+              class="h-px w-5 origin-center bg-zenith-gold-bronze transition-all duration-300 dark:bg-zenith-gold-vivid"
+              :class="mobileMenuOpen ? '-translate-y-[9px] -rotate-45' : ''"
+            />
+          </button>
+        </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer (fixed, slides from right) -->
+  <Transition
+    enter-active-class="transition-transform duration-300 ease-out"
+    enter-from-class="translate-x-full"
+    enter-to-class="translate-x-0"
+    leave-active-class="transition-transform duration-200 ease-in"
+    leave-from-class="translate-x-0"
+    leave-to-class="translate-x-full"
+  >
+    <aside
+      v-if="mobileMenuOpen"
+      class="fixed inset-y-0 right-0 z-[999] flex w-72 flex-col bg-zenith-bg-light shadow-2xl shadow-black/30 dark:bg-zenith-bg-dark md:hidden"
+      role="dialog"
+      :aria-label="$t('nav.ariaLabel')"
+      aria-modal="true"
+    >
+      <!-- Drawer top border accent -->
+      <div class="h-0.5 w-full bg-gradient-to-r from-zenith-gold-bronze via-zenith-gold-vivid to-zenith-champagne" />
+
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between px-6 py-5 border-b border-zenith-gold-bronze/10 dark:border-zenith-gold-vivid/10">
+        <NuxtLink
+          :to="localePath('/')"
+          :aria-label="$t('nav.logoAriaLabel')"
+          @click="closeMobileMenu"
+        >
+          <NuxtImg
+            src="/images/brand/logo.webp"
+            alt="Zenith Logo"
+            width="600"
+            height="600"
+            class="h-8 w-auto"
+            loading="eager"
+          />
+        </NuxtLink>
+
+        <button
+          type="button"
+          :aria-label="$t('nav.toggleMenu')"
+          class="flex h-8 w-8 items-center justify-center rounded-lg text-zenith-text-secondary-light transition-colors duration-200 hover:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark"
+          @click="closeMobileMenu"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M2 2L14 14M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Drawer Nav Links -->
+      <nav class="flex-1 overflow-y-auto px-4 py-6">
+        <ul class="space-y-1" role="list">
+          <li v-for="item in navItems" :key="item.to" role="listitem">
+            <NuxtLink
+              :to="localePath(item.to)"
+              class="group relative flex items-center gap-4 rounded-lg px-4 py-4 text-sm font-medium transition-all duration-200"
+              :class="
+                isActive(item.to)
+                  ? 'bg-zenith-gold-vivid/10 text-zenith-gold-vivid dark:bg-zenith-gold-vivid/15'
+                  : 'text-zenith-text-secondary-light hover:bg-zenith-bg-secondary-light hover:text-zenith-text-primary-light dark:text-zenith-text-secondary-dark dark:hover:bg-zenith-bg-secondary-dark dark:hover:text-zenith-text-primary-dark'
+              "
+              :aria-current="isActive(item.to) ? 'page' : undefined"
+              @click="closeMobileMenu"
+            >
+              <!-- Active indicator bar -->
+              <span
+                class="absolute left-0 top-1/2 h-5 w-0.5 -translate-y-1/2 rounded-full bg-gradient-to-b from-zenith-gold-bronze to-zenith-gold-vivid transition-all duration-200"
+                :class="isActive(item.to) ? 'opacity-100' : 'opacity-0 group-hover:opacity-50'"
+              />
+              {{ $t(item.label) }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Drawer CTA -->
+      <div class="border-t border-zenith-gold-bronze/10 p-6 dark:border-zenith-gold-vivid/10">
+        <Button as-child variant="gold" class="w-full">
+          <NuxtLink :to="localePath('/contact')" @click="closeMobileMenu">
+            {{ $t('nav.contact') }}
+          </NuxtLink>
+        </Button>
+      </div>
+    </aside>
+  </Transition>
 </template>
 
 <script setup lang="ts">
@@ -118,7 +200,14 @@ const route = useRoute()
 const localePath = useLocalePath()
 
 const mobileMenuOpen = ref<boolean>(false)
-const activeSection = ref<string>('')
+const isScrolled = ref<boolean>(false)
+const isHidden = ref<boolean>(false)
+let lastScrollY: number = 0
+
+/** Nav items without contact (shown separately as CTA on desktop) */
+const desktopNavItems = computed(() =>
+  navItems.filter((item) => item.to !== '/contact'),
+)
 
 const toggleMobileMenu = (): void => {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -128,127 +217,29 @@ const closeMobileMenu = (): void => {
   mobileMenuOpen.value = false
 }
 
-const scrollToSection = (event: Event, anchor: string): void => {
-  event.preventDefault()
-  const targetId = anchor.replace('#', '')
-  const targetElement = document.getElementById(targetId)
-
-  if (targetElement) {
-    const navbarHeight = window.innerWidth >= 768 ? 30 : 10
-    const elementPosition = targetElement.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.scrollY - navbarHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-
-    closeMobileMenu()
-  }
-}
-
-const scrollToTop = (event: Event): void => {
-  event.preventDefault()
-  if (route.path === '/' || route.path === '/en') {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  } else {
-    navigateTo(localePath('/'))
-  }
-  closeMobileMenu()
-}
-
-const handleNavClick = (event: Event, path: string): void => {
-  if (path === '/') {
-    scrollToTop(event)
-  } else if (path.startsWith('#')) {
-    if (route.path === '/' || route.path === '/en') {
-      scrollToSection(event, path)
-    } else {
-      event.preventDefault()
-      closeMobileMenu()
-      navigateTo(localePath('/') + path)
-    }
-  } else {
-    closeMobileMenu()
-  }
-}
-
 const isActive = (path: string): boolean => {
-  if (path.startsWith('#')) {
-    return activeSection.value === path
-  }
-  if (path === '/') {
-    return (route.path === '/' || route.path === '/en') && activeSection.value === ''
-  }
-  return route.path.startsWith(path) || route.path.startsWith(localePath(path))
+  return route.path === localePath(path)
+}
+
+const handleScroll = (): void => {
+  const currentScrollY: number = window.scrollY
+  isScrolled.value = currentScrollY > 20
+  isHidden.value = currentScrollY > 80 && currentScrollY > lastScrollY
+  lastScrollY = currentScrollY
 }
 
 onMounted(() => {
-  const visibleSections: Map<string, IntersectionObserverEntry> = new Map()
+  window.addEventListener('scroll', handleScroll, { passive: true })
+})
 
-  const observerOptions = {
-    root: null,
-    rootMargin: '-100px 0px -66% 0px',
-    threshold: [0, 0.25, 0.5, 0.75, 1],
-  }
-
-  const observerCallback = (entries: IntersectionObserverEntry[]): void => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        visibleSections.set(entry.target.id, entry)
-      } else {
-        visibleSections.delete(entry.target.id)
-      }
-    })
-
-    if (visibleSections.size > 0) {
-      const entries: IntersectionObserverEntry[] = Array.from(visibleSections.values())
-      if (entries.length > 0) {
-        let topSection: IntersectionObserverEntry = entries[0]!
-        let minTop: number = entries[0]!.boundingClientRect.top
-
-        for (const entry of entries) {
-          const rect: DOMRectReadOnly = entry.boundingClientRect
-          if (rect.top < minTop) {
-            minTop = rect.top
-            topSection = entry
-          }
-        }
-
-        if (topSection.target instanceof Element) {
-          activeSection.value = `#${topSection.target.id}`
-        }
-      }
-    }
-  }
-
-  const observer = new IntersectionObserver(observerCallback, observerOptions)
-
-  const sections = document.querySelectorAll('section[id]')
-  sections.forEach((section) => observer.observe(section))
-
-  const handleScroll = (): void => {
-    if (window.scrollY < 200) {
-      activeSection.value = ''
-      visibleSections.clear()
-    }
-  }
-
-  window.addEventListener('scroll', handleScroll)
-
-  onUnmounted(() => {
-    observer.disconnect()
-    window.removeEventListener('scroll', handleScroll)
-  })
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
 })
 
 watch(
   () => route.path,
   () => {
-    closeMobileMenu()
+    mobileMenuOpen.value = false
   },
 )
 </script>

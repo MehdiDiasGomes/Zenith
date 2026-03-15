@@ -10,9 +10,30 @@ export interface PostalAddress {
   addressCountry: string
 }
 
-export interface GeoCircle {
-  '@type': 'GeoCircle'
+export interface ImageObject {
+  '@type': 'ImageObject'
+  url: string
+  width: number
+  height: number
+}
+
+export interface ServiceArea {
+  '@type': 'City' | 'AdministrativeArea'
   name: string
+}
+
+export interface ServiceOffer {
+  '@type': 'Offer'
+  itemOffered: {
+    '@type': 'Service'
+    name: string
+  }
+}
+
+export interface OfferCatalog {
+  '@type': 'OfferCatalog'
+  name: string
+  itemListElement: ServiceOffer[]
 }
 
 export interface OrganizationSchema {
@@ -21,15 +42,15 @@ export interface OrganizationSchema {
   name: string
   description: string
   url: string
-  logo: string
+  logo: ImageObject
   image: string
   email: string
   telephone: string
   address: PostalAddress
-  areaServed: GeoCircle
+  areaServed: ServiceArea[]
   sameAs: string[]
   priceRange: string
-  serviceType: string[]
+  hasOfferCatalog: OfferCatalog
   inLanguage: string
 }
 

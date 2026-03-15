@@ -10,6 +10,8 @@
             <NuxtImg
               src="/images/brand/logo.webp"
               alt="Zenith Logo"
+              width="600"
+              height="600"
               class="h-16 w-auto"
               loading="lazy"
             />

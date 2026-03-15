@@ -40,6 +40,10 @@ For information regarding the collection and processing of your personal data, p
 
 This site only uses technical cookies necessary for its proper functioning (display preferences, language). No tracking, advertising or analytics cookies are used.
 
+## Mapping
+
+The interactive maps used on this site are provided by [OpenStreetMap](https://www.openstreetmap.org/copyright) (© OpenStreetMap contributors, [ODbL](https://opendatacommons.org/licenses/odbl/) license) and [CARTO](https://carto.com/attributions) (© CARTO).
+
 ## Contact
 
 For any questions regarding this legal notice, you can contact us via the [contact form](/#contact) or by email at contact@dg-zenith.com.

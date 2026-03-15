@@ -1,73 +1,182 @@
 <template>
-  <main class="faq-wrapper px-4 pb-20 pt-24 sm:px-6 md:pt-32 lg:px-8 lg:pt-40">
-    <div class="mx-auto max-w-4xl">
-      <header class="mb-12 text-center">
-        <h1 class="mb-4 text-zenith-gold-vivid">
-          {{ $t('faq.title') }}
-        </h1>
+  <main class="relative overflow-hidden">
+
+    <!-- ── Hero ──────────────────────────────────────────────────── -->
+    <section class="relative px-4 pb-16 pt-24 sm:px-6 md:pt-32 lg:px-8 lg:pt-40">
+      <!-- Grid background -->
+      <div class="faq-grid pointer-events-none absolute inset-0" aria-hidden="true" />
+      <!-- Edge fades -->
+      <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark"
+        aria-hidden="true"
+      />
+      <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-r from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark"
+        aria-hidden="true"
+      />
+      <!-- Large decorative "?" -->
+      <div
+        class="pointer-events-none absolute right-0 top-0 select-none font-mono text-[22rem] font-black leading-none text-zenith-gold-vivid/[0.03] dark:text-zenith-gold-vivid/[0.04]"
+        aria-hidden="true"
+      >
+        ?
+      </div>
+
+      <div class="relative mx-auto max-w-4xl">
+        <!-- Eyebrow -->
+        <div class="hero-fade mb-8 flex items-center gap-3">
+          <span class="h-px w-8 bg-zenith-gold-vivid" aria-hidden="true" />
+          <span class="text-xs font-semibold uppercase tracking-widest text-zenith-gold-vivid">
+            {{ $t('faq.eyebrow') }}
+          </span>
+        </div>
+
+        <!-- Title row + count badge -->
+        <div class="flex items-end justify-between gap-8">
+          <h1
+            class="hero-fade hero-fade-delay-1 max-w-2xl font-bold leading-tight tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+          >
+            {{ $t('faq.title') }}
+          </h1>
+
+          <!-- Item count -->
+          <div class="hero-fade hero-fade-delay-2 hidden shrink-0 flex-col items-center gap-1 pb-2 md:flex">
+            <span
+              class="font-mono text-5xl font-black tabular-nums leading-none text-zenith-gold-vivid/15 dark:text-zenith-gold-vivid/12"
+              aria-hidden="true"
+            >
+              {{ String(faqItems.length).padStart(2, '0') }}
+            </span>
+            <span class="text-[10px] font-semibold uppercase tracking-widest text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+              {{ $t('faq.itemsLabel') }}
+            </span>
+          </div>
+        </div>
+
         <p
-          class="mx-auto max-w-2xl text-lg text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+          class="hero-fade hero-fade-delay-2 mt-5 max-w-xl leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
         >
           {{ $t('faq.subtitle') }}
         </p>
-      </header>
 
-      <Accordion type="single" collapsible class="w-full space-y-4">
+        <!-- Bottom divider -->
         <div
-          v-for="item in faqItems"
-          :key="item.id"
-        >
+          class="mt-14 h-px bg-gradient-to-r from-transparent via-zenith-gold-bronze/30 to-transparent"
+          aria-hidden="true"
+        />
+      </div>
+    </section>
+
+    <!-- ── FAQ Accordion ─────────────────────────────────────────── -->
+    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-4xl">
+        <Accordion type="single" collapsible class="w-full">
           <AccordionItem
+            v-for="(item, index) in faqItems"
+            :key="item.id"
             :value="item.id"
-            class="rounded-lg border border-zenith-gold-bronze/30 bg-white/5 px-6 backdrop-blur-sm transition-all hover:border-zenith-gold-vivid/50 dark:bg-black/20"
+            class="faq-item group relative border-b border-zenith-gold-bronze/12 dark:border-zenith-gold-bronze/8"
+            :style="{ '--item-delay': `${index * 0.06}s` }"
           >
-            <AccordionTrigger class="text-left hover:no-underline">
-              <h2 class="text-lg font-semibold text-zenith-text-primary-light transition-colors hover:text-zenith-gold-vivid group-data-[state=open]:text-zenith-gold-vivid dark:text-zenith-text-primary-dark">
-                {{ $t(item.questionKey) }}
-              </h2>
+            <!-- Left accent bar -->
+            <span
+              class="absolute left-0 top-0 h-full w-[2px] origin-top scale-y-0 bg-gradient-to-b from-zenith-gold-bronze to-zenith-gold-vivid transition-transform duration-400 group-data-[state=open]:scale-y-100"
+              aria-hidden="true"
+            />
+
+            <AccordionTrigger class="py-7 pl-7 pr-1 hover:no-underline [&>svg]:hidden">
+              <div class="flex items-start gap-5 text-left">
+                <!-- Index number -->
+                <span
+                  class="mt-1 shrink-0 font-mono text-xs font-bold tabular-nums leading-none text-zenith-gold-vivid/20 transition-colors duration-300 group-data-[state=open]:text-zenith-gold-vivid/55"
+                  aria-hidden="true"
+                >
+                  {{ String(index + 1).padStart(2, '0') }}
+                </span>
+
+                <!-- Question text -->
+                <span
+                  class="text-base font-semibold leading-snug text-zenith-text-primary-light transition-colors duration-300 group-data-[state=open]:text-zenith-gold-vivid dark:text-zenith-text-primary-dark"
+                >
+                  {{ $t(item.questionKey) }}
+                </span>
+              </div>
+
+              <!-- Custom chevron -->
+              <ChevronDown
+                class="ml-4 h-4 w-4 shrink-0 text-zenith-text-secondary-light/40 transition-all duration-300 group-data-[state=open]:rotate-180 group-data-[state=open]:text-zenith-gold-vivid dark:text-zenith-text-secondary-dark/30"
+                aria-hidden="true"
+              />
             </AccordionTrigger>
+
             <AccordionContent>
-              <p class="pb-4 text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+              <p
+                class="pb-7 pl-16 pr-6 text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+              >
                 {{ $t(item.answerKey) }}
               </p>
             </AccordionContent>
           </AccordionItem>
-        </div>
-      </Accordion>
+        </Accordion>
+      </div>
+    </section>
 
-      <section
-        class="mt-16 flex flex-col items-center gap-8 rounded-2xl bg-white/5 p-8 backdrop-blur-sm md:flex-row md:gap-12 md:p-12 dark:bg-black/20"
-        aria-labelledby="cta-heading"
-      >
-        <div class="flex w-full justify-center md:w-1/2">
-          <NuxtImg
-            src="/assets/illustrations/faq.svg"
-            alt="Illustration FAQ"
-            class="h-auto w-full max-w-xs md:max-w-sm"
-            loading="lazy"
+    <!-- ── CTA ───────────────────────────────────────────────────── -->
+    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 pb-24 sm:px-6 lg:px-8" aria-labelledby="faq-cta-heading">
+      <div class="mx-auto max-w-4xl">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-zenith-gold-bronze/20 bg-zenith-bg-secondary-light px-8 py-10 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark md:px-12 md:py-12"
+        >
+          <!-- Top border accent -->
+          <div
+            class="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-zenith-gold-vivid/50 to-transparent"
+            aria-hidden="true"
           />
-        </div>
+          <!-- Corner ambient glow -->
+          <div
+            class="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-zenith-gold-vivid/8 blur-2xl"
+            aria-hidden="true"
+          />
 
-        <div class="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
-          <h2 id="cta-heading" class="mb-4 text-zenith-gold-vivid">
-            {{ $t('faq.cta.text') }}
-          </h2>
-          <p class="mb-6 text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-            {{ $t('faq.cta.description') }}
-          </p>
-          <NuxtLink
-            :to="localePath('/') + '#contact'"
-            class="inline-flex items-center gap-2 rounded-lg border border-zenith-gold-vivid bg-zenith-gold-vivid px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-transparent hover:text-zenith-gold-vivid"
-          >
-            {{ $t('faq.cta.button') }}
-          </NuxtLink>
+          <div class="relative flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+            <div class="max-w-md">
+              <!-- Eyebrow -->
+              <div class="mb-4 flex items-center gap-2">
+                <span class="h-px w-5 bg-zenith-gold-vivid/60" aria-hidden="true" />
+                <span class="text-xs font-semibold uppercase tracking-widest text-zenith-gold-vivid">
+                  {{ $t('faq.cta.eyebrow') }}
+                </span>
+              </div>
+              <h2
+                id="faq-cta-heading"
+                class="mb-3 font-bold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+              >
+                {{ $t('faq.cta.text') }}
+              </h2>
+              <p class="text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                {{ $t('faq.cta.description') }}
+              </p>
+            </div>
+
+            <div class="shrink-0">
+              <Button as-child variant="gold">
+                <NuxtLink :to="localePath('/contact')">
+                  {{ $t('faq.cta.button') }}
+                  <ArrowRight :size="16" aria-hidden="true" />
+                </NuxtLink>
+              </Button>
+            </div>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
   </main>
 </template>
 
 <script lang="ts" setup>
+import { ArrowRight, ChevronDown } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
 import { faqItems } from '@/constants/faq'
 import {
   Accordion,
@@ -79,6 +188,7 @@ import type { FaqPageSchema } from '@/types/seo'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const route = useRoute()
 
 const faqPageSchema: FaqPageSchema = useFaqPageSchema(faqItems)
 
@@ -88,7 +198,7 @@ useSeoMeta({
   ogTitle: () => t('seo.faq.title'),
   ogDescription: () => t('seo.faq.description'),
   ogImage: 'https://www.dg-zenith.com/og-image.png',
-  ogUrl: 'https://www.dg-zenith.com/faq',
+  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.faq.title'),
@@ -96,13 +206,14 @@ useSeoMeta({
   twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
 
+usePageCanonical()
+
+useJsonLd(useBreadcrumbSchema([
+  { name: t('nav.home'), url: localePath('/') },
+  { name: t('nav.faqLabel'), url: localePath('/faq') },
+]))
+
 useHead({
-  link: [
-    {
-      rel: 'canonical',
-      href: 'https://www.dg-zenith.com/faq',
-    },
-  ],
   script: [
     {
       type: 'application/ld+json',
@@ -111,3 +222,54 @@ useHead({
   ],
 })
 </script>
+
+<style scoped>
+/* Subtle grid background */
+.faq-grid {
+  background-image:
+    linear-gradient(to right, rgba(182, 119, 29, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(182, 119, 29, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+:global(.dark) .faq-grid {
+  background-image:
+    linear-gradient(to right, rgba(218, 165, 32, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(218, 165, 32, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Hero entrance animations */
+.hero-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-fade-delay-1 { animation-delay: 0.1s; }
+.hero-fade-delay-2 { animation-delay: 0.2s; }
+
+/* FAQ items slide in from left, staggered */
+.faq-item {
+  animation: itemIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--item-delay, 0s);
+}
+
+@keyframes heroIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes itemIn {
+  from {
+    opacity: 0;
+    transform: translateX(-14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>

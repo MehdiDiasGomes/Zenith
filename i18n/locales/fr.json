@@ -13,6 +13,14 @@
     "faq": {
       "title": "FAQ Création Site Web | Zenith Thionville, Metz",
       "description": "Questions fréquentes sur la création de sites internet : tarifs, délais, maintenance. Zenith accompagne les PME à Thionville et Metz."
+    },
+    "offerCatalogName": "Services de création web",
+    "service": {
+      "webDev": "Développement web sur mesure",
+      "uiux": "Design UI/UX",
+      "seo": "Optimisation SEO",
+      "ecommerce": "Développement e-commerce",
+      "maintenance": "Maintenance et support web"
     }
   },
   "home": {
@@ -22,13 +30,171 @@
     "ariaLabel": "Navigation principale",
     "logoAriaLabel": "Retour à l'accueil Zenith",
     "home": "Accueil",
-    "services": "Mes Services",
-    "projects": "Mes Projets",
-    "pricing": "Mes solutions",
-    "contact": "Me contacter",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Tarifs",
+    "contact": "Contact",
     "toggleTheme": "Changer le thème",
     "toggleMenu": "Ouvrir le menu",
-    "switchToLang": "Changer la langue vers {lang}"
+    "switchToLang": "Changer la langue vers {lang}",
+    "faqLabel": "FAQ"
+  },
+  "pages": {
+    "services": {
+      "title": "Services",
+      "seoTitle": "Création Site Web sur Mesure — Services | Zenith Thionville, Metz",
+      "description": "Découvrez les services proposés par Zenith pour développer votre présence en ligne",
+      "hero": {
+        "titleWhite": "Des sites web qui",
+        "titleGradient": "font la différence.",
+        "subtitle": "De la conception au lancement, Zenith crée des expériences digitales sur-mesure qui transforment vos visiteurs en clients.",
+        "badge": "Premier échange gratuit · Sans engagement"
+      },
+      "intro": {
+        "eyebrow": "À propos",
+        "title": "Un accompagnement sur mesure,",
+        "titleGradient": "des résultats à la hauteur.",
+        "description": "Je prends le temps de comprendre votre activité, votre cible et vos objectifs pour concevoir une solution digitale qui vous ressemble — performante, accessible et pensée pour convertir.",
+        "photoAlt": "Mehdi Dias Gomes, fondateur de Zenith",
+        "photoRole": "Fondateur & Développeur web"
+      },
+      "features": {
+        "title": "Ce que je fais pour vous",
+        "webDev": {
+          "title": "Développement web sur mesure",
+          "description": "Sites vitrines, portfolios, applications web — codés à la main pour des performances optimales et un rendu irréprochable sur tous les écrans."
+        },
+        "uiUx": {
+          "title": "Design UI/UX orienté conversion",
+          "description": "Interfaces soignées, navigation intuitive, appels à l'action clairs. Chaque pixel est pensé pour guider vos visiteurs vers la prise de contact."
+        },
+        "seo": {
+          "title": "Référencement & visibilité Google",
+          "description": "Optimisation SEO technique et éditoriale pour que vos clients vous trouvent en premier, sans dépendre uniquement des publicités payantes."
+        },
+        "maintenance": {
+          "title": "Hébergement & maintenance inclus",
+          "description": "Votre site reste rapide, sécurisé et à jour. Nous gérons la technique pour que vous puissiez vous concentrer sur votre métier."
+        },
+        "multilingual": {
+          "title": "Sites multilingues",
+          "description": "Touchez une audience internationale avec un site disponible en plusieurs langues, parfaitement adapté à chaque marché."
+        },
+        "identity": {
+          "title": "Identité visuelle & logo",
+          "description": "Création de logo et charte graphique cohérente pour asseoir votre image de marque sur le long terme."
+        }
+      },
+      "process": {
+        "eyebrow": "Comment ça marche",
+        "title": "Un processus simple, transparent, sans surprise",
+        "subtitle": "Du premier échange à la mise en ligne, je vous tiens informé à chaque étape.",
+        "steps": {
+          "discovery": {
+            "title": "Échange découverte",
+            "description": "Un appel de 30 minutes pour comprendre votre projet, votre cible et vos attentes. C'est le moment d'échanger librement — sans engagement de votre côté.",
+            "badge": "Gratuit"
+          },
+          "proposal": {
+            "title": "Proposition & devis détaillé",
+            "description": "Sous 48h, je vous envoie une proposition claire : périmètre du projet, délai de livraison, tarif exact. Aucune mauvaise surprise."
+          },
+          "build": {
+            "title": "Conception & développement",
+            "description": "Je vous présente les maquettes avant de coder. Vous validez, je développe. Des points réguliers pour que vous suiviez l'avancement en temps réel."
+          },
+          "launch": {
+            "title": "Livraison & accompagnement",
+            "description": "Mise en ligne soignée, formation à la gestion de votre site si besoin, et suivi post-lancement. Je reste disponible."
+          }
+        }
+      },
+      "benefits": {
+        "eyebrow": "Pourquoi moi",
+        "description": "Je travaille seul, sans intermédiaire. Vous avez un interlocuteur unique du premier échange à la mise en ligne — et longtemps après.",
+        "title": "Ce que vous gagnez à travailler avec moi",
+        "stats": {
+          "delay": "délai moyen de livraison",
+          "price": "pour le premier échange",
+          "commitment": "engagement requis"
+        },
+        "tailored": {
+          "title": "100 % sur mesure",
+          "description": "Pas de template, pas de solution générique. Chaque projet est conçu de zéro pour répondre précisément à vos besoins et votre identité."
+        },
+        "fast": {
+          "title": "Livraison rapide",
+          "description": "Un site livré en 2 à 4 semaines selon la complexité, avec un processus clair et des points d'avancement réguliers."
+        },
+        "transparent": {
+          "title": "Prix clairs et transparents",
+          "description": "Devis détaillé avant tout engagement. Aucune mauvaise surprise, aucun frais caché."
+        },
+        "support": {
+          "title": "Accompagnement personnalisé",
+          "description": "Un interlocuteur unique du brief au lancement, disponible et réactif à chaque étape de votre projet."
+        }
+      },
+      "cta": {
+        "title": "Prêt à lancer votre projet ?",
+        "description": "Discutons ensemble de votre vision. Premier échange gratuit et sans engagement — je vous propose une solution adaptée à votre budget et vos objectifs.",
+        "button": "Prendre contact",
+        "reassurance": "Réponse garantie sous 24h · Sans engagement"
+      }
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "seoTitle": "Réalisations — Sites Web PME & Artisans | Zenith",
+      "description": "Découvrez les projets réalisés par Zenith pour ses clients",
+      "eyebrow": "Mes réalisations",
+      "hero": {
+        "titleWhite": "Des projets pensés",
+        "titleGradient": "pour convertir.",
+        "subtitle": "Chaque projet est conçu sur mesure, du design à la mise en ligne. Voici quelques réalisations qui illustrent mon approche.",
+        "badge": "Nouveaux projets en cours d'ajout"
+      }
+    },
+    "pricing": {
+      "title": "Tarifs",
+      "seoTitle": "Tarifs Création Site Web | Zenith Thionville, Metz",
+      "description": "Découvrez les tarifs et solutions proposées par Zenith",
+      "eyebrow": "Tarification transparente",
+      "hero": {
+        "titleWhite": "Des prix clairs,",
+        "titleGradient": "sans mauvaise surprise.",
+        "subtitle": "Chaque devis est détaillé, chaque ligne justifiée. Le prix annoncé est le prix final.",
+        "discountBadge": "-30% sur toutes les prestations — offre limitée"
+      }
+    },
+    "contact": {
+      "title": "Contact | Zenith — Création Site Web Thionville, Metz",
+      "description": "Décrivez votre projet à Zenith et obtenez un devis gratuit sous 24h. Accompagnement personnalisé pour les PME et artisans à Thionville, Metz et alentours.",
+      "eyebrow": "Parlons de votre projet",
+      "hero": {
+        "titleWhite": "Un échange suffit pour",
+        "titleGradient": "tout changer.",
+        "subtitle": "Décrivez-moi votre projet en quelques lignes — je reviens vers vous sous 24h avec un plan d'action concret et un devis sans engagement.",
+        "badge": "Réponse garantie sous 24h"
+      },
+      "trustItems": {
+        "response": "Réponse sous 24h",
+        "noCommitment": "Sans engagement"
+      },
+      "floatingCards": {
+        "response": {
+          "label": "Réponse",
+          "value": "sous 24h"
+        },
+        "quote": {
+          "label": "Devis",
+          "value": "100% gratuit"
+        },
+        "commitment": {
+          "label": "Engagement",
+          "value": "Zéro"
+        }
+      }
+    }
   },
   "hero": {
     "availability": "Actuellement disponible",
@@ -41,22 +207,31 @@
     "subtitle": "Création ou refonte : je construis des sites performants pour les PME qui veulent croître.",
     "location": "Thionville, Metz et alentours (57)",
     "cta": {
-      "primary": "Boostez votre visibilité",
-      "secondary": "Découvrir mes travaux"
+      "primary": "Démarrer mon projet",
+      "secondary": "Voir les réalisations"
     }
   },
-  "marquee": {
-    "webDesigner": "Web Designer",
-    "fullstackDev": "Développeur Full-Stack",
-    "uiUx": "UI/UX Designer",
-    "seoExpert": "Expert SEO",
-    "limitedOffer": "Offre limitée",
-    "discount": "-30% sur toutes les prestations"
+  "divider": {
+    "custom": {
+      "title": "Sur mesure",
+      "subtitle": "Adapté à votre activité et vos objectifs"
+    },
+    "pricing": {
+      "title": "Prix transparent",
+      "subtitle": "Devis gratuit, tarif fixe sans surprise"
+    },
+    "support": {
+      "title": "Suivi complet",
+      "subtitle": "De la maquette à la mise en ligne"
+    }
   },
   "services": {
     "title": "Mes Services",
     "subtitle": "Tout ce dont votre entreprise a besoin pour réussir en ligne",
     "learnMore": "En savoir plus",
+    "eyebrow": "Ce que je fais",
+    "ctaButton": "Voir tous mes services",
+    "moreServices": "Référencement, maintenance, hébergement — un accompagnement complet de A à Z.",
     "ariaLabel": "Section des services proposés",
     "webDev": {
       "title": "Site web professionnel",
@@ -104,6 +279,26 @@
       "description": "Site vitrine de démonstration pour un salon de barbier affichant les services, l'équipe et un formulaire de contact"
     }
   },
+  "legal": {
+    "category": "Mentions légales",
+    "backHome": "Retour à l'accueil",
+    "updatedAt": {
+      "label": "Dernière mise à jour :",
+      "date": "22 janvier 2025"
+    },
+    "tocTitle": "Sommaire",
+    "tocLabel": "Table des matières"
+  },
+  "privacy": {
+    "category": "Politique de confidentialité",
+    "backHome": "Retour à l'accueil",
+    "updatedAt": {
+      "label": "Dernière mise à jour :",
+      "date": "22 janvier 2025"
+    },
+    "tocTitle": "Sommaire",
+    "tocLabel": "Table des matières"
+  },
   "footer": {
     "legalNavAriaLabel": "Navigation légale",
     "legal": "Mentions légales",
@@ -112,6 +307,7 @@
     "copyright": "© {year} Zenith. Tous droits réservés."
   },
   "cta": {
+    "eyebrow": "Parlons de votre projet",
     "title": "Une question ? Un projet ?",
     "subtitle": "Discutons-en gratuitement.",
     "description": {
@@ -122,6 +318,11 @@
     "button": {
       "primary": "Prendre contact",
       "faq": "Consulter la FAQ"
+    },
+    "badges": {
+      "free": "Premier échange gratuit",
+      "noCommitment": "Sans engagement",
+      "replyTime": "Réponse sous 24h"
     }
   },
   "promo": {
@@ -133,10 +334,41 @@
   "pricing": {
     "title": "Mes Solutions",
     "subtitle": "Des solutions digitales pensées pour votre activité",
+    "eyebrow": "Tarifs",
     "popular": "Populaire",
+    "teaserTitle": "Transparent, sans engagement.",
+    "teaserSubtitle": "Des formules claires pour chaque besoin. Consultez les détails, fonctionnalités incluses et modalités de paiement.",
+    "teaserNote": "+ Audit SEO offert, sans carte bancaire.",
+    "teaserCta": "Voir les détails et fonctionnalités",
     "startingFrom": "à partir de",
     "getQuote": "Demander un devis",
-    "requestAudit": "Demander un audit",
+    "requestAudit": "Demander mon audit gratuit",
+    "discountLabel": "Offre -30%",
+    "originalPrice": "Prix habituel",
+    "installment": "Paiement en 3x sans frais",
+    "paymentTitle": "Comment fonctionne le paiement ?",
+    "paymentSubtitle": "Trois versements liés aux jalons du projet — vous ne payez que ce qui est livré.",
+    "paymentSteps": {
+      "start": {
+        "label": "Au démarrage",
+        "percent": "40%",
+        "description": "Acompte pour réserver votre place et lancer les travaux. On commence à travailler."
+      },
+      "mockup": {
+        "label": "À la validation des maquettes",
+        "percent": "30%",
+        "description": "Vous validez le design. On passe au développement. Aucune ligne de code sans votre accord."
+      },
+      "delivery": {
+        "label": "À la livraison",
+        "percent": "30%",
+        "description": "Votre site est en ligne, vous êtes satisfait. Seulement là, on solde la facture."
+      }
+    },
+    "paymentNote": "Paiement par virement bancaire uniquement. Devis signé requis avant démarrage.",
+    "auditEyebrow": "Offre sans engagement",
+    "auditTitle": "Audit SEO offert — découvrez pourquoi Google ne vous trouve pas",
+    "auditSubtitle": "Un diagnostic gratuit de votre visibilité en ligne. Sans engagement, sans prise de tête.",
     "priceInfo": {
       "title": "À propos des tarifs",
       "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
@@ -193,11 +425,13 @@
         "Recommandations d'amélioration concrètes"
       ]
     },
-    "free": "Gratuit"
+    "free": "Gratuit",
+    "noCard": "Sans carte bancaire"
   },
   "contact": {
     "title": "Me contacter",
     "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.",
+    "badge": "Réponse garantie sous 24h",
     "map": {
       "ariaLabel": "Carte interactive montrant la zone d'intervention de Zenith : Thionville, Metz et alentours",
       "loading": "Chargement de la carte..."
@@ -255,9 +489,12 @@
     }
   },
   "faq": {
+    "eyebrow": "Support",
+    "itemsLabel": "questions",
     "title": "Questions fréquentes",
     "subtitle": "Retrouvez les réponses aux questions les plus courantes sur mes services et ma façon de travailler.",
     "cta": {
+      "eyebrow": "Parlons-en",
       "text": "Vous avez d'autres questions ?",
       "description": "Je suis disponible pour répondre à toutes vos interrogations et discuter de votre projet.",
       "button": "Me contacter"
@@ -284,8 +521,8 @@
         "answer": "Selon vos besoins, je peux intégrer une interface d'administration simple pour gérer vos contenus (textes, images, articles de blog). Une formation est incluse pour vous rendre autonome sur les modifications courantes."
       },
       "payment": {
-        "question": "Comment fonctionne le paiement ?",
-        "answer": "Le paiement s'effectue en 3 étapes : un premier versement au lancement du projet, un deuxième à la validation de la maquette, et le solde à la livraison finale. J'accepte les virements bancaires et les paiements par carte."
+        "question": "Comment fonctionne le paiement en 3 fois ?",
+        "answer": "Le paiement est échelonné sur 3 jalons projet : 40% à la signature du devis pour lancer les travaux, 30% à la validation des maquettes, et 30% à la livraison finale. Ce n'est pas du crédit — chaque versement correspond à une étape concrète livrée. Vous ne payez que ce qui est fait. Paiement par virement bancaire uniquement."
       }
     }
   },

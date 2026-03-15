@@ -32,14 +32,14 @@ module.exports = {
         'zenith-gold-bronze': '#B6771D',
         'zenith-gold-vivid': '#DAA520',
         'zenith-champagne': '#FFCF71',
-        'zenith-bg-dark': '#0A0A0A',
-        'zenith-bg-light': '#FAFAF9',
-        'zenith-bg-secondary-dark': '#1A1A1A',
-        'zenith-bg-secondary-light': '#F5F5F4',
-        'zenith-text-primary-dark': '#FFFFFF',
-        'zenith-text-primary-light': '#1A1A1A',
-        'zenith-text-secondary-dark': '#E5E5E5',
-        'zenith-text-secondary-light': '#737373',
+        'zenith-bg-dark': '#111110',
+        'zenith-bg-light': '#F5F0E8',
+        'zenith-bg-secondary-dark': '#1C1C1A',
+        'zenith-bg-secondary-light': '#EDE7DC',
+        'zenith-text-primary-dark': '#F0EBE3',
+        'zenith-text-primary-light': '#1C1917',
+        'zenith-text-secondary-dark': '#A09890',
+        'zenith-text-secondary-light': '#6B6460',
 
         // Legacy colors
         mauve: 'hsl(var(--mauve))',
@@ -125,11 +125,9 @@ module.exports = {
     function ({ addUtilities }) {
       addUtilities({
         '.mp-home': {
-          padding: '0 3%',
-          '@screen sm': { padding: '0 5%' },
-          '@screen md': { padding: '0 8%' },
-          '@screen lg': { padding: '0 10%' },
-          '@screen 2xl': { padding: '0 25%' },
+          padding: '0 1rem',
+          '@screen sm': { padding: '0 1.5rem' },
+          '@screen lg': { padding: '0 2rem' },
         },
         '.text-xl': {
           '@screen sm': { fontSize: '2rem', lineHeight: '2rem' },

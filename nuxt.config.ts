@@ -43,14 +43,18 @@ export default defineNuxtConfig({
   },
   sitemap: {
     urls: [
-      { loc: '/', changefreq: 'weekly', priority: 1.0 },
-      { loc: '/faq', changefreq: 'monthly', priority: 0.8 },
-      { loc: '/legal', changefreq: 'yearly', priority: 0.3 },
-      { loc: '/privacy', changefreq: 'yearly', priority: 0.3 },
+      { loc: '/' },
+      { loc: '/services' },
+      { loc: '/portfolio' },
+      { loc: '/pricing' },
+      { loc: '/contact' },
+      { loc: '/faq' },
+      { loc: '/legal' },
+      { loc: '/privacy' },
     ],
   },
   fonts: {
-    families: [{ name: 'Trirong', provider: 'google' }],
+    families: [{ name: 'Montserrat', provider: 'google' }],
     defaults: {
       weights: [300, 400, 500, 600, 700],
     },
@@ -80,6 +84,17 @@ export default defineNuxtConfig({
       redirectOn: 'root',
     },
     baseUrl: 'https://www.dg-zenith.com',
+  },
+  routeRules: {
+    '/**': {
+      headers: {
+        'X-Frame-Options': 'DENY',
+        'X-Content-Type-Options': 'nosniff',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'X-XSS-Protection': '1; mode=block',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      },
+    },
   },
   shadcn: {
     prefix: '',
