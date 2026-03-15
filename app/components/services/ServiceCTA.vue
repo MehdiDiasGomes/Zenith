@@ -1,50 +1,59 @@
 <template>
   <section
-    class="relative overflow-hidden py-20 md:py-28"
+    class="relative overflow-hidden px-4 py-28 sm:px-6 lg:px-8"
     :aria-labelledby="ctaId"
   >
-    <!-- Background image with parallax effect (desktop only) -->
+    <!-- Background photo -->
     <div
-      class="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-fixed"
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
       style="background-image: url('/assets/backgrounds/cta-background.webp')"
       aria-hidden="true"
     />
+    <!-- Overlay -->
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75" aria-hidden="true" />
+    <!-- Gold tint -->
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-zenith-gold-bronze/10 to-transparent" aria-hidden="true" />
 
-    <!-- Dark overlay -->
-    <div
-      class="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70"
-      aria-hidden="true"
-    />
+    <!-- Top border accent -->
+    <div class="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-zenith-gold-vivid/50 to-transparent" aria-hidden="true" />
 
-    <div class="relative z-10 mx-auto max-w-5xl px-4 text-center">
+    <div class="relative z-10 mx-auto max-w-3xl text-center">
       <h2
         :id="ctaId"
-        class="mb-4 text-3xl font-bold text-white md:text-4xl lg:text-5xl"
+        class="mb-4 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl"
       >
         {{ title }}
       </h2>
 
-      <p class="mx-auto mb-12 max-w-3xl text-base text-white/90 md:text-lg">
+      <p class="mb-10 text-base leading-relaxed text-white/80 md:text-lg">
         {{ description }}
       </p>
 
-      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <Button
-          as-child
-          class="w-full rounded-lg border border-white bg-white px-6 py-3 font-semibold text-zenith-gold-vivid transition-all duration-200 hover:bg-transparent hover:text-white sm:w-auto"
+      <!-- CTA Button -->
+      <div class="flex flex-col items-center gap-4">
+        <NuxtLink
+          :to="localePath('/contact')"
+          class="group inline-flex items-center gap-3 rounded-lg bg-zenith-gold-vivid px-8 py-4 text-sm font-semibold text-zenith-bg-dark shadow-lg shadow-zenith-gold-vivid/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-zenith-gold-vivid/40"
         >
-          <a href="#contact" @click="scrollToContact">
-            {{ buttonText }}
-          </a>
-        </Button>
+          {{ buttonText }}
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" class="transition-transform duration-300 group-hover:translate-x-1">
+            <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </NuxtLink>
+
+        <!-- Reassurance text -->
+        <p class="flex items-center gap-2 text-xs text-white/50">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+            <path d="M6 1L11 3V7C11 9.5 8.8 11.7 6 12C3.2 11.7 1 9.5 1 7V3L6 1Z" stroke="currentColor" stroke-width="1" stroke-linejoin="round" />
+          </svg>
+          {{ $t('pages.services.cta.reassurance') }}
+        </p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
-
 interface ServiceCTAProps {
   title: string
   description: string
@@ -54,24 +63,5 @@ interface ServiceCTAProps {
 defineProps<ServiceCTAProps>()
 
 const ctaId: string = 'service-cta'
-
-/**
- * Smoothly scrolls to the contact section
- * @param event - Click event to prevent default behavior
- */
-const scrollToContact = (event: Event): void => {
-  event.preventDefault()
-  const contactSection: HTMLElement | null = document.getElementById('contact')
-
-  if (contactSection) {
-    const navbarHeight: number = 100
-    const elementPosition: number = contactSection.getBoundingClientRect().top
-    const offsetPosition: number = elementPosition + window.scrollY - navbarHeight
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-  }
-}
+const localePath = useLocalePath()
 </script>
