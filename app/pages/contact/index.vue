@@ -13,12 +13,6 @@
         class="pointer-events-none absolute inset-0 bg-gradient-to-r from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark"
         aria-hidden="true"
       />
-      <!-- Ambient glows -->
-      <div
-        class="pointer-events-none absolute right-1/4 top-10 h-80 w-80 rounded-full bg-zenith-gold-vivid/6 blur-3xl"
-        aria-hidden="true"
-      />
-
       <div class="relative z-10 mx-auto max-w-6xl pb-16">
         <!-- Eyebrow -->
         <div class="hero-fade mb-8 flex items-center gap-3">

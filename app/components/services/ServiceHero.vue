@@ -10,10 +10,6 @@
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark" aria-hidden="true" />
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark" aria-hidden="true" />
 
-    <!-- Ambient glows -->
-    <div class="pointer-events-none absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-zenith-gold-vivid/5 blur-3xl" aria-hidden="true" />
-    <div class="pointer-events-none absolute -right-40 bottom-0 h-72 w-72 rounded-full bg-zenith-gold-bronze/6 blur-3xl" aria-hidden="true" />
-
     <div class="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
       <!-- Left: text -->
       <div>
