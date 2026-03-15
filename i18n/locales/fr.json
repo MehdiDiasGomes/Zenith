@@ -253,6 +253,26 @@
       "description": "Site vitrine de démonstration pour un salon de barbier affichant les services, l'équipe et un formulaire de contact"
     }
   },
+  "legal": {
+    "category": "Mentions légales",
+    "backHome": "Retour à l'accueil",
+    "updatedAt": {
+      "label": "Dernière mise à jour :",
+      "date": "22 janvier 2025"
+    },
+    "tocTitle": "Sommaire",
+    "tocLabel": "Table des matières"
+  },
+  "privacy": {
+    "category": "Politique de confidentialité",
+    "backHome": "Retour à l'accueil",
+    "updatedAt": {
+      "label": "Dernière mise à jour :",
+      "date": "22 janvier 2025"
+    },
+    "tocTitle": "Sommaire",
+    "tocLabel": "Table des matières"
+  },
   "footer": {
     "legalNavAriaLabel": "Navigation légale",
     "legal": "Mentions légales",
