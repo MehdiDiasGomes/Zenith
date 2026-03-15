@@ -194,6 +194,7 @@ import type { FaqPageSchema } from '@/types/seo'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const route = useRoute()
 
 const faqPageSchema: FaqPageSchema = useFaqPageSchema(faqItems)
 
@@ -203,7 +204,7 @@ useSeoMeta({
   ogTitle: () => t('seo.faq.title'),
   ogDescription: () => t('seo.faq.description'),
   ogImage: 'https://www.dg-zenith.com/og-image.png',
-  ogUrl: 'https://www.dg-zenith.com/faq',
+  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
   ogType: 'website',
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('seo.faq.title'),
@@ -211,13 +212,14 @@ useSeoMeta({
   twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
 
+usePageCanonical()
+
+useJsonLd(useBreadcrumbSchema([
+  { name: t('nav.home'), url: localePath('/') },
+  { name: t('nav.faqLabel'), url: localePath('/faq') },
+]))
+
 useHead({
-  link: [
-    {
-      rel: 'canonical',
-      href: 'https://www.dg-zenith.com/faq',
-    },
-  ],
   script: [
     {
       type: 'application/ld+json',

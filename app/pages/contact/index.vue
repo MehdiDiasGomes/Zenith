@@ -93,8 +93,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-[10px] font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">Réponse</p>
-                  <p class="text-sm font-bold text-zenith-gold-vivid">sous 24h</p>
+                  <p class="text-[10px] font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">{{ $t('pages.contact.floatingCards.response.label') }}</p>
+                  <p class="text-sm font-bold text-zenith-gold-vivid">{{ $t('pages.contact.floatingCards.response.value') }}</p>
                 </div>
               </div>
 
@@ -106,8 +106,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-[10px] font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">Devis</p>
-                  <p class="text-sm font-bold text-zenith-gold-vivid">100% gratuit</p>
+                  <p class="text-[10px] font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">{{ $t('pages.contact.floatingCards.quote.label') }}</p>
+                  <p class="text-sm font-bold text-zenith-gold-vivid">{{ $t('pages.contact.floatingCards.quote.value') }}</p>
                 </div>
               </div>
 
@@ -119,8 +119,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-[10px] font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">Engagement</p>
-                  <p class="text-sm font-bold text-zenith-gold-vivid">Zéro</p>
+                  <p class="text-[10px] font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">{{ $t('pages.contact.floatingCards.commitment.label') }}</p>
+                  <p class="text-sm font-bold text-zenith-gold-vivid">{{ $t('pages.contact.floatingCards.commitment.value') }}</p>
                 </div>
               </div>
 
@@ -154,11 +154,41 @@ const trustItems = computed<Record<string, string>>(() => ({
   noCommitment: t('pages.contact.trustItems.noCommitment'),
 }))
 
+const route = useRoute()
+
 useSeoMeta({
   title: () => t('pages.contact.title'),
   description: () => t('pages.contact.description'),
   ogTitle: () => t('pages.contact.title'),
   ogDescription: () => t('pages.contact.description'),
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
+  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('pages.contact.title'),
+  twitterDescription: () => t('pages.contact.description'),
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
+})
+
+usePageCanonical()
+
+const localePath = useLocalePath()
+useJsonLd(useBreadcrumbSchema([
+  { name: t('nav.home'), url: localePath('/') },
+  { name: t('nav.contact'), url: localePath('/contact') },
+]))
+
+useJsonLd({
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: t('pages.contact.title'),
+  description: t('pages.contact.description'),
+  url: `https://www.dg-zenith.com${route.path}`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Zenith',
+    url: 'https://www.dg-zenith.com',
+  },
 })
 </script>
 

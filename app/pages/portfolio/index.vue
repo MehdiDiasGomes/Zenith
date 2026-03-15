@@ -70,11 +70,29 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
 
 useSeoMeta({
-  title: () => `${t('pages.portfolio.title')} | Zenith`,
+  title: () => t('pages.portfolio.seoTitle'),
   description: () => t('pages.portfolio.description'),
+  ogTitle: () => t('pages.portfolio.seoTitle'),
+  ogDescription: () => t('pages.portfolio.description'),
+  ogImage: 'https://www.dg-zenith.com/og-image.png',
+  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
+  ogType: 'website',
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('pages.portfolio.seoTitle'),
+  twitterDescription: () => t('pages.portfolio.description'),
+  twitterImage: 'https://www.dg-zenith.com/og-image.png',
 })
+
+usePageCanonical()
+
+useJsonLd(useBreadcrumbSchema([
+  { name: t('nav.home'), url: localePath('/') },
+  { name: t('pages.portfolio.title'), url: localePath('/portfolio') },
+]))
 </script>
 
 <style scoped>
