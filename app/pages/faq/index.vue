@@ -74,7 +74,7 @@
     </section>
 
     <!-- ── FAQ Accordion ─────────────────────────────────────────── -->
-    <section class="px-4 pb-16 sm:px-6 lg:px-8">
+    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 pb-16 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-4xl">
         <Accordion type="single" collapsible class="w-full">
           <AccordionItem
@@ -128,7 +128,7 @@
     </section>
 
     <!-- ── CTA ───────────────────────────────────────────────────── -->
-    <section class="px-4 pb-24 sm:px-6 lg:px-8" aria-labelledby="faq-cta-heading">
+    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 pb-24 sm:px-6 lg:px-8" aria-labelledby="faq-cta-heading">
       <div class="mx-auto max-w-4xl">
         <div
           class="relative overflow-hidden rounded-2xl border border-zenith-gold-bronze/20 bg-zenith-bg-secondary-light px-8 py-10 dark:border-zenith-gold-bronze/15 dark:bg-zenith-bg-secondary-dark md:px-12 md:py-12"
