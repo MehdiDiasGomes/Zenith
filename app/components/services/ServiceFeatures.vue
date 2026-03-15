@@ -1,55 +1,75 @@
 <template>
   <section
-    class="relative px-4 py-16 sm:px-6 lg:px-8"
+    class="px-4 pb-0 pt-20 sm:px-6 lg:px-8"
     :aria-labelledby="featuresId"
   >
     <div class="mx-auto max-w-6xl">
-      <h2
-        :id="featuresId"
-        class="mb-12 text-center text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
-      >
-        {{ title }}
-      </h2>
+      <!-- Section header -->
+      <div class="mb-20">
+        <h2
+          :id="featuresId"
+          class="text-2xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-3xl"
+        >
+          {{ title }}
+        </h2>
+        <div class="mt-4 h-px bg-zenith-bronze-dark/10 dark:bg-zenith-gold-bronze/15" aria-hidden="true" />
+      </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+      <!-- Alternating feature rows -->
+      <div class="space-y-24">
         <div
           v-for="(feature, index) in features"
           :key="feature.key"
-          class="group relative overflow-clip rounded-3xl border border-zenith-gold-bronze/20 bg-gradient-to-br from-zenith-gold-vivid/5 to-zenith-gold-bronze/5 p-6 transition-all duration-500 hover:border-zenith-gold-vivid/50 hover:shadow-lg hover:shadow-zenith-gold-vivid/20"
-          :class="[
-            index === 0 || index === 3 ? 'md:col-span-2 md:row-span-2' : 'md:row-span-2',
-          ]"
+          class="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16"
+          :class="index % 2 === 1 ? 'md:[&>*:first-child]:order-2' : ''"
         >
-          <div class="relative z-10 flex h-full flex-col">
-            <div
-              class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-zenith-gold-vivid/10 transition-all duration-300 group-hover:scale-110 group-hover:bg-zenith-gold-vivid/20"
-            >
-              <Icon
-                :name="feature.icon"
-                size="24"
-                class="text-zenith-gold-vivid"
-                aria-hidden="true"
-              />
+          <!-- Text side -->
+          <div>
+            <div class="mb-4 flex items-center gap-3">
+              <span class="font-mono text-xs font-medium text-zenith-gold-bronze/60">
+                {{ String(index + 1).padStart(2, '0') }}
+              </span>
+              <span class="h-px w-6 bg-zenith-gold-bronze/30" aria-hidden="true" />
             </div>
-
-            <h3
-              class="mb-3 text-xl font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-            >
+            <h3 class="mb-4 text-xl font-bold leading-snug text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-2xl">
               {{ feature.title }}
             </h3>
-
-            <p
-              class="text-base text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-            >
+            <p class="text-base leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
               {{ feature.description }}
             </p>
           </div>
 
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-zenith-gold-vivid/0 to-zenith-gold-vivid/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          />
+          <!-- Illustration side -->
+          <div class="flex justify-center">
+            <div class="relative w-full max-w-xs">
+              <div class="absolute -inset-4 rounded-3xl bg-zenith-gold-vivid/4 blur-xl" aria-hidden="true" />
+              <NuxtImg
+                :src="feature.illustration"
+                :alt="feature.title"
+                class="relative w-full opacity-90 dark:opacity-80"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- Wave divider → ServiceProcess (bg-secondary) -->
+    <div class="-mx-4 -mb-px mt-16 sm:-mx-6 lg:-mx-8" aria-hidden="true">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        class="block w-full text-zenith-bg-secondary-light dark:text-zenith-bg-secondary-dark"
+      >
+        <path
+          fill="currentColor"
+          d="M0,0 C240,80 480,80 720,40 C960,0 1200,0 1440,60 L1440,80 L0,80 Z"
+        />
+      </svg>
     </div>
   </section>
 </template>
@@ -60,6 +80,7 @@ interface Feature {
   icon: string
   title: string
   description: string
+  illustration?: string
 }
 
 interface ServiceFeaturesProps {
