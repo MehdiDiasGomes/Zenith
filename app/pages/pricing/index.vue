@@ -417,6 +417,8 @@ useJsonLd(useBreadcrumbSchema([
   { name: t('nav.home'), url: localePath('/') },
   { name: t('pages.pricing.title'), url: localePath('/pricing') },
 ]))
+
+useJsonLd(usePricingOffersSchema())
 </script>
 
 <style scoped>

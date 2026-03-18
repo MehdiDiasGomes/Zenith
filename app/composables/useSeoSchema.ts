@@ -13,7 +13,13 @@ import type {
   ImageObject,
   ServiceArea,
   OfferCatalog,
+  PricingOfferItem,
+  ServiceItem,
+  CreativeWorkItem,
+  ItemListSchema,
 } from '@/types/seo'
+import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
+import { projects } from '~/constants/projects'
 
 const SITE_URL: string = 'https://www.dg-zenith.com'
 
@@ -121,6 +127,120 @@ export function useBreadcrumbSchema(items: BreadcrumbItem[]): BreadcrumbSchema {
       name: item.name,
       item: item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`,
     })),
+  }
+
+  return schema
+}
+
+/**
+ * Generates an ItemList schema for the pricing page offers
+ * @returns ItemList schema with Offer items for each pricing plan
+ */
+export function usePricingOffersSchema(): ItemListSchema<PricingOfferItem> {
+  const { t, locale } = useI18n()
+
+  const seller = { '@type': 'LocalBusiness' as const, name: 'Zenith', url: SITE_URL }
+
+  const schema: ItemListSchema<PricingOfferItem> = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('seo.offerCatalogName'),
+    url: `${SITE_URL}/pricing`,
+    itemListElement: pricingPlans.map((plan, index) => ({
+      '@type': 'ListItem' as const,
+      position: index + 1,
+      item: {
+        '@type': 'Offer' as const,
+        name: t(plan.titleKey),
+        description: t(plan.descriptionKey),
+        price: plan.basePrice > 0
+          ? Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100))
+          : 0,
+        priceCurrency: 'EUR' as const,
+        url: `${SITE_URL}/pricing`,
+        availability: 'https://schema.org/InStock' as const,
+        seller,
+      },
+    })),
+    inLanguage: locale.value === 'fr' ? 'fr-FR' : 'en-US',
+  }
+
+  return schema
+}
+
+/**
+ * Generates an ItemList schema for the services page
+ * @returns ItemList schema with Service items for each service offered
+ */
+export function useServicesListSchema(): ItemListSchema<ServiceItem> {
+  const { t, locale } = useI18n()
+
+  const provider = { '@type': 'LocalBusiness' as const, name: 'Zenith', url: SITE_URL }
+  const areaServed: ServiceArea[] = [
+    { '@type': 'City', name: 'Thionville' },
+    { '@type': 'City', name: 'Metz' },
+    { '@type': 'AdministrativeArea', name: 'Moselle' },
+  ]
+
+  const serviceKeys = [
+    { key: 'webDev', anchor: '#web-dev' },
+    { key: 'uiUx', anchor: '#ui-ux' },
+    { key: 'seo', anchor: '#seo' },
+    { key: 'maintenance', anchor: '#maintenance' },
+  ]
+
+  const schema: ItemListSchema<ServiceItem> = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('pages.services.features.title'),
+    url: `${SITE_URL}/services`,
+    itemListElement: serviceKeys.map((service, index) => ({
+      '@type': 'ListItem' as const,
+      position: index + 1,
+      item: {
+        '@type': 'Service' as const,
+        name: t(`pages.services.features.${service.key}.title`),
+        description: t(`pages.services.features.${service.key}.description`),
+        provider,
+        url: `${SITE_URL}/services${service.anchor}`,
+        areaServed,
+      },
+    })),
+    inLanguage: locale.value === 'fr' ? 'fr-FR' : 'en-US',
+  }
+
+  return schema
+}
+
+/**
+ * Generates an ItemList schema for the portfolio page projects
+ * @returns ItemList schema with CreativeWork items for each project
+ */
+export function useProjectsListSchema(): ItemListSchema<CreativeWorkItem> {
+  const { t, locale } = useI18n()
+
+  const author = { '@type': 'LocalBusiness' as const, name: 'Zenith', url: SITE_URL }
+
+  const visibleProjects = projects.filter((project) => !project.id.startsWith('//'))
+
+  const schema: ItemListSchema<CreativeWorkItem> = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: t('pages.portfolio.title'),
+    url: `${SITE_URL}/portfolio`,
+    itemListElement: visibleProjects.map((project, index) => ({
+      '@type': 'ListItem' as const,
+      position: index + 1,
+      item: {
+        '@type': 'CreativeWork' as const,
+        name: t(project.titleKey),
+        description: t(project.descriptionKey),
+        ...(project.link ? { url: project.link } : {}),
+        ...(project.image ? { image: `${SITE_URL}${project.image}` } : {}),
+        author,
+      },
+    })),
+    inLanguage: locale.value === 'fr' ? 'fr-FR' : 'en-US',
   }
 
   return schema
