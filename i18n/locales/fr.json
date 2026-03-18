@@ -277,6 +277,10 @@
     "barberHouse": {
       "title": "Barber House",
       "description": "Site vitrine de démonstration pour un salon de barbier affichant les services, l'équipe et un formulaire de contact"
+    },
+    "myMassageShop": {
+      "title": "My Massage Shop",
+      "description": "Boutique en ligne spécialisée dans la vente d'équipements de massage : tables fixes, tables pliables, accessoires et huiles de massage"
     }
   },
   "legal": {

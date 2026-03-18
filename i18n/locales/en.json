@@ -277,6 +277,10 @@
     "barberHouse": {
       "title": "Barber House",
       "description": "Demo showcase website for a barbershop displaying services, team, and contact form"
+    },
+    "myMassageShop": {
+      "title": "My Massage Shop",
+      "description": "Online store specializing in massage equipment sales: stationary tables, portable tables, accessories, and massage oils"
     }
   },
   "legal": {
