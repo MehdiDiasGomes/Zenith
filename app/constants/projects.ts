@@ -43,4 +43,13 @@ export const projects: Project[] = [
     link: 'https://barber-house-blue.vercel.app/',
     github: 'https://github.com/MehdiDiasGomes/Barber-House',
   },
+  {
+    id: 'my-massage-shop',
+    titleKey: 'projects.myMassageShop.title',
+    descriptionKey: 'projects.myMassageShop.description',
+    image: '/images/projects/my-massage-shop.png',
+    category: 'ecommerce',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Shopify'],
+    link: 'https://mymassageshop.com/',
+  },
 ]
