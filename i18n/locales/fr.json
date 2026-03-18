@@ -530,6 +530,33 @@
       }
     }
   },
+  "blog": {
+    "seoTitle": "Blog — Conseils Création Site Web | Zenith Thionville",
+    "seoDescription": "Conseils pratiques, guides et ressources pour créer ou améliorer votre site web. Pour les PME et artisans de Moselle.",
+    "eyebrow": "Ressources",
+    "title": "Blog",
+    "hero": {
+      "titleWhite": "Conseils &",
+      "titleGradient": "ressources web.",
+      "subtitle": "Guides pratiques et bonnes pratiques pour développer votre présence en ligne."
+    },
+    "featured": "À la une",
+    "readMore": "Lire l'article",
+    "readingTime": "min de lecture",
+    "publishedOn": "Publié le",
+    "allArticles": "Tous les articles",
+    "noArticles": "Aucun article dans cette catégorie pour le moment.",
+    "backToBlog": "Retour au blog",
+    "tableOfContents": "Sommaire",
+    "categories": {
+      "all": "Tous",
+      "prix": "Prix",
+      "conseils": "Conseils",
+      "seo": "SEO",
+      "technique": "Technique",
+      "local": "Local"
+    }
+  },
   "settings": {
     "ariaLabel": "Paramètres",
     "theme": {

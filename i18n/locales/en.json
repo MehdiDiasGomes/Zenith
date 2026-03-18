@@ -529,6 +529,33 @@
       }
     }
   },
+  "blog": {
+    "seoTitle": "Blog — Web Design Tips & Advice | Zenith",
+    "seoDescription": "Practical guides and resources for creating or improving your website. For SMEs and tradespeople.",
+    "eyebrow": "Resources",
+    "title": "Blog",
+    "hero": {
+      "titleWhite": "Tips &",
+      "titleGradient": "web resources.",
+      "subtitle": "Practical guides and best practices to grow your online presence."
+    },
+    "featured": "Featured",
+    "readMore": "Read article",
+    "readingTime": "min read",
+    "publishedOn": "Published on",
+    "allArticles": "All articles",
+    "noArticles": "No articles in this category yet.",
+    "backToBlog": "Back to blog",
+    "tableOfContents": "Table of contents",
+    "categories": {
+      "all": "All",
+      "prix": "Pricing",
+      "conseils": "Tips",
+      "seo": "SEO",
+      "technique": "Technical",
+      "local": "Local"
+    }
+  },
   "settings": {
     "ariaLabel": "Settings",
     "theme": {
