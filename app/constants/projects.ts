@@ -24,15 +24,15 @@ export const categories: Category[] = [
 ]
 
 export const projects: Project[] = [
-  // {
-  //   id: 'kb-clean',
-  //   titleKey: 'projects.kbClean.title',
-  //   descriptionKey: 'projects.kbClean.description',
-  //   image: '/images/projects/kb-clean.png',
-  //   category: 'showcase',
-  //   technologies: ['Nuxt 4', 'TailwindCSS', 'Shadcn', 'Resend', 'TypeScript'],
-  //   link: 'https://kb-clean.vercel.app',
-  // },
+  {
+    id: 'my-massage-shop',
+    titleKey: 'projects.myMassageShop.title',
+    descriptionKey: 'projects.myMassageShop.description',
+    image: '/images/projects/my-massage-shop.png',
+    category: 'ecommerce',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Shopify'],
+    link: 'https://mymassageshop.com/',
+  },
   {
     id: 'barber-house',
     titleKey: 'projects.barberHouse.title',
@@ -44,12 +44,21 @@ export const projects: Project[] = [
     github: 'https://github.com/MehdiDiasGomes/Barber-House',
   },
   {
-    id: 'my-massage-shop',
-    titleKey: 'projects.myMassageShop.title',
-    descriptionKey: 'projects.myMassageShop.description',
-    image: '/images/projects/my-massage-shop.png',
-    category: 'ecommerce',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'Shopify'],
-    link: 'https://mymassageshop.com/',
+    id: 'zenith',
+    titleKey: 'projects.zenith.title',
+    descriptionKey: 'projects.zenith.description',
+    image: '/images/projects/zenith.png',
+    category: 'portfolio',
+    technologies: ['Nuxt 4', 'TypeScript', 'TailwindCSS', 'i18n'],
+    link: 'https://dg-zenith.com',
   },
+  // {
+  //   id: 'kb-clean',
+  //   titleKey: 'projects.kbClean.title',
+  //   descriptionKey: 'projects.kbClean.description',
+  //   image: '/images/projects/kb-clean.png',
+  //   category: 'showcase',
+  //   technologies: ['Nuxt 4', 'TailwindCSS', 'Shadcn', 'Resend', 'TypeScript'],
+  //   link: 'https://kb-clean.vercel.app',
+  // },
 ]
