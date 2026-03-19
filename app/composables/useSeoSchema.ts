@@ -17,6 +17,7 @@ import type {
   ServiceItem,
   CreativeWorkItem,
   ItemListSchema,
+  BlogPostingSchema,
 } from '@/types/seo'
 import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
 import { projects } from '~/constants/projects'
@@ -259,4 +260,53 @@ export function useJsonLd<T extends object>(schema: T): void {
       },
     ],
   })
+}
+
+/**
+ * Generates a BlogPosting JSON-LD schema for a blog article
+ * @param post - Blog post data
+ * @returns BlogPosting schema object for JSON-LD
+ */
+export function useBlogPostingSchema(post: {
+  title: string
+  description: string
+  image?: string
+  date: string
+  category: string
+  path: string
+}): BlogPostingSchema {
+  const { locale } = useI18n()
+
+  const absoluteImage: string = post.image
+    ? `${SITE_URL}${post.image}`
+    : `${SITE_URL}/og-image.png`
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    image: absoluteImage,
+    datePublished: post.date,
+    dateModified: post.date,
+    url: `${SITE_URL}${post.path}`,
+    author: {
+      '@type': 'Person',
+      name: 'Mehdi Dias Gomes',
+      url: SITE_URL,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zenith',
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/images/brand/z_logo.webp`,
+        width: 600,
+        height: 600,
+      },
+    },
+    inLanguage: locale.value === 'fr' ? 'fr-FR' : 'en-GB',
+    articleSection: post.category,
+  }
 }

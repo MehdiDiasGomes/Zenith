@@ -144,3 +144,31 @@ export interface ItemListSchema<T> {
   itemListElement: ItemListElement<T>[]
   inLanguage: string
 }
+
+export interface BlogPostingAuthor {
+  '@type': 'Person'
+  name: string
+  url: string
+}
+
+export interface BlogPostingPublisher {
+  '@type': 'Organization'
+  name: string
+  url: string
+  logo: ImageObject
+}
+
+export interface BlogPostingSchema {
+  '@context': 'https://schema.org'
+  '@type': 'BlogPosting'
+  headline: string
+  description: string
+  image: string
+  datePublished: string
+  dateModified: string
+  url: string
+  author: BlogPostingAuthor
+  publisher: BlogPostingPublisher
+  inLanguage: string
+  articleSection: string
+}

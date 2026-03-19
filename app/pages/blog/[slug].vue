@@ -227,18 +227,27 @@ const formattedDate = computed((): string =>
   )
 )
 
+const SITE_URL: string = 'https://www.dg-zenith.com'
+const absoluteOgImage: string = post!.image
+  ? `${SITE_URL}${post!.image}`
+  : `${SITE_URL}/og-image.png`
+
 useSeoMeta({
   title: () => `${post!.title} | Zenith`,
   description: () => post!.description,
   ogTitle: () => `${post!.title} | Zenith`,
   ogDescription: () => post!.description,
-  ogImage: post!.image ?? 'https://www.dg-zenith.com/og-image.png',
-  ogUrl: () => `https://www.dg-zenith.com${route.path}`,
+  ogImage: absoluteOgImage,
+  ogUrl: () => `${SITE_URL}${route.path}`,
   ogType: 'article',
+  articlePublishedTime: post!.date,
+  articleModifiedTime: post!.date,
+  articleAuthor: 'Mehdi Dias Gomes',
+  articleSection: post!.category,
   twitterCard: 'summary_large_image',
   twitterTitle: () => `${post!.title} | Zenith`,
   twitterDescription: () => post!.description,
-  twitterImage: post!.image ?? 'https://www.dg-zenith.com/og-image.png',
+  twitterImage: absoluteOgImage,
 })
 
 usePageCanonical()
@@ -246,8 +255,17 @@ usePageCanonical()
 useJsonLd(useBreadcrumbSchema([
   { name: t('nav.home'), url: localePath('/') },
   { name: t('blog.title'), url: localePath('/blog') },
-  { name: post!.title, url: `https://www.dg-zenith.com${route.path}` },
+  { name: post!.title, url: `${SITE_URL}${route.path}` },
 ]))
+
+useJsonLd(useBlogPostingSchema({
+  title: post!.title,
+  description: post!.description,
+  image: post!.image,
+  date: post!.date,
+  category: post!.category,
+  path: route.path,
+}))
 </script>
 
 <style>
