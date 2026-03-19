@@ -44,6 +44,15 @@ export const projects: Project[] = [
     github: 'https://github.com/MehdiDiasGomes/Barber-House',
   },
   {
+    id: 'douceur-et-therapie',
+    titleKey: 'projects.douceurEtTherapie.title',
+    descriptionKey: 'projects.douceurEtTherapie.description',
+    image: '/images/projects/douceur-et-therapie.png',
+    category: 'showcase',
+    technologies: ['Next.js', 'TailwindCSS', 'TypeScript'],
+    link: 'https://douceurettherapie.com/',
+  },
+  {
     id: 'zenith',
     titleKey: 'projects.zenith.title',
     descriptionKey: 'projects.zenith.description',
