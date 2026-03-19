@@ -135,4 +135,6 @@ useJsonLd(useBreadcrumbSchema([
   { name: t('nav.home'), url: localePath('/') },
   { name: t('pages.services.title'), url: localePath('/services') },
 ]))
+
+useJsonLd(useServicesListSchema())
 </script>

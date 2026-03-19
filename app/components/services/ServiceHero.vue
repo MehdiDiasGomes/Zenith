@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex min-h-[80vh] items-center overflow-hidden px-4 py-20 sm:px-6 lg:px-8"
+    class="relative overflow-hidden px-4 pb-0 pt-20 sm:px-6 lg:px-8"
     :aria-labelledby="heroId"
   >
     <!-- Grid background -->
@@ -10,7 +10,7 @@
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark" aria-hidden="true" />
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-zenith-bg-light via-transparent to-zenith-bg-light dark:from-zenith-bg-dark dark:via-transparent dark:to-zenith-bg-dark" aria-hidden="true" />
 
-    <div class="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <div class="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-12 pb-16 lg:grid-cols-2 lg:gap-16">
       <!-- Left: text -->
       <div>
         <!-- Eyebrow -->
@@ -68,6 +68,9 @@
           </ClientOnly>
         </div>
       </div>
+
+      <!-- Bottom divider spanning full grid -->
+      <div class="col-span-full mt-4 h-px bg-gradient-to-r from-transparent via-zenith-gold-bronze/30 to-transparent" aria-hidden="true" />
     </div>
   </section>
 </template>

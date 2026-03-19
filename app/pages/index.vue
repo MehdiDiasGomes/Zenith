@@ -12,6 +12,9 @@
       <Projects />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
+      <BlogPreview />
+    </div>
+    <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
       <PricingTeaser />
     </div>
   </div>

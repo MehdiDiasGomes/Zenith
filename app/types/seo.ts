@@ -94,3 +94,81 @@ export interface FaqItemInput {
   questionKey: string
   answerKey: string
 }
+
+export interface LocalBusinessRef {
+  '@type': 'LocalBusiness'
+  name: string
+  url: string
+}
+
+export interface PricingOfferItem {
+  '@type': 'Offer'
+  name: string
+  description: string
+  price: number
+  priceCurrency: 'EUR'
+  url: string
+  availability: 'https://schema.org/InStock'
+  seller: LocalBusinessRef
+}
+
+export interface ServiceItem {
+  '@type': 'Service'
+  name: string
+  description: string
+  provider: LocalBusinessRef
+  url: string
+  areaServed: ServiceArea[]
+}
+
+export interface CreativeWorkItem {
+  '@type': 'CreativeWork'
+  name: string
+  description: string
+  url?: string
+  image?: string
+  author: LocalBusinessRef
+}
+
+export interface ItemListElement<T> {
+  '@type': 'ListItem'
+  position: number
+  item: T
+}
+
+export interface ItemListSchema<T> {
+  '@context': 'https://schema.org'
+  '@type': 'ItemList'
+  name: string
+  url: string
+  itemListElement: ItemListElement<T>[]
+  inLanguage: string
+}
+
+export interface BlogPostingAuthor {
+  '@type': 'Person'
+  name: string
+  url: string
+}
+
+export interface BlogPostingPublisher {
+  '@type': 'Organization'
+  name: string
+  url: string
+  logo: ImageObject
+}
+
+export interface BlogPostingSchema {
+  '@context': 'https://schema.org'
+  '@type': 'BlogPosting'
+  headline: string
+  description: string
+  image: string
+  datePublished: string
+  dateModified: string
+  url: string
+  author: BlogPostingAuthor
+  publisher: BlogPostingPublisher
+  inLanguage: string
+  articleSection: string
+}

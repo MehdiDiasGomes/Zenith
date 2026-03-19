@@ -281,6 +281,10 @@
     "myMassageShop": {
       "title": "My Massage Shop",
       "description": "Online store specializing in massage equipment sales: stationary tables, portable tables, accessories, and massage oils"
+    },
+    "zenith": {
+      "title": "Zenith",
+      "description": "My own freelance showcase website — designed and built by me to present my activity, my work, and my web development services."
     }
   },
   "legal": {
@@ -344,7 +348,7 @@
     "teaserNote": "+ Free SEO audit, no credit card required.",
     "teaserCta": "See details and features",
     "startingFrom": "starting from",
-    "getQuote": "Get a quote",
+    "getQuote": "Contact me [FREE]",
     "requestAudit": "Request my free audit",
     "discountLabel": "-30% offer",
     "originalPrice": "Regular price",
@@ -527,6 +531,36 @@
         "question": "How does the 3-installment payment work?",
         "answer": "Payment is split across 3 project milestones: 40% upon signing the quote to start work, 30% upon mockup approval, and 30% at final delivery. This is not a credit arrangement — each payment corresponds to a concrete delivered milestone. You only pay for what's done. Bank transfer only."
       }
+    }
+  },
+  "blog": {
+    "seoTitle": "Blog — Web Design Tips & Advice | Zenith",
+    "seoDescription": "Practical guides and resources for creating or improving your website. For SMEs and tradespeople.",
+    "eyebrow": "Resources",
+    "title": "Blog",
+    "hero": {
+      "titleWhite": "Tips &",
+      "titleGradient": "web resources.",
+      "subtitle": "Practical guides and best practices to grow your online presence."
+    },
+    "featured": "Featured",
+    "readMore": "Read article",
+    "readingTime": "min read",
+    "publishedOn": "Published on",
+    "allArticles": "All articles",
+    "homeTitle": "Latest articles",
+    "homeSubtitle": "Practical guides and tips to grow your online presence.",
+    "viewAll": "Explore the blog",
+    "noArticles": "No articles in this category yet.",
+    "backToBlog": "Back to blog",
+    "tableOfContents": "Table of contents",
+    "categories": {
+      "all": "All",
+      "prix": "Pricing",
+      "conseils": "Tips",
+      "seo": "SEO",
+      "technique": "Technical",
+      "local": "Local"
     }
   },
   "settings": {

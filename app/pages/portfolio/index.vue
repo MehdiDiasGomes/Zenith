@@ -90,6 +90,8 @@ useJsonLd(useBreadcrumbSchema([
   { name: t('nav.home'), url: localePath('/') },
   { name: t('pages.portfolio.title'), url: localePath('/portfolio') },
 ]))
+
+useJsonLd(useProjectsListSchema())
 </script>
 
 <style scoped>
