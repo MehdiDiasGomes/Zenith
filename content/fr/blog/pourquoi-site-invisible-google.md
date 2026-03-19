@@ -1,8 +1,9 @@
 ---
 title: "Pourquoi votre site n'apparaît pas sur Google"
 description: "Votre site existe mais personne ne le trouve ? Voici les 5 raisons les plus courantes et ce que vous pouvez faire pour y remédier."
-date: "2025-03-05"
+date: "2026-03-05"
 category: "seo"
+image: "/images/blog/website-invisible-google-seo.webp"
 readingTime: 7
 featured: false
 ---

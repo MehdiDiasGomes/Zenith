@@ -1,8 +1,9 @@
 ---
-title: "How much does a website cost in 2025?"
+title: "How much does a website cost in 2026?"
 description: "Real pricing, factors that influence the cost and how to avoid bad surprises. A complete guide for SMEs and tradespeople."
-date: "2025-03-15"
+date: "2026-03-15"
 category: "prix"
+image: "/images/blog/website-cost-thionville-guide.webp"
 readingTime: 6
 featured: true
 ---

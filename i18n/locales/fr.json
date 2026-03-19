@@ -281,6 +281,10 @@
     "myMassageShop": {
       "title": "My Massage Shop",
       "description": "Boutique en ligne spécialisée dans la vente d'équipements de massage : tables fixes, tables pliables, accessoires et huiles de massage"
+    },
+    "zenith": {
+      "title": "Zenith",
+      "description": "Mon propre site vitrine freelance — je l'ai conçu et développé pour présenter mon activité, mes réalisations et mes services de création web."
     }
   },
   "legal": {
@@ -545,6 +549,9 @@
     "readingTime": "min de lecture",
     "publishedOn": "Publié le",
     "allArticles": "Tous les articles",
+    "homeTitle": "Derniers articles",
+    "homeSubtitle": "Conseils pratiques et guides pour développer votre présence en ligne.",
+    "viewAll": "Explorer le blog",
     "noArticles": "Aucun article dans cette catégorie pour le moment.",
     "backToBlog": "Retour au blog",
     "tableOfContents": "Sommaire",

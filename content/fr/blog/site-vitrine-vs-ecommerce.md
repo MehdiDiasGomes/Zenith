@@ -1,8 +1,9 @@
 ---
 title: "Site vitrine ou e-commerce : lequel choisir pour votre activité ?"
 description: "Vous hésitez entre un site vitrine et une boutique en ligne ? Voici comment choisir en fonction de votre activité, vos objectifs et votre budget."
-date: "2025-03-10"
+date: "2026-03-10"
 category: "conseils"
+image: "/images/blog/showcase-vs-ecommerce-website.webp"
 readingTime: 5
 featured: false
 ---

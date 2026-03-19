@@ -281,6 +281,10 @@
     "myMassageShop": {
       "title": "My Massage Shop",
       "description": "Online store specializing in massage equipment sales: stationary tables, portable tables, accessories, and massage oils"
+    },
+    "zenith": {
+      "title": "Zenith",
+      "description": "My own freelance showcase website — designed and built by me to present my activity, my work, and my web development services."
     }
   },
   "legal": {
@@ -544,6 +548,9 @@
     "readingTime": "min read",
     "publishedOn": "Published on",
     "allArticles": "All articles",
+    "homeTitle": "Latest articles",
+    "homeSubtitle": "Practical guides and tips to grow your online presence.",
+    "viewAll": "Explore the blog",
     "noArticles": "No articles in this category yet.",
     "backToBlog": "Back to blog",
     "tableOfContents": "Table of contents",

@@ -192,7 +192,7 @@ const localePath = useLocalePath()
 const slug = route.params.slug as string
 
 const post = await queryCollection('blog')
-  .path(`/${locale.value}/blog/${slug}`)
+  .where('stem', '=', `${locale.value}/blog/${slug}`)
   .first() as BlogPost | null
 
 if (!post) {
@@ -320,11 +320,16 @@ useJsonLd(useBreadcrumbSchema([
 }
 
 .prose-zenith td {
-  @apply border-b border-zenith-bronze-dark/8 px-4 py-3 text-zenith-text-secondary-light dark:border-zenith-gold-bronze/8 dark:text-zenith-text-secondary-dark;
+  @apply border-b border-zenith-gold-bronze/10 px-4 py-3 text-zenith-text-secondary-light dark:border-zenith-gold-bronze/10 dark:text-zenith-text-secondary-dark;
 }
 
 .prose-zenith code {
-  @apply rounded bg-zenith-gold-vivid/8 px-1.5 py-0.5 text-xs font-mono text-zenith-gold-vivid dark:bg-zenith-gold-vivid/12;
+  @apply rounded px-1.5 py-0.5 text-xs font-mono text-zenith-gold-vivid;
+  background-color: rgba(218, 165, 32, 0.08);
+}
+
+:global(.dark) .prose-zenith code {
+  background-color: rgba(218, 165, 32, 0.12);
 }
 
 .blog-article-grid {
