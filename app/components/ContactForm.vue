@@ -261,7 +261,7 @@
                 <FormLabel class="cursor-pointer text-xs font-normal leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
                   {{ $t('contact.form.consent.label') }}
                   <NuxtLink
-                    :to="localePath('/legal')"
+                    :to="localePath('/privacy')"
                     class="text-zenith-gold-vivid underline underline-offset-2 transition-colors duration-200 hover:text-zenith-champagne"
                   >
                     {{ $t('contact.form.consent.linkText') }}
