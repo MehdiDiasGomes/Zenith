@@ -31,6 +31,11 @@ export default defineNuxtConfig({
     resendApiKey: process.env.RESEND_API_KEY,
     contactEmail: process.env.CONTACT_EMAIL,
   },
+  critters: {
+    config: {
+      preload: 'swap',
+    },
+  },
   modules: [
     '@nuxtjs/critters',
     '@nuxtjs/tailwindcss',

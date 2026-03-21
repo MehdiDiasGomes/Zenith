@@ -60,7 +60,10 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
-const currentYear = computed<number>(() => new Date().getFullYear())
+const currentYear = ref<number>(0)
+onMounted(() => {
+  currentYear.value = new Date().getFullYear()
+})
 
 const { elementRef: _logoRef, classes: logoClasses } = useTailwindAnimate(
   'animate-fade-up animate-delay-100 animate-duration-700',

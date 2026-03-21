@@ -27,6 +27,19 @@ definePageMeta({
   layout: 'default',
 })
 
+useHead({
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/images/decorations/left_spotlight.webp',
+      imagesrcset:
+        '/_vercel/image?url=%2Fimages%2Fdecorations%2Fleft_spotlight.webp&w=640&q=75 640w, /_vercel/image?url=%2Fimages%2Fdecorations%2Fleft_spotlight.webp&w=1200&q=75 1200w',
+      imagesizes: '100vw',
+    },
+  ],
+})
+
 const route = useRoute()
 
 useSeoMeta({
