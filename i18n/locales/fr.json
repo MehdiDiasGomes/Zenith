@@ -740,5 +740,13 @@
         "button": "Améliorer mon design"
       }
     }
+  },
+  "error": {
+    "code": "404",
+    "title": "Page introuvable",
+    "subtitle": "Cette page a disparu au-delà du zénith.",
+    "description": "La page que vous cherchez n'existe pas ou a été déplacée. Laissez-nous vous guider vers l'accueil.",
+    "cta": "Retour à l'accueil",
+    "label": "Erreur"
   }
 }
