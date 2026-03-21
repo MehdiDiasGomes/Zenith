@@ -70,13 +70,6 @@
         {{ $t('hero.subtitle') }}
       </p>
 
-      <div
-        class="mb-12 flex items-center justify-center gap-2 text-sm text-zenith-gold-bronze dark:text-zenith-champagne"
-      >
-        <MapPin :size="16" :aria-hidden="true" />
-        <span>{{ $t('hero.location') }}</span>
-      </div>
-
       <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
         <Button as-child variant="gold">
           <NuxtLink :to="localePath('/contact')">

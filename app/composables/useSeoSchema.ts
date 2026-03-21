@@ -39,10 +39,7 @@ export function useOrganizationSchema(): OrganizationSchema {
   }
 
   const areaServed: ServiceArea[] = [
-    { '@type': 'City', name: 'Thionville' },
-    { '@type': 'City', name: 'Metz' },
-    { '@type': 'AdministrativeArea', name: 'Moselle' },
-    { '@type': 'AdministrativeArea', name: 'Grand Est' },
+    { '@type': 'AdministrativeArea', name: 'France' },
   ]
 
   const hasOfferCatalog: OfferCatalog = {

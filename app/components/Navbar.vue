@@ -149,7 +149,7 @@
       <!-- Footer strip -->
       <footer class="overlay-footer" aria-label="Footer">
         <span>Zenith</span>
-        <span>Thionville, France · {{ currentYear }}</span>
+        <span>© {{ currentYear }}</span>
       </footer>
     </div>
   </Transition>
