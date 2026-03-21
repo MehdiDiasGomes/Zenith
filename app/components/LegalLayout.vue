@@ -130,7 +130,7 @@ interface LegalLayoutProps {
 const props = defineProps<LegalLayoutProps>()
 
 const localePath = useLocalePath()
-const contentId: string = `legal-content-${Math.random().toString(36).slice(2, 7)}`
+const contentId: string = `legal-content-${props.category.toLowerCase().replace(/\s+/g, '-')}`
 
 const tocLinks = computed<TocLink[]>(() => props.document?.body?.toc?.links ?? [])
 const title = computed<string>(() => props.document?.title ?? props.category)
