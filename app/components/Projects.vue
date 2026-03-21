@@ -72,6 +72,11 @@
             <NuxtImg
               :src="project.image"
               :alt="$t(project.titleKey)"
+              width="800"
+              height="400"
+              sizes="xs:100vw sm:100vw md:50vw lg:600px"
+              format="webp"
+              quality="80"
               class="h-full w-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-[1.04]"
               loading="lazy"
             />

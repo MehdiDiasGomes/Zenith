@@ -40,8 +40,8 @@
           <NuxtImg
             src="/images/brand/logo.webp"
             alt="Zenith Logo"
-            width="600"
-            height="600"
+            width="112"
+            height="112"
             class="h-9 w-auto transition-all duration-300 group-hover:brightness-110 md:h-12"
             :class="mobileMenuOpen ? 'brightness-[2]' : ''"
             loading="eager"
@@ -166,7 +166,10 @@ const isScrolled = ref<boolean>(false)
 const isHidden = ref<boolean>(false)
 let lastScrollY: number = 0
 
-const currentYear: number = new Date().getFullYear()
+const currentYear = ref<number>(0)
+onMounted(() => {
+  currentYear.value = new Date().getFullYear()
+})
 
 /** Nav items without contact (shown separately as CTA on desktop) */
 const desktopNavItems = computed(() =>

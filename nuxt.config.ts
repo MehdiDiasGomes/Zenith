@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  sourcemap: {
+    server: false,
+    client: false,
+  },
   css: ['~/assets/css/tailwind.css'],
   app: {
     head: {
@@ -28,6 +32,7 @@ export default defineNuxtConfig({
     contactEmail: process.env.CONTACT_EMAIL,
   },
   modules: [
+    '@nuxtjs/critters',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     'shadcn-nuxt',
