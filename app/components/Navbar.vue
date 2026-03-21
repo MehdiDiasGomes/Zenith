@@ -85,7 +85,7 @@
             type="button"
             :aria-label="$t('nav.toggleMenu')"
             :aria-expanded="mobileMenuOpen"
-            class="hamburger-btn md:hidden"
+            class="hamburger-btn flex md:hidden"
             :class="{ 'is-open': mobileMenuOpen }"
             @click="toggleMobileMenu"
           >
@@ -101,7 +101,7 @@
   <Transition name="overlay-fade">
     <div
       v-if="mobileMenuOpen"
-      class="mobile-overlay md:hidden"
+      class="mobile-overlay flex md:hidden"
       role="dialog"
       aria-modal="true"
       :aria-label="$t('nav.ariaLabel')"
@@ -224,7 +224,6 @@ watch(
 ───────────────────────────────────────────────────────── */
 .hamburger-btn {
   position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -279,6 +278,13 @@ watch(
   transform: translateY(-4px) rotate(-45deg);
 }
 
+/* Hidden on desktop — declared after display:flex to win the cascade */
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
 /* ─────────────────────────────────────────────────────────
    Fullscreen overlay
 ───────────────────────────────────────────────────────── */
@@ -287,7 +293,6 @@ watch(
   inset: 0;
   z-index: 998;
   background-color: #0c0b09;
-  display: flex;
   flex-direction: column;
   overflow: hidden;
 }
@@ -393,7 +398,7 @@ watch(
 /* ─── Link text ─── */
 .nav-text {
   display: block;
-  font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: clamp(2.25rem, 9vw, 3.25rem);
   font-weight: 300;
   font-style: italic;
@@ -415,9 +420,8 @@ watch(
 
 /* ─── Hover arrow ─── */
 .nav-arrow {
-  font-family: Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
   color: #ff9d00;
   flex-shrink: 0;
   align-self: center;
