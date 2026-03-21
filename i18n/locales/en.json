@@ -739,5 +739,13 @@
         "button": "Improve my design"
       }
     }
+  },
+  "error": {
+    "code": "404",
+    "title": "Page not found",
+    "subtitle": "This page has vanished beyond the zenith.",
+    "description": "The page you are looking for does not exist or has been moved. Let us guide you back home.",
+    "cta": "Back to home",
+    "label": "Error"
   }
 }
