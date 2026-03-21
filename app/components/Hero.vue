@@ -6,9 +6,10 @@
       <NuxtImg
         src="/images/decorations/left_spotlight.webp"
         alt=""
-        width="800"
-        height="1200"
-        sizes="sm:50vw lg:600px"
+        width="572"
+        height="608"
+        sizes="(max-width: 768px) 50vw, 600px"
+        quality="75"
         class="pointer-events-none absolute left-0 top-0 h-full w-auto opacity-50"
         loading="eager"
         :preload="true"
@@ -19,8 +20,10 @@
       <NuxtImg
         src="/images/decorations/right_spotlight.webp"
         alt=""
-        width="800"
-        height="1200"
+        width="572"
+        height="608"
+        sizes="(max-width: 768px) 50vw, 600px"
+        quality="75"
         class="pointer-events-none absolute right-0 top-0 h-full w-auto"
         loading="eager"
         :preload="true"
@@ -28,23 +31,30 @@
       />
     </div>
     <div class="relative z-10 mx-auto max-w-5xl text-center">
-      <div class="mb-8 flex justify-center">
-        <div
-          class="inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/20 bg-zenith-bg-secondary-light/50 px-4 py-2 backdrop-blur-sm dark:bg-zenith-bg-secondary-dark/50"
-        >
-          <span class="relative flex h-2 w-2">
-            <span
-              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-zenith-gold-vivid opacity-75"
-            />
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-zenith-gold-vivid" />
-          </span>
-          <span
-            class="text-xs font-medium text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+      <ClientOnly>
+        <div class="mb-8 flex justify-center">
+          <div
+            class="inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/20 bg-zenith-bg-secondary-light/50 px-4 py-2 backdrop-blur-sm dark:bg-zenith-bg-secondary-dark/50"
           >
-            {{ $t('hero.availability') }}
-          </span>
+            <span class="relative flex h-2 w-2">
+              <span
+                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-zenith-gold-vivid opacity-75"
+              />
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-zenith-gold-vivid" />
+            </span>
+            <span
+              class="text-xs font-medium text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+            >
+              {{ $t('hero.availability') }}
+            </span>
+          </div>
         </div>
-      </div>
+        <template #fallback>
+          <div class="mb-8 flex justify-center">
+            <div class="h-9 w-40 animate-pulse rounded-full bg-zenith-bg-secondary-light/30 dark:bg-zenith-bg-secondary-dark/30" />
+          </div>
+        </template>
+      </ClientOnly>
 
       <h1 class="mb-6 font-bold leading-tight">
         <span class="text-zenith-text-primary-light dark:text-zenith-text-primary-dark">

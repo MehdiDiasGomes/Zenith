@@ -3,19 +3,19 @@
     <Hero />
     <SectionDivider />
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
-      <Services />
+      <LazyServices />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
-      <CallToAction />
+      <LazyCallToAction />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
-      <Projects />
+      <LazyProjects />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
-      <BlogPreview />
+      <LazyBlogPreview />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
-      <PricingTeaser />
+      <LazyPricingTeaser />
     </div>
   </div>
 </template>
