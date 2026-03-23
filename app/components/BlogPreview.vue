@@ -132,19 +132,6 @@
         </NuxtLink>
       </div>
 
-      <!-- Mobile + bottom CTA -->
-      <div class="mt-10 flex justify-center">
-        <Button
-          as-child
-          variant="gold"
-          :aria-label="$t('blog.viewAll')"
-        >
-          <NuxtLink :to="localePath('/blog')">
-            {{ $t('blog.viewAll') }}
-            <ArrowRight :size="14" aria-hidden="true" />
-          </NuxtLink>
-        </Button>
-      </div>
 
     </div>
   </section>
