@@ -253,6 +253,12 @@
       "imageAlt": "Illustration représentant la maintenance et le support technique"
     }
   },
+  "projectsPreview": {
+    "eyebrow": "Réalisations",
+    "title": "Mes derniers projets",
+    "subtitle": "Un aperçu de ce que je crée pour mes clients.",
+    "cta": "Voir toutes mes réalisations"
+  },
   "projects": {
     "title": "Mes Projets",
     "subtitle": "Découvrez mes réalisations",
@@ -352,7 +358,7 @@
     "teaserNote": "+ Audit SEO offert, sans carte bancaire.",
     "teaserCta": "Voir les détails et fonctionnalités",
     "startingFrom": "à partir de",
-    "getQuote": "Me contacter [GRATUIT]",
+    "getQuote": "Me contacter",
     "requestAudit": "Demander mon audit gratuit",
     "discountLabel": "Offre -30%",
     "originalPrice": "Prix habituel",
@@ -554,7 +560,7 @@
     "allArticles": "Tous les articles",
     "homeTitle": "Derniers articles",
     "homeSubtitle": "Conseils pratiques et guides pour développer votre présence en ligne.",
-    "viewAll": "Explorer le blog",
+    "viewAll": "Voir tous les articles",
     "noArticles": "Aucun article dans cette catégorie pour le moment.",
     "backToBlog": "Retour au blog",
     "tableOfContents": "Sommaire",

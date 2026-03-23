@@ -253,6 +253,12 @@
       "imageAlt": "Illustration representing maintenance and technical support"
     }
   },
+  "projectsPreview": {
+    "eyebrow": "Work",
+    "title": "My latest projects",
+    "subtitle": "A glimpse of what I create for my clients.",
+    "cta": "View all my work"
+  },
   "projects": {
     "title": "My Projects",
     "subtitle": "Discover my work",
@@ -351,7 +357,7 @@
     "teaserNote": "+ Free SEO audit, no credit card required.",
     "teaserCta": "See details and features",
     "startingFrom": "starting from",
-    "getQuote": "Contact me [FREE]",
+    "getQuote": "Contact me",
     "requestAudit": "Request my free audit",
     "discountLabel": "-30% offer",
     "originalPrice": "Regular price",
@@ -553,7 +559,7 @@
     "allArticles": "All articles",
     "homeTitle": "Latest articles",
     "homeSubtitle": "Practical guides and tips to grow your online presence.",
-    "viewAll": "Explore the blog",
+    "viewAll": "View all articles",
     "noArticles": "No articles in this category yet.",
     "backToBlog": "Back to blog",
     "tableOfContents": "Table of contents",

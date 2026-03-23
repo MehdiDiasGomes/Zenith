@@ -9,7 +9,7 @@
       <LazyCallToAction />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
-      <LazyProjects />
+      <LazyProjectsPreview />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
       <LazyBlogPreview />
