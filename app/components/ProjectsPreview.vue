@@ -159,6 +159,16 @@
         </article>
       </div>
 
+      <!-- Mobile CTA button -->
+      <div class="mt-8 flex justify-center sm:hidden">
+        <Button as-child variant="gold" :aria-label="$t('projectsPreview.cta')">
+          <NuxtLink :to="localePath('/portfolio')">
+            {{ $t('projectsPreview.cta') }}
+            <ArrowRight :size="14" aria-hidden="true" />
+          </NuxtLink>
+        </Button>
+      </div>
+
     </div>
   </section>
 </template>

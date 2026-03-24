@@ -75,3 +75,21 @@ export const pricingPlans: PricingPlan[] = [
 ]
 
 export const DISCOUNT_PERCENTAGE = 30
+
+export interface PaymentStep {
+  key: string
+}
+
+export const paymentSteps: PaymentStep[] = [
+  { key: 'start' },
+  { key: 'mockup' },
+  { key: 'delivery' },
+]
+
+export const customDevTagKeys: string[] = [
+  'pricing.customDev.tags.0',
+  'pricing.customDev.tags.1',
+  'pricing.customDev.tags.2',
+  'pricing.customDev.tags.3',
+]
+

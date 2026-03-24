@@ -433,6 +433,20 @@
         "Formation complète à la gestion de votre boutique"
       ]
     },
+    "customDev": {
+      "eyebrow": "Sur mesure",
+      "title": "Développement spécifique",
+      "subtitle": "Application web, intégration API, outil métier : votre projet n'entre pas dans une case — parlons-en.",
+      "price": "Sur devis",
+      "priceNote": "Devis gratuit sous 24h",
+      "cta": "Me contacter",
+      "tags": [
+        "Application web",
+        "Intégration API",
+        "Outil métier",
+        "Automatisation"
+      ]
+    },
     "seoAudit": {
       "title": "Audit SEO",
       "description": "Analyse gratuite de votre visibilité en ligne",

@@ -191,6 +191,63 @@
           </article>
         </div>
 
+        <!-- Custom development card -->
+        <div
+          class="plan-card mt-5 overflow-hidden rounded-2xl border border-zenith-gold-vivid/30 bg-zenith-bg-secondary-light dark:border-zenith-gold-vivid/20 dark:bg-zenith-bg-secondary-dark"
+          style="animation-delay: 0.45s"
+        >
+          <!-- Subtle ambient glow -->
+          <div class="relative flex flex-col items-start justify-between gap-8 overflow-hidden p-6 sm:flex-row sm:items-center lg:p-8">
+            <div
+              class="pointer-events-none absolute -right-16 -top-10 h-64 w-64 rounded-full bg-zenith-gold-vivid/5 blur-3xl"
+              aria-hidden="true"
+            />
+
+            <!-- Left: content -->
+            <div class="relative flex-1">
+              <div class="mb-3 flex items-center gap-2">
+                <span class="h-px w-5 bg-zenith-gold-vivid/60" aria-hidden="true" />
+                <span class="text-xs font-semibold uppercase tracking-widest text-zenith-gold-vivid">
+                  {{ $t('pricing.customDev.eyebrow') }}
+                </span>
+              </div>
+              <h3 class="mb-2 text-lg font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark lg:text-xl">
+                {{ $t('pricing.customDev.title') }}
+              </h3>
+              <p class="max-w-lg text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                {{ $t('pricing.customDev.subtitle') }}
+              </p>
+              <!-- Feature tags -->
+              <div class="mt-4 flex flex-wrap gap-2" role="list" :aria-label="$t('pricing.customDev.title')">
+                <span
+                  v-for="tagKey in customDevTagKeys"
+                  :key="tagKey"
+                  role="listitem"
+                  class="rounded-md border border-zenith-gold-bronze/20 bg-zenith-gold-vivid/6 px-2.5 py-1 text-xs font-medium text-zenith-gold-vivid/80 dark:border-zenith-gold-vivid/15 dark:bg-zenith-gold-vivid/8 dark:text-zenith-gold-vivid"
+                >
+                  {{ $t(tagKey) }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Right: price + CTA -->
+            <div class="relative flex flex-col items-start gap-4 sm:items-end">
+              <div class="sm:text-right">
+                <p class="text-4xl font-bold text-zenith-gold-vivid">{{ $t('pricing.customDev.price') }}</p>
+                <p class="mt-0.5 text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                  {{ $t('pricing.customDev.priceNote') }}
+                </p>
+              </div>
+              <Button as-child variant="gold" :aria-label="$t('pricing.customDev.cta')">
+                <NuxtLink :to="localePath('/contact')">
+                  {{ $t('pricing.customDev.cta') }}
+                  <ArrowRight :size="14" aria-hidden="true" />
+                </NuxtLink>
+              </Button>
+            </div>
+          </div>
+        </div>
+
         <!-- Free audit card -->
         <div
           class="plan-card mt-5 overflow-hidden rounded-2xl border border-dashed border-zenith-gold-bronze/40 dark:border-zenith-gold-bronze/25"
@@ -351,22 +408,19 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
-import { pricingPlans, DISCOUNT_PERCENTAGE, type PricingPlan } from '~/constants/pricing'
+import {
+  pricingPlans,
+  paymentSteps,
+  customDevTagKeys,
+  DISCOUNT_PERCENTAGE,
+  type PricingPlan,
+  type PaymentStep,
+} from '~/constants/pricing'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 
 const isDiscountActive: boolean = DISCOUNT_PERCENTAGE > 0
-
-interface PaymentStep {
-  key: string
-}
-
-const paymentSteps: PaymentStep[] = [
-  { key: 'start' },
-  { key: 'mockup' },
-  { key: 'delivery' },
-]
 
 const mainPlans: PricingPlan[] = pricingPlans.filter((plan: PricingPlan) => plan.id !== 'seo-audit')
 const auditPlan: PricingPlan | undefined = pricingPlans.find((plan: PricingPlan) => plan.id === 'seo-audit')
@@ -381,9 +435,8 @@ const discountedPrice = (basePrice: number): number => {
   return Math.round(basePrice * (1 - DISCOUNT_PERCENTAGE / 100))
 }
 
-
 /**
- * Returns CSS classes for a pricing card based on its plan type
+ * Returns Tailwind CSS classes for a pricing card based on its plan type
  * @param planId - The unique plan identifier
  * @returns Tailwind CSS class string
  */

@@ -432,6 +432,20 @@
         "Complete training for managing your store"
       ]
     },
+    "customDev": {
+      "eyebrow": "Tailored",
+      "title": "Custom development",
+      "subtitle": "Web app, API integration, business tool: your project doesn't fit a mold — let's talk about it.",
+      "price": "On quote",
+      "priceNote": "Free quote within 24h",
+      "cta": "Contact me",
+      "tags": [
+        "Web application",
+        "API integration",
+        "Business tool",
+        "Automation"
+      ]
+    },
     "seoAudit": {
       "title": "SEO Audit",
       "description": "Free analysis of your online visibility",
