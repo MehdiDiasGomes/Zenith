@@ -2,7 +2,7 @@
   <section
     id="services"
     class="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8"
-    :aria-labelledby="'services-heading'"
+    aria-labelledby="services-heading"
   >
     <!-- Ambient glow -->
     <div

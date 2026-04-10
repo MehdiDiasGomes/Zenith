@@ -1,6 +1,6 @@
 import type { Directive, DirectiveBinding } from 'vue'
 
-type RevealOptions = {
+interface RevealOptions {
   delay?: number
   duration?: number
   distance?: number

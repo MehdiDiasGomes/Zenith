@@ -90,7 +90,7 @@
       </aside>
 
       <!-- Content -->
-      <main class="min-w-0 flex-1" :id="contentId">
+      <main :id="contentId" class="min-w-0 flex-1">
         <ContentRenderer
           v-if="document"
           class="legal-prose"

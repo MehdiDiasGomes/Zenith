@@ -2,7 +2,7 @@
   <section
     id="projects-preview"
     class="relative overflow-hidden px-4 py-20 sm:px-6 lg:px-8"
-    :aria-labelledby="'projects-preview-heading'"
+    aria-labelledby="projects-preview-heading"
   >
     <!-- Ambient glow -->
     <div

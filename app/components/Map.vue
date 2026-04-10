@@ -37,10 +37,13 @@
 </template>
 
 <script setup lang="ts">
+import type { Map as LeafletMap, TileLayer as LeafletTileLayer } from 'leaflet'
+import type LeafletLib from 'leaflet'
+
 const mapContainer = ref<HTMLDivElement | null>(null)
-const map = ref<any>(null)
-const tileLayer = ref<any>(null)
-let L: any = null
+const map = ref<LeafletMap | null>(null)
+const tileLayer = ref<LeafletTileLayer | null>(null)
+let L: typeof LeafletLib | null = null
 
 const colorMode = useColorMode()
 

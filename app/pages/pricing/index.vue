@@ -414,7 +414,6 @@ import {
   customDevTagKeys,
   DISCOUNT_PERCENTAGE,
   type PricingPlan,
-  type PaymentStep,
 } from '~/constants/pricing'
 
 const { t } = useI18n()
