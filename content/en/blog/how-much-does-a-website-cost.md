@@ -5,7 +5,7 @@ date: "2026-03-15"
 category: "prix"
 image: "/images/blog/website-cost-thionville-guide.webp"
 readingTime: 6
-featured: true
+featured: false
 ---
 
 It's the first question almost every client asks me. Before talking about design or features, the budget is at the heart of every conversation.
