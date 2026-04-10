@@ -84,7 +84,7 @@
         <Button as-child variant="gold">
           <NuxtLink :to="localePath('/contact')">
             {{ $t('hero.cta.primary') }}
-            <ArrowRight :size="16" aria-hidden="true" />
+            <Icon name="ArrowRight" :size="16" aria-hidden="true" />
           </NuxtLink>
         </Button>
 
@@ -99,7 +99,6 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRight, MapPin } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 
 const localePath = useLocalePath()

@@ -126,7 +126,7 @@
 
       <!-- Right Form Panel -->
       <div class="flex h-full flex-col bg-zenith-bg-light px-8 py-10 dark:bg-zenith-bg-dark lg:px-12 lg:py-12">
-        <form class="flex h-full flex-col gap-8" @submit="onSubmit" novalidate>
+        <form class="flex h-full flex-col gap-8" novalidate @submit="onSubmit">
 
           <!-- Name + Email row -->
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">

@@ -51,14 +51,14 @@
 </template>
 
 <script setup lang="ts">
+import { ArrowRight } from 'lucide-vue-next'
+import { Button } from '@/components/ui/button'
+
 interface ServiceCTAProps {
   title: string
   description: string
   buttonText: string
 }
-
-import { ArrowRight } from 'lucide-vue-next'
-import { Button } from '@/components/ui/button'
 
 defineProps<ServiceCTAProps>()
 
