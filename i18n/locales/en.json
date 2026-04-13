@@ -502,7 +502,10 @@
       "submit": "Send message",
       "sending": "Sending...",
       "success": "Message sent successfully! I'll respond quickly.",
-      "error": "An error occurred. Please try again."
+      "error": "An error occurred. Please try again.",
+      "recaptcha": "This site is protected by reCAPTCHA. Google's {privacyPolicy} and {termsOfService} apply.",
+      "recaptchaPrivacy": "Privacy Policy",
+      "recaptchaTerms": "Terms of Service"
     },
     "info": {
       "title": "Contact Information",

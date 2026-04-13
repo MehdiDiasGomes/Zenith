@@ -503,7 +503,10 @@
       "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
       "success": "Message envoyé avec succès ! Je vous répondrai rapidement.",
-      "error": "Une erreur est survenue. Veuillez réessayer."
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "recaptcha": "Ce site est protégé par reCAPTCHA. La {privacyPolicy} et les {termsOfService} de Google s'appliquent.",
+      "recaptchaPrivacy": "Politique de confidentialité",
+      "recaptchaTerms": "Conditions d'utilisation"
     },
     "info": {
       "title": "Informations de contact",

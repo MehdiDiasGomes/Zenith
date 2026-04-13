@@ -272,6 +272,28 @@
             </FormItem>
           </FormField>
 
+          <!-- reCAPTCHA disclosure (required when badge is hidden) -->
+          <p class="text-[10px] leading-relaxed text-zenith-text-secondary-light/50 dark:text-zenith-text-secondary-dark/40">
+            <i18n-t keypath="contact.form.recaptcha" tag="span">
+              <template #privacyPolicy>
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline underline-offset-2 transition-colors duration-200 hover:text-zenith-gold-vivid"
+                >{{ $t('contact.form.recaptchaPrivacy') }}</a>
+              </template>
+              <template #termsOfService>
+                <a
+                  href="https://policies.google.com/terms"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="underline underline-offset-2 transition-colors duration-200 hover:text-zenith-gold-vivid"
+                >{{ $t('contact.form.recaptchaTerms') }}</a>
+              </template>
+            </i18n-t>
+          </p>
+
           <!-- Submit -->
           <div class="flex flex-col gap-3">
             <Button type="submit" variant="gold" size="lg" :disabled="isSubmitting" class="w-full">
@@ -324,6 +346,7 @@ import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import { z } from 'zod'
 import { ArrowRight, ChevronDown } from 'lucide-vue-next'
+import { useReCaptcha } from 'vue-recaptcha-v3'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -332,6 +355,7 @@ import { contactInfo } from '~/constants/contact'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
+const recaptcha = useReCaptcha()
 
 const formSchema = toTypedSchema(
   z.object({
@@ -373,9 +397,12 @@ const onSubmit = form.handleSubmit(async (values) => {
   submitStatus.value = 'idle'
 
   try {
+    await recaptcha?.recaptchaLoaded()
+    const recaptchaToken: string = await recaptcha?.executeRecaptcha('contact_form') ?? ''
+
     const response = await $fetch('/api/contact', {
       method: 'POST',
-      body: values,
+      body: { ...values, recaptchaToken },
     })
 
     if (response.success) {
