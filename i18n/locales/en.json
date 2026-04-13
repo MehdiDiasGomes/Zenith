@@ -1,18 +1,18 @@
 {
   "seo": {
-    "title": "Website Creation Thionville, Metz (57) | Zenith",
-    "description": "Professional website creation for SMEs and businesses in Thionville, Metz and surrounding areas. Showcase sites, e-commerce. Free quote, personalized support.",
+    "title": "Custom Website Creation | Zenith France",
+    "description": "Professional website creation for SMEs and businesses throughout France. Showcase sites, e-commerce. Free quote, personalized support.",
     "legal": {
       "title": "Legal Notice | Zenith - Website Creation",
-      "description": "Legal notice for Zenith, professional website creation in Thionville and Metz."
+      "description": "Legal notice for Zenith, professional website creation."
     },
     "privacy": {
       "title": "Privacy Policy | Zenith",
       "description": "Privacy policy and personal data protection for Zenith, GDPR compliant."
     },
     "faq": {
-      "title": "FAQ Website Creation | Zenith Thionville, Metz",
-      "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs in Thionville and Metz."
+      "title": "FAQ Website Creation | Zenith France",
+      "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs throughout France."
     },
     "offerCatalogName": "Web creation services",
     "service": {
@@ -42,7 +42,7 @@
   "pages": {
     "services": {
       "title": "Services",
-      "seoTitle": "Custom Website Development — Services | Zenith Thionville, Metz",
+      "seoTitle": "Custom Website Development — Services | Zenith France",
       "description": "Discover the services offered by Zenith to develop your online presence",
       "hero": {
         "titleWhite": "Websites that",
@@ -156,7 +156,7 @@
     },
     "pricing": {
       "title": "Pricing",
-      "seoTitle": "Website Pricing | Zenith Thionville, Metz",
+      "seoTitle": "Website Pricing | Zenith France",
       "description": "Discover the pricing and solutions offered by Zenith",
       "eyebrow": "Transparent pricing",
       "hero": {
@@ -167,8 +167,8 @@
       }
     },
     "contact": {
-      "title": "Contact | Zenith — Web Design &amp; Development",
-      "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses.",
+      "title": "Contact | Zenith — Web Design &amp; Development France",
+      "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses throughout France.",
       "eyebrow": "Let's talk about your project",
       "hero": {
         "titleWhite": "One conversation can",
@@ -463,7 +463,7 @@
     "subtitle": "Have a question? A project? Feel free to contact me, I'll get back to you as soon as possible.",
     "badge": "Response guaranteed within 24h",
     "map": {
-      "ariaLabel": "Interactive map showing Zenith's service area: Thionville, Metz and surroundings",
+      "ariaLabel": "Interactive map showing Zenith's service area in France",
       "loading": "Loading map..."
     },
     "form": {

@@ -1,18 +1,18 @@
 {
   "seo": {
-    "title": "Création Site Web Thionville, Metz (57) | Zenith",
-    "description": "Création de sites internet professionnels pour PME et artisans à Thionville, Metz et alentours. Sites vitrines, e-commerce. Devis gratuit, accompagnement personnalisé.",
+    "title": "Création Site Web sur Mesure | Zenith France",
+    "description": "Création de sites internet professionnels pour PME et artisans partout en France. Sites vitrines, e-commerce. Devis gratuit, accompagnement personnalisé.",
     "legal": {
       "title": "Mentions Légales | Zenith - Création Site Web",
-      "description": "Mentions légales de Zenith, création de sites internet professionnels à Thionville et Metz."
+      "description": "Mentions légales de Zenith, création de sites internet professionnels."
     },
     "privacy": {
       "title": "Politique de Confidentialité | Zenith",
       "description": "Politique de confidentialité et protection des données personnelles de Zenith, conforme au RGPD."
     },
     "faq": {
-      "title": "FAQ Création Site Web | Zenith Thionville, Metz",
-      "description": "Questions fréquentes sur la création de sites internet : tarifs, délais, maintenance. Zenith accompagne les PME à Thionville et Metz."
+      "title": "FAQ Création Site Web | Zenith France",
+      "description": "Questions fréquentes sur la création de sites internet : tarifs, délais, maintenance. Zenith accompagne les PME partout en France."
     },
     "offerCatalogName": "Services de création web",
     "service": {
@@ -42,7 +42,7 @@
   "pages": {
     "services": {
       "title": "Services",
-      "seoTitle": "Création Site Web sur Mesure — Services | Zenith Thionville, Metz",
+      "seoTitle": "Création Site Web sur Mesure — Services | Zenith France",
       "description": "Découvrez les services proposés par Zenith pour développer votre présence en ligne",
       "hero": {
         "titleWhite": "Des sites web qui",
@@ -156,7 +156,7 @@
     },
     "pricing": {
       "title": "Tarifs",
-      "seoTitle": "Tarifs Création Site Web | Zenith Thionville, Metz",
+      "seoTitle": "Tarifs Création Site Web | Zenith France",
       "description": "Découvrez les tarifs et solutions proposées par Zenith",
       "eyebrow": "Tarification transparente",
       "hero": {
@@ -167,8 +167,8 @@
       }
     },
     "contact": {
-      "title": "Contact | Zenith — Création Site Web Thionville, Metz",
-      "description": "Décrivez votre projet à Zenith et obtenez un devis gratuit sous 24h. Accompagnement personnalisé pour les PME et artisans à Thionville, Metz et alentours.",
+      "title": "Contact | Zenith — Création Site Web France",
+      "description": "Décrivez votre projet à Zenith et obtenez un devis gratuit sous 24h. Accompagnement personnalisé pour les PME et artisans partout en France.",
       "eyebrow": "Parlons de votre projet",
       "hero": {
         "titleWhite": "Un échange suffit pour",
@@ -464,7 +464,7 @@
     "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter, je vous répondrai dans les plus brefs délais.",
     "badge": "Réponse garantie sous 24h",
     "map": {
-      "ariaLabel": "Carte interactive montrant la zone d'intervention de Zenith : Thionville, Metz et alentours",
+      "ariaLabel": "Carte interactive montrant la zone d'intervention de Zenith en France",
       "loading": "Chargement de la carte..."
     },
     "form": {
