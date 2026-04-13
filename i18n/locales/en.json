@@ -243,7 +243,7 @@
       "imageAlt": "Illustration representing design and user experience"
     },
     "performance": {
-      "title": "Visible on Google",
+      "title": "Optimized for Google",
       "description": "Optimization so your clients find you when searching for your services, without relying on advertising",
       "imageAlt": "Illustration representing SEO optimization and search engine ranking"
     },
@@ -273,7 +273,7 @@
       "all": "All",
       "portfolio": "Portfolio",
       "showcase": "Showcase sites",
-      "ecommerce": "E-shop"
+      "ecommerce": "Online store"
     },
     "kbClean": {
       "title": "KB Clean",
@@ -397,19 +397,19 @@
         "Modern and responsive design",
         "Up to 5 pages",
         "Contact form",
-        "Visible on Google",
+        "Optimized for Google",
         "Fast website"
       ]
     },
     "showcaseAdvanced": {
-      "title": "Advanced showcase site",
+      "title": "Premium showcase site",
       "description": "For a complete and professional online presence",
       "monthlyFee": "+ €30/month (hosting and maintenance)",
       "features": [
         "Modern and responsive design",
         "Unlimited pages",
         "Contact form",
-        "Visible on Google",
+        "Optimized for Google",
         "Fast website",
         "Blog / News section",
         "Multilingual site (2 languages)",
@@ -417,7 +417,7 @@
       ]
     },
     "eshop": {
-      "title": "E-shop",
+      "title": "Online store",
       "description": "Your turnkey online store to start selling now",
       "monthlyFee": "+ €80/month (hosting and maintenance)",
       "features": [
@@ -539,11 +539,11 @@
       },
       "timeline": {
         "question": "What are the delivery timelines?",
-        "answer": "A classic showcase site typically takes 2 to 3 weeks. For an advanced showcase site, expect 3 to 5 weeks. An e-shop requires 4 to 6 weeks. These timelines may vary depending on complexity and your responsiveness for approvals."
+        "answer": "A classic showcase site typically takes 2 to 3 weeks. For a premium showcase site, expect 3 to 5 weeks. An online store requires 4 to 6 weeks. These timelines may vary depending on complexity and your responsiveness for approvals."
       },
       "pricing": {
         "question": "How are your prices calculated?",
-        "answer": "My prices are based on the type of site (showcase, advanced, e-shop) and the desired features. I provide a detailed and transparent quote before any commitment. No surprises: the announced price is the final price."
+        "answer": "My prices are based on the type of site (showcase, premium, online store) and the desired features. I provide a detailed and transparent quote before any commitment. No surprises: the announced price is the final price."
       },
       "maintenance": {
         "question": "Do you offer site maintenance?",

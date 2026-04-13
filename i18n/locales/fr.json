@@ -243,7 +243,7 @@
       "imageAlt": "Illustration représentant le design et l'expérience utilisateur"
     },
     "performance": {
-      "title": "Visible sur Google",
+      "title": "Optimisé pour Google",
       "description": "Optimisation pour que vos clients vous trouvent quand ils cherchent vos services, sans dépendre de la publicité",
       "imageAlt": "Illustration représentant l'optimisation SEO et le référencement"
     },
@@ -273,7 +273,7 @@
       "all": "Tous",
       "portfolio": "Portfolio",
       "showcase": "Sites vitrines",
-      "ecommerce": "E-shop"
+      "ecommerce": "Boutique en ligne"
     },
     "kbClean": {
       "title": "KB Clean",
@@ -398,19 +398,19 @@
         "Design moderne et responsive",
         "Jusqu'à 5 pages",
         "Formulaire de contact",
-        "Visible sur Google",
+        "Optimisé pour Google",
         "Site rapide"
       ]
     },
     "showcaseAdvanced": {
-      "title": "Site vitrine avancé",
+      "title": "Site vitrine premium",
       "description": "Pour une présence en ligne complète et professionnelle",
       "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
       "features": [
         "Design moderne et responsive",
         "Pages illimitées",
         "Formulaire de contact",
-        "Visible sur Google",
+        "Optimisé pour Google",
         "Site rapide",
         "Blog / Section actualités",
         "Site multilingue (2 langues)",
@@ -418,7 +418,7 @@
       ]
     },
     "eshop": {
-      "title": "E-shop",
+      "title": "Boutique en ligne",
       "description": "Votre boutique en ligne clé en main pour vendre dès maintenant",
       "monthlyFee": "+ 80€/mois (hébergement et maintenance)",
       "features": [
@@ -540,11 +540,11 @@
       },
       "timeline": {
         "question": "Quels sont les délais de réalisation ?",
-        "answer": "Un site vitrine classique prend généralement 2 à 3 semaines. Pour un site vitrine avancé, comptez 3 à 5 semaines. Un e-shop nécessite 4 à 6 semaines. Ces délais peuvent varier selon la complexité et votre réactivité pour les validations."
+        "answer": "Un site vitrine classique prend généralement 2 à 3 semaines. Pour un site vitrine premium, comptez 3 à 5 semaines. Une boutique en ligne nécessite 4 à 6 semaines. Ces délais peuvent varier selon la complexité et votre réactivité pour les validations."
       },
       "pricing": {
         "question": "Comment sont calculés vos tarifs ?",
-        "answer": "Mes tarifs sont basés sur le type de site (vitrine, avancé, e-shop) et les fonctionnalités souhaitées. Je vous fournis un devis détaillé et transparent avant tout engagement. Pas de mauvaise surprise : le prix annoncé est le prix final."
+        "answer": "Mes tarifs sont basés sur le type de site (vitrine, premium, boutique en ligne) et les fonctionnalités souhaitées. Je vous fournis un devis détaillé et transparent avant tout engagement. Pas de mauvaise surprise : le prix annoncé est le prix final."
       },
       "maintenance": {
         "question": "Proposez-vous la maintenance du site ?",
