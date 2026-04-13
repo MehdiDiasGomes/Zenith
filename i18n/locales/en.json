@@ -1,18 +1,18 @@
 {
   "seo": {
-    "title": "Website Creation Thionville, Metz (57) | Zenith",
-    "description": "Professional website creation for SMEs and businesses in Thionville, Metz and surrounding areas. Showcase sites, e-commerce. Free quote, personalized support.",
+    "title": "Custom Website Creation | Zenith France",
+    "description": "Professional website creation for SMEs and businesses throughout France. Showcase sites, e-commerce. Free quote, personalized support.",
     "legal": {
       "title": "Legal Notice | Zenith - Website Creation",
-      "description": "Legal notice for Zenith, professional website creation in Thionville and Metz."
+      "description": "Legal notice for Zenith, professional website creation."
     },
     "privacy": {
       "title": "Privacy Policy | Zenith",
       "description": "Privacy policy and personal data protection for Zenith, GDPR compliant."
     },
     "faq": {
-      "title": "FAQ Website Creation | Zenith Thionville, Metz",
-      "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs in Thionville and Metz."
+      "title": "FAQ Website Creation | Zenith France",
+      "description": "Frequently asked questions about website creation: pricing, timelines, maintenance. Zenith supports SMEs throughout France."
     },
     "offerCatalogName": "Web creation services",
     "service": {
@@ -42,7 +42,7 @@
   "pages": {
     "services": {
       "title": "Services",
-      "seoTitle": "Custom Website Development — Services | Zenith Thionville, Metz",
+      "seoTitle": "Custom Website Development — Services | Zenith France",
       "description": "Discover the services offered by Zenith to develop your online presence",
       "hero": {
         "titleWhite": "Websites that",
@@ -156,7 +156,7 @@
     },
     "pricing": {
       "title": "Pricing",
-      "seoTitle": "Website Pricing | Zenith Thionville, Metz",
+      "seoTitle": "Website Pricing | Zenith France",
       "description": "Discover the pricing and solutions offered by Zenith",
       "eyebrow": "Transparent pricing",
       "hero": {
@@ -167,8 +167,8 @@
       }
     },
     "contact": {
-      "title": "Contact | Zenith — Web Design &amp; Development",
-      "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses.",
+      "title": "Contact | Zenith — Web Design &amp; Development France",
+      "description": "Tell Zenith about your project and get a free quote within 24 hours. Personalized support for SMEs and businesses throughout France.",
       "eyebrow": "Let's talk about your project",
       "hero": {
         "titleWhite": "One conversation can",
@@ -243,7 +243,7 @@
       "imageAlt": "Illustration representing design and user experience"
     },
     "performance": {
-      "title": "Visible on Google",
+      "title": "Optimized for Google",
       "description": "Optimization so your clients find you when searching for your services, without relying on advertising",
       "imageAlt": "Illustration representing SEO optimization and search engine ranking"
     },
@@ -273,7 +273,7 @@
       "all": "All",
       "portfolio": "Portfolio",
       "showcase": "Showcase sites",
-      "ecommerce": "E-shop"
+      "ecommerce": "Online store"
     },
     "kbClean": {
       "title": "KB Clean",
@@ -397,19 +397,19 @@
         "Modern and responsive design",
         "Up to 5 pages",
         "Contact form",
-        "Visible on Google",
+        "Optimized for Google",
         "Fast website"
       ]
     },
     "showcaseAdvanced": {
-      "title": "Advanced showcase site",
+      "title": "Premium showcase site",
       "description": "For a complete and professional online presence",
       "monthlyFee": "+ €30/month (hosting and maintenance)",
       "features": [
         "Modern and responsive design",
         "Unlimited pages",
         "Contact form",
-        "Visible on Google",
+        "Optimized for Google",
         "Fast website",
         "Blog / News section",
         "Multilingual site (2 languages)",
@@ -417,7 +417,7 @@
       ]
     },
     "eshop": {
-      "title": "E-shop",
+      "title": "Online store",
       "description": "Your turnkey online store to start selling now",
       "monthlyFee": "+ €80/month (hosting and maintenance)",
       "features": [
@@ -463,7 +463,7 @@
     "subtitle": "Have a question? A project? Feel free to contact me, I'll get back to you as soon as possible.",
     "badge": "Response guaranteed within 24h",
     "map": {
-      "ariaLabel": "Interactive map showing Zenith's service area: Thionville, Metz and surroundings",
+      "ariaLabel": "Interactive map showing Zenith's service area in France",
       "loading": "Loading map..."
     },
     "form": {
@@ -502,7 +502,10 @@
       "submit": "Send message",
       "sending": "Sending...",
       "success": "Message sent successfully! I'll respond quickly.",
-      "error": "An error occurred. Please try again."
+      "error": "An error occurred. Please try again.",
+      "recaptcha": "This site is protected by reCAPTCHA. Google's {privacyPolicy} and {termsOfService} apply.",
+      "recaptchaPrivacy": "Privacy Policy",
+      "recaptchaTerms": "Terms of Service"
     },
     "info": {
       "title": "Contact Information",
@@ -536,11 +539,11 @@
       },
       "timeline": {
         "question": "What are the delivery timelines?",
-        "answer": "A classic showcase site typically takes 2 to 3 weeks. For an advanced showcase site, expect 3 to 5 weeks. An e-shop requires 4 to 6 weeks. These timelines may vary depending on complexity and your responsiveness for approvals."
+        "answer": "A classic showcase site typically takes 2 to 3 weeks. For a premium showcase site, expect 3 to 5 weeks. An online store requires 4 to 6 weeks. These timelines may vary depending on complexity and your responsiveness for approvals."
       },
       "pricing": {
         "question": "How are your prices calculated?",
-        "answer": "My prices are based on the type of site (showcase, advanced, e-shop) and the desired features. I provide a detailed and transparent quote before any commitment. No surprises: the announced price is the final price."
+        "answer": "My prices are based on the type of site (showcase, premium, online store) and the desired features. I provide a detailed and transparent quote before any commitment. No surprises: the announced price is the final price."
       },
       "maintenance": {
         "question": "Do you offer site maintenance?",

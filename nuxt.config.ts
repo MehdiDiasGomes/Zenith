@@ -26,10 +26,13 @@ export default defineNuxtConfig({
       ],
     },
   },
-  plugins: [{ src: '~/plugins/vue-recaptcha-v3.ts', mode: 'client' }],
   runtimeConfig: {
-    resendApiKey: process.env.RESEND_API_KEY,
-    contactEmail: process.env.CONTACT_EMAIL,
+    resendApiKey: '',
+    contactEmail: '',
+    recaptchaSecretKey: '',
+    public: {
+      recaptchaSiteKey: '',
+    },
   },
   critters: {
     config: {

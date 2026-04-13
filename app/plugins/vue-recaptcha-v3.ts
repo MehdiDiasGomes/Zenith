@@ -5,6 +5,7 @@ import { VueReCaptcha } from 'vue-recaptcha-v3'
  * the ~500KB Google script on every route.
  */
 export default defineNuxtPlugin((nuxtApp) => {
+  const config = useRuntimeConfig()
   const router = useRouter()
 
   const isContactPage = (path: string): boolean =>
@@ -16,9 +17,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     if (installed) return
     installed = true
     nuxtApp.vueApp.use(VueReCaptcha, {
-      siteKey: '6LfTZwQrAAAAALwtAffDteP8oVySXcp_AdyXVkc_',
+      siteKey: config.public.recaptchaSiteKey as string,
       loaderOptions: {
         autoHideBadge: true,
+        useRecaptchaNet: true,
       },
     })
   }
