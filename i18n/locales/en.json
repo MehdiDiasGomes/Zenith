@@ -763,6 +763,21 @@
       }
     }
   },
+  "testimonials": {
+    "eyebrow": "Client reviews",
+    "title": "They say it better than I do",
+    "subtitle": "Authentic feedback from people who trusted me with their online presence.",
+    "listAriaLabel": "Client reviews",
+    "sourceAriaLabel": "Review posted on {source}",
+    "ratingAriaLabel": "Rating: {rating} out of 5 stars",
+    "items": {
+      "petiteLeona": {
+        "name": "Petite Leona",
+        "company": "Douceur & Thérapie",
+        "text": "An attentive developer who built the website for my business. Despite my many requests for changes, he remained attentive and understanding. I highly recommend :)"
+      }
+    }
+  },
   "error": {
     "code": "404",
     "title": "Page not found",
