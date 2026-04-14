@@ -58,6 +58,11 @@
       <Projects />
     </div>
 
+    <!-- Testimonials -->
+    <div v-reveal="{ duration: 700, distance: 40 }">
+      <Testimonials />
+    </div>
+
     <!-- CTA -->
     <div v-reveal="{ duration: 700, distance: 40 }">
       <CallToAction />

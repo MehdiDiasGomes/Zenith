@@ -764,6 +764,21 @@
       }
     }
   },
+  "testimonials": {
+    "eyebrow": "Avis clients",
+    "title": "Ils en parlent mieux que moi",
+    "subtitle": "Des retours authentiques de personnes qui m'ont fait confiance pour leur présence en ligne.",
+    "listAriaLabel": "Avis de mes clients",
+    "sourceAriaLabel": "Avis publié sur {source}",
+    "ratingAriaLabel": "Note : {rating} étoiles sur 5",
+    "items": {
+      "petiteLeona": {
+        "name": "Petite Leona",
+        "company": "Douceur & Thérapie",
+        "text": "Développeur à l'écoute, qui a créé le site web de mon activité. Malgré mes nombreuses demandes de modifications il est resté attentif et compréhensif. Je recommande :)"
+      }
+    }
+  },
   "error": {
     "code": "404",
     "title": "Page introuvable",
