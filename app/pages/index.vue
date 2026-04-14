@@ -12,6 +12,9 @@
       <LazyProjectsPreview />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
+      <LazyTestimonials />
+    </div>
+    <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
       <LazyBlogPreview />
     </div>
     <div v-reveal="{ delay: 0, duration: 700, distance: 40 }">
