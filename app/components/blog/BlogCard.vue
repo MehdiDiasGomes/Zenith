@@ -43,7 +43,7 @@
     <!-- Card body -->
     <div class="flex flex-1 flex-col p-5">
       <!-- Category badge -->
-      <span class="mb-3 inline-flex self-start rounded-full bg-zenith-gold-vivid/8 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zenith-gold-vivid/70 dark:bg-zenith-gold-vivid/10 dark:text-zenith-gold-vivid/60">
+      <span class="mb-3 inline-flex self-start rounded-full bg-zenith-gold-vivid/8 text-[10px] font-semibold uppercase tracking-wider text-zenith-gold-vivid/70 dark:bg-zenith-gold-vivid/10 dark:text-zenith-gold-vivid/60">
         {{ $t(`blog.categories.${post.category}`) }}
       </span>
 
