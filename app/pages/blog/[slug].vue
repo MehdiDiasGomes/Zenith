@@ -32,7 +32,7 @@
 
         <!-- Category + meta -->
         <div class="mb-5 flex flex-wrap items-center gap-3">
-          <span class="rounded-full bg-zenith-gold-vivid/8 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-zenith-gold-vivid dark:bg-zenith-gold-vivid/12">
+          <span class="rounded-full bg-zenith-gold-vivid/8 py-1 text-xs font-semibold uppercase tracking-wider text-zenith-gold-vivid dark:bg-zenith-gold-vivid/12">
             {{ $t(`blog.categories.${post.category}`) }}
           </span>
           <span class="text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">

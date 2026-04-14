@@ -72,13 +72,13 @@
 
               <!-- Dark overlay on hover -->
               <div
-                class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent opacity-0 transition-opacity duration-400 group-hover:opacity-100"
+                class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent opacity-100 transition-opacity duration-400 sm:opacity-0 sm:group-hover:opacity-100"
                 aria-hidden="true"
               />
 
               <!-- Action buttons — bottom-left of image -->
               <div
-                class="absolute bottom-4 left-4 flex items-center gap-2 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+                class="absolute bottom-4 left-4 flex items-center gap-2 translate-y-0 opacity-100 transition-all duration-300 sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100"
               >
                 <Button
                   v-if="project.link"

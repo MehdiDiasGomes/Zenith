@@ -1,5 +1,5 @@
 <template>
-  <section id="projects" class="relative px-4 py-20 sm:px-6 lg:px-8">
+  <section id="projects" class="relative bg-zenith-bg-secondary-light px-4 py-20 dark:bg-zenith-bg-secondary-dark sm:px-6 lg:px-8">
     <div class="mx-auto max-w-6xl">
 
       <!-- Category filters — editorial tab style -->
@@ -54,7 +54,7 @@
         <article
           v-for="(project, index) in filteredProjects"
           :key="project.id"
-          class="project-card group relative flex flex-col overflow-hidden rounded-2xl bg-zenith-bg-light dark:bg-zenith-bg-secondary-dark"
+          class="project-card group relative flex flex-col overflow-hidden rounded-2xl bg-zenith-bg-light dark:bg-zenith-bg-dark"
           :class="isFeatured(index) ? 'lg:col-span-2' : ''"
           :style="{ '--delay': `${index * 0.07}s` }"
         >
@@ -149,7 +149,7 @@
               </h3>
               <!-- Category badge — minimal pill -->
               <span
-                class="flex-shrink-0 rounded-full bg-zenith-gold-vivid/8 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zenith-gold-vivid/70 dark:bg-zenith-gold-vivid/10 dark:text-zenith-gold-vivid/60"
+                class="flex-shrink-0 rounded-full bg-zenith-gold-vivid/8 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-zenith-gold-vivid/70 dark:bg-zenith-gold-vivid/10 dark:text-zenith-gold-vivid/60"
               >
                 {{ $t(`projects.categories.${project.category}`) }}
               </span>
