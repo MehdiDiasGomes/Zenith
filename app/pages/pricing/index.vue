@@ -141,40 +141,47 @@
                 <p class="mt-1.5 text-xs font-medium text-zenith-gold-vivid/80">
                   {{ $t('pricing.installment') }}
                 </p>
-                <p
-                  v-if="plan.monthlyFeeKey"
-                  class="mt-1 text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                >
-                  {{ $t(plan.monthlyFeeKey) }}
-                </p>
               </div>
 
               <!-- Features -->
-              <ul class="mb-8 flex-1 space-y-3" :aria-label="$t(plan.titleKey)">
-                <li
-                  v-for="feature in plan.features"
-                  :key="feature.textKey"
-                  class="flex items-start gap-2.5 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+              <div class="mb-8 flex-1 space-y-5" :aria-label="$t(plan.titleKey)">
+                <div
+                  v-for="(group, groupIndex) in plan.featureGroups"
+                  :key="groupIndex"
                 >
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 15 15"
-                    fill="none"
-                    class="mt-0.5 flex-shrink-0 text-zenith-gold-vivid"
-                    aria-hidden="true"
+                  <p
+                    v-if="group.titleKey"
+                    class="mb-3 text-xs font-semibold uppercase tracking-wider text-zenith-gold-bronze dark:text-zenith-champagne/70"
                   >
-                    <path
-                      d="M12.5 3.5L6 10L2.5 6.5"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  {{ $t(feature.textKey) }}
-                </li>
-              </ul>
+                    {{ $t(group.titleKey) }}
+                  </p>
+                  <ul class="space-y-3">
+                    <li
+                      v-for="feature in group.features"
+                      :key="feature.textKey"
+                      class="flex items-start gap-2.5 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                    >
+                      <svg
+                        width="15"
+                        height="15"
+                        viewBox="0 0 15 15"
+                        fill="none"
+                        class="mt-0.5 flex-shrink-0 text-zenith-gold-vivid"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M12.5 3.5L6 10L2.5 6.5"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                      {{ $t(feature.textKey) }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
               <!-- CTA -->
               <Button
@@ -319,84 +326,10 @@
           {{ $t('pricing.priceInfo.description') }}
         </p>
       </div>
+      
+       <PricingPaymentBadges />
     </section>
 
-    <!-- Payment milestones -->
-    <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="payment-heading">
-      <div class="mx-auto max-w-6xl">
-        <div class="rounded-2xl border border-zenith-bronze-dark/10 bg-zenith-bg-secondary-light px-6 py-10 dark:border-zenith-gold-bronze/10 dark:bg-zenith-bg-secondary-dark md:px-10">
-          <!-- Header -->
-          <div class="mb-10 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2
-                id="payment-heading"
-                class="text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark md:text-2xl"
-              >
-                {{ $t('pricing.paymentTitle') }}
-              </h2>
-              <p class="mt-1 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                {{ $t('pricing.paymentSubtitle') }}
-              </p>
-            </div>
-          </div>
-
-          <!-- Steps -->
-          <div class="relative">
-            <!-- Desktop: horizontal line -->
-            <div
-              class="pointer-events-none absolute left-5 right-0 top-5 hidden h-px bg-gradient-to-r from-zenith-gold-vivid/30 via-zenith-gold-vivid/50 to-zenith-gold-vivid/20 md:block"
-              aria-hidden="true"
-            />
-
-            <div class="grid grid-cols-1 gap-0 md:grid-cols-3 md:gap-6">
-              <div
-                v-for="(step, index) in paymentSteps"
-                :key="step.key"
-                class="relative flex gap-5 md:flex-col md:gap-3"
-              >
-                <!-- Mobile: vertical line between steps -->
-                <div
-                  v-if="index < paymentSteps.length - 1"
-                  class="absolute left-5 top-10 h-full w-px -translate-x-1/2 bg-gradient-to-b from-zenith-gold-vivid/40 to-zenith-gold-vivid/10 md:hidden"
-                  aria-hidden="true"
-                />
-
-                <!-- Circle -->
-                <div class="relative flex-shrink-0">
-                  <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-zenith-gold-vivid/40 bg-zenith-bg-secondary-light dark:bg-zenith-bg-dark">
-                    <span class="text-sm font-bold text-zenith-gold-vivid">{{ index + 1 }}</span>
-                  </div>
-                </div>
-
-                <!-- Content -->
-                <div class="pb-8 md:pb-0">
-                  <span class="mb-2 block text-xs font-semibold uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                    {{ $t(`pricing.paymentSteps.${step.key}.label`) }}
-                  </span>
-                  <p class="mb-2 text-3xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
-                    {{ $t(`pricing.paymentSteps.${step.key}.percent`) }}
-                  </p>
-                  <p class="text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                    {{ $t(`pricing.paymentSteps.${step.key}.description`) }}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Note -->
-          <div class="mt-8 flex items-center gap-2 border-t border-zenith-bronze-dark/10 pt-6 dark:border-zenith-gold-bronze/10">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="flex-shrink-0 text-zenith-gold-vivid/60" aria-hidden="true">
-              <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2" />
-              <path d="M7 6.5V10M7 4.5V5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
-            </svg>
-            <p class="text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-              {{ $t('pricing.paymentNote') }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- CTA -->
     <div v-reveal="{ duration: 700, distance: 40 }">
@@ -410,7 +343,6 @@ import { ArrowRight } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import {
   pricingPlans,
-  paymentSteps,
   customDevTagKeys,
   DISCOUNT_PERCENTAGE,
   type PricingPlan,

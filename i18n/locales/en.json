@@ -101,7 +101,7 @@
           },
           "build": {
             "title": "Design & development",
-            "description": "I show you mockups before writing a single line of code. You approve, I build. Regular check-ins so you always know where things stand."
+            "description": "I build your site directly from the brief. Regular check-ins let you validate and adjust at every step, in real time."
           },
           "launch": {
             "title": "Launch & ongoing support",
@@ -354,14 +354,15 @@
     "popular": "Popular",
     "teaserTitle": "Transparent, no commitment.",
     "teaserSubtitle": "Clear packages for every need. Check the full details, included features and payment terms.",
-    "teaserNote": "+ Free SEO audit, no credit card required.",
+    "teaserNote": "+ Free SEO audit.",
     "teaserCta": "See details and features",
     "startingFrom": "starting from",
-    "getQuote": "Contact me",
+    "getQuote": "Get my site",
     "requestAudit": "Request my free audit",
     "discountLabel": "-30% offer",
     "originalPrice": "Regular price",
     "installment": "Payment in 3 instalments, interest-free",
+    "paymentMethodsLabel": "Accepted payments",
     "paymentTitle": "How does payment work?",
     "paymentSubtitle": "Three payments tied to project milestones — you only pay for what's delivered.",
     "paymentSteps": {
@@ -381,7 +382,7 @@
         "description": "Your site is live and you're happy. Only then do we settle the invoice."
       }
     },
-    "paymentNote": "Bank transfer only. Signed quote required before project start.",
+    "paymentNote": "Secure card payment via Stripe — or 3x installments with no fees via Klarna. Signed quote required before project start.",
     "auditEyebrow": "No commitment offer",
     "auditTitle": "Free SEO audit — find out why Google can't find you",
     "auditSubtitle": "A free diagnosis of your online visibility. No commitment, no hassle.",
@@ -390,46 +391,87 @@
       "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
     },
     "showcase": {
-      "title": "Showcase site",
-      "description": "The essential solution to present your business online",
-      "monthlyFee": "+ €30/month (hosting and maintenance)",
-      "features": [
-        "Modern and responsive design",
-        "Up to 5 pages",
-        "Contact form",
-        "Optimized for Google",
-        "Fast website"
+      "title": "Essential",
+      "description": "Your professional online presence, delivered turnkey",
+      "groups": [
+        {
+          "title": "Your site, turnkey",
+          "features": [
+            "Professional design adapted to all screens (mobile, tablet, desktop)",
+            "Up to 5 pages (Home, Services, About, Contact…)",
+            "Contact form to receive enquiries directly from your site",
+            "Launch + Google indexing"
+          ]
+        },
+        {
+          "title": "Local SEO",
+          "features": [
+            "Optimized meta tags + Google Business profile configured",
+            "Fast and performant site, favored by Google"
+          ]
+        }
       ]
     },
     "showcaseAdvanced": {
-      "title": "Premium showcase site",
-      "description": "For a complete and professional online presence",
-      "monthlyFee": "+ €30/month (hosting and maintenance)",
-      "features": [
-        "Modern and responsive design",
-        "Unlimited pages",
-        "Contact form",
-        "Optimized for Google",
-        "Fast website",
-        "Blog / News section",
-        "Multilingual site (2 languages)",
-        "Custom logo design"
+      "title": "Visibility",
+      "description": "To be found, chosen and contacted by your clients",
+      "groups": [
+        {
+          "features": [
+            "Everything included in Essential"
+          ]
+        },
+        {
+          "title": "Your site, turnkey",
+          "features": [
+            "Up to 10 pages to showcase your entire business",
+            "Blog / news to improve your Google visibility",
+            "Bilingual site to reach more clients"
+          ]
+        },
+        {
+          "title": "SEO & performance",
+          "features": [
+            "Optimized SEO to improve your Google ranking",
+            "Performance tracking with Google Analytics"
+          ]
+        },
+        {
+          "title": "Support",
+          "features": [
+            "Delivered in 2 to 3 weeks + personalized support"
+          ]
+        }
       ]
     },
     "eshop": {
-      "title": "Online store",
-      "description": "Your turnkey online store to start selling now",
-      "monthlyFee": "+ €80/month (hosting and maintenance)",
-      "features": [
-        "20 product catalog",
-        "Optimized shopping cart and checkout",
-        "Secure payment (Stripe, PayPal)",
-        "Real-time inventory management",
-        "Order and customer management",
-        "Customer account with history",
-        "Automatic shipping cost calculation",
-        "Promo codes and discounts",
-        "Complete training for managing your store"
+      "title": "Store",
+      "description": "Your turnkey online store to sell 24/7",
+      "groups": [
+        {
+          "title": "Your store",
+          "features": [
+            "Complete online store, ready to sell from launch",
+            "Unlimited product catalog",
+            "Secure payment (Stripe, PayPal)"
+          ]
+        },
+        {
+          "title": "Easy management",
+          "features": [
+            "Inventory, orders and customers in real time",
+            "Customer account with order history",
+            "Automated shipping",
+            "Promotions and discount codes"
+          ]
+        },
+        {
+          "title": "Visibility & independence",
+          "features": [
+            "E-commerce SEO to get your products visible on Google",
+            "Complete training to manage your store independently"
+          ]
+        }
       ]
     },
     "customDev": {
@@ -447,12 +489,12 @@
       ]
     },
     "seoAudit": {
-      "title": "SEO Audit",
-      "description": "Free analysis of your online visibility",
+      "title": "Free Diagnosis",
+      "description": "Find out why Google can't find you — no commitment",
       "features": [
-        "Analysis of your current visibility",
-        "The 3 priority points to fix",
-        "Concrete improvement recommendations"
+        "Analysis of your current Google visibility",
+        "Identification of the 3 issues costing you clients",
+        "Concrete, actionable recommendations — no jargon"
       ]
     },
     "free": "Free",
@@ -535,15 +577,15 @@
     "items": {
       "process": {
         "question": "How does a project with you work?",
-        "answer": "Each project starts with a discussion to understand your needs and goals. I then propose a mockup for validation, followed by the development of your site. You're involved at every step to ensure a result that meets your expectations."
+        "answer": "Each project starts with a discussion to understand your needs and goals. I then build your site directly, with regular check-ins to validate and adjust in real time. You're involved at every step to ensure a result that meets your expectations."
       },
       "timeline": {
         "question": "What are the delivery timelines?",
-        "answer": "A classic showcase site typically takes 2 to 3 weeks. For a premium showcase site, expect 3 to 5 weeks. An online store requires 4 to 6 weeks. These timelines may vary depending on complexity and your responsiveness for approvals."
+        "answer": "The Essential plan is delivered in 1 to 2 weeks. The Visibility plan takes 2 to 3 weeks. An online store typically requires 3 to 5 weeks. These timelines may vary depending on project complexity and your responsiveness for approvals."
       },
       "pricing": {
         "question": "How are your prices calculated?",
-        "answer": "My prices are based on the type of site (showcase, premium, online store) and the desired features. I provide a detailed and transparent quote before any commitment. No surprises: the announced price is the final price."
+        "answer": "My prices are based on the chosen plan: Essential, Visibility or Store. I provide a detailed and transparent quote before any commitment. No surprises: the announced price is the final price."
       },
       "maintenance": {
         "question": "Do you offer site maintenance?",
@@ -554,8 +596,8 @@
         "answer": "Depending on your needs, I can integrate a simple admin interface to manage your content (texts, images, blog posts). Training is included to make you autonomous for common modifications."
       },
       "payment": {
-        "question": "How does the 3-installment payment work?",
-        "answer": "Payment is split across 3 project milestones: 40% upon signing the quote to start work, 30% upon mockup approval, and 30% at final delivery. This is not a credit arrangement — each payment corresponds to a concrete delivered milestone. You only pay for what's done. Bank transfer only."
+        "question": "What payment methods are accepted?",
+        "answer": "You can pay in full by card via Stripe, or in 3 interest-free installments via Klarna. With Klarna, the full amount is advanced upfront and they manage the installments directly with you — no extra hassle on your end. A signed quote is required before the project starts."
       }
     }
   },

@@ -19,7 +19,6 @@
           :key="plan.id"
           class="group relative flex flex-col overflow-hidden rounded-3xl border border-zenith-gold-bronze/30 bg-zenith-bg-light transition-all duration-300 hover:-translate-y-2 hover:border-zenith-gold-vivid dark:bg-zenith-bg-dark"
         >
-
           <div class="relative p-8">
             <h3
               class="mb-3 text-xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
@@ -43,49 +42,63 @@
               </template>
               <template v-else>
                 <div class="mb-2 flex items-center gap-3">
-                  <span class="text-lg text-zenith-text-secondary-light/50 dark:text-zenith-text-secondary-dark/50 line-through">
+                  <span
+                    class="text-lg text-zenith-text-secondary-light/50 line-through dark:text-zenith-text-secondary-dark/50"
+                  >
                     {{ plan.basePrice }}€
                   </span>
-                  <span class="rounded-full bg-gradient-to-r from-red-500 to-red-600 px-3 py-1 text-xs font-bold text-white shadow-md">
+                  <span
+                    class="rounded-full bg-gradient-to-r from-red-500 to-red-600 px-3 py-1 text-xs font-bold text-white shadow-md"
+                  >
                     -{{ DISCOUNT_PERCENTAGE }}%
                   </span>
                 </div>
                 <div class="flex items-end gap-2">
-                  <span class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+                  <span
+                    class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                  >
                     {{ $t('pricing.startingFrom') }}
                   </span>
                   <span class="text-5xl font-extrabold text-zenith-gold-vivid">
                     {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
                   </span>
                 </div>
-                <p
-                  v-if="plan.monthlyFeeKey"
-                  class="mt-3 text-xs font-medium text-zenith-gold-vivid"
-                >
-                  {{ $t(plan.monthlyFeeKey) }}
-                </p>
               </template>
             </div>
 
-            <div class="mb-6 h-px w-full bg-gradient-to-r from-transparent via-zenith-gold-bronze/30 to-transparent" />
+            <div
+              class="mb-6 h-px w-full bg-gradient-to-r from-transparent via-zenith-gold-bronze/30 to-transparent"
+            />
 
-            <ul class="space-y-4">
-              <li
-                v-for="(feature, featureIndex) in plan.features"
-                :key="featureIndex"
-                class="flex items-start gap-3 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-              >
-                <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zenith-gold-vivid/10">
-                  <Icon
-                    name="Check"
-                    size="14"
-                    class="text-zenith-gold-vivid"
-                    aria-hidden="true"
-                  />
-                </div>
-                <span>{{ $t(feature.textKey) }}</span>
-              </li>
-            </ul>
+            <div class="space-y-5">
+              <div v-for="(group, groupIndex) in plan.featureGroups" :key="groupIndex">
+                <p
+                  v-if="group.titleKey"
+                  class="mb-3 text-xs font-semibold uppercase tracking-wider text-zenith-gold-bronze dark:text-zenith-champagne/70"
+                >
+                  {{ $t(group.titleKey) }}
+                </p>
+                <ul class="space-y-3">
+                  <li
+                    v-for="(feature, featureIndex) in group.features"
+                    :key="featureIndex"
+                    class="flex items-start gap-3 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                  >
+                    <div
+                      class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-zenith-gold-vivid/10"
+                    >
+                      <Icon
+                        name="Check"
+                        size="14"
+                        class="text-zenith-gold-vivid"
+                        aria-hidden="true"
+                      />
+                    </div>
+                    <span>{{ $t(feature.textKey) }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div class="mt-auto p-8 pt-0">
@@ -109,10 +122,14 @@
             aria-hidden="true"
           />
           <div>
-            <h4 class="mb-2 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark">
+            <h4
+              class="mb-2 font-semibold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
+            >
               {{ $t('pricing.priceInfo.title') }}
             </h4>
-            <p class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
+            <p
+              class="text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+            >
               {{ $t('pricing.priceInfo.description') }}
             </p>
           </div>

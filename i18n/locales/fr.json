@@ -101,7 +101,7 @@
           },
           "build": {
             "title": "Conception & développement",
-            "description": "Je vous présente les maquettes avant de coder. Vous validez, je développe. Des points réguliers pour que vous suiviez l'avancement en temps réel."
+            "description": "Je développe votre site directement depuis le brief. Des points réguliers vous permettent de valider et d'ajuster à chaque étape, en temps réel."
           },
           "launch": {
             "title": "Livraison & accompagnement",
@@ -355,14 +355,15 @@
     "popular": "Populaire",
     "teaserTitle": "Transparent, sans engagement.",
     "teaserSubtitle": "Des formules claires pour chaque besoin. Consultez les détails, fonctionnalités incluses et modalités de paiement.",
-    "teaserNote": "+ Audit SEO offert, sans carte bancaire.",
+    "teaserNote": "+ Audit SEO offert.",
     "teaserCta": "Voir les détails et fonctionnalités",
     "startingFrom": "à partir de",
-    "getQuote": "Me contacter",
-    "requestAudit": "Demander mon audit gratuit",
+    "getQuote": "Obtenir mon site",
+    "requestAudit": "Demander mon audit offert",
     "discountLabel": "Offre -30%",
     "originalPrice": "Prix habituel",
-    "installment": "Paiement en 3x sans frais",
+    "installment": "Paiement en 3x sans frais disponible",
+    "paymentMethodsLabel": "Paiements acceptés",
     "paymentTitle": "Comment fonctionne le paiement ?",
     "paymentSubtitle": "Trois versements liés aux jalons du projet — vous ne payez que ce qui est livré.",
     "paymentSteps": {
@@ -382,7 +383,7 @@
         "description": "Votre site est en ligne, vous êtes satisfait. Seulement là, on solde la facture."
       }
     },
-    "paymentNote": "Paiement par virement bancaire uniquement. Devis signé requis avant démarrage.",
+    "paymentNote": "Paiement sécurisé par carte via Stripe — ou en 3x sans frais via Klarna. Devis signé requis avant démarrage.",
     "auditEyebrow": "Offre sans engagement",
     "auditTitle": "Audit SEO offert — découvrez pourquoi Google ne vous trouve pas",
     "auditSubtitle": "Un diagnostic gratuit de votre visibilité en ligne. Sans engagement, sans prise de tête.",
@@ -391,46 +392,87 @@
       "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
     },
     "showcase": {
-      "title": "Site vitrine",
-      "description": "La solution essentielle pour présenter votre activité en ligne",
-      "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
-      "features": [
-        "Design moderne et responsive",
-        "Jusqu'à 5 pages",
-        "Formulaire de contact",
-        "Optimisé pour Google",
-        "Site rapide"
+      "title": "Essentiel",
+      "description": "Votre présence en ligne professionnelle, livrée clé en main",
+      "groups": [
+        {
+          "title": "Votre site, clé en main",
+          "features": [
+            "Design professionnel adapté à tous les écrans (mobile, tablette, ordinateur)",
+            "Jusqu'à 5 pages (Accueil, Services, À propos, Contact…)",
+            "Formulaire de contact pour recevoir des demandes directement depuis votre site",
+            "Mise en ligne + indexation sur Google"
+          ]
+        },
+        {
+          "title": "SEO local",
+          "features": [
+            "Balises optimisées + fiche Google Business configurée",
+            "Site rapide et performant, favorisé par Google"
+          ]
+        }
       ]
     },
     "showcaseAdvanced": {
-      "title": "Site vitrine premium",
-      "description": "Pour une présence en ligne complète et professionnelle",
-      "monthlyFee": "+ 30€/mois (hébergement et maintenance)",
-      "features": [
-        "Design moderne et responsive",
-        "Pages illimitées",
-        "Formulaire de contact",
-        "Optimisé pour Google",
-        "Site rapide",
-        "Blog / Section actualités",
-        "Site multilingue (2 langues)",
-        "Design de logo personnalisé"
+      "title": "Visibilité",
+      "description": "Pour être trouvé, choisi et contacté par vos clients",
+      "groups": [
+        {
+          "features": [
+            "Tout ce qui est inclus dans Essentiel"
+          ]
+        },
+        {
+          "title": "Votre site, clé en main",
+          "features": [
+            "Jusqu'à 10 pages pour présenter toute votre activité",
+            "Blog / actualités pour améliorer votre visibilité sur Google",
+            "Site bilingue pour toucher plus de clients"
+          ]
+        },
+        {
+          "title": "Référencement & performance",
+          "features": [
+            "Référencement naturel optimisé (SEO) pour améliorer votre position sur Google",
+            "Suivi de vos performances avec Google Analytics"
+          ]
+        },
+        {
+          "title": "Accompagnement",
+          "features": [
+            "Livraison en 2 à 3 semaines + accompagnement personnalisé"
+          ]
+        }
       ]
     },
     "eshop": {
-      "title": "Boutique en ligne",
-      "description": "Votre boutique en ligne clé en main pour vendre dès maintenant",
-      "monthlyFee": "+ 80€/mois (hébergement et maintenance)",
-      "features": [
-        "Catalogue de 20 produits",
-        "Panier et tunnel de commande optimisé",
-        "Paiement sécurisé (Stripe, PayPal)",
-        "Gestion des stocks en temps réel",
-        "Gestion des commandes et clients",
-        "Espace client avec historique",
-        "Calcul automatique des frais de livraison",
-        "Codes promo et réductions",
-        "Formation complète à la gestion de votre boutique"
+      "title": "Boutique",
+      "description": "Votre boutique en ligne clé en main pour vendre 24h/24",
+      "groups": [
+        {
+          "title": "Votre boutique",
+          "features": [
+            "Boutique en ligne complète, prête à vendre dès le lancement",
+            "Catalogue produits illimité",
+            "Paiement sécurisé (Stripe, PayPal)"
+          ]
+        },
+        {
+          "title": "Gestion simplifiée",
+          "features": [
+            "Stocks, commandes et clients en temps réel",
+            "Espace client avec historique des commandes",
+            "Livraison automatisée",
+            "Promotions et codes de réduction"
+          ]
+        },
+        {
+          "title": "Visibilité & autonomie",
+          "features": [
+            "SEO e-commerce pour rendre vos produits visibles sur Google",
+            "Formation complète pour gérer votre boutique en toute autonomie"
+          ]
+        }
       ]
     },
     "customDev": {
@@ -448,15 +490,15 @@
       ]
     },
     "seoAudit": {
-      "title": "Audit SEO",
-      "description": "Analyse gratuite de votre visibilité en ligne",
+      "title": "Diagnostic offert",
+      "description": "Découvrez pourquoi Google ne vous trouve pas — sans engagement",
       "features": [
-        "Analyse de votre visibilité actuelle",
-        "Les 3 points prioritaires à corriger",
-        "Recommandations d'amélioration concrètes"
+        "Analyse de votre visibilité actuelle sur Google",
+        "Identification des 3 problèmes qui vous font perdre des clients",
+        "Recommandations concrètes et actionnables, sans jargon"
       ]
     },
-    "free": "Gratuit",
+    "free": "Offert",
     "noCard": "Sans carte bancaire"
   },
   "contact": {
@@ -536,15 +578,15 @@
     "items": {
       "process": {
         "question": "Comment se déroule un projet avec vous ?",
-        "answer": "Chaque projet débute par un échange pour comprendre vos besoins et objectifs. Je vous propose ensuite une maquette pour validation, puis je développe votre site. Vous êtes impliqué à chaque étape pour garantir un résultat fidèle à vos attentes."
+        "answer": "Chaque projet débute par un échange pour comprendre vos besoins et objectifs. Je développe ensuite votre site directement, avec des points réguliers pour valider et ajuster en temps réel. Vous êtes impliqué à chaque étape pour garantir un résultat fidèle à vos attentes."
       },
       "timeline": {
         "question": "Quels sont les délais de réalisation ?",
-        "answer": "Un site vitrine classique prend généralement 2 à 3 semaines. Pour un site vitrine premium, comptez 3 à 5 semaines. Une boutique en ligne nécessite 4 à 6 semaines. Ces délais peuvent varier selon la complexité et votre réactivité pour les validations."
+        "answer": "La formule Essentiel est livrée en 1 à 2 semaines. La formule Visibilité prend 2 à 3 semaines. Une boutique en ligne nécessite généralement 3 à 5 semaines. Ces délais peuvent varier selon la complexité du projet et votre réactivité pour les validations."
       },
       "pricing": {
         "question": "Comment sont calculés vos tarifs ?",
-        "answer": "Mes tarifs sont basés sur le type de site (vitrine, premium, boutique en ligne) et les fonctionnalités souhaitées. Je vous fournis un devis détaillé et transparent avant tout engagement. Pas de mauvaise surprise : le prix annoncé est le prix final."
+        "answer": "Mes tarifs sont basés sur la formule choisie : Essentiel, Visibilité ou Boutique. Je vous fournis un devis détaillé et transparent avant tout engagement. Pas de mauvaise surprise : le prix annoncé est le prix final."
       },
       "maintenance": {
         "question": "Proposez-vous la maintenance du site ?",
@@ -555,8 +597,8 @@
         "answer": "Selon vos besoins, je peux intégrer une interface d'administration simple pour gérer vos contenus (textes, images, articles de blog). Une formation est incluse pour vous rendre autonome sur les modifications courantes."
       },
       "payment": {
-        "question": "Comment fonctionne le paiement en 3 fois ?",
-        "answer": "Le paiement est échelonné sur 3 jalons projet : 40% à la signature du devis pour lancer les travaux, 30% à la validation des maquettes, et 30% à la livraison finale. Ce n'est pas du crédit — chaque versement correspond à une étape concrète livrée. Vous ne payez que ce qui est fait. Paiement par virement bancaire uniquement."
+        "question": "Quels sont les modes de paiement acceptés ?",
+        "answer": "Vous pouvez régler en une seule fois par carte bancaire via Stripe, ou en 3 fois sans frais via Klarna. Dans ce cas, Klarna avance la totalité du montant et gère les mensualités directement avec vous — vous n'avez rien de plus à gérer. Un devis signé est requis avant le démarrage du projet."
       }
     }
   },
