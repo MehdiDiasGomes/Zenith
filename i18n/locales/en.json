@@ -390,86 +390,78 @@
       "title": "About pricing",
       "description": "The prices displayed are indicative base rates. The final amount may vary depending on the complexity of your project, your specific needs, and the development time required. A personalized quote will be provided after analyzing your request."
     },
-    "showcase": {
-      "title": "Essential",
-      "description": "Your professional online presence, delivered turnkey",
+    "onlinePresence": {
+      "title": "Online Presence",
+      "description": "Professional website to be found and credible online",
       "groups": [
         {
-          "title": "Your site, turnkey",
+          "title": "Included features",
           "features": [
-            "Professional design adapted to all screens (mobile, tablet, desktop)",
-            "Up to 5 pages (Home, Services, About, Contact…)",
-            "Contact form to receive enquiries directly from your site",
-            "Launch + Google indexing"
+            "Modern and responsive website",
+            "Optimized contact page",
+            "Basic local SEO optimization",
+            "Fast loading speed",
+            "Professional design tailored to your business"
           ]
         },
         {
-          "title": "Local SEO",
+          "title": "What you gain",
           "features": [
-            "Optimized meta tags + Google Business profile configured",
-            "Fast and performant site, favored by Google"
+            "Be easily found online",
+            "Allow clients to contact you quickly",
+            "Project a credible, professional image",
+            "Offer a smooth experience on mobile and desktop"
           ]
         }
       ]
     },
-    "showcaseAdvanced": {
-      "title": "Visibility",
-      "description": "To be found, chosen and contacted by your clients",
+    "clientAcquisition": {
+      "title": "Client Acquisition",
+      "description": "Structured website to turn your visitors into clients",
       "groups": [
         {
+          "title": "Included features",
           "features": [
-            "Everything included in Essential"
+            "Structured multi-page site (home, services, contact)",
+            "Pages optimized to convert visitors",
+            "Improved SEO (structure + basic content)",
+            "Optimized forms to generate enquiries",
+            "Basic performance tracking (analytics)"
           ]
         },
         {
-          "title": "Your site, turnkey",
+          "title": "What you gain",
           "features": [
-            "Up to 10 pages to showcase your entire business",
-            "Blog / news to improve your Google visibility",
-            "Bilingual site to reach more clients"
-          ]
-        },
-        {
-          "title": "SEO & performance",
-          "features": [
-            "Optimized SEO to improve your Google ranking",
-            "Performance tracking with Google Analytics"
-          ]
-        },
-        {
-          "title": "Support",
-          "features": [
-            "Delivered in 2 to 3 weeks + personalized support"
+            "Turn your visitors into contact requests",
+            "Showcase your services clearly",
+            "Improve your Google visibility",
+            "Understand where your visitors come from"
           ]
         }
       ]
     },
-    "eshop": {
-      "title": "Store",
-      "description": "Your turnkey online store to sell 24/7",
+    "growthAutomation": {
+      "title": "Growth & Automation",
+      "description": "Full website or e-commerce to sell and scale your business",
       "groups": [
         {
-          "title": "Your store",
+          "title": "Included features",
           "features": [
-            "Complete online store, ready to sell from launch",
-            "Unlimited product catalog",
-            "Secure payment (Stripe, PayPal)"
+            "Full website or e-commerce",
+            "Optimized conversion funnel",
+            "Payment integration (if e-commerce)",
+            "Advanced content management",
+            "Simple automations (emails / forms)",
+            "Scalable structure ready to grow"
           ]
         },
         {
-          "title": "Easy management",
+          "title": "What you gain",
           "features": [
-            "Inventory, orders and customers in real time",
-            "Customer account with order history",
-            "Automated shipping",
-            "Promotions and discount codes"
-          ]
-        },
-        {
-          "title": "Visibility & independence",
-          "features": [
-            "E-commerce SEO to get your products visible on Google",
-            "Complete training to manage your store independently"
+            "Sell online or generate leads automatically",
+            "Automate part of your client acquisition",
+            "Easily manage your products or services",
+            "Have a site ready to scale with your business"
           ]
         }
       ]

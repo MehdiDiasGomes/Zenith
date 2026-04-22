@@ -17,118 +17,88 @@ export interface PricingPlan {
 
 export const pricingPlans: PricingPlan[] = [
   {
-    id: 'showcase',
-    titleKey: 'pricing.showcase.title',
-    descriptionKey: 'pricing.showcase.description',
-    basePrice: 950,
+    id: 'online-presence',
+    titleKey: 'pricing.onlinePresence.title',
+    descriptionKey: 'pricing.onlinePresence.description',
+    basePrice: 690,
     featureGroups: [
       {
-        titleKey: 'pricing.showcase.groups.0.title',
+        titleKey: 'pricing.onlinePresence.groups.0.title',
         features: [
-          { textKey: 'pricing.showcase.groups.0.features.0' },
-          { textKey: 'pricing.showcase.groups.0.features.1' },
-          { textKey: 'pricing.showcase.groups.0.features.2' },
-          { textKey: 'pricing.showcase.groups.0.features.3' },
+          { textKey: 'pricing.onlinePresence.groups.0.features.0' },
+          { textKey: 'pricing.onlinePresence.groups.0.features.1' },
+          { textKey: 'pricing.onlinePresence.groups.0.features.2' },
+          { textKey: 'pricing.onlinePresence.groups.0.features.3' },
+          { textKey: 'pricing.onlinePresence.groups.0.features.4' },
         ],
       },
       {
-        titleKey: 'pricing.showcase.groups.1.title',
+        titleKey: 'pricing.onlinePresence.groups.1.title',
         features: [
-          { textKey: 'pricing.showcase.groups.1.features.0' },
-          { textKey: 'pricing.showcase.groups.1.features.1' },
+          { textKey: 'pricing.onlinePresence.groups.1.features.0' },
+          { textKey: 'pricing.onlinePresence.groups.1.features.1' },
+          { textKey: 'pricing.onlinePresence.groups.1.features.2' },
+          { textKey: 'pricing.onlinePresence.groups.1.features.3' },
         ],
       },
     ],
   },
   {
-    id: 'showcase-advanced',
-    titleKey: 'pricing.showcaseAdvanced.title',
-    descriptionKey: 'pricing.showcaseAdvanced.description',
-    basePrice: 1450,
+    id: 'client-acquisition',
+    titleKey: 'pricing.clientAcquisition.title',
+    descriptionKey: 'pricing.clientAcquisition.description',
+    basePrice: 1490,
     featureGroups: [
       {
+        titleKey: 'pricing.clientAcquisition.groups.0.title',
         features: [
-          { textKey: 'pricing.showcaseAdvanced.groups.0.features.0' },
+          { textKey: 'pricing.clientAcquisition.groups.0.features.0' },
+          { textKey: 'pricing.clientAcquisition.groups.0.features.1' },
+          { textKey: 'pricing.clientAcquisition.groups.0.features.2' },
+          { textKey: 'pricing.clientAcquisition.groups.0.features.3' },
+          { textKey: 'pricing.clientAcquisition.groups.0.features.4' },
         ],
       },
       {
-        titleKey: 'pricing.showcaseAdvanced.groups.1.title',
+        titleKey: 'pricing.clientAcquisition.groups.1.title',
         features: [
-          { textKey: 'pricing.showcaseAdvanced.groups.1.features.0' },
-          { textKey: 'pricing.showcaseAdvanced.groups.1.features.1' },
-          { textKey: 'pricing.showcaseAdvanced.groups.1.features.2' },
-        ],
-      },
-      {
-        titleKey: 'pricing.showcaseAdvanced.groups.2.title',
-        features: [
-          { textKey: 'pricing.showcaseAdvanced.groups.2.features.0' },
-          { textKey: 'pricing.showcaseAdvanced.groups.2.features.1' },
-        ],
-      },
-      {
-        titleKey: 'pricing.showcaseAdvanced.groups.3.title',
-        features: [
-          { textKey: 'pricing.showcaseAdvanced.groups.3.features.0' },
+          { textKey: 'pricing.clientAcquisition.groups.1.features.0' },
+          { textKey: 'pricing.clientAcquisition.groups.1.features.1' },
+          { textKey: 'pricing.clientAcquisition.groups.1.features.2' },
+          { textKey: 'pricing.clientAcquisition.groups.1.features.3' },
         ],
       },
     ],
   },
   {
-    id: 'eshop',
-    titleKey: 'pricing.eshop.title',
-    descriptionKey: 'pricing.eshop.description',
-    basePrice: 1900,
+    id: 'growth-automation',
+    titleKey: 'pricing.growthAutomation.title',
+    descriptionKey: 'pricing.growthAutomation.description',
+    basePrice: 2490,
     featureGroups: [
       {
-        titleKey: 'pricing.eshop.groups.0.title',
+        titleKey: 'pricing.growthAutomation.groups.0.title',
         features: [
-          { textKey: 'pricing.eshop.groups.0.features.0' },
-          { textKey: 'pricing.eshop.groups.0.features.1' },
-          { textKey: 'pricing.eshop.groups.0.features.2' },
+          { textKey: 'pricing.growthAutomation.groups.0.features.0' },
+          { textKey: 'pricing.growthAutomation.groups.0.features.1' },
+          { textKey: 'pricing.growthAutomation.groups.0.features.2' },
+          { textKey: 'pricing.growthAutomation.groups.0.features.3' },
+          { textKey: 'pricing.growthAutomation.groups.0.features.4' },
+          { textKey: 'pricing.growthAutomation.groups.0.features.5' },
         ],
       },
       {
-        titleKey: 'pricing.eshop.groups.1.title',
+        titleKey: 'pricing.growthAutomation.groups.1.title',
         features: [
-          { textKey: 'pricing.eshop.groups.1.features.0' },
-          { textKey: 'pricing.eshop.groups.1.features.1' },
-          { textKey: 'pricing.eshop.groups.1.features.2' },
-          { textKey: 'pricing.eshop.groups.1.features.3' },
-        ],
-      },
-      {
-        titleKey: 'pricing.eshop.groups.2.title',
-        features: [
-          { textKey: 'pricing.eshop.groups.2.features.0' },
-          { textKey: 'pricing.eshop.groups.2.features.1' },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'seo-audit',
-    titleKey: 'pricing.seoAudit.title',
-    descriptionKey: 'pricing.seoAudit.description',
-    basePrice: 0,
-    featureGroups: [
-      {
-        features: [
-          { textKey: 'pricing.seoAudit.features.0' },
-          { textKey: 'pricing.seoAudit.features.1' },
-          { textKey: 'pricing.seoAudit.features.2' },
+          { textKey: 'pricing.growthAutomation.groups.1.features.0' },
+          { textKey: 'pricing.growthAutomation.groups.1.features.1' },
+          { textKey: 'pricing.growthAutomation.groups.1.features.2' },
+          { textKey: 'pricing.growthAutomation.groups.1.features.3' },
         ],
       },
     ],
   },
 ]
 
-export const DISCOUNT_PERCENTAGE = 30
 
-
-export const customDevTagKeys: string[] = [
-  'pricing.customDev.tags.0',
-  'pricing.customDev.tags.1',
-  'pricing.customDev.tags.2',
-  'pricing.customDev.tags.3',
-]
+export const FEATURED_PLAN_ID = 'client-acquisition' as const

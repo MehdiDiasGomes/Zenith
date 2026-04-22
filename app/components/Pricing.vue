@@ -33,37 +33,16 @@
             </p>
 
             <div class="mb-8">
-              <template v-if="plan.basePrice === 0">
-                <div class="flex items-end justify-start py-4">
-                  <span class="text-5xl font-extrabold text-zenith-gold-vivid">
-                    {{ $t('pricing.free') }}
-                  </span>
-                </div>
-              </template>
-              <template v-else>
-                <div class="mb-2 flex items-center gap-3">
-                  <span
-                    class="text-lg text-zenith-text-secondary-light/50 line-through dark:text-zenith-text-secondary-dark/50"
-                  >
-                    {{ plan.basePrice }}€
-                  </span>
-                  <span
-                    class="rounded-full bg-gradient-to-r from-red-500 to-red-600 px-3 py-1 text-xs font-bold text-white shadow-md"
-                  >
-                    -{{ DISCOUNT_PERCENTAGE }}%
-                  </span>
-                </div>
-                <div class="flex items-end gap-2">
-                  <span
-                    class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                  >
-                    {{ $t('pricing.startingFrom') }}
-                  </span>
-                  <span class="text-5xl font-extrabold text-zenith-gold-vivid">
-                    {{ Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100)) }}€
-                  </span>
-                </div>
-              </template>
+              <div class="flex items-end gap-2">
+                <span
+                  class="mb-2 text-sm text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
+                >
+                  {{ $t('pricing.startingFrom') }}
+                </span>
+                <span class="text-5xl font-extrabold text-zenith-gold-vivid">
+                  {{ plan.basePrice }}€
+                </span>
+              </div>
             </div>
 
             <div
@@ -104,7 +83,7 @@
           <div class="mt-auto p-8 pt-0">
             <Button as-child variant="gold" class="w-full justify-center">
               <NuxtLink :to="localePath('/contact')">
-                {{ plan.id === 'seo-audit' ? $t('pricing.requestAudit') : $t('pricing.getQuote') }}
+                {{ $t('pricing.getQuote') }}
               </NuxtLink>
             </Button>
           </div>
@@ -141,7 +120,7 @@
 
 <script setup lang="ts">
 import { Button } from '@/components/ui/button'
-import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
+import { pricingPlans } from '~/constants/pricing'
 
 const localePath = useLocalePath()
 </script>

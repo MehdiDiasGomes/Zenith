@@ -42,16 +42,16 @@
       <!-- Price anchors -->
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <article
-          v-for="(plan, index) in teaserPlans"
+          v-for="(plan, index) in pricingPlans"
           :key="plan.id"
           class="group relative flex flex-col justify-between rounded-xl border p-6 transition-all duration-300 hover:-translate-y-0.5"
-          :class="plan.id === 'showcase-advanced'
+          :class="plan.id === FEATURED_PLAN_ID
             ? 'border-zenith-gold-vivid/40 bg-zenith-bg-light shadow-lg shadow-zenith-gold-vivid/8 dark:border-zenith-gold-vivid/30 dark:bg-zenith-bg-dark'
             : 'border-zenith-bronze-dark/10 bg-zenith-bg-light hover:border-zenith-gold-bronze/30 dark:border-zenith-gold-bronze/10 dark:bg-zenith-bg-dark'"
         >
           <!-- Popular badge -->
           <span
-            v-if="plan.id === 'showcase-advanced'"
+            v-if="plan.id === FEATURED_PLAN_ID"
             class="absolute right-4 top-4 rounded-full border border-zenith-gold-vivid/40 bg-zenith-gold-vivid/10 px-2.5 py-0.5 text-xs font-semibold text-zenith-gold-vivid"
           >
             {{ $t('pricing.popular') }}
@@ -77,15 +77,9 @@
             </p>
             <p
               class="text-3xl font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-              :class="{ 'text-zenith-gold-vivid': plan.id === 'showcase-advanced' }"
+              :class="{ 'text-zenith-gold-vivid': plan.id === FEATURED_PLAN_ID }"
             >
-              {{ discountedPrice(plan.basePrice) }}<span class="text-lg">€</span>
-            </p>
-            <p
-              v-if="plan.monthlyFeeKey"
-              class="mt-1 text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-            >
-              {{ $t(plan.monthlyFeeKey) }}
+              {{ plan.basePrice }}<span class="text-lg">€</span>
             </p>
           </div>
         </article>
@@ -110,21 +104,7 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
-import { pricingPlans, DISCOUNT_PERCENTAGE, type PricingPlan } from '~/constants/pricing'
+import { pricingPlans, FEATURED_PLAN_ID } from '~/constants/pricing'
 
 const localePath = useLocalePath()
-
-const teaserPlans: PricingPlan[] = pricingPlans.filter(
-  (plan: PricingPlan) => plan.id !== 'seo-audit',
-)
-
-/**
- * Calculates the discounted price for a plan
- * @param basePrice - Original base price in euros
- * @returns Discounted price rounded to nearest integer
- */
-const discountedPrice = (basePrice: number): number => {
-  if (DISCOUNT_PERCENTAGE === 0) return basePrice
-  return Math.round(basePrice * (1 - DISCOUNT_PERCENTAGE / 100))
-}
 </script>

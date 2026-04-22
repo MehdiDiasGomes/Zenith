@@ -19,7 +19,7 @@ import type {
   ItemListSchema,
   BlogPostingSchema,
 } from '@/types/seo'
-import { pricingPlans, DISCOUNT_PERCENTAGE } from '~/constants/pricing'
+import { pricingPlans } from '~/constants/pricing'
 import { projects } from '~/constants/projects'
 
 const SITE_URL: string = 'https://www.dg-zenith.com'
@@ -151,9 +151,7 @@ export function usePricingOffersSchema(): ItemListSchema<PricingOfferItem> {
         '@type': 'Offer' as const,
         name: t(plan.titleKey),
         description: t(plan.descriptionKey),
-        price: plan.basePrice > 0
-          ? Math.round(plan.basePrice * (1 - DISCOUNT_PERCENTAGE / 100))
-          : 0,
+        price: plan.basePrice,
         priceCurrency: 'EUR' as const,
         url: `${SITE_URL}/pricing`,
         availability: 'https://schema.org/InStock' as const,

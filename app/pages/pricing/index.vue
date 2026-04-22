@@ -40,19 +40,6 @@
             <p class="type-lead leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
               {{ $t('pages.pricing.hero.subtitle') }}
             </p>
-            <!-- Discount badge -->
-            <div
-              v-if="isDiscountActive"
-              class="mt-6 inline-flex items-center gap-2 rounded-full border border-zenith-gold-bronze/30 bg-zenith-gold-vivid/5 px-4 py-2 dark:border-zenith-gold-vivid/20"
-            >
-              <span class="relative flex h-2 w-2" aria-hidden="true">
-                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-zenith-gold-vivid opacity-60" />
-                <span class="relative inline-flex h-2 w-2 rounded-full bg-zenith-gold-vivid" />
-              </span>
-              <span class="text-xs font-semibold text-zenith-gold-vivid">
-                {{ $t('pages.pricing.hero.discountBadge') }}
-              </span>
-            </div>
           </div>
         </div>
 
@@ -68,10 +55,9 @@
     <section v-reveal="{ duration: 700, distance: 40 }" class="px-4 py-16 sm:px-6 lg:px-8" aria-labelledby="pricing-heading">
       <h2 id="pricing-heading" class="sr-only">{{ $t('pricing.title') }}</h2>
       <div class="mx-auto max-w-6xl">
-        <!-- 3 main plans -->
         <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
           <article
-            v-for="(plan, index) in mainPlans"
+            v-for="(plan, index) in pricingPlans"
             :key="plan.id"
             class="plan-card relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-500"
             :class="getPlanClasses(plan.id)"
@@ -79,7 +65,7 @@
           >
             <!-- Popular glow effect -->
             <div
-              v-if="plan.id === 'showcase-advanced'"
+              v-if="plan.id === FEATURED_PLAN_ID"
               class="pointer-events-none absolute -inset-px rounded-2xl"
               style="background: linear-gradient(135deg, rgba(218,165,32,0.15) 0%, transparent 50%, rgba(182,119,29,0.1) 100%)"
               aria-hidden="true"
@@ -95,16 +81,10 @@
                   0{{ index + 1 }}
                 </span>
                 <span
-                  v-if="plan.id === 'showcase-advanced'"
+                  v-if="plan.id === FEATURED_PLAN_ID"
                   class="rounded-full border border-zenith-gold-vivid/40 bg-zenith-gold-vivid/10 px-3 py-1 text-xs font-semibold text-zenith-gold-vivid"
                 >
                   {{ $t('pricing.popular') }}
-                </span>
-                <span
-                  v-else-if="isDiscountActive"
-                  class="rounded-full border border-zenith-gold-bronze/30 bg-zenith-gold-vivid/5 px-3 py-1 text-xs font-medium text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
-                >
-                  {{ $t('pricing.discountLabel') }}
                 </span>
               </div>
 
@@ -118,23 +98,15 @@
 
               <!-- Price block -->
               <div class="mb-6 border-b border-zenith-bronze-dark/10 pb-6 dark:border-zenith-gold-bronze/10">
-                <div v-if="isDiscountActive" class="mb-1 flex items-center gap-2">
-                  <span class="text-sm text-zenith-text-secondary-light line-through dark:text-zenith-text-secondary-dark">
-                    {{ plan.basePrice }}€
-                  </span>
-                  <span class="text-xs font-medium text-zenith-gold-vivid/70">
-                    {{ $t('pricing.originalPrice') }}
-                  </span>
-                </div>
                 <p class="mb-1 text-xs font-medium uppercase tracking-wider text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
                   {{ $t('pricing.startingFrom') }}
                 </p>
                 <div class="flex items-baseline gap-1">
                   <span
                     class="text-5xl font-bold tracking-tight text-zenith-text-primary-light dark:text-zenith-text-primary-dark"
-                    :class="{ 'text-zenith-gold-vivid': plan.id === 'showcase-advanced' }"
+                    :class="{ 'text-zenith-gold-vivid': plan.id === FEATURED_PLAN_ID }"
                   >
-                    {{ discountedPrice(plan.basePrice) }}
+                    {{ plan.basePrice }}
                   </span>
                   <span class="text-xl font-semibold text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">€</span>
                 </div>
@@ -198,63 +170,6 @@
           </article>
         </div>
 
-        <!-- Custom development card -->
-        <div
-          class="plan-card mt-5 overflow-hidden rounded-2xl border border-zenith-gold-vivid/30 bg-zenith-bg-secondary-light dark:border-zenith-gold-vivid/20 dark:bg-zenith-bg-secondary-dark"
-          style="animation-delay: 0.45s"
-        >
-          <!-- Subtle ambient glow -->
-          <div class="relative flex flex-col items-start justify-between gap-8 overflow-hidden p-6 sm:flex-row sm:items-center lg:p-8">
-            <div
-              class="pointer-events-none absolute -right-16 -top-10 h-64 w-64 rounded-full bg-zenith-gold-vivid/5 blur-3xl"
-              aria-hidden="true"
-            />
-
-            <!-- Left: content -->
-            <div class="relative flex-1">
-              <div class="mb-3 flex items-center gap-2">
-                <span class="h-px w-5 bg-zenith-gold-vivid/60" aria-hidden="true" />
-                <span class="text-xs font-semibold uppercase tracking-widest text-zenith-gold-vivid">
-                  {{ $t('pricing.customDev.eyebrow') }}
-                </span>
-              </div>
-              <h3 class="mb-2 text-lg font-bold text-zenith-text-primary-light dark:text-zenith-text-primary-dark lg:text-xl">
-                {{ $t('pricing.customDev.title') }}
-              </h3>
-              <p class="max-w-lg text-sm leading-relaxed text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                {{ $t('pricing.customDev.subtitle') }}
-              </p>
-              <!-- Feature tags -->
-              <div class="mt-4 flex flex-wrap gap-2" role="list" :aria-label="$t('pricing.customDev.title')">
-                <span
-                  v-for="tagKey in customDevTagKeys"
-                  :key="tagKey"
-                  role="listitem"
-                  class="rounded-md border border-zenith-gold-bronze/20 bg-zenith-gold-vivid/6 px-2.5 py-1 text-xs font-medium text-zenith-gold-vivid/80 dark:border-zenith-gold-vivid/15 dark:bg-zenith-gold-vivid/8 dark:text-zenith-gold-vivid"
-                >
-                  {{ $t(tagKey) }}
-                </span>
-              </div>
-            </div>
-
-            <!-- Right: price + CTA -->
-            <div class="relative flex flex-col items-start gap-4 sm:items-end">
-              <div class="sm:text-right">
-                <p class="text-4xl font-bold text-zenith-gold-vivid">{{ $t('pricing.customDev.price') }}</p>
-                <p class="mt-0.5 text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark">
-                  {{ $t('pricing.customDev.priceNote') }}
-                </p>
-              </div>
-              <Button as-child variant="gold" :aria-label="$t('pricing.customDev.cta')">
-                <NuxtLink :to="localePath('/contact')">
-                  {{ $t('pricing.customDev.cta') }}
-                  <ArrowRight :size="14" aria-hidden="true" />
-                </NuxtLink>
-              </Button>
-            </div>
-          </div>
-        </div>
-
         <!-- Free audit card -->
         <div
           class="plan-card mt-5 overflow-hidden rounded-2xl border border-dashed border-zenith-gold-bronze/40 dark:border-zenith-gold-bronze/25"
@@ -278,8 +193,8 @@
               <!-- Features inline -->
               <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-2">
                 <li
-                  v-for="feature in auditPlan?.features"
-                  :key="feature.textKey"
+                  v-for="featureKey in auditFeatureKeys"
+                  :key="featureKey"
                   class="flex items-center gap-1.5 text-xs text-zenith-text-secondary-light dark:text-zenith-text-secondary-dark"
                 >
                   <svg
@@ -298,7 +213,7 @@
                       stroke-linejoin="round"
                     />
                   </svg>
-                  {{ $t(feature.textKey) }}
+                  {{ $t(featureKey) }}
                 </li>
               </ul>
             </div>
@@ -330,7 +245,6 @@
        <PricingPaymentBadges />
     </section>
 
-
     <!-- CTA -->
     <div v-reveal="{ duration: 700, distance: 40 }">
       <CallToAction />
@@ -341,30 +255,18 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
-import {
-  pricingPlans,
-  customDevTagKeys,
-  DISCOUNT_PERCENTAGE,
-  type PricingPlan,
-} from '~/constants/pricing'
+import { pricingPlans, FEATURED_PLAN_ID } from '~/constants/pricing'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-const isDiscountActive: boolean = DISCOUNT_PERCENTAGE > 0
-
-const mainPlans: PricingPlan[] = pricingPlans.filter((plan: PricingPlan) => plan.id !== 'seo-audit')
-const auditPlan: PricingPlan | undefined = pricingPlans.find((plan: PricingPlan) => plan.id === 'seo-audit')
-
-/**
- * Calculates the discounted price for a plan
- * @param basePrice - Original base price in euros
- * @returns Discounted price rounded to nearest integer
- */
-const discountedPrice = (basePrice: number): number => {
-  if (!isDiscountActive) return basePrice
-  return Math.round(basePrice * (1 - DISCOUNT_PERCENTAGE / 100))
-}
+// i18n keys for the free audit card — sourced from seoAudit locale entries
+// since the seo-audit plan was removed from pricingPlans
+const auditFeatureKeys: string[] = [
+  'pricing.seoAudit.features.0',
+  'pricing.seoAudit.features.1',
+  'pricing.seoAudit.features.2',
+]
 
 /**
  * Returns Tailwind CSS classes for a pricing card based on its plan type
@@ -372,12 +274,11 @@ const discountedPrice = (basePrice: number): number => {
  * @returns Tailwind CSS class string
  */
 const getPlanClasses = (planId: string): string => {
-  if (planId === 'showcase-advanced') {
+  if (planId === FEATURED_PLAN_ID) {
     return 'border-zenith-gold-vivid/40 bg-zenith-bg-light shadow-xl shadow-zenith-gold-vivid/8 dark:border-zenith-gold-vivid/30 dark:bg-zenith-bg-secondary-dark lg:scale-[1.02]'
   }
   return 'border-zenith-bronze-dark/10 bg-zenith-bg-light hover:border-zenith-gold-bronze/30 dark:border-zenith-gold-bronze/10 dark:bg-zenith-bg-secondary-dark dark:hover:border-zenith-gold-bronze/30'
 }
-
 
 const route = useRoute()
 

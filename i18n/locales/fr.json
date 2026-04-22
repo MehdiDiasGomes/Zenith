@@ -391,86 +391,78 @@
       "title": "À propos des tarifs",
       "description": "Les prix affichés sont des tarifs de base indicatifs. Le montant final peut varier en fonction de la complexité de votre projet, de vos besoins spécifiques et du temps de développement nécessaire. Un devis personnalisé vous sera fourni après analyse de votre demande."
     },
-    "showcase": {
-      "title": "Essentiel",
-      "description": "Votre présence en ligne professionnelle, livrée clé en main",
+    "onlinePresence": {
+      "title": "Présence en ligne",
+      "description": "Site professionnel pour être trouvable et crédible en ligne",
       "groups": [
         {
-          "title": "Votre site, clé en main",
+          "title": "Fonctionnalités incluses",
           "features": [
-            "Design professionnel adapté à tous les écrans (mobile, tablette, ordinateur)",
-            "Jusqu'à 5 pages (Accueil, Services, À propos, Contact…)",
-            "Formulaire de contact pour recevoir des demandes directement depuis votre site",
-            "Mise en ligne + indexation sur Google"
+            "Site moderne et responsive",
+            "Page de contact optimisée",
+            "Optimisation SEO locale de base",
+            "Chargement rapide",
+            "Design professionnel adapté à votre activité"
           ]
         },
         {
-          "title": "SEO local",
+          "title": "Ce que vous gagnez",
           "features": [
-            "Balises optimisées + fiche Google Business configurée",
-            "Site rapide et performant, favorisé par Google"
+            "Être facilement trouvable en ligne",
+            "Permettre aux clients de vous contacter rapidement",
+            "Donner une image professionnelle crédible",
+            "Offrir une expérience fluide sur mobile et desktop"
           ]
         }
       ]
     },
-    "showcaseAdvanced": {
-      "title": "Visibilité",
-      "description": "Pour être trouvé, choisi et contacté par vos clients",
+    "clientAcquisition": {
+      "title": "Acquisition de clients",
+      "description": "Site structuré pour transformer vos visiteurs en clients",
       "groups": [
         {
+          "title": "Fonctionnalités incluses",
           "features": [
-            "Tout ce qui est inclus dans Essentiel"
+            "Site multi-pages structuré (accueil, services, contact)",
+            "Pages optimisées pour convertir les visiteurs",
+            "SEO amélioré (structure + contenu de base)",
+            "Formulaires optimisés pour générer des demandes",
+            "Suivi basique des performances (analytics)"
           ]
         },
         {
-          "title": "Votre site, clé en main",
+          "title": "Ce que vous gagnez",
           "features": [
-            "Jusqu'à 10 pages pour présenter toute votre activité",
-            "Blog / actualités pour améliorer votre visibilité sur Google",
-            "Site bilingue pour toucher plus de clients"
-          ]
-        },
-        {
-          "title": "Référencement & performance",
-          "features": [
-            "Référencement naturel optimisé (SEO) pour améliorer votre position sur Google",
-            "Suivi de vos performances avec Google Analytics"
-          ]
-        },
-        {
-          "title": "Accompagnement",
-          "features": [
-            "Livraison en 2 à 3 semaines + accompagnement personnalisé"
+            "Transformer vos visiteurs en demandes de contact",
+            "Mettre en valeur vos services clairement",
+            "Améliorer votre visibilité sur Google",
+            "Comprendre d'où viennent vos visiteurs"
           ]
         }
       ]
     },
-    "eshop": {
-      "title": "Boutique",
-      "description": "Votre boutique en ligne clé en main pour vendre 24h/24",
+    "growthAutomation": {
+      "title": "Croissance & automatisation",
+      "description": "Site complet ou e-commerce pour vendre et faire évoluer votre business",
       "groups": [
         {
-          "title": "Votre boutique",
+          "title": "Fonctionnalités incluses",
           "features": [
-            "Boutique en ligne complète, prête à vendre dès le lancement",
-            "Catalogue produits illimité",
-            "Paiement sécurisé (Stripe, PayPal)"
+            "Site complet ou e-commerce",
+            "Tunnel de conversion optimisé",
+            "Intégration paiement (si e-commerce)",
+            "Gestion avancée des contenus",
+            "Automatisations simples (emails / formulaires)",
+            "Structure scalable pour évoluer"
           ]
         },
         {
-          "title": "Gestion simplifiée",
+          "title": "Ce que vous gagnez",
           "features": [
-            "Stocks, commandes et clients en temps réel",
-            "Espace client avec historique des commandes",
-            "Livraison automatisée",
-            "Promotions et codes de réduction"
-          ]
-        },
-        {
-          "title": "Visibilité & autonomie",
-          "features": [
-            "SEO e-commerce pour rendre vos produits visibles sur Google",
-            "Formation complète pour gérer votre boutique en toute autonomie"
+            "Vendre en ligne ou générer des leads automatiquement",
+            "Automatiser une partie de votre acquisition client",
+            "Gérer facilement vos produits ou services",
+            "Avoir un site prêt à évoluer avec votre business"
           ]
         }
       ]
